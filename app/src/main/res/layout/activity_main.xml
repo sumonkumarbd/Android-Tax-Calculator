@@ -1,0 +1,817 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+<!--    UpperVictor-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="-15dp"
+        android:layout_gravity="top"
+        >
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="102dp"
+            android:layout_alignParentTop="true"
+            android:scaleType="fitXY"
+            android:src="@drawable/ic_wave_upper" />
+    </RelativeLayout>
+    <!--    UpperVictor-->
+
+
+<!--    mainArea-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="450dp"
+        android:layout_marginTop="-30dp"
+        android:id="@+id/mainArea"
+        >
+<!--        CalculateArea-->
+        <!--        appName-->
+        <TextView
+            android:id="@+id/appName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/teko_medium"
+            android:layout_alignParentStart="true"
+            android:shadowColor="@color/gray"
+            android:layout_marginStart="20dp"
+            android:text="@string/app_name"
+            android:textColor="@color/base"
+            android:textSize="27sp"
+            app:neumorph_shadowElevation="5dp" />
+        <!--        appName-->
+
+<!--        sesion-->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:fontFamily="@font/teko_medium"
+            android:text="Finance year 21-22"
+            android:textColor="@color/base"
+            android:textSize="15sp"
+            android:layout_marginEnd="25dp"
+            android:layout_marginTop="18dp"
+            />
+<!--        sesion-->
+
+<!--        dataholderParent-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/appName"
+            android:orientation="vertical">
+
+
+            <!--        heading-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10sp"
+                android:layout_marginBottom="-10dp"
+                android:background="@drawable/blue_button"
+                android:orientation="horizontal">
+                <!--dataHeading-->
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_margin="5dp"
+                    android:layout_weight="5.4"
+                    android:fontFamily="@font/teko_medium"
+                    android:gravity="center"
+                    android:text="Slab"
+                    android:textColor="@color/white"
+                    android:textSize="16sp" />
+                <!--dataHeading-->
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/white" />
+
+                <!--dataHeading-->
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_margin="5dp"
+                    android:layout_weight="2"
+                    android:fontFamily="@font/teko_medium"
+                    android:gravity="center"
+                    android:text="Tax Rate"
+                    android:textColor="@color/white"
+                    android:textSize="16sp" />
+                <!--dataHeading-->
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/white" />
+
+                <!--dataHeading-->
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_margin="5dp"
+                    android:layout_weight="4"
+                    android:fontFamily="@font/teko_medium"
+                    android:gravity="center"
+                    android:text="Taxable amount"
+                    android:textColor="@color/white"
+                    android:textSize="16sp" />
+                <!--dataHeading-->
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/white" />
+
+                <!--dataHeading-->
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_margin="5dp"
+                    android:layout_weight="4"
+                    android:fontFamily="@font/teko_medium"
+                    android:gravity="center"
+                    android:text="Tax"
+                    android:textColor="@color/white"
+                    android:textSize="16sp" />
+                <!--dataHeading-->
+
+
+            </LinearLayout>
+            <!--        heading-->
+
+            <!--            dataTable-->
+            <soup.neumorphism.NeumorphCardView
+                style="@style/Widget.Neumorph.CardView"
+                android:layout_width="match_parent"
+                android:layout_height="65dp"
+                android:layout_marginTop="5dp"
+                app:neumorph_lightSource="leftTop"
+                app:neumorph_shapeType="basin">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <!--                    data-->
+                    <TextView
+                        android:layout_width="120dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="5dp"
+                        android:fontFamily="@font/teko_medium"
+                        android:gravity="center"
+                        android:padding="5dp"
+                        android:text="0-300000 tk"
+                        android:textColor="@color/base"
+                        android:textSize="16sp" />
+                    <!--                    data-->
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:background="@color/gray" />
+
+                    <!--                    data-->
+                    <TextView
+                        android:layout_width="45dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="5dp"
+                        android:fontFamily="@font/teko_medium"
+                        android:gravity="center"
+                        android:padding="5dp"
+                        android:text="0%"
+                        android:textColor="@color/base"
+                        android:textSize="16sp" />
+                    <!--                    data-->
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:background="@color/gray" />
+
+                    <!--                    data-->
+                    <TextView
+                        android:id="@+id/c1"
+                        android:layout_width="90dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="5dp"
+                        android:fontFamily="@font/teko_medium"
+                        android:gravity="center"
+                        android:padding="5dp"
+                        android:textColor="@color/base"
+                        android:textSize="16sp" />
+                    <!--                    data-->
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:background="@color/gray" />
+
+                    <!--                    data-->
+                    <TextView
+                        android:id="@+id/d1"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="5dp"
+                        android:fontFamily="@font/teko_medium"
+                        android:gravity="center"
+                        android:padding="5dp"
+                        android:textColor="@color/base"
+                        android:textSize="16sp" />
+                    <!--                    data-->
+
+
+                </LinearLayout>
+
+
+            </soup.neumorphism.NeumorphCardView>
+            <!--            dataTable-->
+
+            <!--            dataTable-->
+            <soup.neumorphism.NeumorphCardView
+                style="@style/Widget.Neumorph.CardView"
+                android:layout_width="match_parent"
+                android:layout_height="65dp"
+                android:layout_marginTop="-15dp"
+                app:neumorph_lightSource="leftTop"
+                app:neumorph_shapeType="basin">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <!--                    data-->
+                    <TextView
+                        android:layout_width="120dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="5dp"
+                        android:fontFamily="@font/teko_medium"
+                        android:gravity="center"
+                        android:padding="5dp"
+                        android:text="300001-400000 tk"
+                        android:textColor="@color/base"
+                        android:textSize="16sp" />
+                    <!--                    data-->
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:background="@color/gray" />
+
+                    <!--                    data-->
+                    <TextView
+                        android:layout_width="45dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="5dp"
+                        android:fontFamily="@font/teko_medium"
+                        android:gravity="center"
+                        android:padding="5dp"
+                        android:text="5%"
+                        android:textColor="@color/base"
+                        android:textSize="16sp" />
+                    <!--                    data-->
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:background="@color/gray" />
+
+                    <!--                    data-->
+                    <TextView
+                        android:id="@+id/c2"
+                        android:layout_width="90dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="5dp"
+                        android:fontFamily="@font/teko_medium"
+                        android:gravity="center"
+                        android:padding="5dp"
+                        android:textColor="@color/base"
+                        android:textSize="16sp" />
+                    <!--                    data-->
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:background="@color/gray" />
+
+                    <!--                    data-->
+                    <TextView
+                        android:id="@+id/d2"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="5dp"
+                        android:fontFamily="@font/teko_medium"
+                        android:gravity="center"
+                        android:padding="5dp"
+                        android:textColor="@color/base"
+                        android:textSize="16sp" />
+                    <!--                    data-->
+
+
+                </LinearLayout>
+
+
+            </soup.neumorphism.NeumorphCardView>
+            <!--            dataTable-->
+
+            <!--            dataTable-->
+            <soup.neumorphism.NeumorphCardView
+                style="@style/Widget.Neumorph.CardView"
+                android:layout_width="match_parent"
+                android:layout_height="65dp"
+                android:layout_marginTop="-15dp"
+                app:neumorph_lightSource="leftTop"
+                app:neumorph_shapeType="basin">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <!--                    data-->
+                    <TextView
+                        android:layout_width="120dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="5dp"
+                        android:fontFamily="@font/teko_medium"
+                        android:gravity="center"
+                        android:padding="5dp"
+                        android:text="400001-700000 tk"
+                        android:textColor="@color/base"
+                        android:textSize="16sp" />
+                    <!--                    data-->
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:background="@color/gray" />
+
+                    <!--                    data-->
+                    <TextView
+                        android:layout_width="45dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="5dp"
+                        android:fontFamily="@font/teko_medium"
+                        android:gravity="center"
+                        android:padding="5dp"
+                        android:text="10%"
+                        android:textColor="@color/base"
+                        android:textSize="16sp" />
+                    <!--                    data-->
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:background="@color/gray" />
+
+                    <!--                    data-->
+                    <TextView
+                        android:id="@+id/c3"
+                        android:layout_width="90dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="5dp"
+                        android:fontFamily="@font/teko_medium"
+                        android:gravity="center"
+                        android:padding="5dp"
+                        android:textColor="@color/base"
+                        android:textSize="16sp" />
+                    <!--                    data-->
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:background="@color/gray" />
+
+                    <!--                    data-->
+                    <TextView
+                        android:id="@+id/d3"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="5dp"
+                        android:fontFamily="@font/teko_medium"
+                        android:gravity="center"
+                        android:padding="5dp"
+                        android:textColor="@color/base"
+                        android:textSize="16sp" />
+                    <!--                    data-->
+
+
+                </LinearLayout>
+
+
+            </soup.neumorphism.NeumorphCardView>
+            <!--            dataTable-->
+
+            <!--            dataTable-->
+            <soup.neumorphism.NeumorphCardView
+                style="@style/Widget.Neumorph.CardView"
+                android:layout_width="match_parent"
+                android:layout_height="65dp"
+                android:layout_marginTop="-15dp"
+                app:neumorph_lightSource="leftTop"
+                app:neumorph_shapeType="basin">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <!--                    data-->
+                    <TextView
+                        android:layout_width="120dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="5dp"
+                        android:fontFamily="@font/teko_medium"
+                        android:gravity="center"
+                        android:padding="5dp"
+                        android:text="700000-1100000 tk"
+                        android:textColor="@color/base"
+                        android:textSize="16sp" />
+                    <!--                    data-->
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:background="@color/gray" />
+
+                    <!--                    data-->
+                    <TextView
+                        android:layout_width="45dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="5dp"
+                        android:fontFamily="@font/teko_medium"
+                        android:gravity="center"
+                        android:padding="5dp"
+                        android:text="15%"
+                        android:textColor="@color/base"
+                        android:textSize="16sp" />
+                    <!--                    data-->
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:background="@color/gray" />
+
+                    <!--                    data-->
+                    <TextView
+                        android:id="@+id/c4"
+                        android:layout_width="90dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="5dp"
+                        android:fontFamily="@font/teko_medium"
+                        android:gravity="center"
+                        android:padding="5dp"
+                        android:textColor="@color/base"
+                        android:textSize="16sp" />
+                    <!--                    data-->
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:background="@color/gray" />
+
+                    <!--                    data-->
+                    <TextView
+                        android:id="@+id/d4"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="5dp"
+                        android:fontFamily="@font/teko_medium"
+                        android:gravity="center"
+                        android:padding="5dp"
+                        android:textColor="@color/base"
+                        android:textSize="16sp" />
+                    <!--                    data-->
+
+
+                </LinearLayout>
+
+
+            </soup.neumorphism.NeumorphCardView>
+            <!--            dataTable-->
+
+            <!--            dataTable-->
+            <soup.neumorphism.NeumorphCardView
+                style="@style/Widget.Neumorph.CardView"
+                android:layout_width="match_parent"
+                android:layout_height="65dp"
+                android:layout_marginTop="-15dp"
+                app:neumorph_lightSource="leftTop"
+                app:neumorph_shapeType="basin">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <!--                    data-->
+                    <TextView
+                        android:layout_width="120dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="5dp"
+                        android:fontFamily="@font/teko_medium"
+                        android:gravity="center"
+                        android:padding="5dp"
+                        android:text="1100000-1600000 tk"
+                        android:textColor="@color/base"
+                        android:textSize="16sp" />
+                    <!--                    data-->
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:background="@color/gray" />
+
+                    <!--                    data-->
+                    <TextView
+                        android:layout_width="45dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="5dp"
+                        android:fontFamily="@font/teko_medium"
+                        android:gravity="center"
+                        android:padding="5dp"
+                        android:text="20%"
+                        android:textColor="@color/base"
+                        android:textSize="16sp" />
+                    <!--                    data-->
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:background="@color/gray" />
+
+                    <!--                    data-->
+                    <TextView
+                        android:id="@+id/c5"
+                        android:layout_width="90dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="5dp"
+                        android:fontFamily="@font/teko_medium"
+                        android:gravity="center"
+                        android:padding="5dp"
+                        android:textColor="@color/base"
+                        android:textSize="16sp" />
+                    <!--                    data-->
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:background="@color/gray" />
+
+                    <!--                    data-->
+                    <TextView
+                        android:id="@+id/d5"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="5dp"
+                        android:fontFamily="@font/teko_medium"
+                        android:gravity="center"
+                        android:padding="5dp"
+                        android:textColor="@color/base"
+                        android:textSize="16sp" />
+                    <!--                    data-->
+
+
+                </LinearLayout>
+
+
+            </soup.neumorphism.NeumorphCardView>
+            <!--            dataTable-->
+
+            <!--            dataTable-->
+            <soup.neumorphism.NeumorphCardView
+                style="@style/Widget.Neumorph.CardView"
+                android:layout_width="match_parent"
+                android:layout_height="65dp"
+                android:layout_marginTop="-15dp"
+                app:neumorph_lightSource="leftTop"
+                app:neumorph_shapeType="basin">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <!--                    data-->
+                    <TextView
+                        android:layout_width="120dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="5dp"
+                        android:fontFamily="@font/teko_medium"
+                        android:gravity="center"
+                        android:padding="5dp"
+                        android:text="Above 1600000 tk"
+                        android:textColor="@color/base"
+                        android:textSize="16sp" />
+                    <!--                    data-->
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:background="@color/gray" />
+
+                    <!--                    data-->
+                    <TextView
+                        android:layout_width="45dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="5dp"
+                        android:fontFamily="@font/teko_medium"
+                        android:gravity="center"
+                        android:padding="5dp"
+                        android:text="25%"
+                        android:textColor="@color/base"
+                        android:textSize="16sp" />
+                    <!--                    data-->
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:background="@color/gray" />
+
+                    <!--                    data-->
+                    <TextView
+                        android:id="@+id/c6"
+                        android:layout_width="90dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="5dp"
+                        android:fontFamily="@font/teko_medium"
+                        android:gravity="center"
+                        android:padding="5dp"
+                        android:textColor="@color/base"
+                        android:textSize="16sp" />
+                    <!--                    data-->
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:background="@color/gray" />
+
+                    <!--                    data-->
+                    <TextView
+                        android:id="@+id/d6"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="5dp"
+                        android:fontFamily="@font/teko_medium"
+                        android:gravity="center"
+                        android:padding="5dp"
+                        android:textColor="@color/base"
+                        android:textSize="16sp" />
+                    <!--                    data-->
+
+
+                </LinearLayout>
+
+
+            </soup.neumorphism.NeumorphCardView>
+            <!--            dataTable-->
+
+            <!--            sumArea-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10sp"
+                android:layout_marginBottom="-10dp"
+                android:background="@drawable/blue_button"
+                android:orientation="horizontal">
+                <!--dataHeading-->
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_margin="5dp"
+                    android:layout_weight="2"
+                    android:fontFamily="@font/teko_medium"
+                    android:gravity="center"
+                    android:text="Total"
+                    android:textColor="@color/white"
+                    android:textSize="24sp" />
+                <!--dataHeading-->
+
+                <!--dataHeading-->
+                <TextView
+                    android:id="@+id/result"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_margin="5dp"
+                    android:layout_weight="4"
+                    android:fontFamily="@font/teko_medium"
+                    android:gravity="center"
+                    android:textColor="@color/white"
+                    android:textSize="24sp" />
+                <!--dataHeading-->
+
+
+            </LinearLayout>
+            <!--            sumArea-->
+
+
+        </LinearLayout>
+        <!--        dataholderParent-->
+
+    </RelativeLayout>
+<!--    mainArea-->
+
+    <!--        InputArea-->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/mainArea"
+        android:orientation="vertical"
+        android:layout_gravity="center"
+        >
+        <soup.neumorphism.NeumorphCardView
+            android:layout_width="250dp"
+            android:layout_height="80dp"
+            style="@style/Widget.Neumorph.CardView"
+            app:neumorph_shapeType="basin"
+            >
+          <EditText
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/tnasparent"
+            android:id="@+id/inputVal"
+            android:hint="@string/hint_text"
+            android:textColor="@color/base"
+            android:fontFamily="@font/teko_regular"
+            android:defaultFocusHighlightEnabled="true"
+            android:textColorHint="@color/base"
+            app:neumorph_shapeType="basin"
+            android:textSize="20sp"
+            android:inputType="number"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:focusableInTouchMode="true"
+            />
+            </soup.neumorphism.NeumorphCardView>
+
+        <!--        CalcButton-->
+        <soup.neumorphism.NeumorphButton
+            android:id="@+id/calcButton"
+            android:layout_width="150dp"
+            android:layout_height="70dp"
+            style="@style/Widget.Neumorph.Button"
+            app:neumorph_shapeType="flat"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="Calculate"
+            android:textSize="22dp"
+            android:fontFamily="@font/teko_medium"
+            android:textColor="@color/base"
+            android:clickable="true"
+            android:textStyle="bold"
+            />
+        <!--        CalcButton-->
+
+    </LinearLayout>
+    <!--        InputArea-->
+
+
+<!--    LowerVictor-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:layout_marginBottom="-19dp">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:scaleType="fitXY"
+            android:src="@drawable/ic_wave" />
+
+    </RelativeLayout>
+    <!--    LowerVictor-->
+
+
+
+
+
+
+
+</LinearLayout>

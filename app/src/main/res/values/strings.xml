@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">Tax Calculator</string>
+    <string name="hint_text">Enter Your Total Income here</string>
+</resources>
