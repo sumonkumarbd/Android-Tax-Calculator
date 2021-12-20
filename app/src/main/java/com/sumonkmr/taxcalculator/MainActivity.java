@@ -18,7 +18,7 @@ public class MainActivity extends AppCompatActivity {
     TextView d1, d2, d3, d4, d5, d6, result;
     EditText inputVal;
     Button calcButton;
-    float a1, a2, a3, a4, a5;
+    double a1, a2, a3, a4, a5;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -67,28 +67,28 @@ public class MainActivity extends AppCompatActivity {
 
 //                variabls
                 String tk = " tk";
-                float firstTaxamount = newUserInput-a1;
+                double firstTaxamount = newUserInput-a1;
                 String ftaxAmount = String.valueOf(firstTaxamount);
-                float firstTax = (firstTaxamount*5)/100 ;
+                double firstTax = (firstTaxamount*5)/100 ;
                 String fTax = String.valueOf(firstTax);
 
-                float secoundTaxableamount = newUserInput-a2;
-                float secondTax = (secoundTaxableamount*10)/100 ;
+                double secoundTaxableamount = newUserInput-a2;
+                double secondTax = (secoundTaxableamount*10)/100 ;
                 String secTaxAmount = String.valueOf(secoundTaxableamount);
                 String secTax = String.valueOf(secondTax);
 
-                float thirdTaxableamount = newUserInput-a3;
-                float thirdTax = (thirdTaxableamount*15)/100 ;
+                double thirdTaxableamount = newUserInput-a3;
+                double thirdTax = (thirdTaxableamount*15)/100 ;
                 String thirdTaxAmount = String.valueOf(thirdTaxableamount);
                 String sThirdTax = String.valueOf(thirdTax);
 
-                float fourthTaxableamount = newUserInput-a4;
-                float fourthTax = (fourthTaxableamount*20)/100 ;
+                double fourthTaxableamount = newUserInput-a4;
+                double fourthTax = (fourthTaxableamount*20)/100 ;
                 String fourthTaxAmount = String.valueOf(fourthTaxableamount);
                 String newfourthTax = String.valueOf(fourthTax);
 
-                float fifthTaxableamount = newUserInput-a5;
-                float fifthTax = (fifthTaxableamount*25)/100 ;
+                double fifthTaxableamount = newUserInput-a5;
+                double fifthTax = (fifthTaxableamount*25)/100 ;
                 String fifthTaxAmount = String.valueOf(fifthTaxableamount);
                 String newfifthTax = String.valueOf(fifthTax);
 
@@ -114,8 +114,8 @@ public class MainActivity extends AppCompatActivity {
                     d2.setText(fTax+" tk");
                 };
                 if (newUserInput > a2){
-                    float secoundMaxAmount = a2-a1;
-                    float secoundMaxTax = (secoundMaxAmount*5/100);
+                    double secoundMaxAmount = a2-a1;
+                    double secoundMaxTax = (secoundMaxAmount*5/100);
                     c2.setText(secoundMaxAmount+tk);
                     d2.setText(secoundMaxTax+tk);
                 };
@@ -128,8 +128,8 @@ public class MainActivity extends AppCompatActivity {
                     d3.setText(secTax+" tk");
                 };
                 if (newUserInput > a3){
-                    float ThirdMaxAmount = a3-a2;
-                    float thirdMaxTax = (ThirdMaxAmount*10/100);
+                    double ThirdMaxAmount = a3-a2;
+                    double thirdMaxTax = (ThirdMaxAmount*10/100);
                     c3.setText(ThirdMaxAmount+tk);
                     d3.setText(thirdMaxTax+tk);
                 };
@@ -145,8 +145,8 @@ public class MainActivity extends AppCompatActivity {
                     d4.setText(sThirdTax+" tk");
                 };
                 if (newUserInput > a4){
-                    float fourthMaxAmount = a4-a3;
-                    float fourthMaxTax = (fourthMaxAmount*15/100);
+                    double fourthMaxAmount = a4-a3;
+                    double fourthMaxTax = (fourthMaxAmount*15/100);
                     c4.setText(fourthMaxAmount+tk);
                     d4.setText(fourthMaxTax+tk);
                 };
@@ -162,8 +162,8 @@ public class MainActivity extends AppCompatActivity {
                     d5.setText(newfourthTax+" tk");
                 };
                 if (newUserInput > a5){
-                    float fourthMaxAmount = a5-a4;
-                    float fourthMaxTax = (fourthMaxAmount*20)/100 ;
+                    double fourthMaxAmount = a5-a4;
+                    double fourthMaxTax = (fourthMaxAmount*20)/100 ;
                     String sFourthTax = String.valueOf(fourthMaxTax);
                     c5.setText(fourthMaxAmount+tk);
                     d5.setText(sFourthTax+tk);
@@ -187,7 +187,7 @@ public class MainActivity extends AppCompatActivity {
 
 //                TotalTax
                 if (newUserInput > 300000){
-                    float totalTax = firstTax+secondTax+thirdTax+fourthTax+fifthTax;
+                    double totalTax = firstTax+secondTax+thirdTax+fourthTax+fifthTax;
                     String sTotalTax = String.valueOf(totalTax);
                     result.setText(sTotalTax);
                 };
