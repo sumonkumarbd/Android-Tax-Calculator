@@ -3,8 +3,8 @@ package com.sumonkmr.taxcalculator;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.os.Handler;
 import android.text.Editable;
-import android.text.TextUtils;
 import android.text.TextWatcher;
 import android.util.TypedValue;
 import android.view.View;
@@ -30,7 +30,6 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
 
-//
 //////        Hooks
         c1 = findViewById(R.id.c1);
         c2 = findViewById(R.id.c2);
@@ -49,6 +48,7 @@ public class MainActivity extends AppCompatActivity {
         inputVal = findViewById(R.id.inputVal);
         calcButton = findViewById(R.id.calcButton);
 
+//        values
         a1 = 300000;
         a2 = 400000;
         a3 = 700000;
@@ -57,25 +57,17 @@ public class MainActivity extends AppCompatActivity {
         sumTax = 195000;
 
 
-        //                thiorys\
+        //                Actions
         inputVal.addTextChangedListener(textWatcher);
         calcButton.setEnabled(false);
 
-//        if (TextUtils.isEmpty(inputVal.getText().toString())){
-//            Toast.makeText(MainActivity.this, "Please Enter Your Amount", Toast.LENGTH_SHORT).show();
-//            calcButton.setEnabled(false);
-//            return;
-//        }else {
-//            calcButton.setEnabled(true);
-//        };
+        Handler h = new Handler();
+        Runnable r = () -> Toast.makeText(MainActivity.this, "Put your amount to check your tax!!", Toast.LENGTH_LONG).show();
+        h.postDelayed(r,2000);
 
 
 
-
-//
-
-
-////       Litseners
+//      Litseners
         calcButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -228,20 +220,21 @@ public class MainActivity extends AppCompatActivity {
                 if (newUserInput > 99999999) {
                     amountResult.setTextSize(TypedValue.COMPLEX_UNIT_SP,18);
                     taxResult.setTextSize(TypedValue.COMPLEX_UNIT_SP,18);
+                    c6.setTextSize(TypedValue.COMPLEX_UNIT_SP,18);
+                    d6.setTextSize(TypedValue.COMPLEX_UNIT_SP,18);
                 }else {
                     amountResult.setTextSize(TypedValue.COMPLEX_UNIT_SP,24);
                     taxResult.setTextSize(TypedValue.COMPLEX_UNIT_SP,24);
+                    c6.setTextSize(TypedValue.COMPLEX_UNIT_SP,20);
+                    d6.setTextSize(TypedValue.COMPLEX_UNIT_SP,20);
                 };
 
 
                 inputVal.setText("");
+                calcButton.setEnabled(false);
             };
 //            clcButtion OnClick Litsenr
-
-
-
-
-        });
+        });// ClacButton Listener
 
 
 
@@ -252,16 +245,17 @@ public class MainActivity extends AppCompatActivity {
 
 
     //        for Empty requration
-
     TextWatcher textWatcher = new TextWatcher() {
         @Override
         public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
             String userValue = inputVal.getText().toString();
             if (!userValue.isEmpty()){
                 calcButton.setEnabled(true);
-            }else {
+            }else{
                 calcButton.setEnabled(false);
+                Toast.makeText(MainActivity.this, "Put Your Amount For Check Your Tax!!", Toast.LENGTH_SHORT).show();
             };
+
         }
 
         @Override
@@ -273,8 +267,9 @@ public class MainActivity extends AppCompatActivity {
         public void afterTextChanged(Editable editable) {
             calcButton.setEnabled(true);
 
+
         }
-    };
+    };  //        for Empty requration
 
 
-};
+};//MainActivities
