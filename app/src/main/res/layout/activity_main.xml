@@ -74,18 +74,17 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
-                android:layout_marginStart="10dp"
+                android:layout_marginStart="12dp"
                 android:layout_marginEnd="10sp"
                 android:layout_marginBottom="-10dp"
                 android:background="@drawable/blue_button"
                 android:orientation="horizontal">
                 <!--dataHeading-->
                 <TextView
-                    android:layout_width="0dp"
+                    android:layout_width="120dp"
                     android:layout_height="match_parent"
                     android:layout_gravity="center"
                     android:layout_margin="5dp"
-                    android:layout_weight="5.4"
                     android:fontFamily="@font/teko_medium"
                     android:gravity="center"
                     android:text="Slab"
@@ -100,11 +99,10 @@
 
                 <!--dataHeading-->
                 <TextView
-                    android:layout_width="0dp"
+                    android:layout_width="34dp"
                     android:layout_height="match_parent"
                     android:layout_gravity="center"
                     android:layout_margin="5dp"
-                    android:layout_weight="2"
                     android:fontFamily="@font/teko_medium"
                     android:gravity="center"
                     android:text="Tax Rate"
@@ -119,11 +117,10 @@
 
                 <!--dataHeading-->
                 <TextView
-                    android:layout_width="0dp"
+                    android:layout_width="80dp"
                     android:layout_height="match_parent"
                     android:layout_gravity="center"
                     android:layout_margin="5dp"
-                    android:layout_weight="4"
                     android:fontFamily="@font/teko_medium"
                     android:gravity="center"
                     android:text="Taxable amount"
@@ -138,11 +135,10 @@
 
                 <!--dataHeading-->
                 <TextView
-                    android:layout_width="0dp"
+                    android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_gravity="center"
                     android:layout_margin="5dp"
-                    android:layout_weight="4"
                     android:fontFamily="@font/teko_medium"
                     android:gravity="center"
                     android:text="Tax"
@@ -190,7 +186,6 @@
                     <TextView
                         android:layout_width="45dp"
                         android:layout_height="match_parent"
-                        android:layout_marginStart="10dp"
                         android:layout_marginTop="5dp"
                         android:fontFamily="@font/teko_medium"
                         android:gravity="center"
@@ -209,7 +204,6 @@
                         android:id="@+id/c1"
                         android:layout_width="90dp"
                         android:layout_height="match_parent"
-                        android:layout_marginStart="10dp"
                         android:layout_marginTop="5dp"
                         android:fontFamily="@font/teko_medium"
                         android:gravity="center"
@@ -227,7 +221,6 @@
                         android:id="@+id/d1"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:layout_marginStart="10dp"
                         android:layout_marginTop="5dp"
                         android:fontFamily="@font/teko_medium"
                         android:gravity="center"
@@ -279,7 +272,6 @@
                     <TextView
                         android:layout_width="45dp"
                         android:layout_height="match_parent"
-                        android:layout_marginStart="10dp"
                         android:layout_marginTop="5dp"
                         android:fontFamily="@font/teko_medium"
                         android:gravity="center"
@@ -298,7 +290,6 @@
                         android:id="@+id/c2"
                         android:layout_width="90dp"
                         android:layout_height="match_parent"
-                        android:layout_marginStart="10dp"
                         android:layout_marginTop="5dp"
                         android:fontFamily="@font/teko_medium"
                         android:gravity="center"
@@ -316,7 +307,6 @@
                         android:id="@+id/d2"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:layout_marginStart="10dp"
                         android:layout_marginTop="5dp"
                         android:fontFamily="@font/teko_medium"
                         android:gravity="center"
@@ -368,7 +358,6 @@
                     <TextView
                         android:layout_width="45dp"
                         android:layout_height="match_parent"
-                        android:layout_marginStart="10dp"
                         android:layout_marginTop="5dp"
                         android:fontFamily="@font/teko_medium"
                         android:gravity="center"
@@ -387,7 +376,6 @@
                         android:id="@+id/c3"
                         android:layout_width="90dp"
                         android:layout_height="match_parent"
-                        android:layout_marginStart="10dp"
                         android:layout_marginTop="5dp"
                         android:fontFamily="@font/teko_medium"
                         android:gravity="center"
@@ -405,7 +393,6 @@
                         android:id="@+id/d3"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:layout_marginStart="10dp"
                         android:layout_marginTop="5dp"
                         android:fontFamily="@font/teko_medium"
                         android:gravity="center"
@@ -457,7 +444,6 @@
                     <TextView
                         android:layout_width="45dp"
                         android:layout_height="match_parent"
-                        android:layout_marginStart="10dp"
                         android:layout_marginTop="5dp"
                         android:fontFamily="@font/teko_medium"
                         android:gravity="center"
@@ -476,7 +462,6 @@
                         android:id="@+id/c4"
                         android:layout_width="90dp"
                         android:layout_height="match_parent"
-                        android:layout_marginStart="10dp"
                         android:layout_marginTop="5dp"
                         android:fontFamily="@font/teko_medium"
                         android:gravity="center"
@@ -494,7 +479,6 @@
                         android:id="@+id/d4"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:layout_marginStart="10dp"
                         android:layout_marginTop="5dp"
                         android:fontFamily="@font/teko_medium"
                         android:gravity="center"
@@ -546,7 +530,6 @@
                     <TextView
                         android:layout_width="45dp"
                         android:layout_height="match_parent"
-                        android:layout_marginStart="10dp"
                         android:layout_marginTop="5dp"
                         android:fontFamily="@font/teko_medium"
                         android:gravity="center"
@@ -565,7 +548,6 @@
                         android:id="@+id/c5"
                         android:layout_width="90dp"
                         android:layout_height="match_parent"
-                        android:layout_marginStart="10dp"
                         android:layout_marginTop="5dp"
                         android:fontFamily="@font/teko_medium"
                         android:gravity="center"
@@ -583,7 +565,6 @@
                         android:id="@+id/d5"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:layout_marginStart="10dp"
                         android:layout_marginTop="5dp"
                         android:fontFamily="@font/teko_medium"
                         android:gravity="center"
@@ -635,7 +616,6 @@
                     <TextView
                         android:layout_width="45dp"
                         android:layout_height="match_parent"
-                        android:layout_marginStart="10dp"
                         android:layout_marginTop="5dp"
                         android:fontFamily="@font/teko_medium"
                         android:gravity="center"
@@ -654,7 +634,6 @@
                         android:id="@+id/c6"
                         android:layout_width="90dp"
                         android:layout_height="match_parent"
-                        android:layout_marginStart="10dp"
                         android:layout_marginTop="5dp"
                         android:fontFamily="@font/teko_medium"
                         android:gravity="center"
@@ -672,7 +651,6 @@
                         android:id="@+id/d6"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:layout_marginStart="10dp"
                         android:layout_marginTop="5dp"
                         android:fontFamily="@font/teko_medium"
                         android:gravity="center"
@@ -713,7 +691,37 @@
 
                 <!--dataHeading-->
                 <TextView
-                    android:id="@+id/result"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/teko_medium"
+                    android:gravity="center"
+                    android:text="="
+                    android:textColor="@color/white"
+                    android:textSize="24sp" />
+                <!--dataHeading-->
+
+                <!--dataHeading-->
+
+                <TextView
+                    android:id="@+id/amountResult"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_margin="5dp"
+                    android:layout_weight="4"
+                    android:fontFamily="@font/teko_medium"
+                    android:gravity="center"
+                    android:textColor="@color/white"
+                    android:textSize="24sp" />
+                <!--dataHeading-->
+
+
+                <!--dataHeading-->
+                <TextView
+                    android:id="@+id/taxResult"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_gravity="center"
@@ -762,6 +770,7 @@
             android:textColorHint="@color/base"
             app:neumorph_shapeType="basin"
             android:textSize="20sp"
+              android:text=""
             android:inputType="number"
             android:layout_gravity="center"
             android:gravity="center"
