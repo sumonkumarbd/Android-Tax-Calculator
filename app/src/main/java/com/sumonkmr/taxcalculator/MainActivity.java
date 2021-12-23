@@ -1,7 +1,10 @@
 package com.sumonkmr.taxcalculator;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.os.Handler;
 import android.text.Editable;
@@ -13,6 +16,12 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 import java.math.BigDecimal;
+import java.text.DecimalFormat;
+import java.text.FieldPosition;
+import java.text.NumberFormat;
+import java.text.ParsePosition;
+import java.util.Currency;
+import java.util.Locale;
 
 
 public class MainActivity extends AppCompatActivity {
@@ -22,7 +31,7 @@ public class MainActivity extends AppCompatActivity {
     TextView d1, d2, d3, d4, d5, d6, amountResult, taxResult;
     EditText inputVal;
     Button calcButton;
-    double a1, a2, a3, a4, a5, sumTax;
+    float a1, a2, a3, a4, a5, sumTax;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -67,44 +76,52 @@ public class MainActivity extends AppCompatActivity {
 
 
 
+
+
+
 //      Litseners
         calcButton.setOnClickListener(new View.OnClickListener() {
+            @SuppressLint("DefaultLocale")
             @Override
             public void onClick(View view) {
 
                 String userInput = inputVal.getText().toString();
-                double newUserInput = Double.parseDouble(userInput);
-                BigDecimal userValue = BigDecimal.valueOf(newUserInput).setScale(2,1);
+                float newUserInput = Float.valueOf(userInput);
+                String userValue = String.format("%,.2f",newUserInput);
+
+
+
 
 
 
 //                variabls with Theory
                 String tk = " tk";
-                double firstTaxamount = (double) (newUserInput - a1);
-                BigDecimal ftaxAmount = BigDecimal.valueOf(firstTaxamount).setScale(2,1);
-                double firstTax = firstTaxamount*5/100;
-                BigDecimal fstTax = BigDecimal.valueOf(firstTax).setScale(2,1);
+                float firstTaxamount =(newUserInput - a1);
+                String ftaxAmount = String.format("%,.2f",firstTaxamount);
+                float firstTax = firstTaxamount*5/100;
+                String fstTax = String.format("%,.2f",firstTax);
 
-                double secoundTaxableamount = (newUserInput - a2);
-                BigDecimal secTaxAmount = BigDecimal.valueOf(secoundTaxableamount).setScale(2,1);
-                double  secondTax = secoundTaxableamount*10/100;
-                BigDecimal secTax = BigDecimal.valueOf(secondTax).setScale(2,1);
-
-                double thirdTaxableamount = (double) (newUserInput - a3);
-                BigDecimal thirdTaxAmount = BigDecimal.valueOf(thirdTaxableamount).setScale(2,1);
-                double thirdTax = thirdTaxableamount*15/100;
-                BigDecimal sThirdTax = BigDecimal.valueOf(thirdTax).setScale(2,1);
+                float secoundTaxableamount = (newUserInput - a2);
+                String secTaxAmount = String.format("%,.2f",secoundTaxableamount);
+                float  secondTax = secoundTaxableamount*10/100;
+                String secTax = String.format("%,.2f",secondTax);
 
 
-                double fourthTaxableamount =newUserInput - a4;
-                BigDecimal fourthTaxAmount = BigDecimal.valueOf(fourthTaxableamount).setScale(2,1);
-                double fourthTax = fourthTaxableamount*20/100;
-                BigDecimal newfourthTax = BigDecimal.valueOf(fourthTax).setScale(2,1);
+                float thirdTaxableamount = (float) (newUserInput - a3);
+                String thirdTaxAmount = String.format("%,.2f",thirdTaxableamount);
+                float thirdTax = thirdTaxableamount*15/100;
+                String sThirdTax = String.format("%,.2f",thirdTax);
 
-                double fifthTaxableamount = (double) (newUserInput - a5);
-                BigDecimal fifthTaxAmount = BigDecimal.valueOf(fifthTaxableamount).setScale(2,1);
-                double fifthTax = fifthTaxableamount*25/100;
-                BigDecimal newfifthTax = BigDecimal.valueOf(fifthTax).setScale(2,1);
+
+                float fourthTaxableamount =newUserInput - a4;
+                String fourthTaxAmount = String.format("%,.2f",fourthTaxableamount);
+                float fourthTax = fourthTaxableamount*20/100;
+                String newfourthTax = String.format("%,.2f",fourthTax);
+
+                float fifthTaxableamount = (float) (newUserInput - a5);
+                String fifthTaxAmount = String.format("%,.2f",fifthTaxableamount);
+                float fifthTax = fifthTaxableamount*25/100;
+                String newfifthTax = String.format("%,.2f",fifthTax);
 
 
                 //                ResultBar
@@ -122,7 +139,7 @@ public class MainActivity extends AppCompatActivity {
                         d2.setText("");
                         taxResult.setText("0 tk");
                     } else if (newUserInput > a1) {
-                        String newA1 = String.valueOf(a1);
+                        String newA1 = String.format("%,.2f",a1);
                         c1.setText(newA1 + tk);
                         d1.setText("0 tk");
                     }
@@ -135,10 +152,12 @@ public class MainActivity extends AppCompatActivity {
                         d2.setText(fstTax + " tk");
                         taxResult.setText(fstTax+tk);
                     } else if (newUserInput > a2) {
-                        double secoundMaxAmount = a2 - a1;
-                        double secoundMaxTax = (secoundMaxAmount * 5 / 100);
-                        c2.setText(secoundMaxAmount + tk);
-                        d2.setText(secoundMaxTax + tk);
+                        float secoundMaxAmount = a2 - a1;
+                        float secoundMaxTax = (secoundMaxAmount * 5 / 100);
+                        String sMaxsecAmount = String.format("%,.2f",secoundMaxAmount);
+                        String sMaxsecTax = String.format("%,.2f",secoundMaxTax);
+                        c2.setText(sMaxsecAmount + tk);
+                        d2.setText(sMaxsecTax + tk);
                     }
                     ;
 //            secondMathode
@@ -148,14 +167,16 @@ public class MainActivity extends AppCompatActivity {
                     if (newUserInput > a2 && newUserInput <= a3) {
                         c3.setText(secTaxAmount + tk);
                         d3.setText(secTax + tk);
-                        double sumSecTax =secondTax + 5000;
-                        BigDecimal newSumSecTax = BigDecimal.valueOf(sumSecTax).setScale(2,1);
+                        float sumSecTax =secondTax + 5000;
+                        String newSumSecTax = String.format("%,.2f",sumSecTax);
                         taxResult.setText(newSumSecTax+tk);
                     } else if (newUserInput > a3) {
-                        double ThirdMaxAmount = a3 - a2;
-                        double thirdMaxTax = (ThirdMaxAmount * 10 / 100);
-                        c3.setText(ThirdMaxAmount + tk);
-                        d3.setText(thirdMaxTax + tk);
+                        float ThirdMaxAmount = a3 - a2;
+                        float thirdMaxTax = (ThirdMaxAmount * 10 / 100);
+                        String sThirdMaxAmount = String.format("%,.2f",ThirdMaxAmount);
+                        String sthirdMaxTax = String.format("%,.2f",thirdMaxTax);
+                        c3.setText(sThirdMaxAmount + tk);
+                        d3.setText(sthirdMaxTax + tk);
                     } else if (newUserInput <= a2) {
                         c3.setText("");
                         d3.setText("");
@@ -167,14 +188,16 @@ public class MainActivity extends AppCompatActivity {
                     if (newUserInput > a3 && newUserInput <= a4) {
                         c4.setText(thirdTaxAmount + tk);
                         d4.setText(sThirdTax + tk);
-                        double sumThirdTax = thirdTax + 35000;
-                        BigDecimal newSumThirdTax = BigDecimal.valueOf(sumThirdTax).setScale(2,1);
+                        float sumThirdTax = thirdTax + 35000;
+                        String newSumThirdTax = String.format("%,.2f",sumThirdTax);
                         taxResult.setText(newSumThirdTax+tk);
                     } else if (newUserInput > a4) {
-                        double fourthMaxAmount = a4 - a3;
-                        double fourthMaxTax = (fourthMaxAmount * 15 / 100);
-                        c4.setText(fourthMaxAmount + tk);
-                        d4.setText(fourthMaxTax + tk);
+                        float fourthMaxAmount = a4 - a3;
+                        float fourthMaxTax = (fourthMaxAmount * 15 / 100);
+                        String sfourthMaxAmount = String.format("%,.2f",fourthMaxAmount);
+                        String sfourthMaxTax = String.format("%,.2f",fourthMaxTax);
+                        c4.setText(sfourthMaxAmount + tk);
+                        d4.setText(sfourthMaxTax + tk);
                     } else if (newUserInput <= a3) {
                         c4.setText("");
                         d4.setText("");
@@ -186,15 +209,16 @@ public class MainActivity extends AppCompatActivity {
                     if (newUserInput > a4 && newUserInput <= a5) {
                         c5.setText(fourthTaxAmount + tk);
                         d5.setText(newfourthTax + tk);
-                        double sumfourthTax = fourthTax + 95000;
-                        BigDecimal newFourthTax = BigDecimal.valueOf(sumfourthTax).setScale(2,1);
+                        float sumfourthTax = fourthTax + 95000;
+                        String newFourthTax = String.format("%,.2f",sumfourthTax);
                         taxResult.setText(newFourthTax+tk);
                     } else if (newUserInput > a5) {
-                        double fourthMaxAmount = a5 - a4;
-                        double fourthMaxTax = (fourthMaxAmount * 20) / 100;
-                        String sFourthTax = String.valueOf(fourthMaxTax);
-                        c5.setText(fourthMaxAmount + tk);
-                        d5.setText(sFourthTax + tk);
+                        float fifthMaxAmount = a5 - a4;
+                        float fifthMaxTax = (fifthMaxAmount * 20) / 100;
+                      String sfifthMaxAmount = String.format("%,.2f",fifthMaxAmount);
+                        String sfifthMaxTax = String.format("%,.2f",fifthMaxTax);
+                        c5.setText(sfifthMaxAmount + tk);
+                        d5.setText(sfifthMaxTax + tk);
                     } else if (newUserInput <= a4) {
                         c5.setText("");
                         d5.setText("");
@@ -206,8 +230,8 @@ public class MainActivity extends AppCompatActivity {
                     if (newUserInput > a5) {
                         c6.setText(fifthTaxAmount + tk);
                         d6.setText(newfifthTax + tk);
-                        double sumFifthTax = fifthTax + 195000;
-                        BigDecimal newSumFifthTax = BigDecimal.valueOf(sumFifthTax).setScale(2,1);
+                        float sumFifthTax = fifthTax + 195000;
+                        String newSumFifthTax = String.format("%,.2f",sumFifthTax);
                         taxResult.setText(newSumFifthTax+tk);
                     } else if (newUserInput <= a5) {
                         c6.setText("");
