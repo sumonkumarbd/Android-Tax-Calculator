@@ -14,6 +14,7 @@ import android.util.TypedValue;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
 import java.util.Locale;
@@ -25,7 +26,7 @@ public class MainActivity extends AppCompatActivity {
     TextView c1, c2, c3, c4, c5, c6 ;
     TextView d1, d2, d3, d4, d5, d6, amountResult, taxResult;
     EditText inputVal;
-    Button calcButton;
+    ImageButton calcButton;
     double a1, a2, a3, a4, a5, sumTax;
     TextToSpeech sp;
 
@@ -103,7 +104,7 @@ public class MainActivity extends AppCompatActivity {
 
 
 //                variabls with Theory
-                String tk = " tk";
+                String টাকা = " টাকা";
                 double firstTaxamount =(newUserInput - a1);
                 String ftaxAmount = String.format("%,.2f",firstTaxamount);
                 double firstTax = firstTaxamount*5/100;
@@ -133,23 +134,23 @@ public class MainActivity extends AppCompatActivity {
 
 
                 //                ResultBar
-                amountResult.setText(userValue + tk);
+                amountResult.setText(userValue + টাকা);
 
 
 //                firstMathod
                     if (newUserInput <= a1) {
-                        c1.setText(userValue + tk);
-                        d1.setText("0 tk");
+                        c1.setText(userValue + টাকা);
+                        d1.setText("0 টাকা");
                         c2.setText("");
                         d2.setText("");
-                        taxResult.setText("0 tk");
+                        taxResult.setText("0 টাকা");
                         //                TextToSpeech
                         int speech = sp.speak("আপনার ট্যাক্স হচ্ছে",TextToSpeech.QUEUE_FLUSH,null);
                         int taxResult = sp.speak("0 টাকা",TextToSpeech.QUEUE_ADD,null);
                     } else if (newUserInput > a1) {
                         String newA1 = String.format("%,.2f",a1);
-                        c1.setText(newA1 + tk);
-                        d1.setText("0 tk");
+                        c1.setText(newA1 + টাকা);
+                        d1.setText("0 টাকা");
                         //                TextToSpeech
                         int speech = sp.speak("আপনার ট্যাক্স হচ্ছে",TextToSpeech.QUEUE_FLUSH,null);
                         int taxResult = sp.speak("0 টাকা",TextToSpeech.QUEUE_ADD,null);
@@ -159,24 +160,24 @@ public class MainActivity extends AppCompatActivity {
 
                     //            secondMathode
                     if (newUserInput > a1 && newUserInput <= a2) {
-                        c2.setText(ftaxAmount + tk);
-                        d2.setText(fstTax + " tk");
-                        taxResult.setText(fstTax+tk);
+                        c2.setText(ftaxAmount + টাকা);
+                        d2.setText(fstTax + " টাকা");
+                        taxResult.setText(fstTax+টাকা);
                         //                TextToSpeech
                         int speech = sp.speak("আপনার ট্যাক্স হচ্ছে",TextToSpeech.QUEUE_FLUSH,null);
                         int taxResult = sp.speak(fstTax,TextToSpeech.QUEUE_ADD,null);
-                        int টাকা = sp.speak("টাকা",TextToSpeech.QUEUE_ADD,null);
+                        int tk = sp.speak("টাকা",TextToSpeech.QUEUE_ADD,null);
                     } else if (newUserInput > a2) {
                         double secoundMaxAmount = a2 - a1;
                         double secoundMaxTax = (secoundMaxAmount * 5 / 100);
                         String sMaxsecAmount = String.format("%,.2f",secoundMaxAmount);
                         String sMaxsecTax = String.format("%,.2f",secoundMaxTax);
-                        c2.setText(sMaxsecAmount + tk);
-                        d2.setText(sMaxsecTax + tk);
+                        c2.setText(sMaxsecAmount + টাকা);
+                        d2.setText(sMaxsecTax + টাকা);
                         //                TextToSpeech
                         int speech = sp.speak("আপনার ট্যাক্স হচ্ছে",TextToSpeech.QUEUE_FLUSH,null);
                         int taxResult = sp.speak(sMaxsecTax,TextToSpeech.QUEUE_ADD,null);
-                        int টাকা = sp.speak("টাকা",TextToSpeech.QUEUE_ADD,null);
+                        int tk = sp.speak("টাকা",TextToSpeech.QUEUE_ADD,null);
                     }
                     ;
 //            secondMathode
@@ -184,26 +185,26 @@ public class MainActivity extends AppCompatActivity {
 
 //                THirdMathod
                     if (newUserInput > a2 && newUserInput <= a3) {
-                        c3.setText(secTaxAmount + tk);
-                        d3.setText(secTax + tk);
+                        c3.setText(secTaxAmount + টাকা);
+                        d3.setText(secTax + টাকা);
                         double sumSecTax =secondTax + 5000;
                         String newSumSecTax = String.format("%,.2f",sumSecTax);
-                        taxResult.setText(newSumSecTax+tk);
+                        taxResult.setText(newSumSecTax+টাকা);
                         //                TextToSpeech
                         int speech = sp.speak("আপনার ট্যাক্স হচ্ছে",TextToSpeech.QUEUE_FLUSH,null);
                         int taxResult = sp.speak(newSumSecTax,TextToSpeech.QUEUE_ADD,null);
-                        int টাকা = sp.speak("টাকা",TextToSpeech.QUEUE_ADD,null);
+                        int tk = sp.speak("টাকা",TextToSpeech.QUEUE_ADD,null);
                     } else if (newUserInput > a3) {
                         double ThirdMaxAmount = a3 - a2;
                         double thirdMaxTax = (ThirdMaxAmount * 10 / 100);
                         String sThirdMaxAmount = String.format("%,.2f",ThirdMaxAmount);
                         String sthirdMaxTax = String.format("%,.2f",thirdMaxTax);
-                        c3.setText(sThirdMaxAmount + tk);
-                        d3.setText(sthirdMaxTax + tk);
+                        c3.setText(sThirdMaxAmount + টাকা);
+                        d3.setText(sthirdMaxTax + টাকা);
                         //                TextToSpeech
                         int speech = sp.speak("আপনার ট্যাক্স হচ্ছে",TextToSpeech.QUEUE_FLUSH,null);
                         int taxResult = sp.speak(sthirdMaxTax,TextToSpeech.QUEUE_ADD,null);
-                        int টাকা = sp.speak("টাকা",TextToSpeech.QUEUE_ADD,null);
+                        int tk = sp.speak("টাকা",TextToSpeech.QUEUE_ADD,null);
                     } else if (newUserInput <= a2) {
                         c3.setText("");
                         d3.setText("");
@@ -213,26 +214,26 @@ public class MainActivity extends AppCompatActivity {
 
 //                fouthMathod
                     if (newUserInput > a3 && newUserInput <= a4) {
-                        c4.setText(thirdTaxAmount + tk);
-                        d4.setText(sThirdTax + tk);
+                        c4.setText(thirdTaxAmount + টাকা);
+                        d4.setText(sThirdTax + টাকা);
                         double sumThirdTax = thirdTax + 35000;
                         String newSumThirdTax = String.format("%,.2f",sumThirdTax);
-                        taxResult.setText(newSumThirdTax+tk);
+                        taxResult.setText(newSumThirdTax+টাকা);
                         //                TextToSpeech
                         int speech = sp.speak("আপনার ট্যাক্স হচ্ছে",TextToSpeech.QUEUE_FLUSH,null);
                         int taxResult = sp.speak(newSumThirdTax,TextToSpeech.QUEUE_ADD,null);
-                        int টাকা = sp.speak("টাকা",TextToSpeech.QUEUE_ADD,null);
+                        int tk = sp.speak("টাকা",TextToSpeech.QUEUE_ADD,null);
                     } else if (newUserInput > a4) {
                         double fourthMaxAmount = a4 - a3;
                         double fourthMaxTax = (fourthMaxAmount * 15 / 100);
                         String sfourthMaxAmount = String.format("%,.2f",fourthMaxAmount);
                         String sfourthMaxTax = String.format("%,.2f",fourthMaxTax);
-                        c4.setText(sfourthMaxAmount + tk);
-                        d4.setText(sfourthMaxTax + tk);
+                        c4.setText(sfourthMaxAmount + টাকা);
+                        d4.setText(sfourthMaxTax + টাকা);
                         //                TextToSpeech
                         int speech = sp.speak("আপনার ট্যাক্স হচ্ছে",TextToSpeech.QUEUE_FLUSH,null);
                         int taxResult = sp.speak(sfourthMaxTax,TextToSpeech.QUEUE_ADD,null);
-                        int টাকা = sp.speak("টাকা",TextToSpeech.QUEUE_ADD,null);
+                        int tk = sp.speak("টাকা",TextToSpeech.QUEUE_ADD,null);
                     } else if (newUserInput <= a3) {
                         c4.setText("");
                         d4.setText("");
@@ -242,26 +243,26 @@ public class MainActivity extends AppCompatActivity {
 
 //                FifthMathod
                     if (newUserInput > a4 && newUserInput <= a5) {
-                        c5.setText(fourthTaxAmount + tk);
-                        d5.setText(newfourthTax + tk);
+                        c5.setText(fourthTaxAmount + টাকা);
+                        d5.setText(newfourthTax + টাকা);
                         double sumfourthTax = fourthTax + 95000;
                         String newFourthTax = String.format("%,.2f",sumfourthTax);
-                        taxResult.setText(newFourthTax+tk);
+                        taxResult.setText(newFourthTax+টাকা);
                         //                TextToSpeech
                         int speech = sp.speak("আপনার ট্যাক্স হচ্ছে",TextToSpeech.QUEUE_FLUSH,null);
                         int taxResult = sp.speak(newFourthTax,TextToSpeech.QUEUE_ADD,null);
-                        int টাকা = sp.speak("টাকা",TextToSpeech.QUEUE_ADD,null);
+                        int tk = sp.speak("টাকা",TextToSpeech.QUEUE_ADD,null);
                     } else if (newUserInput > a5) {
                         double fifthMaxAmount = a5 - a4;
                         double fifthMaxTax = (fifthMaxAmount * 20) / 100;
                       String sfifthMaxAmount = String.format("%,.2f",fifthMaxAmount);
                         String sfifthMaxTax = String.format("%,.2f",fifthMaxTax);
-                        c5.setText(sfifthMaxAmount + tk);
-                        d5.setText(sfifthMaxTax + tk);
+                        c5.setText(sfifthMaxAmount + টাকা);
+                        d5.setText(sfifthMaxTax + টাকা);
                         //                TextToSpeech
                         int speech = sp.speak("আপনার ট্যাক্স হচ্ছে",TextToSpeech.QUEUE_FLUSH,null);
                         int taxResult = sp.speak(sfifthMaxTax,TextToSpeech.QUEUE_ADD,null);
-                        int টাকা = sp.speak("টাকা",TextToSpeech.QUEUE_ADD,null);
+                        int tk = sp.speak("টাকা",TextToSpeech.QUEUE_ADD,null);
                     } else if (newUserInput <= a4) {
                         c5.setText("");
                         d5.setText("");
@@ -271,15 +272,15 @@ public class MainActivity extends AppCompatActivity {
 
 //                SixthMethod
                     if (newUserInput > a5) {
-                        c6.setText(fifthTaxAmount + tk);
-                        d6.setText(newfifthTax + tk);
+                        c6.setText(fifthTaxAmount + টাকা);
+                        d6.setText(newfifthTax + টাকা);
                         double sumFifthTax = fifthTax + 195000;
                         String newSumFifthTax = String.format("%,.2f",sumFifthTax);
-                        taxResult.setText(newSumFifthTax+tk);
+                        taxResult.setText(newSumFifthTax+টাকা);
                         //                TextToSpeech
                         int speech = sp.speak("আপনার ট্যাক্স হচ্ছে",TextToSpeech.QUEUE_FLUSH,null);
                         int taxResult = sp.speak(newSumFifthTax,TextToSpeech.QUEUE_ADD,null);
-                        int টাকা = sp.speak("টাকা",TextToSpeech.QUEUE_ADD,null);
+                        int tk = sp.speak("টাকা",TextToSpeech.QUEUE_ADD,null);
                     } else if (newUserInput <= a5) {
                         c6.setText("");
                         d6.setText("");
@@ -289,15 +290,15 @@ public class MainActivity extends AppCompatActivity {
 
 //                if incase given amount is more than 999999999 digit then it will work for better user expreance
                 if (newUserInput > 99999999) {
-                    amountResult.setTextSize(TypedValue.COMPLEX_UNIT_SP,18);
-                    taxResult.setTextSize(TypedValue.COMPLEX_UNIT_SP,18);
-                    c6.setTextSize(TypedValue.COMPLEX_UNIT_SP,18);
-                    d6.setTextSize(TypedValue.COMPLEX_UNIT_SP,18);
+                    amountResult.setTextSize(TypedValue.COMPLEX_UNIT_SP,12);
+                    taxResult.setTextSize(TypedValue.COMPLEX_UNIT_SP,12);
+                    c6.setTextSize(TypedValue.COMPLEX_UNIT_SP,8);
+                    d6.setTextSize(TypedValue.COMPLEX_UNIT_SP,8);
                 }else {
-                    amountResult.setTextSize(TypedValue.COMPLEX_UNIT_SP,24);
-                    taxResult.setTextSize(TypedValue.COMPLEX_UNIT_SP,24);
-                    c6.setTextSize(TypedValue.COMPLEX_UNIT_SP,20);
-                    d6.setTextSize(TypedValue.COMPLEX_UNIT_SP,20);
+                    amountResult.setTextSize(TypedValue.COMPLEX_UNIT_SP,14);
+                    taxResult.setTextSize(TypedValue.COMPLEX_UNIT_SP,14);
+                    c6.setTextSize(TypedValue.COMPLEX_UNIT_SP,10);
+                    d6.setTextSize(TypedValue.COMPLEX_UNIT_SP,10);
                 };
 
 
