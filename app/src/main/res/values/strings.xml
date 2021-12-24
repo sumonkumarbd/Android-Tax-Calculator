@@ -1,5 +1,20 @@
-<resources>
-    <string name="app_name">Tax Calculator</string>
-    <string name="hint_text">Enter Your Total Income here</string>
-    <dimen name="Default">20sp</dimen>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <string name="app_name">ট্যাক্স ক্যালকুলেটর</string>
+    <string name="hint_text">এখানে আপনার মোট আয় লিখুন</string>
+    <string name="slab">করের ধরণ</string>
+    <string name="tax_rate">করের রেট</string>
+    <string name="tax_amount">করযোগ্য অর্থ</string>
+    <string name="tax">কর</string>
+    <string name="firstSlab">0-300000 টাকা</string>
+    <string name="seceoundSlab">300001-400000 টাকা</string>
+    <string name="thirdSlab">400001-700000 টাকা</string>
+    <string name="fourthSlab">700000-1100000 টাকা</string>
+    <string name="fifthSlab">1100000-1600000 টাকা</string>
+    <string name="sixthSlab">1600000 টাকার উপরে</string>
+    <string name="total_amount">সর্বমোট পরিমাণ</string>
+    <string name="total_tax">মোট ট্যাক্স</string>
+    <string name="check">হিসেব করুন!!</string>
+    <string name="finance_year_21_22">অর্থ বছর ২১-২২</string>
+    <dimen name="Default">12sp</dimen>
+    <dimen name="much_bold">20sp</dimen>
 </resources>

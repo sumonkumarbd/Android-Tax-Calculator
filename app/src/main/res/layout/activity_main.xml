@@ -22,75 +22,84 @@
             android:layout_alignParentTop="true"
             android:scaleType="fitXY"
             android:src="@drawable/tax_bulding" />
+
     </RelativeLayout>
     <!--    UpperVictor-->
-
-
-<!--    mainArea-->
-    <RelativeLayout
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="490dp"
-        android:layout_marginTop="-20dp"
-        android:id="@+id/mainArea"
-        >
-<!--        CalculateArea-->
+        android:layout_height="50dp"
+        android:orientation="horizontal">
+        <!--        CalculateArea-->
         <!--        appName-->
         <TextView
             android:id="@+id/appName"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignParentStart="true"
             android:layout_marginStart="20dp"
-            android:fontFamily="@font/teko_medium"
+            android:fontFamily="@font/bdf"
             android:shadowColor="@color/gray"
             android:text="@string/app_name"
             android:textColor="@color/base"
-            android:textSize="48sp"
+            android:textSize="30sp"
+            android:gravity="left"
             app:neumorph_shadowElevation="5dp" />
         <!--        appName-->
-
-<!--        sesion-->
+        <!--        sesion-->
         <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentEnd="true"
-            android:layout_marginTop="35dp"
-            android:layout_marginEnd="25dp"
-            android:fontFamily="@font/teko_medium"
-            android:text="Finance year 21-22"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="right"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="5dp"
+            android:fontFamily="@font/bdf"
+            android:text="@string/finance_year_21_22"
             android:textColor="@color/base"
-            android:textSize="15sp" />
-<!--        sesion-->
+            android:layout_marginTop="20dp"
+            android:textSize="18sp" />
+        <!--        sesion-->
+    </LinearLayout>
 
+
+<!--MainAreaParent-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        >
+        <!--    mainArea-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="465dp"
+        android:id="@+id/mainArea"
+        >
 <!--        dataholderParent-->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_below="@+id/appName"
             android:orientation="vertical">
 
 
             <!--        heading-->
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="50dp"
+                android:layout_height="45dp"
                 android:layout_marginStart="10dp"
                 android:layout_marginEnd="10dp"
                 android:layout_marginBottom="-10dp"
                 android:background="@drawable/blue_button"
-                android:weightSum="12"
-                android:orientation="horizontal">
+                android:orientation="horizontal"
+                android:weightSum="12">
                 <!--dataHeading-->
                 <TextView
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
-                    android:layout_weight="4"
+                    android:layout_gravity="center"
                     android:layout_marginStart="10dp"
-                    android:layout_gravity="center"
+                    android:layout_weight="4"
+                    android:fontFamily="@font/bdf"
+                    android:gravity="center"
+                    android:text="@string/slab"
                     android:textAlignment="center"
-                    android:fontFamily="@font/teko_medium"
-                    android:gravity="center"
-                    android:text="Slab"
                     android:textColor="@color/white"
                     android:textSize="@dimen/Default" />
                 <!--dataHeading-->
@@ -103,13 +112,13 @@
                 <!--dataHeading-->
                 <TextView
                     android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_margin="5dp"
                     android:layout_weight="2"
-                    android:layout_height="match_parent"
-                    android:layout_gravity="center"
-                    android:layout_margin="5dp"
-                    android:fontFamily="@font/teko_medium"
+                    android:fontFamily="@font/bdf"
                     android:gravity="center"
-                    android:text="Tax Rate"
+                    android:text="@string/tax_rate"
                     android:textColor="@color/white"
                     android:textSize="@dimen/Default" />
                 <!--dataHeading-->
@@ -125,12 +134,12 @@
                 <TextView
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
-                    android:layout_weight="3"
                     android:layout_gravity="center"
                     android:layout_margin="5dp"
-                    android:fontFamily="@font/teko_medium"
+                    android:layout_weight="3"
+                    android:fontFamily="@font/bdf"
                     android:gravity="center"
-                    android:text="Tax amount"
+                    android:text="@string/tax_amount"
                     android:textColor="@color/white"
                     android:textSize="@dimen/Default" />
 
@@ -143,12 +152,12 @@
                 <TextView
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
-                    android:layout_weight="3"
                     android:layout_gravity="center"
                     android:layout_margin="5dp"
-                    android:fontFamily="@font/teko_medium"
+                    android:layout_weight="3"
+                    android:fontFamily="@font/bdf"
                     android:gravity="center"
-                    android:text="Tax"
+                    android:text="@string/tax"
                     android:textColor="@color/white"
                     android:textSize="@dimen/Default" />
                 <!--dataHeading-->
@@ -175,12 +184,12 @@
                     <TextView
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
-                        android:layout_weight="4"
                         android:layout_marginTop="5dp"
-                        android:fontFamily="@font/teko_medium"
+                        android:layout_weight="4"
+                        android:fontFamily="@font/bdf"
                         android:gravity="center"
                         android:padding="5dp"
-                        android:text="0-300000 tk"
+                        android:text="@string/firstSlab"
                         android:textColor="@color/base"
                         android:textSize="@dimen/Default" />
                     <!--                    data-->
@@ -192,15 +201,15 @@
                     <!--                    data-->
                     <TextView
                         android:layout_width="0dp"
-                        android:layout_weight="2"
                         android:layout_height="match_parent"
                         android:layout_marginTop="5dp"
+                        android:layout_weight="2"
                         android:fontFamily="@font/teko_medium"
                         android:gravity="center"
                         android:padding="5dp"
                         android:text="0%"
                         android:textColor="@color/base"
-                        android:textSize="@dimen/Default" />
+                        android:textSize="@dimen/much_bold" />
                     <!--                    data-->
                     <View
                         android:layout_width="1dp"
@@ -211,10 +220,10 @@
                     <TextView
                         android:id="@+id/c1"
                         android:layout_width="0dp"
-                        android:layout_weight="3"
                         android:layout_height="match_parent"
                         android:layout_marginTop="5dp"
-                        android:fontFamily="@font/teko_medium"
+                        android:layout_weight="3"
+                        android:fontFamily="@font/bdf"
                         android:gravity="center"
                         android:padding="5dp"
                         android:textColor="@color/base"
@@ -229,10 +238,10 @@
                     <TextView
                         android:id="@+id/d1"
                         android:layout_width="0dp"
-                        android:layout_weight="3"
                         android:layout_height="match_parent"
                         android:layout_marginTop="5dp"
-                        android:fontFamily="@font/teko_medium"
+                        android:layout_weight="3"
+                        android:fontFamily="@font/bdf"
                         android:gravity="center"
                         android:padding="5dp"
                         android:textColor="@color/base"
@@ -263,13 +272,13 @@
                     <!--                    data-->
                     <TextView
                         android:layout_width="0dp"
-                        android:layout_weight="4"
                         android:layout_height="match_parent"
                         android:layout_marginTop="5dp"
-                        android:fontFamily="@font/teko_medium"
+                        android:layout_weight="4"
+                        android:fontFamily="@font/bdf"
                         android:gravity="center"
                         android:padding="5dp"
-                        android:text="300001-400000 tk"
+                        android:text="@string/seceoundSlab"
                         android:textColor="@color/base"
                         android:textSize="@dimen/Default" />
                     <!--                    data-->
@@ -281,15 +290,15 @@
                     <!--                    data-->
                     <TextView
                         android:layout_width="0dp"
-                        android:layout_weight="2"
                         android:layout_height="match_parent"
                         android:layout_marginTop="5dp"
+                        android:layout_weight="2"
                         android:fontFamily="@font/teko_medium"
                         android:gravity="center"
                         android:padding="5dp"
                         android:text="5%"
                         android:textColor="@color/base"
-                        android:textSize="@dimen/Default" />
+                        android:textSize="@dimen/much_bold" />
                     <!--                    data-->
                     <View
                         android:layout_width="1dp"
@@ -300,10 +309,10 @@
                     <TextView
                         android:id="@+id/c2"
                         android:layout_width="0dp"
-                        android:layout_weight="3"
                         android:layout_height="match_parent"
                         android:layout_marginTop="5dp"
-                        android:fontFamily="@font/teko_medium"
+                        android:layout_weight="3"
+                        android:fontFamily="@font/bdf"
                         android:gravity="center"
                         android:padding="5dp"
                         android:textColor="@color/base"
@@ -318,10 +327,10 @@
                     <TextView
                         android:id="@+id/d2"
                         android:layout_width="0dp"
-                        android:layout_weight="3"
                         android:layout_height="match_parent"
                         android:layout_marginTop="5dp"
-                        android:fontFamily="@font/teko_medium"
+                        android:layout_weight="3"
+                        android:fontFamily="@font/bdf"
                         android:gravity="center"
                         android:padding="5dp"
                         android:textColor="@color/base"
@@ -352,13 +361,13 @@
                     <!--                    data-->
                     <TextView
                         android:layout_width="0dp"
-                        android:layout_weight="4"
                         android:layout_height="match_parent"
                         android:layout_marginTop="5dp"
-                        android:fontFamily="@font/teko_medium"
+                        android:layout_weight="4"
+                        android:fontFamily="@font/bdf"
                         android:gravity="center"
                         android:padding="5dp"
-                        android:text="400001-700000 tk"
+                        android:text="@string/thirdSlab"
                         android:textColor="@color/base"
                         android:textSize="@dimen/Default" />
                     <!--                    data-->
@@ -370,15 +379,15 @@
                     <!--                    data-->
                     <TextView
                         android:layout_width="0dp"
-                        android:layout_weight="2"
                         android:layout_height="match_parent"
                         android:layout_marginTop="5dp"
+                        android:layout_weight="2"
                         android:fontFamily="@font/teko_medium"
                         android:gravity="center"
                         android:padding="5dp"
                         android:text="10%"
                         android:textColor="@color/base"
-                        android:textSize="@dimen/Default" />
+                        android:textSize="@dimen/much_bold" />
                     <!--                    data-->
                     <View
                         android:layout_width="1dp"
@@ -389,10 +398,10 @@
                     <TextView
                         android:id="@+id/c3"
                         android:layout_width="0dp"
-                        android:layout_weight="3"
                         android:layout_height="match_parent"
                         android:layout_marginTop="5dp"
-                        android:fontFamily="@font/teko_medium"
+                        android:layout_weight="3"
+                        android:fontFamily="@font/bdf"
                         android:gravity="center"
                         android:padding="5dp"
                         android:textColor="@color/base"
@@ -407,10 +416,10 @@
                     <TextView
                         android:id="@+id/d3"
                         android:layout_width="0dp"
-                        android:layout_weight="3"
                         android:layout_height="match_parent"
                         android:layout_marginTop="5dp"
-                        android:fontFamily="@font/teko_medium"
+                        android:layout_weight="3"
+                        android:fontFamily="@font/bdf"
                         android:gravity="center"
                         android:padding="5dp"
                         android:textColor="@color/base"
@@ -441,13 +450,13 @@
                     <!--                    data-->
                     <TextView
                         android:layout_width="0dp"
-                        android:layout_weight="4"
                         android:layout_height="match_parent"
                         android:layout_marginTop="5dp"
-                        android:fontFamily="@font/teko_medium"
+                        android:layout_weight="4"
+                        android:fontFamily="@font/bdf"
                         android:gravity="center"
                         android:padding="5dp"
-                        android:text="700000-1100000 tk"
+                        android:text="@string/fourthSlab"
                         android:textColor="@color/base"
                         android:textSize="@dimen/Default" />
                     <!--                    data-->
@@ -459,15 +468,15 @@
                     <!--                    data-->
                     <TextView
                         android:layout_width="0dp"
-                        android:layout_weight="2"
                         android:layout_height="match_parent"
                         android:layout_marginTop="5dp"
+                        android:layout_weight="2"
                         android:fontFamily="@font/teko_medium"
                         android:gravity="center"
                         android:padding="5dp"
                         android:text="15%"
                         android:textColor="@color/base"
-                        android:textSize="@dimen/Default" />
+                        android:textSize="@dimen/much_bold" />
                     <!--                    data-->
                     <View
                         android:layout_width="1dp"
@@ -478,10 +487,10 @@
                     <TextView
                         android:id="@+id/c4"
                         android:layout_width="0dp"
-                        android:layout_weight="3"
                         android:layout_height="match_parent"
                         android:layout_marginTop="5dp"
-                        android:fontFamily="@font/teko_medium"
+                        android:layout_weight="3"
+                        android:fontFamily="@font/bdf"
                         android:gravity="center"
                         android:padding="5dp"
                         android:textColor="@color/base"
@@ -496,10 +505,10 @@
                     <TextView
                         android:id="@+id/d4"
                         android:layout_width="0dp"
-                        android:layout_weight="3"
                         android:layout_height="match_parent"
                         android:layout_marginTop="5dp"
-                        android:fontFamily="@font/teko_medium"
+                        android:layout_weight="3"
+                        android:fontFamily="@font/bdf"
                         android:gravity="center"
                         android:padding="5dp"
                         android:textColor="@color/base"
@@ -530,13 +539,13 @@
                     <!--                    data-->
                     <TextView
                         android:layout_width="0dp"
-                        android:layout_weight="4"
                         android:layout_height="match_parent"
                         android:layout_marginTop="5dp"
-                        android:fontFamily="@font/teko_medium"
+                        android:layout_weight="4"
+                        android:fontFamily="@font/bdf"
                         android:gravity="center"
                         android:padding="5dp"
-                        android:text="1100000-1600000 tk"
+                        android:text="@string/fifthSlab"
                         android:textColor="@color/base"
                         android:textSize="@dimen/Default" />
                     <!--                    data-->
@@ -548,15 +557,15 @@
                     <!--                    data-->
                     <TextView
                         android:layout_width="0dp"
-                        android:layout_weight="2"
                         android:layout_height="match_parent"
                         android:layout_marginTop="5dp"
+                        android:layout_weight="2"
                         android:fontFamily="@font/teko_medium"
                         android:gravity="center"
                         android:padding="5dp"
                         android:text="20%"
                         android:textColor="@color/base"
-                        android:textSize="@dimen/Default" />
+                        android:textSize="@dimen/much_bold" />
                     <!--                    data-->
                     <View
                         android:layout_width="1dp"
@@ -567,10 +576,10 @@
                     <TextView
                         android:id="@+id/c5"
                         android:layout_width="0dp"
-                        android:layout_weight="3"
                         android:layout_height="match_parent"
                         android:layout_marginTop="5dp"
-                        android:fontFamily="@font/teko_medium"
+                        android:layout_weight="3"
+                        android:fontFamily="@font/bdf"
                         android:gravity="center"
                         android:padding="5dp"
                         android:textColor="@color/base"
@@ -585,10 +594,10 @@
                     <TextView
                         android:id="@+id/d5"
                         android:layout_width="0dp"
-                        android:layout_weight="3"
                         android:layout_height="match_parent"
                         android:layout_marginTop="5dp"
-                        android:fontFamily="@font/teko_medium"
+                        android:layout_weight="3"
+                        android:fontFamily="@font/bdf"
                         android:gravity="center"
                         android:padding="5dp"
                         android:textColor="@color/base"
@@ -619,13 +628,13 @@
                     <!--                    data-->
                     <TextView
                         android:layout_width="0dp"
-                        android:layout_weight="4"
                         android:layout_height="match_parent"
                         android:layout_marginTop="5dp"
-                        android:fontFamily="@font/teko_medium"
+                        android:layout_weight="4"
+                        android:fontFamily="@font/bdf"
                         android:gravity="center"
                         android:padding="5dp"
-                        android:text="Above 1600000 tk"
+                        android:text="@string/sixthSlab"
                         android:textColor="@color/base"
                         android:textSize="@dimen/Default" />
                     <!--                    data-->
@@ -637,15 +646,15 @@
                     <!--                    data-->
                     <TextView
                         android:layout_width="0dp"
-                        android:layout_weight="2"
                         android:layout_height="match_parent"
                         android:layout_marginTop="5dp"
+                        android:layout_weight="2"
                         android:fontFamily="@font/teko_medium"
                         android:gravity="center"
                         android:padding="5dp"
                         android:text="25%"
                         android:textColor="@color/base"
-                        android:textSize="@dimen/Default" />
+                        android:textSize="@dimen/much_bold" />
                     <!--                    data-->
                     <View
                         android:layout_width="1dp"
@@ -656,10 +665,10 @@
                     <TextView
                         android:id="@+id/c6"
                         android:layout_width="0dp"
-                        android:layout_weight="3"
                         android:layout_height="match_parent"
                         android:layout_marginTop="5dp"
-                        android:fontFamily="@font/teko_medium"
+                        android:layout_weight="3"
+                        android:fontFamily="@font/bdf"
                         android:gravity="center"
                         android:padding="5dp"
                         android:textColor="@color/base"
@@ -674,10 +683,10 @@
                     <TextView
                         android:id="@+id/d6"
                         android:layout_width="0dp"
-                        android:layout_weight="3"
                         android:layout_height="match_parent"
                         android:layout_marginTop="5dp"
-                        android:fontFamily="@font/teko_medium"
+                        android:layout_weight="3"
+                        android:fontFamily="@font/bdf"
                         android:gravity="center"
                         android:padding="5dp"
                         android:textColor="@color/base"
@@ -694,62 +703,87 @@
             <!--            sumArea-->
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="55dp"
+                android:layout_height="80dp"
                 android:layout_marginStart="10dp"
                 android:layout_marginEnd="10sp"
-                android:layout_marginBottom="-10dp"
                 android:background="@drawable/blue_button"
-                android:orientation="horizontal">
-                <!--dataHeading-->
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_gravity="center"
-                    android:layout_weight="2"
-                    android:fontFamily="@font/teko_medium"
-                    android:gravity="center"
-                    android:text="Total"
-                    android:textColor="@color/white"
-                    android:textSize="24sp" />
-                <!--dataHeading-->
+                android:orientation="vertical">
+                <!--Result Heading-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    >
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:layout_weight="4"
+                        android:fontFamily="@font/bdf"
+                        android:gravity="center"
+                        android:text="@string/total_amount"
+                        android:textColor="@color/white"
+                        android:textSize="15sp" />
+                    <!--dataHeading-->
 
-                <!--dataHeading-->
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_gravity="center"
-                    android:layout_weight="1"
-                    android:fontFamily="@font/teko_medium"
-                    android:gravity="center"
-                    android:text="="
-                    android:textColor="@color/white"
-                    android:textSize="24sp" />
-                <!--dataHeading-->
+                    <!--dataHeading-->
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:layout_weight="4"
+                        android:fontFamily="@font/bdf"
+                        android:gravity="center"
+                        android:text="@string/total_tax"
+                        android:textColor="@color/white"
+                        android:textSize="15sp" />
 
-                <!--dataHeading-->
+                    <!--dataHeading-->
 
+
+                </LinearLayout><!--Result Heading-->
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:orientation="horizontal"
+                    >
+
+                    <View
+                        android:layout_width="100dp"
+                        android:layout_height="1dp"
+                        android:layout_gravity="left"
+                       android:layout_marginLeft="50dp"
+                        android:background="@color/white"/>
+                    <View
+                        android:layout_width="100dp"
+                        android:layout_height="1dp"
+                        android:layout_gravity="left"
+                        android:layout_marginLeft="90dp"
+                        android:background="@color/white"/>
+
+
+                </LinearLayout><!--view-->
+
+
+                <!--Result Text-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    >
                 <TextView
                     android:id="@+id/amountResult"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_gravity="center"
                     android:layout_weight="4"
-                    android:fontFamily="@font/teko_medium"
+                    android:fontFamily="@font/bdf"
                     android:gravity="center"
+                    android:text="-"
                     android:textColor="@color/white"
                     android:textSize="24sp" />
                 <!--dataHeading-->
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="->"
-                    android:textColor="@color/white"
-                    android:fontFamily="@font/teko_medium"
-                    android:textSize="25sp"
-                    android:layout_gravity="center"
-                    android:gravity="center"
-                    />
 
 
                 <!--dataHeading-->
@@ -759,11 +793,14 @@
                     android:layout_height="match_parent"
                     android:layout_gravity="center"
                     android:layout_weight="4"
-                    android:fontFamily="@font/teko_medium"
+                    android:fontFamily="@font/bdf"
                     android:gravity="center"
+                    android:text="-"
                     android:textColor="@color/white"
                     android:textSize="24sp" />
                 <!--dataHeading-->
+
+                </LinearLayout><!--Result Text-->
 
 
             </LinearLayout>
@@ -773,22 +810,27 @@
         </LinearLayout>
         <!--        dataholderParent-->
 
-    </RelativeLayout>
-<!--    mainArea-->
+    </RelativeLayout><!--    mainArea-->
 
     <!--        InputArea-->
+  <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:orientation="vertical"
+            >
     <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/mainArea"
-        android:orientation="vertical"
-        android:layout_gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="20dp"
+        android:orientation="horizontal"
         >
         <soup.neumorphism.NeumorphCardView
-            android:layout_width="250dp"
-            android:layout_height="80dp"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="3"
             style="@style/Widget.Neumorph.CardView"
             app:neumorph_shapeType="basin"
+            android:layout_marginRight="-20dp"
             >
           <EditText
             android:layout_width="match_parent"
@@ -801,8 +843,8 @@
             android:defaultFocusHighlightEnabled="true"
             android:textColorHint="@color/base"
             app:neumorph_shapeType="basin"
-            android:textSize="20sp"
-              android:text=""
+            android:textSize="@dimen/much_bold"
+            android:text=""
             android:inputType="number"
             android:layout_gravity="center"
             android:gravity="center"
@@ -813,23 +855,26 @@
         <!--        CalcButton-->
         <soup.neumorphism.NeumorphButton
             android:id="@+id/calcButton"
-            android:layout_width="150dp"
-            android:layout_height="70dp"
             style="@style/Widget.Neumorph.Button"
-            app:neumorph_shapeType="flat"
+            android:layout_width="0dp"
+            android:layout_weight="2"
+            android:layout_height="match_parent"
             android:layout_gravity="center"
-            android:gravity="center"
-            android:text="Check!!"
-            android:textSize="22dp"
-            android:fontFamily="@font/teko_medium"
-            android:textColor="@color/base"
             android:clickable="true"
+            android:fontFamily="@font/bdf"
+            android:gravity="center"
+            android:text="@string/check"
+            android:textColor="@color/base"
+            android:textSize="@dimen/much_bold"
             android:textStyle="bold"
-            />
+            app:neumorph_shapeType="flat" />
         <!--        CalcButton-->
 
-    </LinearLayout>
-    <!--        InputArea-->
+    </LinearLayout><!--        InputArea-->
+
+  </LinearLayout>
+    </LinearLayout><!--MainAreaParent-->
+
     <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
