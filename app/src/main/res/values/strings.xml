@@ -1,10 +1,10 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <string name="app_name">ট্যাক্স ক্যালকুলেটর</string>
     <string name="hint_text">এখানে আপনার মোট আয় লিখুন</string>
-    <string name="slab">করের ধরণ</string>
+    <string name="slab">ট্যাক্সের ধরণ</string>
     <string name="tax_rate">রেট</string>
-    <string name="tax_amount">করযোগ্য অর্থ</string>
-    <string name="tax">কর</string>
+    <string name="tax_amount">ট্যাক্সযোগ্য অর্থ</string>
+    <string name="tax">ট্যাক্স</string>
     <string name="firstSlab">০ থেকে ৩ লক্ষ টাকা </string>
     <string name="seceoundSlab">পরবর্তী ৪ লক্ষ টাকা</string>
     <string name="thirdSlab">পরবর্তী ৭ লক্ষ টাকা</string>
@@ -15,6 +15,7 @@
     <string name="total_tax">মোট ট্যাক্স</string>
     <string name="check">হিসেব করুন!!</string>
     <string name="finance_year_21_22">অর্থ বছর ২১-২২</string>
+    <dimen name="heding_size">14sp</dimen>
     <dimen name="Default">10sp</dimen>
     <dimen name="much_bold">12sp</dimen>
 </resources>
