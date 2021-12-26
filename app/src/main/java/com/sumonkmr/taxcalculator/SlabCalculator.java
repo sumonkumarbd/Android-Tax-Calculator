@@ -24,7 +24,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import java.util.Locale;
 
 
-public class MainActivity extends AppCompatActivity {
+public class SlabCalculator extends Main {
 
     //       varriables
     TextView c1, c2, c3, c4, c5, c6;
@@ -39,11 +39,8 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.main_activity);
+        setContentView(R.layout.slab_calculator);
 
-
-
-        Methods methods = new Methods();
 
 
 //       Hooks
@@ -72,15 +69,17 @@ public class MainActivity extends AppCompatActivity {
         header_title4 = findViewById(R.id.header_title4);
 
 //        Animations
-        Animation fade_in = AnimationUtils.loadAnimation(MainActivity.this,R.anim.fade_in);
-        Animation zoom_in = AnimationUtils.loadAnimation(MainActivity.this,R.anim.zoom_in);
-        Animation left_to_right = AnimationUtils.loadAnimation(MainActivity.this,R.anim.left_to_right);
-        Animation right_to_left = AnimationUtils.loadAnimation(MainActivity.this,R.anim.right_to_left);
-        Animation right_to_left_slow = AnimationUtils.loadAnimation(MainActivity.this,R.anim.right_to_left_slow);
-        Animation middle_to_top = AnimationUtils.loadAnimation(MainActivity.this,R.anim.middle_to_top);
-        Animation up_down_cont = AnimationUtils.loadAnimation(MainActivity.this,R.anim.up_down_cont);
-        Animation up_from_bottom = AnimationUtils.loadAnimation(MainActivity.this,R.anim.up_from_bottom);
-        Animation up_from_bottom_slow = AnimationUtils.loadAnimation(MainActivity.this,R.anim.up_from_bottom_slow);
+        Animation fade_in = AnimationUtils.loadAnimation(SlabCalculator.this,R.anim.fade_in);
+        Animation zoom_in = AnimationUtils.loadAnimation(SlabCalculator.this,R.anim.zoom_in);
+        Animation left_to_right = AnimationUtils.loadAnimation(SlabCalculator.this,R.anim.left_to_right);
+        Animation right_to_left = AnimationUtils.loadAnimation(SlabCalculator.this,R.anim.right_to_left);
+        Animation right_to_left_slow = AnimationUtils.loadAnimation(SlabCalculator.this,R.anim.right_to_left_slow);
+        Animation middle_to_top = AnimationUtils.loadAnimation(SlabCalculator.this,R.anim.middle_to_top);
+        Animation up_down_cont = AnimationUtils.loadAnimation(SlabCalculator.this,R.anim.up_down_cont);
+        Animation up_from_bottom = AnimationUtils.loadAnimation(SlabCalculator.this,R.anim.up_from_bottom);
+        Animation up_from_bottom_slow = AnimationUtils.loadAnimation(SlabCalculator.this,R.anim.up_from_bottom_slow);
+        Animation slide_in_left = AnimationUtils.loadAnimation(SlabCalculator.this,R.anim.slide_in_left);
+        Animation slide_out_right = AnimationUtils.loadAnimation(SlabCalculator.this,R.anim.slide_out_right);
 
 
 //        values
@@ -110,19 +109,14 @@ public class MainActivity extends AppCompatActivity {
         Runnable appname = new Runnable() {
             @Override
             public void run() {
-                appName.startAnimation(fade_in);
+                appName.startAnimation(slide_in_left);
             }
         };
-        Runnable seasoN = new Runnable() {
-            @Override
-            public void run() {
-                season.startAnimation(left_to_right);
-            }
-        };
-        Runnable header = () -> header_titles.startAnimation(left_to_right);
+//        Runnable seasoN = () -> season.startAnimation(slide_out_right);
+        Runnable header = () -> header_titles.startAnimation(slide_in_left);
 
 
-        Runnable r = () -> Toast.makeText(MainActivity.this, "নিশ্চিত করুন এটি আপনার বার্ষিক আয়!!", Toast.LENGTH_LONG).show();
+        Runnable r = () -> Toast.makeText(SlabCalculator.this, "নিশ্চিত করুন এটি আপনার বার্ষিক আয়!!", Toast.LENGTH_LONG).show();
         h.postDelayed(r,2000);
 
 //        animations calling
@@ -388,7 +382,7 @@ public class MainActivity extends AppCompatActivity {
 
             String uservalue = inputVal.getText().toString();
             if (!uservalue.isEmpty() && !uservalue.matches("[0-9]+")) {
-                Toast.makeText(MainActivity.this, "ইনপুট সঠিক নয়!!", Toast.LENGTH_SHORT).show();
+                Toast.makeText(SlabCalculator.this, "ইনপুট সঠিক নয়!!", Toast.LENGTH_SHORT).show();
                 calcButton.setEnabled(false);
             }else{
                 calcButton.setEnabled(true);

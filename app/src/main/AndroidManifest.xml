@@ -10,7 +10,16 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.TaxCalculator">
         <activity
-            android:name=".MainActivity"
+            android:name=".Main"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".SlabCalculator"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
