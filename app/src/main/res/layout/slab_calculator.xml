@@ -7,21 +7,34 @@
     android:orientation="vertical"
     tools:context=".SlabCalculator">
 
-
     <!--    UpperVictor-->
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="-15dp"
-        android:layout_marginBottom="10dp"
+        android:layout_marginTop="0dp"
+        android:layout_marginBottom="0dp"
+        android:visibility="visible"
         android:layout_gravity="top"
         >
+
+        <TextView
+            android:id="@+id/text_morq"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top"
+            android:fontFamily="@font/banglafont"
+            android:gravity="top"
+            android:singleLine="true"
+            android:text="@string/intro"
+            android:textEditPasteWindowLayout="@string/intro"
+            android:textSize="@dimen/head_bold" />
 
         <ImageView
             android:layout_width="match_parent"
             android:layout_height="102dp"
             android:layout_alignParentTop="true"
             android:scaleType="fitXY"
+            android:visibility="gone"
             android:src="@drawable/tax_bulding" />
 
     </RelativeLayout>
@@ -38,7 +51,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="20dp"
-            android:fontFamily="@font/bdf"
+            android:fontFamily="@font/bd_font"
             android:shadowColor="@color/gray"
             android:text="@string/app_name"
             android:textColor="@color/base"
@@ -53,11 +66,11 @@
             android:layout_height="match_parent"
             android:gravity="right"
             android:layout_marginEnd="20dp"
-            android:layout_marginBottom="5dp"
-            android:fontFamily="@font/bdf"
+            android:layout_marginBottom="10dp"
+            android:fontFamily="@font/bd_font"
             android:text="@string/finance_year_21_22"
             android:textColor="@color/base"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="15dp"
             android:textSize="@dimen/much_bold" />
         <!--        sesion-->
     </LinearLayout>
@@ -72,7 +85,7 @@
         <!--    mainArea-->
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="360dp"
+            android:layout_height="330dp"
             android:id="@+id/mainArea"
             >
             <!--        dataholderParent-->
@@ -86,7 +99,7 @@
                 <LinearLayout
                     android:id="@+id/header_titles"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="30dp"
                     android:layout_marginStart="10dp"
                     android:layout_marginEnd="10dp"
                     android:layout_marginBottom="-5dp"
@@ -106,7 +119,7 @@
                         android:text="@string/slab"
                         android:textAlignment="center"
                         android:textColor="@color/white"
-                        android:textSize="@dimen/heding_size" />
+                        android:textSize="@dimen/Default" />
                     <!--dataHeading-->
 
 
@@ -122,7 +135,7 @@
                         android:gravity="center_vertical|center"
                         android:text="@string/tax_rate"
                         android:textColor="@color/white"
-                        android:textSize="@dimen/heding_size" />
+                        android:textSize="@dimen/Default" />
                     <!--dataHeading-->
 
 
@@ -140,7 +153,7 @@
                         android:gravity="center"
                         android:text="@string/tax_amount"
                         android:textColor="@color/white"
-                        android:textSize="@dimen/heding_size" />
+                        android:textSize="@dimen/Default" />
 
                     <!--dataHeading-->
                     <TextView
@@ -154,18 +167,25 @@
                         android:gravity="center"
                         android:text="@string/tax"
                         android:textColor="@color/white"
-                        android:textSize="@dimen/heding_size" />
+                        android:textSize="@dimen/Default" />
                     <!--dataHeading-->
 
 
                 </LinearLayout>
                 <!--        heading-->
 
+
                 <!--            dataTable-->
+                <LinearLayout
+                    android:id="@+id/dataTable_header"
+                    android:layout_width="match_parent"
+                    android:layout_height="255dp"
+                    android:orientation="vertical"
+                    >
                 <soup.neumorphism.NeumorphCardView
                     style="@style/Widget.Neumorph.CardView"
                     android:layout_width="match_parent"
-                    android:layout_height="60dp"
+                    android:layout_height="55dp"
                     app:neumorph_lightSource="leftTop"
                     app:neumorph_shapeType="basin">
 
@@ -195,7 +215,7 @@
                             android:layout_height="match_parent"
                             android:layout_gravity="center"
                             android:layout_weight="1"
-                            android:fontFamily="@font/banglafont"
+                            android:fontFamily="@font/bdf"
                             android:gravity="fill_vertical|center"
                             android:text="0%"
                             android:textColor="@color/base"
@@ -240,7 +260,7 @@
                 <soup.neumorphism.NeumorphCardView
                     style="@style/Widget.Neumorph.CardView"
                     android:layout_width="match_parent"
-                    android:layout_height="60dp"
+                    android:layout_height="55dp"
                     android:layout_marginTop="-15dp"
                     app:neumorph_lightSource="leftTop"
                     app:neumorph_shapeType="basin">
@@ -270,7 +290,7 @@
                             android:layout_height="match_parent"
                             android:layout_gravity="center"
                             android:layout_weight="1"
-                            android:fontFamily="@font/banglafont"
+                            android:fontFamily="@font/bdf"
                             android:gravity="fill_vertical|center"
                             android:text="5%"
                             android:textColor="@color/base"
@@ -317,7 +337,7 @@
                 <soup.neumorphism.NeumorphCardView
                     style="@style/Widget.Neumorph.CardView"
                     android:layout_width="match_parent"
-                    android:layout_height="60dp"
+                    android:layout_height="55dp"
                     android:layout_marginTop="-15dp"
                     app:neumorph_lightSource="leftTop"
                     app:neumorph_shapeType="basin">
@@ -347,7 +367,7 @@
                             android:layout_height="match_parent"
                             android:layout_gravity="center"
                             android:layout_weight="1"
-                            android:fontFamily="@font/banglafont"
+                            android:fontFamily="@font/bdf"
                             android:gravity="fill_vertical|center"
                             android:text="10%"
                             android:textColor="@color/base"
@@ -393,7 +413,7 @@
                 <soup.neumorphism.NeumorphCardView
                     style="@style/Widget.Neumorph.CardView"
                     android:layout_width="match_parent"
-                    android:layout_height="60dp"
+                    android:layout_height="55dp"
                     android:layout_marginTop="-15dp"
                     app:neumorph_lightSource="leftTop"
                     app:neumorph_shapeType="basin">
@@ -423,7 +443,7 @@
                             android:layout_height="match_parent"
                             android:layout_gravity="center"
                             android:layout_weight="1"
-                            android:fontFamily="@font/banglafont"
+                            android:fontFamily="@font/bdf"
                             android:gravity="fill_vertical|center"
                             android:text="15%"
                             android:textColor="@color/base"
@@ -469,7 +489,7 @@
                 <soup.neumorphism.NeumorphCardView
                     style="@style/Widget.Neumorph.CardView"
                     android:layout_width="match_parent"
-                    android:layout_height="60dp"
+                    android:layout_height="55dp"
                     android:layout_marginTop="-15dp"
                     app:neumorph_lightSource="leftTop"
                     app:neumorph_shapeType="basin">
@@ -499,7 +519,7 @@
                             android:layout_height="match_parent"
                             android:layout_gravity="right"
                             android:layout_weight="1"
-                            android:fontFamily="@font/banglafont"
+                            android:fontFamily="@font/bdf"
                             android:gravity="fill_vertical|center"
                             android:text="20%"
                             android:textColor="@color/base"
@@ -545,7 +565,7 @@
                 <soup.neumorphism.NeumorphCardView
                     style="@style/Widget.Neumorph.CardView"
                     android:layout_width="match_parent"
-                    android:layout_height="60dp"
+                    android:layout_height="55dp"
                     android:layout_marginTop="-15dp"
                     app:neumorph_lightSource="leftTop"
                     app:neumorph_shapeType="basin">
@@ -575,7 +595,7 @@
                             android:layout_height="match_parent"
                             android:layout_gravity="center"
                             android:layout_weight="1"
-                            android:fontFamily="@font/banglafont"
+                            android:fontFamily="@font/bdf"
                             android:gravity="fill_vertical|end"
                             android:text="25%"
                             android:textColor="@color/base"
@@ -616,10 +636,14 @@
 
 
                 </soup.neumorphism.NeumorphCardView>
+                </LinearLayout>
+
+
                 <!--            dataTable-->
 
                 <!--            sumArea-->
                 <LinearLayout
+                    android:id="@+id/resulBar"
                     android:layout_width="match_parent"
                     android:layout_height="45dp"
                     android:layout_marginStart="10dp"
@@ -724,8 +748,9 @@
 
         <!--        InputArea-->
         <LinearLayout
+            android:id="@+id/input_area"
             android:layout_width="match_parent"
-            android:layout_height="70dp"
+            android:layout_height="60dp"
             android:layout_marginHorizontal="20dp"
             android:weightSum="3"
             android:orientation="horizontal"
@@ -736,10 +761,20 @@
             <soup.neumorphism.NeumorphCardView
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:layout_weight="1.5"
+                android:layout_weight="2"
                 style="@style/Widget.Neumorph.CardView"
                 app:neumorph_shapeType="basin"
                 >
+                <ImageView
+                    android:id="@+id/inputError"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_baseline_error_outline_24"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="5dp"
+                    android:visibility="invisible"
+                    android:alpha=".8"
+                    />
                 <EditText
                     android:layout_width="match_parent"
                     android:layout_height="40dp"
@@ -748,9 +783,10 @@
                     android:hint="@string/hint_text"
                     android:textColor="@color/base"
                     android:fontFamily="@font/banglafont"
+                    android:defaultFocusHighlightEnabled="true"
                     android:textColorHint="@color/gray"
                     app:neumorph_shapeType="basin"
-                    android:textSize="@dimen/much_bold"
+                    android:textSize="@dimen/head_bold"
                     android:text=""
                     android:inputType="number"
                     android:layout_gravity="center"
@@ -766,14 +802,15 @@
                 android:layout_weight="1"
                 android:layout_gravity="center"
                 android:gravity="right"
-                android:layout_marginStart="-140dp"
+                android:layout_marginStart="-135dp"
+                android:layout_marginEnd="10dp"
                 >
 
                 <soup.neumorphism.NeumorphImageButton
                     android:id="@+id/calcButton"
                     style="@style/Widget.Neumorph.Button"
-                    android:layout_width="70dp"
-                    android:layout_height="70dp"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
                     android:layout_gravity="center"
                     android:clickable="true"
                     android:focusable="true"
@@ -790,7 +827,13 @@
 
     </LinearLayout><!--MainAreaParent-->
 
-
+<!--    Bottom Area-->
+<LinearLayout
+    android:id="@+id/bottomArea"
+    android:layout_width="match_parent"
+    android:layout_height="150dp"
+    android:orientation="vertical"
+    >
     <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -815,6 +858,9 @@
     </RelativeLayout>
     <!--    LowerVictor-->
 
+
+</LinearLayout>
+    <!--    Bottom Area-->
 
 
 

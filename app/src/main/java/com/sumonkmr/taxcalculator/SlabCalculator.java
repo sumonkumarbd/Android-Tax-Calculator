@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.speech.tts.TextToSpeech;
 import android.text.Editable;
+import android.text.TextUtils;
 import android.text.TextWatcher;
 import android.util.TypedValue;
 import android.view.View;
@@ -14,6 +15,7 @@ import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.EditText;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -28,11 +30,12 @@ public class SlabCalculator extends Main {
 
     //       varriables
     TextView c1, c2, c3, c4, c5, c6;
-    TextView d1, d2, d3, d4, d5, d6, amountResult, taxResult, appName;
+    TextView d1, d2, d3, d4, d5, d6, amountResult, taxResult, appName, text_morq;
     TextView season, header_title1, header_title2, header_title3, header_title4;
-    LinearLayout header_titles;
+    LinearLayout header_titles, dataTable_header ,resulBar, bottomArea, input_area;
     EditText inputVal;
     ImageButton calcButton;
+    ImageView inputError;
     double a1, a2, a3, a4, a5, sumTax;
     TextToSpeech sp;
 
@@ -62,24 +65,18 @@ public class SlabCalculator extends Main {
         calcButton = findViewById(R.id.calcButton);
         appName = findViewById(R.id.appName);
         season = findViewById(R.id.season);
+        inputError = findViewById(R.id.inputError);
+        text_morq = findViewById(R.id.text_morq);
         header_titles = findViewById(R.id.header_titles);
+        resulBar = findViewById(R.id.resulBar);
+        dataTable_header = findViewById(R.id.dataTable_header);
+        bottomArea = findViewById(R.id.bottomArea);
+        input_area = findViewById(R.id.input_area);
         header_title1 = findViewById(R.id.header_title1);
         header_title2 = findViewById(R.id.header_title2);
         header_title3 = findViewById(R.id.header_title3);
         header_title4 = findViewById(R.id.header_title4);
 
-//        Animations
-        Animation fade_in = AnimationUtils.loadAnimation(SlabCalculator.this,R.anim.fade_in);
-        Animation zoom_in = AnimationUtils.loadAnimation(SlabCalculator.this,R.anim.zoom_in);
-        Animation left_to_right = AnimationUtils.loadAnimation(SlabCalculator.this,R.anim.left_to_right);
-        Animation right_to_left = AnimationUtils.loadAnimation(SlabCalculator.this,R.anim.right_to_left);
-        Animation right_to_left_slow = AnimationUtils.loadAnimation(SlabCalculator.this,R.anim.right_to_left_slow);
-        Animation middle_to_top = AnimationUtils.loadAnimation(SlabCalculator.this,R.anim.middle_to_top);
-        Animation up_down_cont = AnimationUtils.loadAnimation(SlabCalculator.this,R.anim.up_down_cont);
-        Animation up_from_bottom = AnimationUtils.loadAnimation(SlabCalculator.this,R.anim.up_from_bottom);
-        Animation up_from_bottom_slow = AnimationUtils.loadAnimation(SlabCalculator.this,R.anim.up_from_bottom_slow);
-        Animation slide_in_left = AnimationUtils.loadAnimation(SlabCalculator.this,R.anim.slide_in_left);
-        Animation slide_out_right = AnimationUtils.loadAnimation(SlabCalculator.this,R.anim.slide_out_right);
 
 
 //        values
@@ -89,12 +86,22 @@ public class SlabCalculator extends Main {
         a4 = 1100000;
         a5 = 1600000;
         sumTax = 195000;
-
+//        Objects
+//        Object of Main
+        Main main = new Main();
+        //        Object of Handler
+        Handler handler = new Handler();
 
 //                Actions
 //        CAll Functions & Methods
 //        ============================
         calcButton.setEnabled(false);
+
+//        for TextMorque
+        Runnable taxt = () ->text_morq.setEllipsize(TextUtils.TruncateAt.MARQUEE);
+        text_morq.setSelected(true);
+        handler.postDelayed(taxt,2000);
+
 
 //        textToVoice
         textToVoice();
@@ -102,27 +109,37 @@ public class SlabCalculator extends Main {
 //        taxtWatcher
         inputVal.addTextChangedListener(textWatcher);
 
-//        Object of Handler
-        Handler h = new Handler();
+
 
 //        Runnables
-        Runnable appname = new Runnable() {
-            @Override
-            public void run() {
-                appName.startAnimation(slide_in_left);
-            }
-        };
-//        Runnable seasoN = () -> season.startAnimation(slide_out_right);
-        Runnable header = () -> header_titles.startAnimation(slide_in_left);
+        Runnable appname = () -> appName.startAnimation(slide_in_left);
+        Runnable seasoN = () -> season.startAnimation(zoom_in);
+        Runnable header = () -> header_titles.startAnimation(right_to_left);
+        Runnable resbar = () -> resulBar.startAnimation(left_to_right);
+        Runnable datatable = () -> dataTable_header.startAnimation(fade_in);
+        Runnable input_sec = () -> input_area.startAnimation(right_to_left_slow);
+        Runnable bottom_sec = () -> bottomArea.startAnimation(up_from_bottom_slow);
+        Runnable title_one = () -> header_title1.startAnimation(fade_in);
+        Runnable title_tow = () -> header_title2.startAnimation(fade_in);
+        Runnable title_three = () -> header_title3.startAnimation(fade_in);
+        Runnable title_four = () -> header_title4.startAnimation(fade_in);
 
 
         Runnable r = () -> Toast.makeText(SlabCalculator.this, "নিশ্চিত করুন এটি আপনার বার্ষিক আয়!!", Toast.LENGTH_LONG).show();
-        h.postDelayed(r,2000);
+        handler.postDelayed(r,2000);
 
 //        animations calling
-        h.postDelayed(appname,1200);
-//        h.postDelayed(seasoN,1500);
-//        h.postDelayed(header,5000);
+        handler.postDelayed(appname,700);
+        handler.postDelayed(seasoN,800);
+        handler.postDelayed(header,1000);
+        handler.postDelayed(resbar,1200);
+        handler.postDelayed(datatable,1800);
+        handler.postDelayed(input_sec,1500);
+        handler.postDelayed(bottom_sec,1500);
+        handler.postDelayed(title_one,1500);
+        handler.postDelayed(title_tow,1500);
+        handler.postDelayed(title_three,1500);
+        handler.postDelayed(title_four,1500);
 
 
 
@@ -381,11 +398,13 @@ public class SlabCalculator extends Main {
         public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
 
             String uservalue = inputVal.getText().toString();
-            if (!uservalue.isEmpty() && !uservalue.matches("[0-9]+")) {
+            if (!uservalue.isEmpty() && !uservalue.matches("[.0-9]+")) {
                 Toast.makeText(SlabCalculator.this, "ইনপুট সঠিক নয়!!", Toast.LENGTH_SHORT).show();
                 calcButton.setEnabled(false);
+                inputError.setVisibility(View.VISIBLE);
             }else{
                 calcButton.setEnabled(true);
+                inputError.setVisibility(View.INVISIBLE);
             };
 
 
@@ -393,7 +412,7 @@ public class SlabCalculator extends Main {
 
         @Override
         public void afterTextChanged(Editable editable) {
-            calcButton.setEnabled(true);
+//            calcButton.setEnabled(true);
 
 
         }
