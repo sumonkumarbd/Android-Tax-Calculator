@@ -657,6 +657,7 @@
                         android:orientation="horizontal">
 
                         <TextView
+                            android:id="@+id/totalAmount"
                             android:layout_width="0dp"
                             android:layout_height="match_parent"
                             android:layout_gravity="center"
@@ -670,6 +671,7 @@
 
                         <!--dataHeading-->
                         <TextView
+                            android:id="@+id/totalTax"
                             android:layout_width="0dp"
                             android:layout_height="match_parent"
                             android:layout_gravity="center"

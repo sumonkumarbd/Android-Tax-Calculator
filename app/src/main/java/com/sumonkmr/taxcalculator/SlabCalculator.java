@@ -29,8 +29,8 @@ import java.util.Locale;
 public class SlabCalculator extends Main {
 
     //       varriables
-    TextView c1, c2, c3, c4, c5, c6;
-    TextView d1, d2, d3, d4, d5, d6, amountResult, taxResult, appName, text_morq;
+    TextView c1, c2, c3, c4, c5, c6, d1, d2, d3, d4, d5, d6;
+    TextView totalAmount, totalTax, amountResult, taxResult, appName, text_morq;
     TextView season, header_title1, header_title2, header_title3, header_title4;
     LinearLayout header_titles, dataTable_header ,resulBar, bottomArea, input_area;
     EditText inputVal;
@@ -76,6 +76,8 @@ public class SlabCalculator extends Main {
         header_title2 = findViewById(R.id.header_title2);
         header_title3 = findViewById(R.id.header_title3);
         header_title4 = findViewById(R.id.header_title4);
+        totalAmount = findViewById(R.id.totalAmount);
+        totalTax = findViewById(R.id.totalTax);
 
 
 
@@ -123,23 +125,28 @@ public class SlabCalculator extends Main {
         Runnable title_tow = () -> header_title2.startAnimation(fade_in);
         Runnable title_three = () -> header_title3.startAnimation(fade_in);
         Runnable title_four = () -> header_title4.startAnimation(fade_in);
+        Runnable ttlAomount = () -> totalAmount.startAnimation(fade_in);
+        Runnable ttlTax = () -> totalTax.startAnimation(fade_in);
 
 
         Runnable r = () -> Toast.makeText(SlabCalculator.this, "নিশ্চিত করুন এটি আপনার বার্ষিক আয়!!", Toast.LENGTH_LONG).show();
-        handler.postDelayed(r,2000);
+
 
 //        animations calling
+        handler.postDelayed(r,2000);
         handler.postDelayed(appname,700);
         handler.postDelayed(seasoN,800);
-        handler.postDelayed(header,1000);
+        handler.postDelayed(header,1300);
         handler.postDelayed(resbar,1200);
         handler.postDelayed(datatable,1800);
-        handler.postDelayed(input_sec,1500);
+        handler.postDelayed(input_sec,1300);
         handler.postDelayed(bottom_sec,1500);
         handler.postDelayed(title_one,1500);
         handler.postDelayed(title_tow,1500);
         handler.postDelayed(title_three,1500);
         handler.postDelayed(title_four,1500);
+        handler.postDelayed(ttlAomount,1500);
+        handler.postDelayed(ttlTax,1500);
 
 
 
