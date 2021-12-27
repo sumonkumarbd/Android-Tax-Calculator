@@ -134,11 +134,11 @@ public class SlabCalculator extends Main {
 
 //        animations calling
         handler.postDelayed(r,2000);
-        handler.postDelayed(appname,700);
+        handler.postDelayed(appname,1000);
         handler.postDelayed(seasoN,800);
         handler.postDelayed(header,1300);
         handler.postDelayed(resbar,1200);
-        handler.postDelayed(datatable,1800);
+        handler.postDelayed(datatable,1500);
         handler.postDelayed(input_sec,1300);
         handler.postDelayed(bottom_sec,1500);
         handler.postDelayed(title_one,1500);
