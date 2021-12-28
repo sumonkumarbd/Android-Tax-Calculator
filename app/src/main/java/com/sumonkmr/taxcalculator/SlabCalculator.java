@@ -34,7 +34,7 @@ public class SlabCalculator extends Main {
     TextView season, header_title1, header_title2, header_title3, header_title4;
     LinearLayout header_titles, dataTable_header ,resulBar, bottomArea, input_area;
     EditText inputVal;
-    ImageButton calcButton;
+    ImageButton calcButton, calcButton_disabled;
     ImageView inputError;
     double a1, a2, a3, a4, a5, sumTax;
     TextToSpeech sp;
@@ -63,6 +63,7 @@ public class SlabCalculator extends Main {
         amountResult = findViewById(R.id.amountResult);
         inputVal = findViewById(R.id.inputVal);
         calcButton = findViewById(R.id.calcButton);
+        calcButton_disabled = findViewById(R.id.calcButton_disabled);
         appName = findViewById(R.id.appName);
         season = findViewById(R.id.season);
         inputError = findViewById(R.id.inputError);
@@ -152,22 +153,23 @@ public class SlabCalculator extends Main {
 
 
 //      Litseners
-        calcButton.setOnClickListener(new View.OnClickListener() {
-            @RequiresApi(api = Build.VERSION_CODES.O)
-            @SuppressLint("DefaultLocale")
-            @Override
-            public void onClick(View view) {
-                String uservalue = inputVal.getText().toString();
-                if (!uservalue.isEmpty()){
-                    // calculator
-                    calculator();
-                }else {
-                    calcButton.setEnabled(false);
-                };
+        //OnClick Litsenr
+        calcButton.setOnClickListener(view -> {
+            String uservalue = inputVal.getText().toString();
+            if (!uservalue.isEmpty()){
+                // calculator
+                calculator();
+            }else {
+                calcButton.setEnabled(false);
+            };
 
 
-            }; //OnClick Litsenr
         });// ClacButton Listener
+
+
+        calcButton_disabled.setOnClickListener(view -> {
+            Toast.makeText(SlabCalculator.this, "নির্ভুল তথ্য পেতে সঠিক সংখ্যা প্রদান করুন!!", Toast.LENGTH_SHORT).show();
+        });
 
 
     }//    View.OnCreateSaveInstance
@@ -409,9 +411,14 @@ public class SlabCalculator extends Main {
                 Toast.makeText(SlabCalculator.this, "ইনপুট সঠিক নয়!!", Toast.LENGTH_SHORT).show();
                 calcButton.setEnabled(false);
                 inputError.setVisibility(View.VISIBLE);
+                calcButton_disabled.setVisibility(View.VISIBLE);
+                calcButton_disabled.setEnabled(true);
             }else{
                 calcButton.setEnabled(true);
                 inputError.setVisibility(View.INVISIBLE);
+                calcButton_disabled.setVisibility(View.INVISIBLE);
+                calcButton_disabled.setEnabled(false);
+
             };
 
 

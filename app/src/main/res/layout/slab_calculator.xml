@@ -807,9 +807,26 @@
                 android:layout_marginStart="-135dp"
                 android:layout_marginEnd="10dp"
                 >
-
+<!--            clcButton>Enabled-->
                 <soup.neumorphism.NeumorphImageButton
                     android:id="@+id/calcButton"
+                    style="@style/Widget.Neumorph.Button"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_gravity="center"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:gravity="center"
+                    android:scaleType="center"
+                    android:src="@drawable/ic_baseline_calculate_24_enable"
+                    android:textColor="@color/base"
+                    android:textSize="@dimen/much_bold"
+                    app:neumorph_shapeType="basin" />
+<!--                clcButton>Enabled-->
+
+<!--                clcButton>Disaled-->
+                <soup.neumorphism.NeumorphImageButton
+                    android:id="@+id/calcButton_disabled"
                     style="@style/Widget.Neumorph.Button"
                     android:layout_width="60dp"
                     android:layout_height="60dp"
@@ -821,7 +838,11 @@
                     android:src="@drawable/ic_baseline_calculate_24"
                     android:textColor="@color/base"
                     android:textSize="@dimen/much_bold"
-                    app:neumorph_shapeType="basin" />
+                    app:neumorph_shapeType="basin"
+                    android:visibility="invisible"/>
+<!--                clcButton>Disaled-->
+
+
             </RelativeLayout>  <!--        CalcButton-->
 
         </LinearLayout>

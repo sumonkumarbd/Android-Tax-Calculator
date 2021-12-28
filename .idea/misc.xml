@@ -3,8 +3,10 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Android_projects/Practice Challenges/TaxCalculator/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.19947916666666668" />
         <entry key="..\:/Android_projects/Practice Challenges/TaxCalculator/app/src/main/res/drawable/blue_button.xml" value="0.12335526315789473" />
         <entry key="..\:/Android_projects/Practice Challenges/TaxCalculator/app/src/main/res/drawable/circle_colored.xml" value="0.1953125" />
+        <entry key="..\:/Android_projects/Practice Challenges/TaxCalculator/app/src/main/res/drawable/ic_baseline_calculate_24.xml" value="0.19947916666666668" />
         <entry key="..\:/Android_projects/Practice Challenges/TaxCalculator/app/src/main/res/drawable/ic_wave.xml" value="0.1953125" />
         <entry key="..\:/Android_projects/Practice Challenges/TaxCalculator/app/src/main/res/drawable/ic_wave_upper.xml" value="0.1953125" />
         <entry key="..\:/Android_projects/Practice Challenges/TaxCalculator/app/src/main/res/drawable/red_button.xml" value="0.1953125" />
