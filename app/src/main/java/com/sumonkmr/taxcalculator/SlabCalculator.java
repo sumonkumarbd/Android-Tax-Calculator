@@ -166,10 +166,10 @@ public class SlabCalculator extends Main {
 
         });// ClacButton Listener
 
-
+        // ClacButton_disabled Listener
         calcButton_disabled.setOnClickListener(view -> {
             Toast.makeText(SlabCalculator.this, "নির্ভুল তথ্য পেতে সঠিক সংখ্যা প্রদান করুন!!", Toast.LENGTH_SHORT).show();
-        });
+        });// ClacButton_disabled Listener
 
 
     }//    View.OnCreateSaveInstance
