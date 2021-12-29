@@ -6,11 +6,13 @@ import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
 import android.text.TextUtils;
+import android.view.View;
 import android.view.ViewGroup;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -19,7 +21,8 @@ public class Main extends AppCompatActivity {
 
     Animation fade_in, zoom_in, left_to_right, right_to_left, right_to_left_slow, middle_to_top;
     Animation up_down_cont, up_from_bottom, up_from_bottom_slow, slide_in_left, slide_out_right, slide_out_left, slide_in_right,right_slidere_infinit;
-    Button mainButton, okay, cancel;
+    Button mainButton;
+    Dialog dialog;
     TextView text_morque;
 
 
@@ -46,8 +49,8 @@ public class Main extends AppCompatActivity {
         right_slidere_infinit = AnimationUtils.loadAnimation(Main.this,R.anim.right_slidere_infinit);
         mainButton = findViewById(R.id.mainButton);
         text_morque = findViewById(R.id.text_morque);
-        okay = findViewById(R.id.btn_okay);
-        cancel = findViewById(R.id.btn_cancel);
+//        okay = findViewById(R.id.btn_okay);
+//        cancel = findViewById(R.id.btn_cancel);
 
 
 //        objs
@@ -66,10 +69,10 @@ public class Main extends AppCompatActivity {
 
 //        dialog_BOx
         //Create the Dialog her
-        Dialog dialog = new Dialog(this);
+        dialog = new Dialog(this);
         dialog.setContentView(R.layout.coustom_dialogbox);
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-            dialog.getWindow().setBackgroundDrawable(getDrawable(R.drawable.dialog_bacground));
+            dialog.getWindow().setBackgroundDrawable(getDrawable(R.drawable.dialog_background));
         }
         dialog.getWindow().setLayout(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT);
         dialog.setCancelable(false); //Optional
@@ -83,14 +86,42 @@ public class Main extends AppCompatActivity {
 
 
 
-        mainButton.setOnClickListener(view -> {
-            dialog.show();
+        Button Okay = dialog.findViewById(R.id.btn_okay);
+        Button Cancel = dialog.findViewById(R.id.btn_cancel);
+
+        Okay.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent intent = new Intent(Main.this,SlabCalculator.class);
+                startActivity(intent);
+                dialog.dismiss();
+            }
         });
 
-//        okay.setOnClickListener(view -> {
-//            Intent intent = new Intent(Main.this,SlabCalculator.class);
-//            startActivity(intent);
-//        });
+        Cancel.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Toast.makeText(Main.this, "Cancel", Toast.LENGTH_SHORT).show();
+                dialog.dismiss();
+            }
+        });
+
+
+        mainButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                dialog.show(); // Showing the dialog here
+            }
+        });
+
+
+
+
+
+
 
 
 
