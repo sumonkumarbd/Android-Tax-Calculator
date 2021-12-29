@@ -1,9 +1,12 @@
 package com.sumonkmr.taxcalculator;
 
+import android.app.Dialog;
 import android.content.Intent;
+import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
 import android.text.TextUtils;
+import android.view.ViewGroup;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.Button;
@@ -16,7 +19,7 @@ public class Main extends AppCompatActivity {
 
     Animation fade_in, zoom_in, left_to_right, right_to_left, right_to_left_slow, middle_to_top;
     Animation up_down_cont, up_from_bottom, up_from_bottom_slow, slide_in_left, slide_out_right, slide_out_left, slide_in_right,right_slidere_infinit;
-    Button mainButton;
+    Button mainButton, okay, cancel;
     TextView text_morque;
 
 
@@ -43,6 +46,8 @@ public class Main extends AppCompatActivity {
         right_slidere_infinit = AnimationUtils.loadAnimation(Main.this,R.anim.right_slidere_infinit);
         mainButton = findViewById(R.id.mainButton);
         text_morque = findViewById(R.id.text_morque);
+        okay = findViewById(R.id.btn_okay);
+        cancel = findViewById(R.id.btn_cancel);
 
 
 //        objs
@@ -58,10 +63,35 @@ public class Main extends AppCompatActivity {
         handler.postDelayed(taxt,2000);
 
 
+
+//        dialog_BOx
+        //Create the Dialog her
+        Dialog dialog = new Dialog(this);
+        dialog.setContentView(R.layout.coustom_dialogbox);
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+            dialog.getWindow().setBackgroundDrawable(getDrawable(R.drawable.dialog_bacground));
+        }
+        dialog.getWindow().setLayout(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT);
+        dialog.setCancelable(false); //Optional
+        dialog.getWindow().getAttributes().windowAnimations =R.anim.fade_in; //Setting the animations to dialog
+
+
+
+
+
+
+
+
+
         mainButton.setOnClickListener(view -> {
-            Intent intent = new Intent(Main.this, SlabCalculator.class);
-            startActivity(intent);
+            dialog.show();
         });
+
+//        okay.setOnClickListener(view -> {
+//            Intent intent = new Intent(Main.this,SlabCalculator.class);
+//            startActivity(intent);
+//        });
+
 
 
 
