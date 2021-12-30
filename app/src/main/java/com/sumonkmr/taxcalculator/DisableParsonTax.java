@@ -3,39 +3,20 @@ package com.sumonkmr.taxcalculator;
 
 import android.os.Bundle;
 import android.os.Handler;
-import android.speech.tts.TextToSpeech;
-import android.text.Editable;
 import android.text.TextUtils;
-import android.text.TextWatcher;
 import android.util.TypedValue;
-import android.view.View;
-import android.widget.EditText;
-import android.widget.ImageButton;
-import android.widget.ImageView;
-import android.widget.LinearLayout;
-import android.widget.TextView;
 import android.widget.Toast;
 
-import java.util.Locale;
 
+public class DisableParsonTax extends FemaleTax {
 
-public class SlabCalculator extends Main {
-
-    //       varriables
-    TextView a1 ,c1, c2, c3, c4, c5, c6, d1, d2, d3, d4, d5, d6;
-    TextView totalAmount, totalTax, amountResult, taxResult, appName, text_morq;
-    TextView season, header_title1, header_title2, header_title3, header_title4;
-    LinearLayout header_titles, dataTable_header ,resulBar, bottomArea, input_area;
-    EditText inputVal;
-    ImageButton calcButton, calcButton_disabled;
-    ImageView inputError;
-    double ballance1, ballance2, ballance3, ballance4, ballance5, sumTax;
-    TextToSpeech sp;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.slab_calculator);
+
+
 
 
 
@@ -75,16 +56,17 @@ public class SlabCalculator extends Main {
         totalAmount = findViewById(R.id.totalAmount);
         totalTax = findViewById(R.id.totalTax);
 
-        a1.setText("প্রথম ৩ লক্ষ টাকা টাকা");
+
+        super.a1.setText("প্রথম সাড়ে ৪ লক্ষ টাকা");
 
 
 
 //        values
-        ballance1 = 300000;
-        ballance2 = 400000;
-        ballance3 = 700000;
-        ballance4 = 1100000;
-        ballance5 = 1600000;
+        ballance1 = 450000;
+        ballance2 = 550000;
+        ballance3 = 850000;
+        ballance4 = 1250000;
+        ballance5 = 1750000;
         sumTax = 195000;
 //        Objects
 //        Object of Main
@@ -110,7 +92,9 @@ public class SlabCalculator extends Main {
         inputVal.addTextChangedListener(textWatcher);
 
 
-        Runnable r = () -> Toast.makeText(SlabCalculator.this, "নিশ্চিত করুন এটি আপনার বার্ষিক আয়!!", Toast.LENGTH_LONG).show();
+
+
+        Runnable r = () -> Toast.makeText(DisableParsonTax.this, "নিশ্চিত করুন এটি আপনার বার্ষিক আয়!!", Toast.LENGTH_LONG).show();
 
 
 //        animations calling
@@ -131,7 +115,7 @@ public class SlabCalculator extends Main {
 
 
 
-        //Litseners
+//      Litseners
         //OnClick Litsenr
         calcButton.setOnClickListener(view -> {
             String uservalue = inputVal.getText().toString();
@@ -147,7 +131,7 @@ public class SlabCalculator extends Main {
 
         // ClacButton_disabled Listener
         calcButton_disabled.setOnClickListener(view -> {
-            Toast.makeText(SlabCalculator.this, "নির্ভুল তথ্য পেতে সঠিক সংখ্যা প্রদান করুন!!", Toast.LENGTH_SHORT).show();
+            Toast.makeText(DisableParsonTax.this, "নির্ভুল তথ্য পেতে সঠিক সংখ্যা প্রদান করুন!!", Toast.LENGTH_SHORT).show();
         });// ClacButton_disabled Listener
 
 
@@ -158,12 +142,19 @@ public class SlabCalculator extends Main {
 
     //                Methods
 //        ====================
+    @Override
     public void calculator(){
 //                variables with Theory
 //        ====================================
         String userInput = inputVal.getText().toString();
         double newUserInput = Double.parseDouble(userInput);
         String userValue = String.format("%,.2f",newUserInput);
+
+        //Important Action for match this class with xml Layout
+
+
+
+
 
         String tk = " টাকা";
         String zero_tk = "0 টাকা ";
@@ -348,67 +339,5 @@ public class SlabCalculator extends Main {
         calcButton.setEnabled(false);
 
     };//calculator finished
-
-    //    VoiceAsist
-    public String voiceAsist(String voice){
-        int speech = sp.speak("আপনার ট্যাক্স হচ্ছে",TextToSpeech.QUEUE_FLUSH,null);
-        int taxResult = sp.speak(voice,TextToSpeech.QUEUE_ADD,null);
-        int taka = sp.speak("টাকা",TextToSpeech.QUEUE_ADD,null);
-        return voice;
-    };//voiceAsist
-    public void textToVoice(){
-        sp = new TextToSpeech(getApplicationContext(),
-                new TextToSpeech.OnInitListener() {
-                    @Override
-                    public void onInit(int i) {
-                        if (i == TextToSpeech.SUCCESS){
-                            int lang = sp.setLanguage(new Locale("bn_BD"));
-                        }
-                    }
-                });
-    };//textToVoice
-
-
-
-
-
-    //        for Empty requration
-    public TextWatcher textWatcher = new TextWatcher() {
-        @Override
-        public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
-
-        }
-
-        @Override
-        public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
-
-            String uservalue = inputVal.getText().toString();
-            if (!uservalue.isEmpty() && !uservalue.matches("[.0-9]+")) {
-                Toast.makeText(SlabCalculator.this, "ইনপুট সঠিক নয়!!", Toast.LENGTH_SHORT).show();
-                calcButton.setEnabled(false);
-                inputError.setVisibility(View.VISIBLE);
-                calcButton_disabled.setVisibility(View.VISIBLE);
-                calcButton_disabled.setEnabled(true);
-            }else{
-                calcButton.setEnabled(true);
-                inputError.setVisibility(View.INVISIBLE);
-                calcButton_disabled.setVisibility(View.INVISIBLE);
-                calcButton_disabled.setEnabled(false);
-
-            };
-
-
-        }
-
-        @Override
-        public void afterTextChanged(Editable editable) {
-//            calcButton.setEnabled(true);
-
-
-        }
-    };  //for Empty requration
-
-
-
 
 }//MainActivities

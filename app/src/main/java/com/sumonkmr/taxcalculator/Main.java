@@ -112,6 +112,22 @@ public class Main extends AppCompatActivity {
             dialog.dismiss();
         });
 
+        female.setOnClickListener(v -> {
+
+            Intent intent = new Intent(Main.this,FemaleTax.class);
+            startActivity(intent);
+            dialog.dismiss();
+        });
+
+        disable_parson.setOnClickListener(v -> {
+
+            Intent intent = new Intent(Main.this,DisableParsonTax.class);
+            startActivity(intent);
+            dialog.dismiss();
+        });
+
+
+
 
 
 

@@ -57,7 +57,7 @@ public class FemaleTax extends SlabCalculator {
         totalTax = findViewById(R.id.totalTax);
 
 
-        super.a1.setText("প্রথম ৩,৫০০০০ টাকা");
+        super.a1.setText("প্রথম সাড়ে ৩ লক্ষ টাকা");
 
 
 
