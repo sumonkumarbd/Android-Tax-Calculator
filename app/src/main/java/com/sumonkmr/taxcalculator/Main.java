@@ -92,27 +92,24 @@ public class Main extends AppCompatActivity {
 
         Button male = dialog.findViewById(R.id.male);
         Button female = dialog.findViewById(R.id.female);
+        Button disable_parson = dialog.findViewById(R.id.disable_parson);
         NeumorphImageButton Cancel = dialog.findViewById(R.id.btn_cancel);
 
-        male.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
 
-                Intent intent = new Intent(Main.this,SlabCalculator.class);
-                startActivity(intent);
-                dialog.dismiss();
-            }
+        male.setOnClickListener(v -> {
+
+            Intent intent = new Intent(Main.this,SlabCalculator.class);
+            startActivity(intent);
+            dialog.dismiss();
         });
 
 
-        female.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
 
-                Intent intent = new Intent(Main.this,FemaleTax.class);
-                startActivity(intent);
-                dialog.dismiss();
-            }
+        female.setOnClickListener(v -> {
+
+            Intent intent = new Intent(Main.this,FemaleTax.class);
+            startActivity(intent);
+            dialog.dismiss();
         });
 
 
@@ -122,22 +119,16 @@ public class Main extends AppCompatActivity {
 
 
 
-        Cancel.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
+        Cancel.setOnClickListener(v -> {
 
-                Toast.makeText(Main.this, "বাতিল হয়েছে!!", Toast.LENGTH_SHORT).show();
-                dialog.dismiss();
-            }
+            Toast.makeText(Main.this, "বাতিল হয়েছে!!", Toast.LENGTH_SHORT).show();
+            dialog.dismiss();
         });
 
 
-        mainButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
+        mainButton.setOnClickListener(v -> {
 
-                dialog.show(); // Showing the dialog here
-            }
+            dialog.show(); // Showing the dialog here
         });
 
 

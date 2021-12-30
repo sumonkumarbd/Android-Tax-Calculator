@@ -22,7 +22,7 @@ import java.util.Locale;
 public class SlabCalculator extends Main {
 
     //       varriables
-    TextView a1, a2, b1,c1, c2, c3, c4, c5, c6, d1, d2, d3, d4, d5, d6;
+    TextView a1 ,c1, c2, c3, c4, c5, c6, d1, d2, d3, d4, d5, d6;
     TextView totalAmount, totalTax, amountResult, taxResult, appName, text_morq;
     TextView season, header_title1, header_title2, header_title3, header_title4;
     LinearLayout header_titles, dataTable_header ,resulBar, bottomArea, input_area;
@@ -42,8 +42,6 @@ public class SlabCalculator extends Main {
 
 //       Hooks
         a1 = findViewById(R.id.a1);
-        a2 = findViewById(R.id.a2);
-        b1 = findViewById(R.id.b1);
         c1 = findViewById(R.id.c1);
         c2 = findViewById(R.id.c2);
         c3 = findViewById(R.id.c3);
@@ -112,23 +110,6 @@ public class SlabCalculator extends Main {
         inputVal.addTextChangedListener(textWatcher);
 
 
-
-//        Runnables
-//        Runnable appname = () -> appName.startAnimation(slide_in_left);
-//        Runnable seasoN = () -> season.startAnimation(zoom_in);
-//        Runnable header = () -> header_titles.startAnimation(right_to_left);
-//        Runnable resbar = () -> resulBar.startAnimation(left_to_right);
-//        Runnable datatable = () -> dataTable_header.startAnimation(fade_in);
-//        Runnable input_sec = () -> input_area.startAnimation(right_to_left_slow);
-//        Runnable bottom_sec = () -> bottomArea.startAnimation(up_from_bottom_slow);
-//        Runnable title_one = () -> header_title1.startAnimation(fade_in);
-//        Runnable title_tow = () -> header_title2.startAnimation(fade_in);
-//        Runnable title_three = () -> header_title3.startAnimation(fade_in);
-//        Runnable title_four = () -> header_title4.startAnimation(fade_in);
-//        Runnable ttlAomount = () -> totalAmount.startAnimation(fade_in);
-//        Runnable ttlTax = () -> totalTax.startAnimation(fade_in);
-
-
         Runnable r = () -> Toast.makeText(SlabCalculator.this, "নিশ্চিত করুন এটি আপনার বার্ষিক আয়!!", Toast.LENGTH_LONG).show();
 
 
@@ -147,25 +128,10 @@ public class SlabCalculator extends Main {
         totalAmount.startAnimation(fade_in);
         totalTax.startAnimation(fade_in);
 
-//        handler.postDelayed(r,2000);
-//        handler.postDelayed(appname,1000);
-//        handler.postDelayed(seasoN,800);
-//        handler.postDelayed(header,1300);
-//        handler.postDelayed(resbar,1200);
-//        handler.postDelayed(datatable,1500);
-//        handler.postDelayed(input_sec,1300);
-//        handler.postDelayed(bottom_sec,1500);
-//        handler.postDelayed(title_one,1500);
-//        handler.postDelayed(title_tow,1500);
-//        handler.postDelayed(title_three,1500);
-//        handler.postDelayed(title_four,1500);
-//        handler.postDelayed(ttlAomount,1500);
-//        handler.postDelayed(ttlTax,1500);
 
 
 
-
-//      Litseners
+        //Litseners
         //OnClick Litsenr
         calcButton.setOnClickListener(view -> {
             String uservalue = inputVal.getText().toString();

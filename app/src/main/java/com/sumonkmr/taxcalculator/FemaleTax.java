@@ -3,34 +3,13 @@ package com.sumonkmr.taxcalculator;
 
 import android.os.Bundle;
 import android.os.Handler;
-import android.speech.tts.TextToSpeech;
-import android.text.Editable;
 import android.text.TextUtils;
-import android.text.TextWatcher;
 import android.util.TypedValue;
-import android.view.View;
-import android.widget.EditText;
-import android.widget.ImageButton;
-import android.widget.ImageView;
-import android.widget.LinearLayout;
-import android.widget.TextView;
 import android.widget.Toast;
-
-import java.util.Locale;
 
 
 public class FemaleTax extends SlabCalculator {
 
-    //       varriables
-//    TextView c1, c2, c3, c4, c5, c6, d1, d2, d3, d4, d5, d6;
-//    TextView totalAmount, totalTax, amountResult, taxResult, appName, text_morq;
-//    TextView season, header_title1, header_title2, header_title3, header_title4;
-//    LinearLayout header_titles, dataTable_header ,resulBar, bottomArea, input_area;
-//    EditText inputVal;
-//    ImageButton calcButton, calcButton_disabled;
-//    ImageView inputError;
-//    double ballance1, ballance2, ballance3, ballance4, ballance5, sumTax;
-//    TextToSpeech sp;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,8 +23,6 @@ public class FemaleTax extends SlabCalculator {
 
 //       Hooks
         a1 = findViewById(R.id.a1);
-        a2 = findViewById(R.id.a2);
-        b1 = findViewById(R.id.b1);
         c1 = findViewById(R.id.c1);
         c2 = findViewById(R.id.c2);
         c3 = findViewById(R.id.c3);
