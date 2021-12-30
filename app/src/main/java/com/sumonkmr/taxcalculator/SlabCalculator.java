@@ -115,39 +115,53 @@ public class SlabCalculator extends Main {
 
 
 //        Runnables
-        Runnable appname = () -> appName.startAnimation(slide_in_left);
-        Runnable seasoN = () -> season.startAnimation(zoom_in);
-        Runnable header = () -> header_titles.startAnimation(right_to_left);
-        Runnable resbar = () -> resulBar.startAnimation(left_to_right);
-        Runnable datatable = () -> dataTable_header.startAnimation(fade_in);
-        Runnable input_sec = () -> input_area.startAnimation(right_to_left_slow);
-        Runnable bottom_sec = () -> bottomArea.startAnimation(up_from_bottom_slow);
-        Runnable title_one = () -> header_title1.startAnimation(fade_in);
-        Runnable title_tow = () -> header_title2.startAnimation(fade_in);
-        Runnable title_three = () -> header_title3.startAnimation(fade_in);
-        Runnable title_four = () -> header_title4.startAnimation(fade_in);
-        Runnable ttlAomount = () -> totalAmount.startAnimation(fade_in);
-        Runnable ttlTax = () -> totalTax.startAnimation(fade_in);
+//        Runnable appname = () -> appName.startAnimation(slide_in_left);
+//        Runnable seasoN = () -> season.startAnimation(zoom_in);
+//        Runnable header = () -> header_titles.startAnimation(right_to_left);
+//        Runnable resbar = () -> resulBar.startAnimation(left_to_right);
+//        Runnable datatable = () -> dataTable_header.startAnimation(fade_in);
+//        Runnable input_sec = () -> input_area.startAnimation(right_to_left_slow);
+//        Runnable bottom_sec = () -> bottomArea.startAnimation(up_from_bottom_slow);
+//        Runnable title_one = () -> header_title1.startAnimation(fade_in);
+//        Runnable title_tow = () -> header_title2.startAnimation(fade_in);
+//        Runnable title_three = () -> header_title3.startAnimation(fade_in);
+//        Runnable title_four = () -> header_title4.startAnimation(fade_in);
+//        Runnable ttlAomount = () -> totalAmount.startAnimation(fade_in);
+//        Runnable ttlTax = () -> totalTax.startAnimation(fade_in);
 
 
         Runnable r = () -> Toast.makeText(SlabCalculator.this, "নিশ্চিত করুন এটি আপনার বার্ষিক আয়!!", Toast.LENGTH_LONG).show();
 
 
 //        animations calling
-        handler.postDelayed(r,2000);
-        handler.postDelayed(appname,1000);
-        handler.postDelayed(seasoN,800);
-        handler.postDelayed(header,1300);
-        handler.postDelayed(resbar,1200);
-        handler.postDelayed(datatable,1500);
-        handler.postDelayed(input_sec,1300);
-        handler.postDelayed(bottom_sec,1500);
-        handler.postDelayed(title_one,1500);
-        handler.postDelayed(title_tow,1500);
-        handler.postDelayed(title_three,1500);
-        handler.postDelayed(title_four,1500);
-        handler.postDelayed(ttlAomount,1500);
-        handler.postDelayed(ttlTax,1500);
+        appName.startAnimation(zoom_in);
+        season.startAnimation(zoom_in);
+        header_titles.startAnimation(right_to_left);
+        resulBar.startAnimation(left_to_right);
+        dataTable_header.startAnimation(fade_in);
+        input_area.startAnimation(right_to_left_slow);
+        bottomArea.startAnimation(up_from_bottom_slow);
+        header_title1.startAnimation(fade_in);
+        header_title2.startAnimation(fade_in);
+        header_title3.startAnimation(fade_in);
+        header_title4.startAnimation(fade_in);
+        totalAmount.startAnimation(fade_in);
+        totalTax.startAnimation(fade_in);
+
+//        handler.postDelayed(r,2000);
+//        handler.postDelayed(appname,1000);
+//        handler.postDelayed(seasoN,800);
+//        handler.postDelayed(header,1300);
+//        handler.postDelayed(resbar,1200);
+//        handler.postDelayed(datatable,1500);
+//        handler.postDelayed(input_sec,1300);
+//        handler.postDelayed(bottom_sec,1500);
+//        handler.postDelayed(title_one,1500);
+//        handler.postDelayed(title_tow,1500);
+//        handler.postDelayed(title_three,1500);
+//        handler.postDelayed(title_four,1500);
+//        handler.postDelayed(ttlAomount,1500);
+//        handler.postDelayed(ttlTax,1500);
 
 
 
@@ -176,7 +190,9 @@ public class SlabCalculator extends Main {
 
 
 
-    //    Functions
+
+    //                Methods
+//        ====================
     public void calculator(){
 //                variables with Theory
 //        ====================================
@@ -367,11 +383,6 @@ public class SlabCalculator extends Main {
         calcButton.setEnabled(false);
 
     };//calculator finished
-
-
-    //                Methods
-//        ====================
-    void secoundMathod(){};//secoundMethod
 
     //    VoiceAsist
     public String voiceAsist(String voice){

@@ -838,8 +838,8 @@
                     android:src="@drawable/ic_baseline_calculate_24"
                     android:textColor="@color/base"
                     android:textSize="@dimen/much_bold"
-                    app:neumorph_shapeType="basin"
-                    android:visibility="invisible"/>
+                    android:visibility="invisible"
+                    app:neumorph_shapeType="basin" />
 <!--                clcButton>Disaled-->
 
 

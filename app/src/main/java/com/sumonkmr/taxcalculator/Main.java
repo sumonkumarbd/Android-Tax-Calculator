@@ -11,10 +11,14 @@ import android.view.ViewGroup;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
+
+import soup.neumorphism.NeumorphButton;
+import soup.neumorphism.NeumorphImageButton;
 
 public class Main extends AppCompatActivity {
 
@@ -86,10 +90,10 @@ public class Main extends AppCompatActivity {
 
 
 
-        Button Okay = dialog.findViewById(R.id.btn_okay);
-        Button Cancel = dialog.findViewById(R.id.btn_cancel);
+        Button male = dialog.findViewById(R.id.male);
+        NeumorphImageButton Cancel = dialog.findViewById(R.id.btn_cancel);
 
-        Okay.setOnClickListener(new View.OnClickListener() {
+        male.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
@@ -103,7 +107,7 @@ public class Main extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                Toast.makeText(Main.this, "Cancel", Toast.LENGTH_SHORT).show();
+                Toast.makeText(Main.this, "বাতিল হয়েছে!!", Toast.LENGTH_SHORT).show();
                 dialog.dismiss();
             }
         });
