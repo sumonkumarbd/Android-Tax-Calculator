@@ -58,6 +58,7 @@ public class FemaleTax extends SlabCalculator {
 
 
         super.a1.setText("প্রথম সাড়ে ৩ লক্ষ টাকা");
+        super.a1.setTextSize(TypedValue.COMPLEX_UNIT_SP,8);
 
 
 

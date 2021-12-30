@@ -58,6 +58,7 @@ public class DisableParsonTax extends FemaleTax {
 
 
         super.a1.setText("প্রথম সাড়ে ৪ লক্ষ টাকা");
+        super.a1.setTextSize(TypedValue.COMPLEX_UNIT_SP,8);
 
 
 
