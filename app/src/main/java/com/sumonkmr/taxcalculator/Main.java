@@ -93,6 +93,7 @@ public class Main extends AppCompatActivity {
         Button male = dialog.findViewById(R.id.male);
         Button female = dialog.findViewById(R.id.female);
         Button disable_parson = dialog.findViewById(R.id.disable_parson);
+        Button freedom_fighter = dialog.findViewById(R.id.freedom_fighter);
         NeumorphImageButton Cancel = dialog.findViewById(R.id.btn_cancel);
 
 
@@ -122,6 +123,13 @@ public class Main extends AppCompatActivity {
         disable_parson.setOnClickListener(v -> {
 
             Intent intent = new Intent(Main.this,DisableParsonTax.class);
+            startActivity(intent);
+            dialog.dismiss();
+        });
+
+        freedom_fighter.setOnClickListener(v -> {
+
+            Intent intent = new Intent(Main.this,FreedomFighterTax.class);
             startActivity(intent);
             dialog.dismiss();
         });
