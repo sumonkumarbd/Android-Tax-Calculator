@@ -91,6 +91,7 @@ public class Main extends AppCompatActivity {
 
 
         Button male = dialog.findViewById(R.id.male);
+        Button female = dialog.findViewById(R.id.female);
         NeumorphImageButton Cancel = dialog.findViewById(R.id.btn_cancel);
 
         male.setOnClickListener(new View.OnClickListener() {
@@ -102,6 +103,24 @@ public class Main extends AppCompatActivity {
                 dialog.dismiss();
             }
         });
+
+
+        female.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent intent = new Intent(Main.this,FemaleTax.class);
+                startActivity(intent);
+                dialog.dismiss();
+            }
+        });
+
+
+
+
+
+
+
 
         Cancel.setOnClickListener(new View.OnClickListener() {
             @Override

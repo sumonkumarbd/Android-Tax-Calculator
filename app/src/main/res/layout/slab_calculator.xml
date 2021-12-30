@@ -196,6 +196,7 @@
 
                         <!--                    data-->
                         <TextView
+                            android:id="@+id/a1"
                             android:layout_width="0dp"
                             android:layout_height="match_parent"
                             android:layout_gravity="center"
@@ -203,7 +204,7 @@
                             android:layout_weight="3.5"
                             android:fontFamily="@font/bdf"
                             android:gravity="center"
-                            android:text="@string/firstSlab"
+                            android:text=""
                             android:textColor="@color/base"
                             android:textSize="@dimen/Default" />
                         <!--                    data-->
@@ -211,6 +212,7 @@
 
                         <!--                    data-->
                         <TextView
+                            android:id="@+id/a2"
                             android:layout_width="0dp"
                             android:layout_height="match_parent"
                             android:layout_gravity="center"
@@ -272,6 +274,7 @@
 
                         <!--                    data-->
                         <TextView
+                            android:id="@+id/b1"
                             android:layout_width="0dp"
                             android:layout_height="match_parent"
                             android:layout_marginStart="5dp"
