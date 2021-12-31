@@ -35,6 +35,8 @@ public class SlabCalculator extends Main {
     ImageView inputError;
     double ballance1, ballance2, ballance3, ballance4, ballance5, sumTax;
     TextToSpeech sp;
+    Spinner spinner;
+    String[] items;
 
 
     @Override
@@ -81,17 +83,7 @@ public class SlabCalculator extends Main {
         totalTax = findViewById(R.id.totalTax);
 
 
-        a1.setText("প্রথম ৩ লক্ষ টাকা টাকা");
-
-
-
-//        values
-        ballance1 = 300000;
-        ballance2 = 400000;
-        ballance3 = 700000;
-        ballance4 = 1100000;
-        ballance5 = 1600000;
-//        Objects
+     //        Objects
 //        Object of Main
         Main main = new Main();
         //        Object of Handler
@@ -104,9 +96,9 @@ public class SlabCalculator extends Main {
 
 //        Dropdown
         //get the spinner from the xml.
-        Spinner spinner = (Spinner)findViewById(R.id.spinner);
+       spinner = (Spinner)findViewById(R.id.spinner);
         //create a list of items for the spinner.
-        String[] items = new String[]{"নেই", "১ টি", "২ টি", "২ এর অধিক"};
+        items = new String[]{"নেই", "১ টি", "২ টি", "২ এর অধিক"};
 
 //There are multiple variations of this, but this is the basic variant.
         ArrayAdapter<String> adapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_activated_1, items);
@@ -117,22 +109,63 @@ public class SlabCalculator extends Main {
             public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
                 switch (i){
                     case 0:
+                        //        values
+                        ballance1 = 300000;
+                        ballance2 = 400000;
+                        ballance3 = 700000;
+                        ballance4 = 1100000;
+                        ballance5 = 1600000;
+                        a1.setText("প্রথম ৩ লক্ষ টাকা টাকা");
                         Toast.makeText(SlabCalculator.this,"নেই",Toast.LENGTH_LONG).show();
                         break;
                     case 1:
+                        //        values
+                        ballance1 = 350000;
+                        ballance2 = 450000;
+                        ballance3 = 750000;
+                        ballance4 = 1500000;
+                        ballance5 = 1650000;
+                        a1.setText("প্রথম সাড়ে ৩ লক্ষ টাকা");
+                        a1.setTextSize(TypedValue.COMPLEX_UNIT_SP,8);
                         Toast.makeText(SlabCalculator.this,"১ টি",Toast.LENGTH_LONG).show();
                         break;
                     case 2:
+                        //        values
+                        ballance1 = 350000;
+                        ballance2 = 450000;
+                        ballance3 = 750000;
+                        ballance4 = 1500000;
+                        ballance5 = 1650000;
+                        a1.setText("প্রথম সাড়ে ৩ লক্ষ টাকা");
+                        a1.setTextSize(TypedValue.COMPLEX_UNIT_SP,8);
                         Toast.makeText(SlabCalculator.this,"২ টি",Toast.LENGTH_LONG).show();
                         break;
                     case 3:
+                        //        values
+                        ballance1 = 350000;
+                        ballance2 = 450000;
+                        ballance3 = 750000;
+                        ballance4 = 1500000;
+                        ballance5 = 1650000;
+                        a1.setText("প্রথম সাড়ে ৩ লক্ষ টাকা");
+                        a1.setTextSize(TypedValue.COMPLEX_UNIT_SP,8);
                         Toast.makeText(SlabCalculator.this,"২ এর অধিক",Toast.LENGTH_LONG).show();
                         break;
+
+                    default:
+                        Toast.makeText(SlabCalculator.this, "আপনার কোনো প্রতিবন্ধি সন্তান থাকলে সিলেক্ট করুন!!", Toast.LENGTH_SHORT).show();
                 }
             }
 
             @Override
             public void onNothingSelected(AdapterView<?> adapterView) {
+
+                //        values
+                ballance1 = 300000;
+                ballance2 = 400000;
+                ballance3 = 700000;
+                ballance4 = 1100000;
+                ballance5 = 1600000;
 
             }
         });
@@ -173,6 +206,7 @@ public class SlabCalculator extends Main {
 
 
         //Litseners
+
         //OnClick Litsenr
         calcButton.setOnClickListener(view -> {
             String uservalue = inputVal.getText().toString();
@@ -197,7 +231,7 @@ public class SlabCalculator extends Main {
 
 
 
-    //                Methods
+//                Methods
 //        ====================
     public void calculator(){
 //                variables with Theory
