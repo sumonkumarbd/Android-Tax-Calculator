@@ -66,12 +66,6 @@ public class FemaleTax extends SlabCalculator {
 
 
 
-//        values
-        ballance1 = 350000;
-        ballance2 = 450000;
-        ballance3 = 750000;
-        ballance4 = 1150000;
-        ballance5 = 1650000;
 //        Objects
 //        Object of Main
         Main main = new Main();
@@ -153,13 +147,14 @@ public class FemaleTax extends SlabCalculator {
 
             @Override
             public void onNothingSelected(AdapterView<?> adapterView) {
-
                 //        values
-                ballance1 = 300000;
-                ballance2 = 400000;
-                ballance3 = 700000;
-                ballance4 = 1100000;
-                ballance5 = 1600000;
+                ballance1 = 350000;
+                ballance2 = 450000;
+                ballance3 = 750000;
+                ballance4 = 1150000;
+                ballance5 = 1650000;
+                a1.setText("প্রথম সাড়ে ৩ লক্ষ টাকা");
+                a1.setTextSize(TypedValue.COMPLEX_UNIT_SP,8);
 
             }
         });
