@@ -5,6 +5,10 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.text.TextUtils;
 import android.util.TypedValue;
+import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
+import android.widget.Spinner;
 import android.widget.Toast;
 
 
@@ -57,27 +61,104 @@ public class DisableParsonTax extends FemaleTax {
         totalTax = findViewById(R.id.totalTax);
 
 
-        super.a1.setText("প্রথম সাড়ে ৪ লক্ষ টাকা");
-        super.a1.setTextSize(TypedValue.COMPLEX_UNIT_SP,8);
 
 
 
-//        values
-        ballance1 = 450000;
-        ballance2 = 550000;
-        ballance3 = 850000;
-        ballance4 = 1250000;
-        ballance5 = 1750000;
+
 //        Objects
 //        Object of Main
         Main main = new Main();
         //        Object of Handler
         Handler handler = new Handler();
+        Runnable msg = () -> {
+            Toast.makeText(DisableParsonTax.this, "আপনার কোনো প্রতিবন্ধি সন্তান থাকলে সিলেক্ট করুন!!", Toast.LENGTH_LONG).show();
+        };
+
+        handler.postDelayed(msg,2000);
 
 //                Actions
 //        CAll Functions & Methods
 //        ============================
         calcButton.setEnabled(false);
+
+        //        Dropdown
+        //get the spinner from the xml.
+        spinner = (Spinner)findViewById(R.id.spinner);
+        //create a list of items for the spinner.
+        items = new String[]{"নেই", "১ টি", "২ টি", "২ এর অধিক"};
+
+//There are multiple variations of this, but this is the basic variant.
+        ArrayAdapter<String> adapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_activated_1, items);
+//set the spinners adapter to the previously created one.
+        spinner.setAdapter(adapter);
+        spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+                switch (i){
+                    case 0:
+                        //        values
+                        ballance1 = 450000;
+                        ballance2 = 550000;
+                        ballance3 = 850000;
+                        ballance4 = 1250000;
+                        ballance5 = 1750000;
+                        a1.setText("প্রথম সাড়ে ৪ লক্ষ টাকা");
+                        a1.setTextSize(TypedValue.COMPLEX_UNIT_SP,8);
+                        break;
+                    case 1:
+                        //        values
+                        ballance1 = 500000;
+                        ballance2 = 600000;
+                        ballance3 = 900000;
+                        ballance4 = 1300000;
+                        ballance5 = 1800000;
+                        a1.setText("প্রথম ৫ লক্ষ টাকা");
+                        a1.setTextSize(TypedValue.COMPLEX_UNIT_SP,10);
+                        Toast.makeText(DisableParsonTax.this,"আপনার নির্ধারিত ট্যাক্সমুক্ত ইনকামে আরো অতিরিক্ত ৫০ হাজার টাকা যোগ হলো।",Toast.LENGTH_LONG).show();
+                        break;
+                    case 2:
+                        //        values
+                        ballance1 = 400000;
+                        ballance2 = 500000;
+                        ballance3 = 800000;
+                        ballance4 = 1200000;
+                        ballance5 = 1700000;
+                        a1.setText("প্রথম ৫ লক্ষ টাকা");
+                        a1.setTextSize(TypedValue.COMPLEX_UNIT_SP,10);
+                        Toast.makeText(DisableParsonTax.this,"আপনার নির্ধারিত ট্যাক্সমুক্ত ইনকামে আরো অতিরিক্ত ৫০ হাজার টাকা যোগ হলো। ",Toast.LENGTH_LONG).show();
+                        break;
+                    case 3:
+                        //        values
+                        ballance1 = 400000;
+                        ballance2 = 500000;
+                        ballance3 = 800000;
+                        ballance4 = 1200000;
+                        ballance5 = 1700000;
+                        a1.setText("প্রথম ৫ লক্ষ টাকা");
+                        a1.setTextSize(TypedValue.COMPLEX_UNIT_SP,10);
+                        Toast.makeText(DisableParsonTax.this," আপনার নির্ধারিত ট্যাক্সমুক্ত ইনকামে আরো অতিরিক্ত ৫০ হাজার টাকা যোগ হলো।",Toast.LENGTH_LONG).show();
+                        break;
+
+                    default:
+                        Toast.makeText(DisableParsonTax.this, "আপনার কোনো প্রতিবন্ধি সন্তান থাকলে সিলেক্ট করুন!!", Toast.LENGTH_SHORT).show();
+                }
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> adapterView) {
+                //        values
+                ballance1 = 450000;
+                ballance2 = 550000;
+                ballance3 = 850000;
+                ballance4 = 1250000;
+                ballance5 = 1750000;
+                a1.setText("প্রথম সাড়ে ৪ লক্ষ টাকা");
+                a1.setTextSize(TypedValue.COMPLEX_UNIT_SP,8);
+
+            }
+        });
+//        Dropdown
+
 
 //        for TextMorque
         Runnable taxt = () ->text_morq.setEllipsize(TextUtils.TruncateAt.MARQUEE);
