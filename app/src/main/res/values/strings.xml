@@ -21,11 +21,12 @@
     <string name="type_of_tax">ক্যাটাগরি নির্বাচন করুন!</string>
     <string name="notice_massage">গণপ্রজাতন্ত্রী বাংলাদেশ সরকার কতৃক ট্যাক্সের জন্য নিৰ্দিষ্ট চারটি শ্রেণী বিভাজন করা হয়েছে।</string>
     <string name="male">পুরুষ</string>
-    <string name="female">নারী এবং ৬৫ বছরের উর্দ্ধে নাগরিক</string>
+    <string name="female">নারী অথবা তৃতীয় লিঙ্গ অথবা ৬৫+ নাগরিক</string>
     <string name="disable_person">প্রতিবন্ধী</string>
     <string name="freedom_fighter">মুক্তিযোদ্ধা</string>
     <string name="cancel">বাতিল করুন!!</string>
     <string name="okay">Okay</string>
+    <string name="disable_child">প্রতিবন্ধী সন্তান</string>
 
 
     <dimen name="heding_size">14sp</dimen>

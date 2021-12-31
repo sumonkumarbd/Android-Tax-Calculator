@@ -68,7 +68,6 @@ public class DisableParsonTax extends FemaleTax {
         ballance3 = 850000;
         ballance4 = 1250000;
         ballance5 = 1750000;
-        sumTax = 195000;
 //        Objects
 //        Object of Main
         Main main = new Main();

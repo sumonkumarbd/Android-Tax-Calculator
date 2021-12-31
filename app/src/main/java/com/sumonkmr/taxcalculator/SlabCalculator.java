@@ -9,10 +9,14 @@ import android.text.TextUtils;
 import android.text.TextWatcher;
 import android.util.TypedValue;
 import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.Spinner;
+import android.widget.Switch;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -31,6 +35,7 @@ public class SlabCalculator extends Main {
     ImageView inputError;
     double ballance1, ballance2, ballance3, ballance4, ballance5, sumTax;
     TextToSpeech sp;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -75,6 +80,7 @@ public class SlabCalculator extends Main {
         totalAmount = findViewById(R.id.totalAmount);
         totalTax = findViewById(R.id.totalTax);
 
+
         a1.setText("প্রথম ৩ লক্ষ টাকা টাকা");
 
 
@@ -85,7 +91,6 @@ public class SlabCalculator extends Main {
         ballance3 = 700000;
         ballance4 = 1100000;
         ballance5 = 1600000;
-        sumTax = 195000;
 //        Objects
 //        Object of Main
         Main main = new Main();
@@ -96,6 +101,42 @@ public class SlabCalculator extends Main {
 //        CAll Functions & Methods
 //        ============================
         calcButton.setEnabled(false);
+
+//        Dropdown
+        //get the spinner from the xml.
+        Spinner spinner = (Spinner)findViewById(R.id.spinner);
+        //create a list of items for the spinner.
+        String[] items = new String[]{"নেই", "১ টি", "২ টি", "২ এর অধিক"};
+
+//There are multiple variations of this, but this is the basic variant.
+        ArrayAdapter<String> adapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_activated_1, items);
+//set the spinners adapter to the previously created one.
+        spinner.setAdapter(adapter);
+        spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+                switch (i){
+                    case 0:
+                        Toast.makeText(SlabCalculator.this,"নেই",Toast.LENGTH_LONG).show();
+                        break;
+                    case 1:
+                        Toast.makeText(SlabCalculator.this,"১ টি",Toast.LENGTH_LONG).show();
+                        break;
+                    case 2:
+                        Toast.makeText(SlabCalculator.this,"২ টি",Toast.LENGTH_LONG).show();
+                        break;
+                    case 3:
+                        Toast.makeText(SlabCalculator.this,"২ এর অধিক",Toast.LENGTH_LONG).show();
+                        break;
+                }
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> adapterView) {
+
+            }
+        });
+//        Dropdown
 
 //        for TextMorque
         Runnable taxt = () ->text_morq.setEllipsize(TextUtils.TruncateAt.MARQUEE);
@@ -411,4 +452,8 @@ public class SlabCalculator extends Main {
 
 
 
-}//MainActivities
+
+
+    }//SlabCalcolatorCalss
+
+

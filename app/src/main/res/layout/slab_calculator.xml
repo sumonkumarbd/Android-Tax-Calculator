@@ -39,6 +39,7 @@
 
     </RelativeLayout>
     <!--    UpperVictor-->
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="40dp"
@@ -169,7 +170,6 @@
                         android:textColor="@color/white"
                         android:textSize="@dimen/Default" />
                     <!--dataHeading-->
-
 
                 </LinearLayout>
                 <!--        heading-->
@@ -644,6 +644,8 @@
 
                 <!--            dataTable-->
 
+
+
                 <!--            sumArea-->
                 <LinearLayout
                     android:id="@+id/resulBar"
@@ -783,7 +785,7 @@
                 <EditText
                     android:layout_width="match_parent"
                     android:layout_height="40dp"
-                    android:background="@color/tnasparent"
+                    android:background="@color/tnsparent"
                     android:id="@+id/inputVal"
                     android:hint="@string/hint_text"
                     android:textColor="@color/base"
@@ -850,6 +852,64 @@
 
         </LinearLayout>
 
+        <LinearLayout
+            android:layout_width="300dp"
+            android:layout_height="60dp"
+            android:orientation="horizontal"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_marginTop="-15dp"
+            >
+            <TextView
+                android:layout_width="100dp"
+                android:layout_height="match_parent"
+                android:text="@string/disable_child"
+                android:layout_gravity="start|center"
+                android:gravity="start|center"
+                android:fontFamily="@font/bd_font"
+                android:textSize="@dimen/head_bold"
+                android:layout_marginStart="20dp"
+                android:elevation="5dp"
+                android:layout_marginEnd="-20dp"
+                android:textColor="@color/base"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="->"
+                android:layout_gravity="start|center"
+                android:gravity="start|center"
+                android:fontFamily="@font/bd_font"
+                android:textSize="@dimen/head_bold"
+                android:layout_marginStart="20dp"
+                android:elevation="5dp"
+                android:textColor="@color/base"
+                />
+            <soup.neumorphism.NeumorphCardView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                style="@style/ShapeAppearance.Neumorph.CardView"
+                app:neumorph_shapeType="basin"
+                android:layout_gravity="end"
+                >
+                <Spinner
+                    android:id="@+id/spinner"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="start"
+                    android:textAlignment="center"
+                    android:gravity="center"
+                    android:background="@color/tnsparent"
+                    android:spinnerMode="dropdown"/>
+
+            </soup.neumorphism.NeumorphCardView>
+
+        </LinearLayout>
+
+
+
+
 
     </LinearLayout><!--MainAreaParent-->
 
@@ -858,6 +918,7 @@
     android:id="@+id/bottomArea"
     android:layout_width="match_parent"
     android:layout_height="150dp"
+    android:visibility="gone"
     android:orientation="vertical"
     >
     <ImageView

@@ -67,7 +67,6 @@ public class FreedomFighterTax extends FemaleTax {
         ballance3 = 875000;
         ballance4 = 1275000;
         ballance5 = 1775000;
-        sumTax = 195000;
 //        Objects
 //        Object of Main
         Main main = new Main();

@@ -8,9 +8,12 @@
         <entry key="..\:/Android_projects/Practice Challenges/TaxCalculator/app/src/main/res/drawable/circle_colored.xml" value="0.1953125" />
         <entry key="..\:/Android_projects/Practice Challenges/TaxCalculator/app/src/main/res/drawable/dialog_bacground.xml" value="0.19947916666666668" />
         <entry key="..\:/Android_projects/Practice Challenges/TaxCalculator/app/src/main/res/drawable/ic_baseline_calculate_24.xml" value="0.19947916666666668" />
+        <entry key="..\:/Android_projects/Practice Challenges/TaxCalculator/app/src/main/res/drawable/ic_baseline_error_outline_24.xml" value="0.1" />
+        <entry key="..\:/Android_projects/Practice Challenges/TaxCalculator/app/src/main/res/drawable/ic_launcher_background.xml" value="0.1" />
         <entry key="..\:/Android_projects/Practice Challenges/TaxCalculator/app/src/main/res/drawable/ic_wave.xml" value="0.1953125" />
         <entry key="..\:/Android_projects/Practice Challenges/TaxCalculator/app/src/main/res/drawable/ic_wave_upper.xml" value="0.1953125" />
         <entry key="..\:/Android_projects/Practice Challenges/TaxCalculator/app/src/main/res/drawable/red_button.xml" value="0.1953125" />
+        <entry key="..\:/Android_projects/Practice Challenges/TaxCalculator/app/src/main/res/drawable/shadow.xml" value="0.19947916666666668" />
         <entry key="..\:/Android_projects/Practice Challenges/TaxCalculator/app/src/main/res/drawable/singecolor_button.xml" value="0.1953125" />
         <entry key="..\:/Android_projects/Practice Challenges/TaxCalculator/app/src/main/res/drawable/top_shade.xml" value="0.1953125" />
         <entry key="..\:/Android_projects/Practice Challenges/TaxCalculator/app/src/main/res/drawable/two_color.xml" value="0.19947916666666668" />
@@ -24,6 +27,7 @@
         <entry key="..\:/Android_projects/Practice Challenges/TaxCalculator/app/src/main/res/layout/main_activity.xml" value="0.33" />
         <entry key="..\:/Android_projects/Practice Challenges/TaxCalculator/app/src/main/res/layout/slab_calculator.xml" value="0.33" />
         <entry key="..\:/Android_projects/Practice Challenges/TaxCalculator/app/src/main/res/layout/slab_tax_calculator.xml" value="0.18333333333333332" />
+        <entry key="..\:/Android_projects/Practice Challenges/TaxCalculator/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.1" />
       </map>
     </option>
   </component>

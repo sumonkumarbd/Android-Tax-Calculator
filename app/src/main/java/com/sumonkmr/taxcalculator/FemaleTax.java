@@ -68,7 +68,6 @@ public class FemaleTax extends SlabCalculator {
         ballance3 = 750000;
         ballance4 = 1150000;
         ballance5 = 1650000;
-        sumTax = 195000;
 //        Objects
 //        Object of Main
         Main main = new Main();
