@@ -6,18 +6,15 @@ import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
 import android.text.TextUtils;
-import android.view.View;
 import android.view.ViewGroup;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.Button;
-import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import soup.neumorphism.NeumorphButton;
 import soup.neumorphism.NeumorphImageButton;
 
 public class Main extends AppCompatActivity {
@@ -25,7 +22,7 @@ public class Main extends AppCompatActivity {
 
     Animation fade_in, zoom_in, left_to_right, right_to_left, right_to_left_slow, middle_to_top;
     Animation up_down_cont, up_from_bottom, up_from_bottom_slow, slide_in_left, slide_out_right, slide_out_left, slide_in_right,right_slidere_infinit;
-    Button mainButton;
+    Button slabCalcButton;
     Dialog dialog;
     TextView text_morque;
 
@@ -51,15 +48,13 @@ public class Main extends AppCompatActivity {
         slide_in_right = AnimationUtils.loadAnimation(Main.this,R.anim.slide_in_right);
         slide_out_right = AnimationUtils.loadAnimation(Main.this,R.anim.slide_out_right);
         right_slidere_infinit = AnimationUtils.loadAnimation(Main.this,R.anim.right_slidere_infinit);
-        mainButton = findViewById(R.id.mainButton);
+        slabCalcButton = findViewById(R.id.slabCalcButton);
         text_morque = findViewById(R.id.text_morque);
-//        okay = findViewById(R.id.btn_okay);
-//        cancel = findViewById(R.id.btn_cancel);
 
 
 //        objs
         Handler handler = new Handler();
-        Runnable runnable = () -> mainButton.startAnimation(zoom_in);
+        Runnable runnable = () -> slabCalcButton.startAnimation(zoom_in);
         handler.postDelayed(runnable,3000);
 
 
@@ -150,7 +145,7 @@ public class Main extends AppCompatActivity {
         });
 
 
-        mainButton.setOnClickListener(v -> {
+        slabCalcButton.setOnClickListener(v -> {
 
             dialog.show(); // Showing the dialog here
         });

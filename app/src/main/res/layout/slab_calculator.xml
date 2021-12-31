@@ -80,13 +80,13 @@
     <!--MainAreaParent-->
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="440dp"
+        android:layout_height="460dp"
         android:orientation="vertical"
         >
         <!--    mainArea-->
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="330dp"
+            android:layout_height="350dp"
             android:id="@+id/mainArea"
             >
             <!--        dataholderParent-->
@@ -100,11 +100,11 @@
                 <LinearLayout
                     android:id="@+id/header_titles"
                     android:layout_width="match_parent"
-                    android:layout_height="30dp"
+                    android:layout_height="35dp"
                     android:layout_marginStart="10dp"
                     android:layout_marginEnd="10dp"
                     android:layout_marginBottom="-5dp"
-                    android:background="@drawable/blue_button"
+                    android:background="@drawable/two_color"
                     android:orientation="horizontal"
                     android:weightSum="12">
                     <!--dataHeading-->
@@ -115,12 +115,13 @@
                         android:layout_gravity="center"
                         android:layout_marginStart="10dp"
                         android:layout_weight="4"
-                        android:fontFamily="@font/bdf"
+                        android:elevation="10dp"
+                        android:fontFamily="@font/titir"
                         android:gravity="center"
                         android:text="@string/slab"
                         android:textAlignment="center"
                         android:textColor="@color/white"
-                        android:textSize="@dimen/Default" />
+                        android:textSize="@dimen/heading_size" />
                     <!--dataHeading-->
 
 
@@ -130,13 +131,13 @@
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
                         android:layout_gravity="center"
-                        android:layout_margin="5dp"
-                        android:layout_weight="1"
-                        android:fontFamily="@font/bdf"
+                        android:layout_weight="1.5"
+                        android:elevation="10dp"
+                        android:fontFamily="@font/titir"
                         android:gravity="center_vertical|center"
                         android:text="@string/tax_rate"
                         android:textColor="@color/white"
-                        android:textSize="@dimen/Default" />
+                        android:textSize="@dimen/heading_size" />
                     <!--dataHeading-->
 
 
@@ -148,13 +149,14 @@
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
                         android:layout_gravity="center"
-                        android:layout_margin="5dp"
+                        android:layout_marginStart="10dp"
                         android:layout_weight="3"
-                        android:fontFamily="@font/bdf"
+                        android:elevation="10dp"
+                        android:fontFamily="@font/titir"
                         android:gravity="center"
                         android:text="@string/tax_amount"
                         android:textColor="@color/white"
-                        android:textSize="@dimen/Default" />
+                        android:textSize="@dimen/heading_size" />
 
                     <!--dataHeading-->
                     <TextView
@@ -162,13 +164,14 @@
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
                         android:layout_gravity="center"
-                        android:layout_margin="5dp"
+                        android:layout_marginStart="20dp"
                         android:layout_weight="3"
-                        android:fontFamily="@font/bdf"
+                        android:elevation="10dp"
+                        android:fontFamily="@font/titir"
                         android:gravity="center"
                         android:text="@string/tax"
                         android:textColor="@color/white"
-                        android:textSize="@dimen/Default" />
+                        android:textSize="@dimen/heading_size" />
                     <!--dataHeading-->
 
                 </LinearLayout>
@@ -180,480 +183,491 @@
                     android:id="@+id/dataTable_header"
                     android:layout_width="match_parent"
                     android:layout_height="255dp"
-                    android:orientation="vertical"
-                    >
-                <soup.neumorphism.NeumorphCardView
-                    style="@style/Widget.Neumorph.CardView"
-                    android:layout_width="match_parent"
-                    android:layout_height="55dp"
-                    app:neumorph_lightSource="leftTop"
-                    app:neumorph_shapeType="basin">
+                    android:orientation="vertical">
 
-                    <LinearLayout
+                    <soup.neumorphism.NeumorphCardView
+                        style="@style/Widget.Neumorph.CardView"
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:orientation="horizontal">
+                        android:layout_height="55dp"
+                        app:neumorph_lightSource="leftTop"
+                        app:neumorph_shapeType="basin">
 
-                        <!--                    data-->
-                        <TextView
-                            android:id="@+id/a1"
-                            android:layout_width="0dp"
+                        <LinearLayout
+                            android:layout_width="match_parent"
                             android:layout_height="match_parent"
-                            android:layout_gravity="center"
-                            android:layout_marginStart="5dp"
-                            android:layout_weight="3.5"
-                            android:fontFamily="@font/bdf"
-                            android:gravity="center"
-                            android:text="@string/firstSlab"
-                            android:textColor="@color/base"
-                            android:textSize="@dimen/Default" />
-                        <!--                    data-->
+                            android:orientation="horizontal">
+
+                            <!--                    data-->
+                            <TextView
+                                android:id="@+id/a1"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center"
+                                android:layout_marginStart="5dp"
+                                android:layout_weight="3.5"
+                                android:fontFamily="@font/bdf"
+                                android:gravity="center"
+                                android:text="@string/firstSlab"
+                                android:elevation="@dimen/Default"
+                                android:textColor="@color/base"
+                                android:textSize="@dimen/Default" />
+                            <!--                    data-->
 
 
-                        <!--                    data-->
-                        <TextView
-                            android:id="@+id/a2"
-                            android:layout_width="0dp"
-                            android:layout_height="match_parent"
-                            android:layout_gravity="center"
-                            android:layout_weight="1"
-                            android:fontFamily="@font/bdf"
-                            android:gravity="fill_vertical|center"
-                            android:text="0%"
-                            android:textColor="@color/base"
-                            android:textSize="@dimen/much_bold" />
-                        <!--                    data-->
+                            <!--                    data-->
+                            <TextView
+                                android:id="@+id/a2"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center"
+                                android:layout_weight="1"
+                                android:fontFamily="@font/bdf"
+                                android:gravity="fill_vertical|center"
+                                android:text="0%"
+                                android:elevation="@dimen/Default"
+                                android:textColor="@color/base"
+                                android:textSize="@dimen/Default" />
+                            <!--                    data-->
 
 
-                        <!--                    data-->
-                        <TextView
-                            android:id="@+id/c1"
-                            android:layout_width="0dp"
-                            android:layout_height="match_parent"
-                            android:layout_weight="3"
-                            android:fontFamily="@font/bdf"
-                            android:gravity="fill_vertical|end"
-                            android:textColor="@color/base"
-                            android:textSize="@dimen/Default" />
-                        <!--                    data-->
+                            <!--                    data-->
+                            <TextView
+                                android:id="@+id/c1"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="3"
+                                android:fontFamily="@font/bdf"
+                                android:gravity="fill_vertical|end"
+                                android:textColor="@color/base"
+                                android:textSize="@dimen/Default" />
+                            <!--                    data-->
 
 
-                        <!--                    data-->
-                        <TextView
-                            android:id="@+id/d1"
-                            android:layout_width="0dp"
-                            android:layout_height="match_parent"
-                            android:layout_gravity="center"
-                            android:layout_weight="3.5"
-                            android:fontFamily="@font/bdf"
-                            android:gravity="center"
-                            android:textColor="@color/base"
-                            android:textSize="@dimen/Default" />
-                        <!--                    data-->
+                            <!--                    data-->
+                            <TextView
+                                android:id="@+id/d1"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center"
+                                android:layout_weight="3.5"
+                                android:fontFamily="@font/bdf"
+                                android:gravity="center"
+                                android:textColor="@color/base"
+                                android:textSize="@dimen/Default" />
+                            <!--                    data-->
 
 
-                    </LinearLayout>
+                        </LinearLayout>
 
 
-                </soup.neumorphism.NeumorphCardView>
-                <!--            dataTable-->
+                    </soup.neumorphism.NeumorphCardView>
+                    <!--            dataTable-->
 
-                <!--            dataTable-->
-                <soup.neumorphism.NeumorphCardView
-                    style="@style/Widget.Neumorph.CardView"
-                    android:layout_width="match_parent"
-                    android:layout_height="55dp"
-                    android:layout_marginTop="-15dp"
-                    app:neumorph_lightSource="leftTop"
-                    app:neumorph_shapeType="basin">
-
-                    <LinearLayout
+                    <!--            dataTable-->
+                    <soup.neumorphism.NeumorphCardView
+                        style="@style/Widget.Neumorph.CardView"
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:orientation="horizontal">
+                        android:layout_height="55dp"
+                        android:layout_marginTop="-15dp"
+                        app:neumorph_lightSource="leftTop"
+                        app:neumorph_shapeType="basin">
 
-                        <!--                    data-->
-                        <TextView
-                            android:id="@+id/b1"
-                            android:layout_width="0dp"
+                        <LinearLayout
+                            android:layout_width="match_parent"
                             android:layout_height="match_parent"
-                            android:layout_marginStart="5dp"
-                            android:layout_weight="3.5"
-                            android:fontFamily="@font/bdf"
-                            android:gravity="center"
-                            android:text="@string/seceoundSlab"
-                            android:textColor="@color/base"
-                            android:textSize="@dimen/Default" />
-                        <!--                    data-->
+                            android:orientation="horizontal">
+
+                            <!--                    data-->
+                            <TextView
+                                android:id="@+id/b1"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_marginStart="5dp"
+                                android:layout_weight="3.5"
+                                android:fontFamily="@font/bdf"
+                                android:gravity="center"
+                                android:text="@string/seceoundSlab"
+                                android:elevation="@dimen/Default"
+                                android:textColor="@color/base"
+                                android:textSize="@dimen/Default" />
+                            <!--                    data-->
 
 
-                        <!--                    data-->
-                        <TextView
-                            android:layout_width="0dp"
-                            android:layout_height="match_parent"
-                            android:layout_gravity="center"
-                            android:layout_weight="1"
-                            android:fontFamily="@font/bdf"
-                            android:gravity="fill_vertical|center"
-                            android:text="5%"
-                            android:textColor="@color/base"
-                            android:textSize="@dimen/much_bold" />
-                        <!--                    data-->
+                            <!--                    data-->
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center"
+                                android:layout_weight="1"
+                                android:fontFamily="@font/bdf"
+                                android:gravity="fill_vertical|center"
+                                android:text="5%"
+                                android:elevation="@dimen/Default"
+                                android:textColor="@color/base"
+                                android:textSize="@dimen/Default" />
+                            <!--                    data-->
 
 
-                        <!--                    data-->
-                        <TextView
-                            android:id="@+id/c2"
-                            android:layout_width="0dp"
-                            android:layout_height="match_parent"
+                            <!--                    data-->
+                            <TextView
+                                android:id="@+id/c2"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
 
-                            android:layout_weight="3"
-                            android:fontFamily="@font/bdf"
-                            android:gravity="fill_vertical|end"
-                            android:textColor="@color/base"
-                            android:textSize="@dimen/Default" />
-                        <!--                    data-->
-
-
-                        <!--                    data-->
-                        <TextView
-                            android:id="@+id/d2"
-                            android:layout_width="0dp"
-                            android:layout_height="match_parent"
-                            android:layout_gravity="center"
-                            android:layout_marginEnd="5dp"
-                            android:layout_weight="3.5"
-                            android:fontFamily="@font/bdf"
-                            android:gravity="center"
-                            android:textColor="@color/base"
-                            android:textSize="@dimen/Default" />
-                        <!--                    data-->
+                                android:layout_weight="3"
+                                android:fontFamily="@font/bdf"
+                                android:gravity="fill_vertical|end"
+                                android:textColor="@color/base"
+                                android:textSize="@dimen/Default" />
+                            <!--                    data-->
 
 
-                    </LinearLayout>
+                            <!--                    data-->
+                            <TextView
+                                android:id="@+id/d2"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center"
+                                android:layout_marginEnd="5dp"
+                                android:layout_weight="3.5"
+                                android:fontFamily="@font/bdf"
+                                android:gravity="center"
+                                android:textColor="@color/base"
+                                android:textSize="@dimen/Default" />
+                            <!--                    data-->
 
 
-                </soup.neumorphism.NeumorphCardView>
-                <!--            dataTable-->
+                        </LinearLayout>
 
-                <!--            dataTable-->
-                <soup.neumorphism.NeumorphCardView
-                    style="@style/Widget.Neumorph.CardView"
-                    android:layout_width="match_parent"
-                    android:layout_height="55dp"
-                    android:layout_marginTop="-15dp"
-                    app:neumorph_lightSource="leftTop"
-                    app:neumorph_shapeType="basin">
 
-                    <LinearLayout
+                    </soup.neumorphism.NeumorphCardView>
+                    <!--            dataTable-->
+
+                    <!--            dataTable-->
+                    <soup.neumorphism.NeumorphCardView
+                        style="@style/Widget.Neumorph.CardView"
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:orientation="horizontal">
+                        android:layout_height="55dp"
+                        android:layout_marginTop="-15dp"
+                        app:neumorph_lightSource="leftTop"
+                        app:neumorph_shapeType="basin">
 
-                        <!--                    data-->
-                        <TextView
-                            android:layout_width="0dp"
+                        <LinearLayout
+                            android:layout_width="match_parent"
                             android:layout_height="match_parent"
-                            android:layout_marginStart="5dp"
-                            android:layout_weight="3.5"
-                            android:fontFamily="@font/bdf"
-                            android:gravity="center"
-                            android:text="@string/thirdSlab"
-                            android:textColor="@color/base"
-                            android:textSize="@dimen/Default" />
-                        <!--                    data-->
+                            android:orientation="horizontal">
+
+                            <!--                    data-->
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_marginStart="5dp"
+                                android:layout_weight="3.5"
+                                android:fontFamily="@font/bdf"
+                                android:gravity="center"
+                                android:text="@string/thirdSlab"
+                                android:elevation="@dimen/Default"
+                                android:textColor="@color/base"
+                                android:textSize="@dimen/Default" />
+                            <!--                    data-->
 
 
-                        <!--                    data-->
-                        <TextView
-                            android:layout_width="0dp"
-                            android:layout_height="match_parent"
-                            android:layout_gravity="center"
-                            android:layout_weight="1"
-                            android:fontFamily="@font/bdf"
-                            android:gravity="fill_vertical|center"
-                            android:text="10%"
-                            android:textColor="@color/base"
-                            android:textSize="@dimen/much_bold" />
-                        <!--                    data-->
+                            <!--                    data-->
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center"
+                                android:layout_weight="1"
+                                android:fontFamily="@font/bdf"
+                                android:gravity="fill_vertical|center"
+                                android:text="10%"
+                                android:elevation="@dimen/Default"
+                                android:textColor="@color/base"
+                                android:textSize="@dimen/Default" />
+                            <!--                    data-->
 
 
-                        <!--                    data-->
-                        <TextView
-                            android:id="@+id/c3"
-                            android:layout_width="0dp"
-                            android:layout_height="match_parent"
-                            android:layout_weight="3"
-                            android:fontFamily="@font/bdf"
-                            android:gravity="fill_vertical|end"
-                            android:textColor="@color/base"
-                            android:textSize="@dimen/Default" />
-                        <!--                    data-->
+                            <!--                    data-->
+                            <TextView
+                                android:id="@+id/c3"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="3"
+                                android:fontFamily="@font/bdf"
+                                android:gravity="fill_vertical|end"
+                                android:textColor="@color/base"
+                                android:textSize="@dimen/Default" />
+                            <!--                    data-->
 
 
-                        <!--                    data-->
-                        <TextView
-                            android:id="@+id/d3"
-                            android:layout_width="0dp"
-                            android:layout_height="match_parent"
-                            android:layout_gravity="center"
-                            android:layout_marginEnd="5dp"
-                            android:layout_weight="3.5"
-                            android:fontFamily="@font/bdf"
-                            android:gravity="center"
-                            android:textColor="@color/base"
-                            android:textSize="@dimen/Default" />
-                        <!--                    data-->
+                            <!--                    data-->
+                            <TextView
+                                android:id="@+id/d3"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center"
+                                android:layout_marginEnd="5dp"
+                                android:layout_weight="3.5"
+                                android:fontFamily="@font/bdf"
+                                android:gravity="center"
+                                android:textColor="@color/base"
+                                android:textSize="@dimen/Default" />
+                            <!--                    data-->
 
 
-                    </LinearLayout>
+                        </LinearLayout>
 
 
-                </soup.neumorphism.NeumorphCardView>
-                <!--            dataTable-->
+                    </soup.neumorphism.NeumorphCardView>
+                    <!--            dataTable-->
 
-                <!--            dataTable-->
-                <soup.neumorphism.NeumorphCardView
-                    style="@style/Widget.Neumorph.CardView"
-                    android:layout_width="match_parent"
-                    android:layout_height="55dp"
-                    android:layout_marginTop="-15dp"
-                    app:neumorph_lightSource="leftTop"
-                    app:neumorph_shapeType="basin">
-
-                    <LinearLayout
+                    <!--            dataTable-->
+                    <soup.neumorphism.NeumorphCardView
+                        style="@style/Widget.Neumorph.CardView"
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:orientation="horizontal">
+                        android:layout_height="55dp"
+                        android:layout_marginTop="-15dp"
+                        app:neumorph_lightSource="leftTop"
+                        app:neumorph_shapeType="basin">
 
-                        <!--                    data-->
-                        <TextView
-                            android:layout_width="0dp"
+                        <LinearLayout
+                            android:layout_width="match_parent"
                             android:layout_height="match_parent"
-                            android:layout_marginStart="5dp"
-                            android:layout_weight="3.5"
-                            android:fontFamily="@font/bdf"
-                            android:gravity="center"
-                            android:text="@string/fourthSlab"
-                            android:textColor="@color/base"
-                            android:textSize="@dimen/Default" />
-                        <!--                    data-->
+                            android:orientation="horizontal">
+
+                            <!--                    data-->
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_marginStart="5dp"
+                                android:layout_weight="3.5"
+                                android:fontFamily="@font/bdf"
+                                android:gravity="center"
+                                android:text="@string/fourthSlab"
+                                android:elevation="@dimen/Default"
+                                android:textColor="@color/base"
+                                android:textSize="@dimen/Default" />
+                            <!--                    data-->
 
 
-                        <!--                    data-->
-                        <TextView
-                            android:layout_width="0dp"
-                            android:layout_height="match_parent"
-                            android:layout_gravity="center"
-                            android:layout_weight="1"
-                            android:fontFamily="@font/bdf"
-                            android:gravity="fill_vertical|center"
-                            android:text="15%"
-                            android:textColor="@color/base"
-                            android:textSize="@dimen/much_bold" />
-                        <!--                    data-->
+                            <!--                    data-->
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center"
+                                android:layout_weight="1"
+                                android:fontFamily="@font/bdf"
+                                android:gravity="fill_vertical|center"
+                                android:text="15%"
+                                android:elevation="@dimen/Default"
+                                android:textColor="@color/base"
+                                android:textSize="@dimen/Default" />
+                            <!--                    data-->
 
 
-                        <!--                    data-->
-                        <TextView
-                            android:id="@+id/c4"
-                            android:layout_width="0dp"
-                            android:layout_height="match_parent"
-                            android:layout_weight="3"
-                            android:fontFamily="@font/bdf"
-                            android:gravity="fill_vertical|end"
-                            android:textColor="@color/base"
-                            android:textSize="@dimen/Default" />
-                        <!--                    data-->
+                            <!--                    data-->
+                            <TextView
+                                android:id="@+id/c4"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="3"
+                                android:fontFamily="@font/bdf"
+                                android:gravity="fill_vertical|end"
+                                android:textColor="@color/base"
+                                android:textSize="@dimen/Default" />
+                            <!--                    data-->
 
 
-                        <!--                    data-->
-                        <TextView
-                            android:id="@+id/d4"
-                            android:layout_width="0dp"
-                            android:layout_height="match_parent"
-                            android:layout_gravity="center"
-                            android:layout_marginEnd="5dp"
-                            android:layout_weight="3.5"
-                            android:fontFamily="@font/bdf"
-                            android:gravity="center"
-                            android:textColor="@color/base"
-                            android:textSize="@dimen/Default" />
-                        <!--                    data-->
+                            <!--                    data-->
+                            <TextView
+                                android:id="@+id/d4"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center"
+                                android:layout_marginEnd="5dp"
+                                android:layout_weight="3.5"
+                                android:fontFamily="@font/bdf"
+                                android:gravity="center"
+                                android:textColor="@color/base"
+                                android:textSize="@dimen/Default" />
+                            <!--                    data-->
 
 
-                    </LinearLayout>
+                        </LinearLayout>
 
 
-                </soup.neumorphism.NeumorphCardView>
-                <!--            dataTable-->
+                    </soup.neumorphism.NeumorphCardView>
+                    <!--            dataTable-->
 
-                <!--            dataTable-->
-                <soup.neumorphism.NeumorphCardView
-                    style="@style/Widget.Neumorph.CardView"
-                    android:layout_width="match_parent"
-                    android:layout_height="55dp"
-                    android:layout_marginTop="-15dp"
-                    app:neumorph_lightSource="leftTop"
-                    app:neumorph_shapeType="basin">
-
-                    <LinearLayout
+                    <!--            dataTable-->
+                    <soup.neumorphism.NeumorphCardView
+                        style="@style/Widget.Neumorph.CardView"
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:orientation="horizontal">
+                        android:layout_height="55dp"
+                        android:layout_marginTop="-15dp"
+                        app:neumorph_lightSource="leftTop"
+                        app:neumorph_shapeType="basin">
 
-                        <!--                    data-->
-                        <TextView
-                            android:layout_width="0dp"
+                        <LinearLayout
+                            android:layout_width="match_parent"
                             android:layout_height="match_parent"
-                            android:layout_marginStart="5dp"
-                            android:layout_weight="3.5"
-                            android:fontFamily="@font/bdf"
-                            android:gravity="center"
-                            android:text="@string/fifthSlab"
-                            android:textColor="@color/base"
-                            android:textSize="@dimen/Default" />
-                        <!--                    data-->
+                            android:orientation="horizontal">
+
+                            <!--                    data-->
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_marginStart="5dp"
+                                android:layout_weight="3.5"
+                                android:fontFamily="@font/bdf"
+                                android:gravity="center"
+                                android:text="@string/fifthSlab"
+                                android:elevation="@dimen/Default"
+                                android:textColor="@color/base"
+                                android:textSize="@dimen/Default" />
+                            <!--                    data-->
 
 
-                        <!--                    data-->
-                        <TextView
-                            android:layout_width="0dp"
-                            android:layout_height="match_parent"
-                            android:layout_gravity="right"
-                            android:layout_weight="1"
-                            android:fontFamily="@font/bdf"
-                            android:gravity="fill_vertical|center"
-                            android:text="20%"
-                            android:textColor="@color/base"
-                            android:textSize="@dimen/much_bold" />
-                        <!--                    data-->
+                            <!--                    data-->
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="right"
+                                android:layout_weight="1"
+                                android:fontFamily="@font/bdf"
+                                android:gravity="fill_vertical|center"
+                                android:text="20%"
+                                android:elevation="@dimen/Default"
+                                android:textColor="@color/base"
+                                android:textSize="@dimen/Default" />
+                            <!--                    data-->
 
 
-                        <!--                    data-->
-                        <TextView
-                            android:id="@+id/c5"
-                            android:layout_width="0dp"
-                            android:layout_height="match_parent"
-                            android:layout_weight="3"
-                            android:fontFamily="@font/bdf"
-                            android:gravity="fill_vertical|end"
-                            android:textColor="@color/base"
-                            android:textSize="@dimen/Default" />
-                        <!--                    data-->
+                            <!--                    data-->
+                            <TextView
+                                android:id="@+id/c5"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="3"
+                                android:fontFamily="@font/bdf"
+                                android:gravity="fill_vertical|end"
+                                android:textColor="@color/base"
+                                android:textSize="@dimen/Default" />
+                            <!--                    data-->
 
 
-                        <!--                    data-->
-                        <TextView
-                            android:id="@+id/d5"
-                            android:layout_width="0dp"
-                            android:layout_height="match_parent"
-                            android:layout_gravity="center"
-                            android:layout_marginEnd="5dp"
-                            android:layout_weight="3.5"
-                            android:fontFamily="@font/bdf"
-                            android:gravity="center"
-                            android:textColor="@color/base"
-                            android:textSize="@dimen/Default" />
-                        <!--                    data-->
+                            <!--                    data-->
+                            <TextView
+                                android:id="@+id/d5"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center"
+                                android:layout_marginEnd="5dp"
+                                android:layout_weight="3.5"
+                                android:fontFamily="@font/bdf"
+                                android:gravity="center"
+                                android:textColor="@color/base"
+                                android:textSize="@dimen/Default" />
+                            <!--                    data-->
 
 
-                    </LinearLayout>
+                        </LinearLayout>
 
 
-                </soup.neumorphism.NeumorphCardView>
-                <!--            dataTable-->
+                    </soup.neumorphism.NeumorphCardView>
+                    <!--            dataTable-->
 
-                <!--            dataTable-->
-                <soup.neumorphism.NeumorphCardView
-                    style="@style/Widget.Neumorph.CardView"
-                    android:layout_width="match_parent"
-                    android:layout_height="55dp"
-                    android:layout_marginTop="-15dp"
-                    app:neumorph_lightSource="leftTop"
-                    app:neumorph_shapeType="basin">
-
-                    <LinearLayout
+                    <!--            dataTable-->
+                    <soup.neumorphism.NeumorphCardView
+                        style="@style/Widget.Neumorph.CardView"
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:orientation="horizontal">
+                        android:layout_height="55dp"
+                        android:layout_marginTop="-15dp"
+                        app:neumorph_lightSource="leftTop"
+                        app:neumorph_shapeType="basin">
 
-                        <!--                    data-->
-                        <TextView
-                            android:layout_width="0dp"
+                        <LinearLayout
+                            android:layout_width="match_parent"
                             android:layout_height="match_parent"
-                            android:layout_marginStart="5dp"
-                            android:layout_weight="3.5"
-                            android:fontFamily="@font/bdf"
-                            android:gravity="center"
-                            android:text="@string/sixthSlab"
-                            android:textColor="@color/base"
-                            android:textSize="@dimen/Default" />
-                        <!--                    data-->
+                            android:orientation="horizontal">
+
+                            <!--                    data-->
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_marginStart="5dp"
+                                android:layout_weight="3.5"
+                                android:fontFamily="@font/bdf"
+                                android:gravity="center"
+                                android:text="@string/sixthSlab"
+                                android:elevation="@dimen/Default"
+                                android:textColor="@color/base"
+                                android:textSize="@dimen/Default" />
+                            <!--                    data-->
 
 
-                        <!--                    data-->
-                        <TextView
-                            android:layout_width="0dp"
-                            android:layout_height="match_parent"
-                            android:layout_gravity="center"
-                            android:layout_weight="1"
-                            android:fontFamily="@font/bdf"
-                            android:gravity="fill_vertical|end"
-                            android:text="25%"
-                            android:textColor="@color/base"
-                            android:textSize="@dimen/much_bold" />
-                        <!--                    data-->
+                            <!--                    data-->
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center"
+                                android:layout_weight="1"
+                                android:fontFamily="@font/bdf"
+                                android:gravity="fill_vertical|end"
+                                android:text="25%"
+                                android:elevation="@dimen/Default"
+                                android:textColor="@color/base"
+                                android:textSize="@dimen/Default" />
+                            <!--                    data-->
 
 
-                        <!--                    data-->
-                        <TextView
-                            android:id="@+id/c6"
-                            android:layout_width="0dp"
-                            android:layout_height="match_parent"
-                            android:layout_gravity="center"
-                            android:layout_weight="3.5"
-                            android:fontFamily="@font/bdf"
-                            android:gravity="fill_vertical|center"
-                            android:textColor="@color/base"
-                            android:textSize="@dimen/Default" />
-                        <!--                    data-->
+                            <!--                    data-->
+                            <TextView
+                                android:id="@+id/c6"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center"
+                                android:layout_weight="3.5"
+                                android:fontFamily="@font/bdf"
+                                android:gravity="fill_vertical|center"
+                                android:textColor="@color/base"
+                                android:textSize="@dimen/Default" />
+                            <!--                    data-->
 
 
-                        <!--                    data-->
-                        <TextView
-                            android:id="@+id/d6"
-                            android:layout_width="0dp"
-                            android:layout_height="match_parent"
-                            android:layout_gravity="center"
-                            android:layout_marginEnd="5dp"
-                            android:layout_weight="3.5"
-                            android:fontFamily="@font/bdf"
-                            android:gravity="center"
-                            android:textColor="@color/base"
-                            android:textSize="@dimen/Default" />
-                        <!--                    data-->
+                            <!--                    data-->
+                            <TextView
+                                android:id="@+id/d6"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center"
+                                android:layout_marginEnd="5dp"
+                                android:layout_weight="3.5"
+                                android:fontFamily="@font/bdf"
+                                android:gravity="center"
+                                android:textColor="@color/base"
+                                android:textSize="@dimen/Default" />
+                            <!--                    data-->
 
 
-                    </LinearLayout>
+                        </LinearLayout>
 
 
-                </soup.neumorphism.NeumorphCardView>
+                    </soup.neumorphism.NeumorphCardView>
                 </LinearLayout>
 
 
                 <!--            dataTable-->
 
 
-
                 <!--            sumArea-->
                 <LinearLayout
                     android:id="@+id/resulBar"
                     android:layout_width="match_parent"
-                    android:layout_height="45dp"
+                    android:layout_height="60dp"
                     android:layout_marginStart="10dp"
                     android:layout_marginEnd="10sp"
-                    android:background="@drawable/blue_button"
+                    android:background="@drawable/two_color"
                     android:orientation="vertical">
                     <!--Result Heading-->
                     <LinearLayout
@@ -667,11 +681,12 @@
                             android:layout_height="match_parent"
                             android:layout_gravity="center"
                             android:layout_weight="4"
-                            android:fontFamily="@font/bdf"
+                            android:fontFamily="@font/titir"
                             android:gravity="center"
+                            android:elevation="@dimen/Default"
                             android:text="@string/total_amount"
                             android:textColor="@color/white"
-                            android:textSize="@dimen/much_bold" />
+                            android:textSize="@dimen/heading_size" />
                         <!--dataHeading-->
 
                         <!--dataHeading-->
@@ -681,11 +696,12 @@
                             android:layout_height="match_parent"
                             android:layout_gravity="center"
                             android:layout_weight="4"
-                            android:fontFamily="@font/bdf"
+                            android:fontFamily="@font/titir"
+                            android:elevation="@dimen/Default"
                             android:gravity="center"
                             android:text="@string/total_tax"
                             android:textColor="@color/white"
-                            android:textSize="@dimen/much_bold" />
+                            android:textSize="@dimen/heading_size" />
 
                         <!--dataHeading-->
 
@@ -823,7 +839,7 @@
                     android:focusable="true"
                     android:gravity="center"
                     android:scaleType="center"
-                    android:src="@drawable/ic_baseline_calculate_24_enable"
+                    android:src="@drawable/ic_baseline_calculate_24"
                     android:textColor="@color/base"
                     android:textSize="@dimen/much_bold"
                     app:neumorph_shapeType="basin" />
@@ -840,7 +856,7 @@
                     android:focusable="true"
                     android:gravity="center"
                     android:scaleType="center"
-                    android:src="@drawable/ic_baseline_calculate_24"
+                    android:src="@drawable/ic_baseline_calculate_24_disable"
                     android:textColor="@color/base"
                     android:textSize="@dimen/much_bold"
                     android:visibility="invisible"
@@ -853,6 +869,7 @@
         </LinearLayout>
 
         <LinearLayout
+            android:id="@+id/bottomArea"
             android:layout_width="300dp"
             android:layout_height="60dp"
             android:orientation="horizontal"
@@ -860,6 +877,12 @@
             android:gravity="center"
             android:layout_marginTop="-15dp"
             >
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/disable_person_icon"
+                android:layout_marginEnd="-20dp"
+                />
             <TextView
                 android:layout_width="100dp"
                 android:layout_height="match_parent"
@@ -915,7 +938,7 @@
 
 <!--    Bottom Area-->
 <LinearLayout
-    android:id="@+id/bottomArea"
+    android:id="@+id/bottomArea2"
     android:layout_width="match_parent"
     android:layout_height="150dp"
     android:visibility="gone"

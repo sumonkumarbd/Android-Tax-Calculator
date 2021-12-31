@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="base">#27bd25</color>
+    <color name="base">#0bab64</color>
     <color name="text_shadow">#e0e0e0</color>
 <!--    <color name="base">#0099ff</color>-->
-    <color name="yellow">#146356</color>
+    <color name="yellow">#3bb78f</color>
     <color name="gray">#9F9A9A</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>

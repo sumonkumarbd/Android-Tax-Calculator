@@ -11,7 +11,7 @@
     <string name="fourthSlab">পরবর্তী ৪ লক্ষ টাকা </string>
     <string name="fifthSlab">পরবর্তী ৫ লক্ষ টাকা </string>
     <string name="sixthSlab">পরবর্তী টাকার উপরে </string>
-    <string name="total_amount">সর্বমোট টাকার </string>
+    <string name="total_amount">সর্বমোট টাকা </string>
     <string name="total_tax">মোট ট্যাক্স</string>
     <string name="check">হিসেব করুন!!</string>
     <string name="intro">কোনো ব্যক্তি-করদাতার আয় যদি বছরে তিন লাখ টাকার বেশি হয়;
@@ -29,7 +29,7 @@
     <string name="disable_child">প্রতিবন্ধী সন্তান</string>
 
 
-    <dimen name="heding_size">14sp</dimen>
+    <dimen name="heading_size">14sp</dimen>
     <dimen name="Default">10sp</dimen>
     <dimen name="much_bold">12sp</dimen>
     <dimen name="head_bold">16sp</dimen>
