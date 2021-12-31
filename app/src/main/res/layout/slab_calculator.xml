@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:background="@color/white"
     tools:context=".SlabCalculator">
 
     <!--    UpperVictor-->
@@ -189,7 +190,8 @@
                         style="@style/Widget.Neumorph.CardView"
                         android:layout_width="match_parent"
                         android:layout_height="55dp"
-                        app:neumorph_lightSource="leftTop"
+                        app:neumorph_lightSource="rightTop"
+                        app:neumorph_shadowColorLight="@color/white"
                         app:neumorph_shapeType="basin">
 
                         <LinearLayout
@@ -269,7 +271,8 @@
                         android:layout_width="match_parent"
                         android:layout_height="55dp"
                         android:layout_marginTop="-15dp"
-                        app:neumorph_lightSource="leftTop"
+                        app:neumorph_lightSource="rightTop"
+                        app:neumorph_shadowColorLight="@color/white"
                         app:neumorph_shapeType="basin">
 
                         <LinearLayout
@@ -349,7 +352,8 @@
                         android:layout_width="match_parent"
                         android:layout_height="55dp"
                         android:layout_marginTop="-15dp"
-                        app:neumorph_lightSource="leftTop"
+                        app:neumorph_shadowColorLight="@color/white"
+                        app:neumorph_lightSource="rightTop"
                         app:neumorph_shapeType="basin">
 
                         <LinearLayout
@@ -427,7 +431,8 @@
                         android:layout_width="match_parent"
                         android:layout_height="55dp"
                         android:layout_marginTop="-15dp"
-                        app:neumorph_lightSource="leftTop"
+                        app:neumorph_lightSource="rightTop"
+                        app:neumorph_shadowColorLight="@color/white"
                         app:neumorph_shapeType="basin">
 
                         <LinearLayout
@@ -505,7 +510,8 @@
                         android:layout_width="match_parent"
                         android:layout_height="55dp"
                         android:layout_marginTop="-15dp"
-                        app:neumorph_lightSource="leftTop"
+                        app:neumorph_shadowColorLight="@color/white"
+                        app:neumorph_lightSource="rightTop"
                         app:neumorph_shapeType="basin">
 
                         <LinearLayout
@@ -583,7 +589,8 @@
                         android:layout_width="match_parent"
                         android:layout_height="55dp"
                         android:layout_marginTop="-15dp"
-                        app:neumorph_lightSource="leftTop"
+                        app:neumorph_lightSource="rightTop"
+                        app:neumorph_shadowColorLight="@color/white"
                         app:neumorph_shapeType="basin">
 
                         <LinearLayout
@@ -786,6 +793,8 @@
                 android:layout_height="match_parent"
                 android:layout_weight="2"
                 style="@style/Widget.Neumorph.CardView"
+                app:neumorph_lightSource="rightTop"
+                app:neumorph_shadowColorLight="@color/white"
                 app:neumorph_shapeType="basin"
                 >
                 <ImageView
@@ -832,6 +841,8 @@
                 <soup.neumorphism.NeumorphImageButton
                     android:id="@+id/calcButton"
                     style="@style/Widget.Neumorph.Button"
+                    app:neumorph_shadowColorLight="@color/white"
+                    app:neumorph_lightSource="leftTop"
                     android:layout_width="60dp"
                     android:layout_height="60dp"
                     android:layout_gravity="center"
@@ -849,6 +860,7 @@
                 <soup.neumorphism.NeumorphImageButton
                     android:id="@+id/calcButton_disabled"
                     style="@style/Widget.Neumorph.Button"
+                    app:neumorph_lightSource="rightTop"
                     android:layout_width="60dp"
                     android:layout_height="60dp"
                     android:layout_gravity="center"
@@ -860,6 +872,7 @@
                     android:textColor="@color/base"
                     android:textSize="@dimen/much_bold"
                     android:visibility="invisible"
+                    app:neumorph_shadowColorLight="@color/white"
                     app:neumorph_shapeType="basin" />
 <!--                clcButton>Disaled-->
 
@@ -914,6 +927,8 @@
                 android:layout_height="match_parent"
                 style="@style/ShapeAppearance.Neumorph.CardView"
                 app:neumorph_shapeType="basin"
+                app:neumorph_lightSource="rightTop"
+                app:neumorph_shadowColorLight="@color/white"
                 android:layout_gravity="end"
                 >
                 <Spinner
