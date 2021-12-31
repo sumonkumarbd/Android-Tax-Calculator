@@ -5,6 +5,10 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.text.TextUtils;
 import android.util.TypedValue;
+import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
+import android.widget.Spinner;
 import android.widget.Toast;
 
 
@@ -78,6 +82,83 @@ public class FemaleTax extends SlabCalculator {
 //        CAll Functions & Methods
 //        ============================
         calcButton.setEnabled(false);
+
+        //        Dropdown
+        //get the spinner from the xml.
+        spinner = (Spinner)findViewById(R.id.spinner);
+        //create a list of items for the spinner.
+        items = new String[]{"নেই", "১ টি", "২ টি", "২ এর অধিক"};
+
+//There are multiple variations of this, but this is the basic variant.
+        ArrayAdapter<String> adapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_activated_1, items);
+//set the spinners adapter to the previously created one.
+        spinner.setAdapter(adapter);
+        spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+                switch (i){
+                    case 0:
+                        //        values
+                        ballance1 = 300000;
+                        ballance2 = 400000;
+                        ballance3 = 700000;
+                        ballance4 = 1100000;
+                        ballance5 = 1600000;
+                        a1.setText("প্রথম ৩ লক্ষ টাকা টাকা");
+                        Toast.makeText(FemaleTax.this, "আপনার কোনো প্রতিবন্ধি সন্তান থাকলে সিলেক্ট করুন!!", Toast.LENGTH_LONG).show();
+                        break;
+                    case 1:
+                        //        values
+                        ballance1 = 350000;
+                        ballance2 = 450000;
+                        ballance3 = 750000;
+                        ballance4 = 1500000;
+                        ballance5 = 1650000;
+                        a1.setText("প্রথম সাড়ে ৩ লক্ষ টাকা");
+                        a1.setTextSize(TypedValue.COMPLEX_UNIT_SP,8);
+                        Toast.makeText(FemaleTax.this,"আপনার নির্ধারিত ট্যাক্সমুক্ত ইনকামে আরো অতিরিক্ত ৫০ হাজার টাকা যোগ হলো।",Toast.LENGTH_LONG).show();
+                        break;
+                    case 2:
+                        //        values
+                        ballance1 = 350000;
+                        ballance2 = 450000;
+                        ballance3 = 750000;
+                        ballance4 = 1500000;
+                        ballance5 = 1650000;
+                        a1.setText("প্রথম সাড়ে ৩ লক্ষ টাকা");
+                        a1.setTextSize(TypedValue.COMPLEX_UNIT_SP,8);
+                        Toast.makeText(FemaleTax.this,"আপনার নির্ধারিত ট্যাক্সমুক্ত ইনকামে আরো অতিরিক্ত ৫০ হাজার টাকা যোগ হলো। ",Toast.LENGTH_LONG).show();
+                        break;
+                    case 3:
+                        //        values
+                        ballance1 = 350000;
+                        ballance2 = 450000;
+                        ballance3 = 750000;
+                        ballance4 = 1500000;
+                        ballance5 = 1650000;
+                        a1.setText("প্রথম সাড়ে ৩ লক্ষ টাকা");
+                        a1.setTextSize(TypedValue.COMPLEX_UNIT_SP,8);
+                        Toast.makeText(FemaleTax.this," আপনার নির্ধারিত ট্যাক্সমুক্ত ইনকামে আরো অতিরিক্ত ৫০ হাজার টাকা যোগ হলো।",Toast.LENGTH_LONG).show();
+                        break;
+
+                    default:
+                        Toast.makeText(FemaleTax.this, "আপনার কোনো প্রতিবন্ধি সন্তান থাকলে সিলেক্ট করুন!!", Toast.LENGTH_SHORT).show();
+                }
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> adapterView) {
+
+                //        values
+                ballance1 = 300000;
+                ballance2 = 400000;
+                ballance3 = 700000;
+                ballance4 = 1100000;
+                ballance5 = 1600000;
+
+            }
+        });
+//        Dropdown
 
 //        for TextMorque
         Runnable taxt = () ->text_morq.setEllipsize(TextUtils.TruncateAt.MARQUEE);

@@ -116,7 +116,7 @@ public class SlabCalculator extends Main {
                         ballance4 = 1100000;
                         ballance5 = 1600000;
                         a1.setText("প্রথম ৩ লক্ষ টাকা টাকা");
-                        Toast.makeText(SlabCalculator.this,"নেই",Toast.LENGTH_LONG).show();
+                        Toast.makeText(SlabCalculator.this, "আপনার কোনো প্রতিবন্ধি সন্তান থাকলে সিলেক্ট করুন!!", Toast.LENGTH_LONG).show();
                         break;
                     case 1:
                         //        values
@@ -127,7 +127,7 @@ public class SlabCalculator extends Main {
                         ballance5 = 1650000;
                         a1.setText("প্রথম সাড়ে ৩ লক্ষ টাকা");
                         a1.setTextSize(TypedValue.COMPLEX_UNIT_SP,8);
-                        Toast.makeText(SlabCalculator.this,"১ টি",Toast.LENGTH_LONG).show();
+                        Toast.makeText(SlabCalculator.this,"আপনার নির্ধারিত ট্যাক্সমুক্ত ইনকামে আরো অতিরিক্ত ৫০ হাজার টাকা যোগ হলো।",Toast.LENGTH_LONG).show();
                         break;
                     case 2:
                         //        values
@@ -138,7 +138,7 @@ public class SlabCalculator extends Main {
                         ballance5 = 1650000;
                         a1.setText("প্রথম সাড়ে ৩ লক্ষ টাকা");
                         a1.setTextSize(TypedValue.COMPLEX_UNIT_SP,8);
-                        Toast.makeText(SlabCalculator.this,"২ টি",Toast.LENGTH_LONG).show();
+                        Toast.makeText(SlabCalculator.this,"আপনার নির্ধারিত ট্যাক্সমুক্ত ইনকামে আরো অতিরিক্ত ৫০ হাজার টাকা যোগ হলো। ",Toast.LENGTH_LONG).show();
                         break;
                     case 3:
                         //        values
@@ -149,7 +149,7 @@ public class SlabCalculator extends Main {
                         ballance5 = 1650000;
                         a1.setText("প্রথম সাড়ে ৩ লক্ষ টাকা");
                         a1.setTextSize(TypedValue.COMPLEX_UNIT_SP,8);
-                        Toast.makeText(SlabCalculator.this,"২ এর অধিক",Toast.LENGTH_LONG).show();
+                        Toast.makeText(SlabCalculator.this," আপনার নির্ধারিত ট্যাক্সমুক্ত ইনকামে আরো অতিরিক্ত ৫০ হাজার টাকা যোগ হলো।",Toast.LENGTH_LONG).show();
                         break;
 
                     default:
