@@ -77,6 +77,11 @@ public class FemaleTax extends SlabCalculator {
         Main main = new Main();
         //        Object of Handler
         Handler handler = new Handler();
+        Runnable msg = () -> {
+            Toast.makeText(FemaleTax.this, "আপনার কোনো প্রতিবন্ধি সন্তান থাকলে সিলেক্ট করুন!!", Toast.LENGTH_LONG).show();
+        };
+
+        handler.postDelayed(msg,2000);
 
 //                Actions
 //        CAll Functions & Methods
@@ -99,45 +104,45 @@ public class FemaleTax extends SlabCalculator {
                 switch (i){
                     case 0:
                         //        values
-                        ballance1 = 300000;
-                        ballance2 = 400000;
-                        ballance3 = 700000;
-                        ballance4 = 1100000;
-                        ballance5 = 1600000;
-                        a1.setText("প্রথম ৩ লক্ষ টাকা টাকা");
-                        Toast.makeText(FemaleTax.this, "আপনার কোনো প্রতিবন্ধি সন্তান থাকলে সিলেক্ট করুন!!", Toast.LENGTH_LONG).show();
-                        break;
-                    case 1:
-                        //        values
                         ballance1 = 350000;
                         ballance2 = 450000;
                         ballance3 = 750000;
-                        ballance4 = 1500000;
+                        ballance4 = 1150000;
                         ballance5 = 1650000;
                         a1.setText("প্রথম সাড়ে ৩ লক্ষ টাকা");
                         a1.setTextSize(TypedValue.COMPLEX_UNIT_SP,8);
+                        break;
+                    case 1:
+                        //        values
+                        ballance1 = 400000;
+                        ballance2 = 500000;
+                        ballance3 = 800000;
+                        ballance4 = 1200000;
+                        ballance5 = 1700000;
+                        a1.setText("প্রথম ৪ লক্ষ টাকা");
+                        a1.setTextSize(TypedValue.COMPLEX_UNIT_SP,10);
                         Toast.makeText(FemaleTax.this,"আপনার নির্ধারিত ট্যাক্সমুক্ত ইনকামে আরো অতিরিক্ত ৫০ হাজার টাকা যোগ হলো।",Toast.LENGTH_LONG).show();
                         break;
                     case 2:
                         //        values
-                        ballance1 = 350000;
-                        ballance2 = 450000;
-                        ballance3 = 750000;
-                        ballance4 = 1500000;
-                        ballance5 = 1650000;
-                        a1.setText("প্রথম সাড়ে ৩ লক্ষ টাকা");
-                        a1.setTextSize(TypedValue.COMPLEX_UNIT_SP,8);
+                        ballance1 = 400000;
+                        ballance2 = 500000;
+                        ballance3 = 800000;
+                        ballance4 = 1200000;
+                        ballance5 = 1700000;
+                        a1.setText("প্রথম ৪ লক্ষ টাকা");
+                        a1.setTextSize(TypedValue.COMPLEX_UNIT_SP,10);
                         Toast.makeText(FemaleTax.this,"আপনার নির্ধারিত ট্যাক্সমুক্ত ইনকামে আরো অতিরিক্ত ৫০ হাজার টাকা যোগ হলো। ",Toast.LENGTH_LONG).show();
                         break;
                     case 3:
                         //        values
-                        ballance1 = 350000;
-                        ballance2 = 450000;
-                        ballance3 = 750000;
-                        ballance4 = 1500000;
-                        ballance5 = 1650000;
-                        a1.setText("প্রথম সাড়ে ৩ লক্ষ টাকা");
-                        a1.setTextSize(TypedValue.COMPLEX_UNIT_SP,8);
+                        ballance1 = 400000;
+                        ballance2 = 500000;
+                        ballance3 = 800000;
+                        ballance4 = 1200000;
+                        ballance5 = 1700000;
+                        a1.setText("প্রথম ৪ লক্ষ টাকা");
+                        a1.setTextSize(TypedValue.COMPLEX_UNIT_SP,10);
                         Toast.makeText(FemaleTax.this," আপনার নির্ধারিত ট্যাক্সমুক্ত ইনকামে আরো অতিরিক্ত ৫০ হাজার টাকা যোগ হলো।",Toast.LENGTH_LONG).show();
                         break;
 
