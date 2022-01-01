@@ -8,23 +8,6 @@
     android:orientation="vertical"
     android:background="@color/background_dark">
 
-<!--    <LinearLayout-->
-<!--        android:id="@+id/sec_parent"-->
-<!--        android:layout_width="300dp"-->
-<!--        android:layout_height="160dp"-->
-<!--        android:layout_gravity="center"-->
-<!--        android:background="@color/white"-->
-<!--        android:elevation="@dimen/head_bolder"-->
-<!--        android:gravity="center_horizontal"-->
-<!--        android:orientation="vertical"-->
-<!--        app:layout_constraintBottom_toTopOf="@id/divider"-->
-<!--        app:layout_constraintEnd_toEndOf="parent"-->
-<!--        app:layout_constraintStart_toStartOf="parent"-->
-<!--        app:layout_constraintTop_toTopOf="parent">-->
-
-<!-- -->
-<!--    </LinearLayout>-->
-
 
     <LinearLayout
         android:id="@+id/selection_card"

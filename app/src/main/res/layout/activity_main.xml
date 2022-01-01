@@ -50,27 +50,26 @@
             android:background="@drawable/singecolor_button"
             android:gravity="center"
             >
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/app_name"
-                android:textColor="@color/white"
                 android:layout_gravity="center"
-                android:gravity="center"
+                android:layout_marginTop="-40dp"
                 android:elevation="@dimen/Default"
                 android:fontFamily="@font/titir"
-                android:textSize="@dimen/head_bolder"
-                android:layout_marginTop="-40dp"
-                />
+                android:gravity="center"
+                android:text="@string/app_name"
+                android:textColor="@color/white"
+                android:textSize="@dimen/head_bolder" />
 
 
         </LinearLayout><!--Upper color bord-->
 
 <!--        main card-->
-        <LinearLayout
+        <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="250dp"
             android:layout_height="400dp"
-            android:orientation="vertical"
             android:layout_marginTop="-70dp"
             android:elevation="@dimen/Default"
             android:layout_gravity="center"
@@ -79,41 +78,124 @@
             <GridLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:rowCount="3"
                 android:columnCount="2"
+                android:rowCount="5"
+                android:layout_margin="10dp"
+                android:padding="10dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
                 >
 
-                <com.google.android.material.card.MaterialCardView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_row="0"
-                    android:layout_column="0"
+                <Button
+                    android:id="@+id/slabCalcButton"
                     android:layout_rowWeight="1"
                     android:layout_columnWeight="1"
-                    android:elevation="@dimen/head_bolder"
-                    android:layout_margin="15dp"
-                    >
+                    android:layout_gravity="fill"
+                    android:layout_margin="5sp"
+                    android:background="#ffffff"
+                    android:text="Button"
+                    android:textSize="12sp" />
 
-                    <Button
-                        android:id="@+id/slabCalcButton"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:background="@drawable/two_color"
-                        android:text="@string/app_name"
-                        android:layout_gravity="center"
-                        />
+                <Button
+                    android:id="@+id/button2"
+                    android:layout_rowWeight="1"
+                    android:layout_columnWeight="1"
+                    android:layout_gravity="fill"
+                    android:layout_margin="5sp"
+                    android:background="#ffffff"
+                    android:text="Button"
+                    android:textSize="12sp" />
 
-                </com.google.android.material.card.MaterialCardView>
+                <Button
+                    android:id="@+id/button3"
+                    android:layout_rowWeight="1"
+                    android:layout_columnWeight="1"
+                    android:layout_gravity="fill"
+                    android:layout_margin="5sp"
+                    android:background="#ffffff"
+                    android:text="Button"
+                    android:textSize="12sp" />
+
+                <Button
+                    android:id="@+id/button4"
+                    android:layout_rowWeight="1"
+                    android:layout_columnWeight="1"
+                    android:layout_gravity="fill"
+                    android:layout_margin="5sp"
+                    android:background="#ffffff"
+                    android:text="Button"
+                    android:textSize="12sp" />
+
+                <Button
+                    android:id="@+id/button5"
+                    android:layout_rowWeight="1"
+                    android:layout_columnWeight="1"
+                    android:layout_gravity="fill"
+                    android:layout_margin="5sp"
+                    android:background="#ffffff"
+                    android:text="Button"
+                    android:textSize="12sp" />
+
+                <Button
+                    android:id="@+id/button6"
+                    android:layout_rowWeight="1"
+                    android:layout_columnWeight="1"
+                    android:layout_gravity="fill"
+                    android:layout_margin="5sp"
+                    android:background="#ffffff"
+                    android:text="Button"
+                    android:textSize="12sp" />
+
+                <Button
+                    android:id="@+id/button7"
+                    android:layout_rowWeight="1"
+                    android:layout_columnWeight="1"
+                    android:layout_gravity="fill"
+                    android:layout_margin="5sp"
+                    android:background="#ffffff"
+                    android:text="Button"
+                    android:textSize="12sp" />
+
+                <Button
+                    android:id="@+id/button8"
+                    android:layout_rowWeight="1"
+                    android:layout_columnWeight="1"
+                    android:layout_gravity="fill"
+                    android:layout_margin="5sp"
+                    android:background="#ffffff"
+                    android:text="Button"
+                    android:textSize="12sp" />
+
+                <Button
+                    android:id="@+id/button9"
+                    android:layout_rowWeight="1"
+                    android:layout_columnWeight="1"
+                    android:layout_gravity="fill"
+                    android:layout_margin="5sp"
+                    android:background="#ffffff"
+                    android:text="Button"
+                    android:textSize="12sp" />
+
+                <Button
+                    android:id="@+id/button20"
+                    android:layout_rowWeight="1"
+                    android:layout_columnWeight="1"
+                    android:layout_gravity="fill"
+                    android:layout_margin="5sp"
+                    android:background="#ffffff"
+                    android:text="Button"
+                    android:textSize="12sp" />
+
 
             </GridLayout>
 
 
+        </androidx.constraintlayout.widget.ConstraintLayout><!--        main card-->
 
 
-
-
-
-        </LinearLayout><!--        main card-->
 
 
 
