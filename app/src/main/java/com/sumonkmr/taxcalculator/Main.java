@@ -22,11 +22,12 @@ import soup.neumorphism.NeumorphImageButton;
 public class Main extends AppCompatActivity {
 
 
-    Animation fade_in, zoom_in, left_to_right, right_to_left, right_to_left_slow, middle_to_top;
+    Animation fade_in, zoom_in, left_to_right, right_to_left, right_to_left_slow, middle_to_top, bottom_from_up;
     Animation up_down_cont, up_from_bottom, up_from_bottom_slow, slide_in_left, slide_out_right, slide_out_left, slide_in_right,right_slidere_infinit;
-    LinearLayout slabCalcButton;
+    LinearLayout slabCalcButton, first_row, insButton, e_tin, sec_row, salary_tax, thirdRow, address_book, about_us;
+    androidx.constraintlayout.widget.ConstraintLayout  mainCard;
     Dialog dialog;
-    TextView text_morque;
+    TextView appName, text_morque;
 
 
     @SuppressLint({"UseCompatLoadingForDrawables", "ObsoleteSdkInt"})
@@ -45,20 +46,38 @@ public class Main extends AppCompatActivity {
         middle_to_top = AnimationUtils.loadAnimation(Main.this,R.anim.middle_to_top);
         up_down_cont = AnimationUtils.loadAnimation(Main.this,R.anim.up_down_cont);
         up_from_bottom = AnimationUtils.loadAnimation(Main.this,R.anim.up_from_bottom);
+        bottom_from_up = AnimationUtils.loadAnimation(Main.this,R.anim.bottom_from_up);
         up_from_bottom_slow = AnimationUtils.loadAnimation(Main.this,R.anim.up_from_bottom_slow);
         slide_in_left = AnimationUtils.loadAnimation(Main.this,R.anim.slide_in_left);
         slide_out_left = AnimationUtils.loadAnimation(Main.this,R.anim.slide_out_left);
         slide_in_right = AnimationUtils.loadAnimation(Main.this,R.anim.slide_in_right);
         slide_out_right = AnimationUtils.loadAnimation(Main.this,R.anim.slide_out_right);
         right_slidere_infinit = AnimationUtils.loadAnimation(Main.this,R.anim.right_slidere_infinit);
+        right_slidere_infinit = AnimationUtils.loadAnimation(Main.this,R.anim.right_slidere_infinit);
         slabCalcButton = findViewById(R.id.slabCalcButton);
         text_morque = findViewById(R.id.text_morque);
+        mainCard = findViewById(R.id.mainCard);
+        first_row = findViewById(R.id.first_row);
+        insButton = findViewById(R.id.insButton);
+        e_tin = findViewById(R.id.e_tin);
+        sec_row = findViewById(R.id.sec_row);
+        salary_tax = findViewById(R.id.salary_tax);
+        thirdRow = findViewById(R.id.thirdRow);
+        address_book = findViewById(R.id.address_book);
+        about_us = findViewById(R.id.about_us);
+        appName = findViewById(R.id.appName);
+
+//        calling animations
+        appName.setAnimation(zoom_in);
+        mainCard.setAnimation(fade_in);
+        first_row.setAnimation(bottom_from_up);
+        salary_tax.setAnimation(slide_in_left);
+        slabCalcButton.setAnimation(slide_in_right);
+        thirdRow.setAnimation(up_from_bottom);
 
 
 //        objs
         Handler handler = new Handler();
-        Runnable runnable = () -> slabCalcButton.startAnimation(fade_in);
-        handler.postDelayed(runnable,1000);
 
 
 //        Actions
