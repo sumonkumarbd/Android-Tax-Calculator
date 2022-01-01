@@ -802,7 +802,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:src="@drawable/ic_baseline_error_outline_24"
-                    android:layout_marginStart="10dp"
+                    android:layout_marginStart="6dp"
                     android:layout_marginTop="5dp"
                     android:visibility="invisible"
                     android:alpha=".8"
@@ -860,7 +860,6 @@
                 <soup.neumorphism.NeumorphImageButton
                     android:id="@+id/calcButton_disabled"
                     style="@style/Widget.Neumorph.Button"
-                    app:neumorph_lightSource="rightTop"
                     android:layout_width="60dp"
                     android:layout_height="60dp"
                     android:layout_gravity="center"
@@ -872,6 +871,7 @@
                     android:textColor="@color/base"
                     android:textSize="@dimen/much_bold"
                     android:visibility="invisible"
+                    app:neumorph_lightSource="rightTop"
                     app:neumorph_shadowColorLight="@color/white"
                     app:neumorph_shapeType="basin" />
 <!--                clcButton>Disaled-->

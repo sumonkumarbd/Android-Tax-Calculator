@@ -92,7 +92,6 @@ public class SlabCalculator extends Main {
 //                Actions
 //        CAll Functions & Methods
 //        ============================
-        calcButton.setEnabled(false);
 
 //        Dropdown
         //get the spinner from the xml.
@@ -211,11 +210,14 @@ public class SlabCalculator extends Main {
         //OnClick Litsenr
         calcButton.setOnClickListener(view -> {
             String uservalue = inputVal.getText().toString();
-            if (!uservalue.isEmpty()){
+            if (uservalue.length() == 0){
+                calcButton.setEnabled(false);
+                calcButton_disabled.setVisibility(View.VISIBLE);
+                inputError.setVisibility(View.VISIBLE);
+                Toast.makeText(SlabCalculator.this,"আপনার ট্যাক্সযোগ্য আয় ইনপুট দিন!",Toast.LENGTH_SHORT).show();
+            }else {
                 // calculator
                 calculator();
-            }else {
-                calcButton.setEnabled(false);
             };
 
 
@@ -421,7 +423,6 @@ public class SlabCalculator extends Main {
 
 
         inputVal.setText("");
-        calcButton.setEnabled(false);
 
     };//calculator finished
 

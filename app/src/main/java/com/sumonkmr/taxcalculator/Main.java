@@ -101,7 +101,11 @@ public class Main extends AppCompatActivity {
 
 
 
-
+            //onClick Events
+        salary_tax.setOnClickListener(view -> {
+            Intent salary_tax = new Intent(Main.this,SalaryTax.class);
+            startActivity(salary_tax);
+        });
 
 
 

@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/background_dark"
+    >
+    <!--        morque_text-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:orientation="vertical"
+        >
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/base"
+            android:alpha=".9"
+            />
+        <TextView
+            android:id="@+id/text_morque"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="top"
+            android:textSize="@dimen/heading_size"
+            android:fontFamily="@font/normal"
+            android:gravity="top"
+            android:layout_marginTop="-20dp"
+            android:textColor="@color/white"
+            android:alpha="1"
+            android:textEditPasteWindowLayout="@string/intro"
+            android:singleLine="true"
+            android:text="@string/intro" />
+    </LinearLayout><!--        morque_text-->
+
+    <!--Upper color bord-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_gravity="center"
+        android:background="@drawable/singecolor_button"
+        android:gravity="center"
+        >
+
+        <TextView
+            android:id="@id/appName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="-20dp"
+            android:elevation="@dimen/Default"
+            android:fontFamily="@font/titir"
+            android:gravity="center"
+            android:text="@string/app_name"
+            android:textColor="@color/white"
+            android:textSize="@dimen/head_bold" />
+
+
+    </LinearLayout><!--Upper color bord-->
+
+<!--    MainCarc-->
+    <LinearLayout
+        android:layout_width="350dp"
+        android:layout_height="520dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="-50dp"
+        android:padding="10dp"
+        android:background="@drawable/tnas_curved25"
+        android:elevation="@dimen/heading_size">
+        >
+
+    </LinearLayout><!--    MainCarc-->
+
+
+
+
+
+
+</LinearLayout><!--parent-->
