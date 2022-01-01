@@ -1,5 +1,6 @@
 package com.sumonkmr.taxcalculator;
 
+import android.annotation.SuppressLint;
 import android.app.Dialog;
 import android.content.Intent;
 import android.os.Build;
@@ -27,6 +28,7 @@ public class Main extends AppCompatActivity {
     TextView text_morque;
 
 
+    @SuppressLint({"UseCompatLoadingForDrawables", "ObsoleteSdkInt"})
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -54,8 +56,8 @@ public class Main extends AppCompatActivity {
 
 //        objs
         Handler handler = new Handler();
-        Runnable runnable = () -> slabCalcButton.startAnimation(zoom_in);
-        handler.postDelayed(runnable,3000);
+        Runnable runnable = () -> slabCalcButton.startAnimation(fade_in);
+        handler.postDelayed(runnable,1000);
 
 
 //        Actions
@@ -75,7 +77,7 @@ public class Main extends AppCompatActivity {
         }
         dialog.getWindow().setLayout(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT);
         dialog.setCancelable(false); //Optional
-        dialog.getWindow().getAttributes().windowAnimations =R.anim.fade_in; //Setting the animations to dialog
+        dialog.getWindow().getAttributes().windowAnimations =R.anim.slide_out_right; //Setting the animations to dialog
 
 
 

@@ -4,191 +4,210 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_gravity="center_horizontal"
-    android:layout_height="wrap_content"
-    android:background="@drawable/dialog_background">
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/background_dark">
 
-
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="8dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/img_sun"
-        android:elevation="5dp"
-        android:contentDescription="@string/app_name" />
-
-    <TextView
-        android:id="@+id/dialog_heading"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:fontFamily="@font/titir"
-        android:text="@string/type_of_tax"
-        android:textColor="@android:color/black"
-        android:textSize="16sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView" />
-
-    <TextView
-        android:id="@+id/dialog_notice"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="15dp"
-        android:layout_marginEnd="16dp"
-        android:fontFamily="@font/bd_font"
-        android:text="@string/notice_massage"
-        android:textAlignment="center"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/dialog_heading" />
-
-
-    <!--    male-->
-    <!--    male-->
-    <!--    female-->
-    <View
-        android:id="@+id/divider"
-        android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:layout_marginBottom="-150dp"
-        app:layout_constraintBottom_toTopOf="@id/male"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/dialog_notice" />
-
-    <soup.neumorphism.NeumorphButton
-        android:id="@+id/male"
-        style="@style/Widget.Neumorph.ImageButton"
-        android:layout_width="match_parent"
-        android:layout_height="75dp"
-        android:layout_gravity="center"
-        android:layout_marginTop="10dp"
-        android:padding="25dp"
-        android:drawableStart="@drawable/male_icon"
-        android:fontFamily="@font/titir"
-        android:gravity="center"
-        android:text="@string/male"
-        android:textColor="@color/base"
-        android:textSize="@dimen/heading_size"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/divider"
-        app:neumorph_shapeType="basin" />
-
-    <soup.neumorphism.NeumorphButton
-        android:id="@+id/female"
-        style="@style/Widget.Neumorph.ImageButton"
-        android:layout_width="match_parent"
-        android:layout_height="75dp"
-        android:layout_gravity="center"
-        android:layout_marginTop="-8dp"
-        android:padding="25dp"
-        android:gravity="center"
-        android:text="@string/female"
-        android:fontFamily="@font/titir"
-        android:textSize="@dimen/heading_size"
-        android:drawableStart="@drawable/female_icon"
-        android:textColor="@color/base"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/male"
-        app:neumorph_shapeType="basin" />
-<!--    female-->
-
-<!--    disable_parson-->
-    <soup.neumorphism.NeumorphButton
-        android:id="@+id/disable_parson"
-        style="@style/Widget.Neumorph.ImageButton"
-        android:layout_width="match_parent"
-        android:layout_height="75dp"
-        android:layout_gravity="center"
-        android:layout_marginTop="-8dp"
-        android:padding="25dp"
-        android:gravity="center"
-        android:drawableStart="@drawable/disable_person_icon"
-        android:text="@string/disable_person"
-        android:fontFamily="@font/titir"
-        android:textSize="@dimen/heading_size"
-        android:textColor="@color/base"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/female"
-        app:neumorph_shapeType="basin"
-        tools:ignore="MissingConstraints" />
-    <!--    disable_parson-->
-
-<!--    freedom_fighter-->
-    <soup.neumorphism.NeumorphButton
-        android:id="@+id/freedom_fighter"
-        style="@style/Widget.Neumorph.ImageButton"
-        android:layout_width="match_parent"
-        android:layout_height="75dp"
-        android:layout_marginTop="-8dp"
-        android:layout_gravity="center"
-        android:gravity="center"
-        android:text="@string/freedom_fighter"
-        android:fontFamily="@font/titir"
-        android:textSize="@dimen/heading_size"
-        android:drawableStart="@drawable/freedom_icon"
-        android:padding="25dp"
-        android:textColor="@color/base"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/disable_parson"
-        app:neumorph_shapeType="basin" />
-    <!--    freedom_fighter-->
-
-
-<!--    <soup.neumorphism.NeumorphImageButton-->
-<!--        android:id="@+id/btn_cancel"-->
-<!--        android:layout_width="80dp"-->
-<!--        android:layout_height="80dp"-->
-<!--        app:layout_constraintBottom_toBottomOf="parent"-->
-<!--        app:layout_constraintTop_toBottomOf="@id/freedom_fighter"-->
-<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--    <LinearLayout-->
+<!--        android:id="@+id/sec_parent"-->
+<!--        android:layout_width="300dp"-->
+<!--        android:layout_height="160dp"-->
+<!--        android:layout_gravity="center"-->
+<!--        android:background="@color/white"-->
+<!--        android:elevation="@dimen/head_bolder"-->
+<!--        android:gravity="center_horizontal"-->
+<!--        android:orientation="vertical"-->
+<!--        app:layout_constraintBottom_toTopOf="@id/divider"-->
 <!--        app:layout_constraintEnd_toEndOf="parent"-->
-<!--        android:src="@drawable/ic_baseline_cancel_24"-->
-<!--        android:focusableInTouchMode="true"-->
-<!--        app:layout_constraintVertical_bias="1.0"-->
-<!--        style="@style/Widget.Neumorph.ImageButton"-->
-<!--        app:neumorph_shapeType="basin"-->
-<!--        android:clickable="true"-->
-<!--        android:focusable="true"-->
-<!--        />-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent">-->
 
-    <soup.neumorphism.NeumorphImageButton
-        android:id="@+id/btn_cancel"
-        style="@style/Widget.Neumorph.ImageButton"
-        android:layout_width="80dp"
-        android:layout_height="80dp"
-        android:layout_gravity="center"
-        android:clickable="true"
-        android:focusable="true"
-        android:gravity="center"
-        android:scaleType="centerCrop"
-        android:src="@drawable/ic_baseline_cancel_24"
-        android:textColor="@color/base"
-        android:textSize="@dimen/much_bold"
-        app:neumorph_shapeType="basin"
-        app:layout_constraintTop_toBottomOf="@id/freedom_fighter"
-        app:layout_constraintStart_toStartOf="parent"
+<!-- -->
+<!--    </LinearLayout>-->
+
+
+    <LinearLayout
+        android:id="@+id/selection_card"
+        android:layout_width="300dp"
+        android:layout_height="500dp"
+        android:layout_marginBottom="52dp"
+        android:background="@drawable/tnas_curved40"
+        android:elevation="@dimen/head_bolder"
+        android:orientation="vertical"
+        android:padding="20dp"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        />
+        app:layout_constraintHorizontal_bias=".5"
+        app:layout_constraintVertical_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:contentDescription="@string/app_name"
+            android:elevation="@dimen/Default"
+            android:layout_gravity="center"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/img_sun" />
+
+        <TextView
+            android:id="@+id/dialog_heading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:fontFamily="@font/titir"
+            android:text="@string/type_of_tax"
+            android:textColor="@color/base"
+            android:elevation="@dimen/Default"
+            android:textSize="16sp"
+            android:layout_gravity="center"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+        <TextView
+            android:id="@+id/dialog_notice"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="16dp"
+            android:fontFamily="@font/bd_font"
+            android:textColor="@color/gray"
+            android:text="@string/notice_massage"
+            android:textAlignment="center"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/dialog_heading" />
+
+        <View
+            android:id="@+id/divider"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/lines"
+            app:layout_constraintBottom_toTopOf="@id/male"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="-10dp"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/dialog_notice" />
+        <!--    male-->
+        <soup.neumorphism.NeumorphButton
+            android:id="@+id/male"
+            style="@style/Widget.Neumorph.ImageButton"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:drawableStart="@drawable/male_icon"
+            android:fontFamily="@font/titir"
+            android:gravity="center"
+            android:padding="25dp"
+            android:text="@string/male"
+            android:textColor="@color/base"
+            android:textSize="@dimen/heading_size"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/divider"
+            app:neumorph_shapeType="basin" />   <!--    male-->
+        <!--    female-->
+        <soup.neumorphism.NeumorphButton
+            android:id="@+id/female"
+            style="@style/Widget.Neumorph.ImageButton"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="-8dp"
+            android:drawableStart="@drawable/female_icon"
+            android:fontFamily="@font/titir"
+            android:gravity="center"
+            android:padding="25dp"
+            android:text="@string/female"
+            android:textColor="@color/base"
+            android:textSize="@dimen/heading_size"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/male"
+            app:neumorph_shapeType="basin" />    <!--    female-->
+        <!--    female-->
+
+        <!--    disable_parson-->
+        <soup.neumorphism.NeumorphButton
+            android:id="@+id/disable_parson"
+            style="@style/Widget.Neumorph.ImageButton"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="-8dp"
+            android:drawableStart="@drawable/disable_person_icon"
+            android:fontFamily="@font/titir"
+            android:gravity="center"
+            android:padding="25dp"
+            android:text="@string/disable_person"
+            android:textColor="@color/base"
+            android:textSize="@dimen/heading_size"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/female"
+            app:neumorph_shapeType="basin"
+            tools:ignore="MissingConstraints" />
+        <!--    disable_parson-->
+
+        <!--    freedom_fighter-->
+        <soup.neumorphism.NeumorphButton
+            android:id="@+id/freedom_fighter"
+            style="@style/Widget.Neumorph.ImageButton"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="-8dp"
+            android:drawableStart="@drawable/freedom_icon"
+            android:fontFamily="@font/titir"
+            android:gravity="center"
+            android:padding="25dp"
+            android:text="@string/freedom_fighter"
+            android:textColor="@color/base"
+            android:textSize="@dimen/heading_size"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/disable_parson"
+            app:neumorph_shapeType="basin" />
+        <!--    freedom_fighter-->
 
 
-<!--    <Button-->
+        <soup.neumorphism.NeumorphImageButton
+            android:id="@+id/btn_cancel"
+            style="@style/Widget.Neumorph.ImageButton"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="-10dp"
+            android:layout_gravity="center"
+            android:clickable="true"
+            android:focusable="true"
+            android:gravity="center"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_baseline_cancel_24"
+            android:textColor="@color/base"
+            android:textSize="@dimen/much_bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/freedom_fighter"
+            app:neumorph_shapeType="basin" />
+    </LinearLayout>
+
+
+    <!--    <Button-->
 <!--        android:id="@+id/btn_okay"-->
 <!--        android:layout_width="0dp"-->
 <!--        android:layout_height="wrap_content"-->

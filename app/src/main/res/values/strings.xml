@@ -33,4 +33,5 @@
     <dimen name="Default">10sp</dimen>
     <dimen name="much_bold">12sp</dimen>
     <dimen name="head_bold">16sp</dimen>
+    <dimen name="head_bolder">20sp</dimen>
 </resources>
