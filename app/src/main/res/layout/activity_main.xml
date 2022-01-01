@@ -72,85 +72,85 @@
             android:layout_height="400dp"
             android:layout_marginTop="-70dp"
             android:elevation="@dimen/Default"
-            android:layout_gravity="center"
+            android:layout_gravity="center_horizontal"
             android:background="@drawable/tnas_curved40"
             >
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:layout_margin="15dp"
                 android:columnCount="2"
+                android:gravity="center_horizontal"
+                android:orientation="horizontal"
                 android:rowCount="0"
-                android:layout_margin="10dp"
-                android:padding="10dp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.5"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                android:orientation="horizontal"
-                >
+                app:layout_constraintTop_toTopOf="parent">
+
+                <LinearLayout
+                    android:id="@+id/insButton"
+                    style="@style/Widget.MaterialComponents.CardView"
+                    android:layout_width="100dp"
+                    android:layout_height="120dp"
+                    android:layout_margin="5dp"
+                    android:background="@drawable/tns_squre"
+                    android:elevation="@dimen/Default"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="10dp"
+                        android:contentDescription="@string/male"
+                        android:src="@drawable/instructions" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom"
+                        android:layout_marginTop="-5dp"
+                        android:fontFamily="@font/normal"
+                        android:gravity="center"
+                        android:text="@string/instraction_dash"
+                        android:textColor="@color/base"
+                        android:textSize="@dimen/head_bold" />
+
+
+                </LinearLayout>
 
                 <LinearLayout
                     android:id="@+id/slabCalcButton"
-                    android:layout_width="100dp"
-                    android:layout_height="100dp"
                     style="@style/Widget.MaterialComponents.CardView"
-                    android:background="@drawable/circle_colored"
+                    android:layout_width="100dp"
+                    android:layout_height="120dp"
                     android:layout_margin="5dp"
-                    android:orientation="vertical"
-                    android:elevation="@dimen/head_bolder"
-                    >
+                    android:background="@drawable/tns_squre"
+                    android:elevation="@dimen/Default"
+                    android:orientation="vertical">
 
                     <ImageView
                         android:layout_width="match_parent"
-                        android:layout_height="70dp"
-                        android:src="@drawable/ic_baseline_arrow_drop_down_circle_24"
-                        android:contentDescription="@string/male" />
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="10dp"
+                        android:contentDescription="@string/male"
+                        android:src="@drawable/instructions" />
 
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="@string/male"
-                        android:textColor="@color/white"
                         android:layout_gravity="bottom"
+                        android:layout_marginTop="-5dp"
+                        android:fontFamily="@font/normal"
                         android:gravity="center"
-                        android:textSize="@dimen/head_bolder"
-                        />
+                        android:text="@string/instraction_dash"
+                        android:textColor="@color/base"
+                        android:textSize="@dimen/head_bold" />
 
 
                 </LinearLayout>
-                <LinearLayout
-                    android:id="@+id/slabCalcButton1"
-                    android:layout_width="100dp"
-                    android:layout_height="100dp"
-                    style="@style/Widget.MaterialComponents.CardView"
-                    android:background="@drawable/circle_colored"
-                    android:layout_margin="5dp"
-                    android:orientation="vertical"
-                    android:elevation="@dimen/head_bolder"
-                    >
-
-                    <ImageView
-                        android:layout_width="match_parent"
-                        android:layout_height="70dp"
-                        android:src="@drawable/ic_baseline_arrow_drop_down_circle_24"
-                        android:contentDescription="@string/male" />
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="@string/cancel"
-                        android:textColor="@color/white"
-                        android:layout_gravity="bottom"
-                        android:gravity="center"
-                        android:textSize="@dimen/head_bolder"
-                        />
-
-
-                </LinearLayout>
-
-
-
 
 
             </LinearLayout>

@@ -27,6 +27,7 @@
     <string name="cancel">বাতিল করুন!!</string>
     <string name="okay">Okay</string>
     <string name="disable_child">প্রতিবন্ধী সন্তান</string>
+    <string name="instraction_dash">নির্দেশিকা</string>
 
 
     <dimen name="heading_size">14sp</dimen>
