@@ -75,11 +75,11 @@
             android:layout_gravity="center"
             android:background="@drawable/tnas_curved40"
             >
-            <GridLayout
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:columnCount="2"
-                android:rowCount="5"
+                android:rowCount="0"
                 android:layout_margin="10dp"
                 android:padding="10dp"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -87,110 +87,73 @@
                 app:layout_constraintHorizontal_bias="0.5"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
+                android:orientation="horizontal"
                 >
 
-                <Button
+                <LinearLayout
                     android:id="@+id/slabCalcButton"
-                    android:layout_rowWeight="1"
-                    android:layout_columnWeight="1"
-                    android:layout_gravity="fill"
-                    android:layout_margin="5sp"
-                    android:background="#ffffff"
-                    android:text="Button"
-                    android:textSize="12sp" />
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    style="@style/Widget.MaterialComponents.CardView"
+                    android:background="@drawable/circle_colored"
+                    android:layout_margin="5dp"
+                    android:orientation="vertical"
+                    android:elevation="@dimen/head_bolder"
+                    >
 
-                <Button
-                    android:id="@+id/button2"
-                    android:layout_rowWeight="1"
-                    android:layout_columnWeight="1"
-                    android:layout_gravity="fill"
-                    android:layout_margin="5sp"
-                    android:background="#ffffff"
-                    android:text="Button"
-                    android:textSize="12sp" />
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="70dp"
+                        android:src="@drawable/ic_baseline_arrow_drop_down_circle_24"
+                        android:contentDescription="@string/male" />
 
-                <Button
-                    android:id="@+id/button3"
-                    android:layout_rowWeight="1"
-                    android:layout_columnWeight="1"
-                    android:layout_gravity="fill"
-                    android:layout_margin="5sp"
-                    android:background="#ffffff"
-                    android:text="Button"
-                    android:textSize="12sp" />
-
-                <Button
-                    android:id="@+id/button4"
-                    android:layout_rowWeight="1"
-                    android:layout_columnWeight="1"
-                    android:layout_gravity="fill"
-                    android:layout_margin="5sp"
-                    android:background="#ffffff"
-                    android:text="Button"
-                    android:textSize="12sp" />
-
-                <Button
-                    android:id="@+id/button5"
-                    android:layout_rowWeight="1"
-                    android:layout_columnWeight="1"
-                    android:layout_gravity="fill"
-                    android:layout_margin="5sp"
-                    android:background="#ffffff"
-                    android:text="Button"
-                    android:textSize="12sp" />
-
-                <Button
-                    android:id="@+id/button6"
-                    android:layout_rowWeight="1"
-                    android:layout_columnWeight="1"
-                    android:layout_gravity="fill"
-                    android:layout_margin="5sp"
-                    android:background="#ffffff"
-                    android:text="Button"
-                    android:textSize="12sp" />
-
-                <Button
-                    android:id="@+id/button7"
-                    android:layout_rowWeight="1"
-                    android:layout_columnWeight="1"
-                    android:layout_gravity="fill"
-                    android:layout_margin="5sp"
-                    android:background="#ffffff"
-                    android:text="Button"
-                    android:textSize="12sp" />
-
-                <Button
-                    android:id="@+id/button8"
-                    android:layout_rowWeight="1"
-                    android:layout_columnWeight="1"
-                    android:layout_gravity="fill"
-                    android:layout_margin="5sp"
-                    android:background="#ffffff"
-                    android:text="Button"
-                    android:textSize="12sp" />
-
-                <Button
-                    android:id="@+id/button9"
-                    android:layout_rowWeight="1"
-                    android:layout_columnWeight="1"
-                    android:layout_gravity="fill"
-                    android:layout_margin="5sp"
-                    android:background="#ffffff"
-                    android:text="Button"
-                    android:textSize="12sp" />
-
-                <Button
-                    android:id="@+id/button20"
-                    android:layout_rowWeight="1"
-                    android:layout_columnWeight="1"
-                    android:layout_gravity="fill"
-                    android:layout_margin="5sp"
-                    android:background="#ffffff"
-                    android:text="Button"
-                    android:textSize="12sp" />
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/male"
+                        android:textColor="@color/white"
+                        android:layout_gravity="bottom"
+                        android:gravity="center"
+                        android:textSize="@dimen/head_bolder"
+                        />
 
 
-            </GridLayout>
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/slabCalcButton1"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    style="@style/Widget.MaterialComponents.CardView"
+                    android:background="@drawable/circle_colored"
+                    android:layout_margin="5dp"
+                    android:orientation="vertical"
+                    android:elevation="@dimen/head_bolder"
+                    >
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="70dp"
+                        android:src="@drawable/ic_baseline_arrow_drop_down_circle_24"
+                        android:contentDescription="@string/male" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/cancel"
+                        android:textColor="@color/white"
+                        android:layout_gravity="bottom"
+                        android:gravity="center"
+                        android:textSize="@dimen/head_bolder"
+                        />
+
+
+                </LinearLayout>
+
+
+
+
+
+            </LinearLayout>
 
 
         </androidx.constraintlayout.widget.ConstraintLayout><!--        main card-->

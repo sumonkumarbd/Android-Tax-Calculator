@@ -11,6 +11,7 @@ import android.view.ViewGroup;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.Button;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -23,7 +24,7 @@ public class Main extends AppCompatActivity {
 
     Animation fade_in, zoom_in, left_to_right, right_to_left, right_to_left_slow, middle_to_top;
     Animation up_down_cont, up_from_bottom, up_from_bottom_slow, slide_in_left, slide_out_right, slide_out_left, slide_in_right,right_slidere_infinit;
-    Button slabCalcButton;
+    LinearLayout slabCalcButton;
     Dialog dialog;
     TextView text_morque;
 
