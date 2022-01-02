@@ -8,6 +8,7 @@
     android:background="@color/background_dark"
     tools:context=".Main">
 
+    <!--    UpperVictor-->
     <!--        morque_text-->
     <LinearLayout
         android:layout_width="match_parent"
@@ -27,6 +28,10 @@
             android:layout_gravity="top"
             android:textSize="@dimen/heading_size"
             android:fontFamily="@font/normal"
+            android:focusableInTouchMode="true"
+            android:ellipsize="marquee"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:scrollHorizontally="true"
             android:gravity="top"
             android:layout_marginTop="-20dp"
             android:textColor="@color/white"
@@ -35,6 +40,7 @@
             android:singleLine="true"
             android:text="@string/intro" />
     </LinearLayout><!--        morque_text-->
+    <!--    UpperVictor-->
 
     <!--Upper color bord-->
     <LinearLayout
