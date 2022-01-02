@@ -116,7 +116,6 @@ public class SlabCalculator extends Main {
                         ballance5 = 1600000;
                         a1.setText("প্রথম ৩ লক্ষ টাকা টাকা");
                         a1.setTextSize(TypedValue.COMPLEX_UNIT_SP,10);
-                        Toast.makeText(SlabCalculator.this, "আপনার কোনো প্রতিবন্ধি সন্তান থাকলে সিলেক্ট করুন!!", Toast.LENGTH_LONG).show();
                         break;
                     case 1:
                         //        values

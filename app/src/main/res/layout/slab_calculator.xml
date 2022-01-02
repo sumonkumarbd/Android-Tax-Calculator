@@ -9,36 +9,33 @@
     tools:context=".SlabCalculator">
 
     <!--    UpperVictor-->
-    <RelativeLayout
+    <!--        morque_text-->
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="0dp"
-        android:layout_marginBottom="0dp"
-        android:visibility="visible"
-        android:layout_gravity="top"
+        android:layout_height="20dp"
+        android:orientation="vertical"
         >
-
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/base"
+            android:alpha=".9"
+            />
         <TextView
             android:id="@+id/text_morq"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:layout_gravity="top"
-            android:fontFamily="@font/banglafont"
+            android:textSize="@dimen/heading_size"
+            android:fontFamily="@font/normal"
             android:gravity="top"
-            android:singleLine="true"
-            android:text="@string/intro"
+            android:layout_marginTop="-20dp"
+            android:textColor="@color/white"
+            android:alpha="1"
             android:textEditPasteWindowLayout="@string/intro"
-            android:textSize="@dimen/head_bold" />
-
-        <ImageView
-            android:layout_width="match_parent"
-            android:layout_height="102dp"
-            android:layout_alignParentTop="true"
-            android:scaleType="fitXY"
-            android:visibility="gone"
-            android:src="@drawable/tax_bulding" />
-
-    </RelativeLayout>
+            android:singleLine="true"
+            android:text="@string/intro" />
+    </LinearLayout><!--        morque_text-->
     <!--    UpperVictor-->
 
     <LinearLayout

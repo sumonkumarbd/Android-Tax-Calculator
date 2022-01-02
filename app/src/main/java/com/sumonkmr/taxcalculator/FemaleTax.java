@@ -71,11 +71,6 @@ public class FemaleTax extends SlabCalculator {
         Main main = new Main();
         //        Object of Handler
         Handler handler = new Handler();
-        Runnable msg = () -> {
-            Toast.makeText(FemaleTax.this, "আপনার কোনো প্রতিবন্ধি সন্তান থাকলে সিলেক্ট করুন!!", Toast.LENGTH_LONG).show();
-        };
-
-        handler.postDelayed(msg,2000);
 
 //                Actions
 //        CAll Functions & Methods
