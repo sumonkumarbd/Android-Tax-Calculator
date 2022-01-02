@@ -47,6 +47,7 @@
         android:layout_height="100dp"
         android:layout_gravity="center"
         android:background="@drawable/singecolor_button"
+        style="@style/Widget.MaterialComponents.CardView"
         android:gravity="center"
         >
 
@@ -94,7 +95,7 @@
         <!--            Row-->
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="30dp"
+            android:layout_height="60dp"
             android:paddingHorizontal="@dimen/Default"
             android:layout_gravity="center_horizontal"
             >
@@ -102,7 +103,8 @@
             <LinearLayout
                 android:id="@+id/col1"
                 android:layout_width="130dp"
-                android:layout_height="match_parent"
+                android:layout_height="40dp"
+                style="@style/Widget.MaterialComponents.CardView"
                 android:background="@drawable/left_curev_base_color"
                 android:elevation="@dimen/shadow"
                 android:paddingHorizontal="5dp"
@@ -115,20 +117,200 @@
 
             <LinearLayout
                 android:id="@+id/col2"
+                style="@style/Widget.MaterialComponents.CardView"
                 android:layout_width="130dp"
-                android:layout_height="match_parent"
+                android:layout_height="40dp"
+                android:background="@drawable/right_courved_white"
+                android:elevation="@dimen/shadow"
+                android:orientation="vertical"
+                android:padding="5dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/col1"
+                app:layout_constraintTop_toTopOf="parent">
+
+
+
+            </LinearLayout><!--                firstCol-->
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+  <!--Row-->
+
+        <!--            Row-->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:paddingHorizontal="@dimen/Default"
+            android:layout_gravity="center_horizontal"
+            >
+
+            <LinearLayout
+                android:id="@+id/col3"
+                android:layout_width="130dp"
+                android:layout_height="40dp"
+                style="@style/Widget.MaterialComponents.CardView"
+                android:background="@drawable/left_curev_base_color"
                 android:elevation="@dimen/shadow"
                 android:paddingHorizontal="5dp"
-                android:background="@drawable/right_courved_white"
                 app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintStart_toEndOf="@+id/col1"
                 android:orientation="vertical">
 
             </LinearLayout>
 
+            <LinearLayout
+                android:id="@+id/col4"
+                style="@style/Widget.MaterialComponents.CardView"
+                android:layout_width="130dp"
+                android:layout_height="40dp"
+                android:background="@drawable/right_courved_white"
+                android:elevation="@dimen/shadow"
+                android:orientation="vertical"
+                android:padding="5dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/col3"
+                app:layout_constraintTop_toTopOf="parent">
+
+
+
+            </LinearLayout><!--                firstCol-->
+
         </androidx.constraintlayout.widget.ConstraintLayout>
-  <!--Row-->
+        <!--Row-->
+
+        <!--            Row-->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:paddingHorizontal="@dimen/Default"
+            android:layout_gravity="center_horizontal"
+            >
+
+            <LinearLayout
+                android:id="@+id/col5"
+                android:layout_width="130dp"
+                android:layout_height="40dp"
+                style="@style/Widget.MaterialComponents.CardView"
+                android:background="@drawable/left_curev_base_color"
+                android:elevation="@dimen/shadow"
+                android:paddingHorizontal="5dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:orientation="vertical">
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/col6"
+                style="@style/Widget.MaterialComponents.CardView"
+                android:layout_width="130dp"
+                android:layout_height="40dp"
+                android:background="@drawable/right_courved_white"
+                android:elevation="@dimen/shadow"
+                android:orientation="vertical"
+                android:padding="5dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/col5"
+                app:layout_constraintTop_toTopOf="parent">
+
+
+
+            </LinearLayout><!--                firstCol-->
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+        <!--Row-->
+
+        <!--            Row-->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:paddingHorizontal="@dimen/Default"
+            android:layout_gravity="center_horizontal"
+            >
+
+            <LinearLayout
+                android:id="@+id/col7"
+                android:layout_width="130dp"
+                android:layout_height="40dp"
+                style="@style/Widget.MaterialComponents.CardView"
+                android:background="@drawable/left_curev_base_color"
+                android:elevation="@dimen/shadow"
+                android:paddingHorizontal="5dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:orientation="vertical">
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/col8"
+                style="@style/Widget.MaterialComponents.CardView"
+                android:layout_width="130dp"
+                android:layout_height="40dp"
+                android:background="@drawable/right_courved_white"
+                android:elevation="@dimen/shadow"
+                android:orientation="vertical"
+                android:padding="5dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/col7"
+                app:layout_constraintTop_toTopOf="parent">
+
+
+
+            </LinearLayout><!--                firstCol-->
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+        <!--Row-->
+
+        <!--            Row-->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:paddingHorizontal="@dimen/Default"
+            android:layout_gravity="center_horizontal"
+            >
+
+            <LinearLayout
+                android:id="@+id/col9"
+                android:layout_width="130dp"
+                android:layout_height="40dp"
+                style="@style/Widget.MaterialComponents.CardView"
+                android:background="@drawable/left_curev_base_color"
+                android:elevation="@dimen/shadow"
+                android:paddingHorizontal="5dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:orientation="vertical">
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/col10"
+                style="@style/Widget.MaterialComponents.CardView"
+                android:layout_width="130dp"
+                android:layout_height="40dp"
+                android:background="@drawable/right_courved_white"
+                android:elevation="@dimen/shadow"
+                android:orientation="vertical"
+                android:padding="5dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/col9"
+                app:layout_constraintTop_toTopOf="parent">
+
+
+
+            </LinearLayout><!--                firstCol-->
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+        <!--Row-->
 
 
 

@@ -74,6 +74,7 @@
         android:id="@+id/mainCard"
         android:layout_width="280dp"
         android:layout_height="390dp"
+        style="@style/Widget.MaterialComponents.CardView"
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="-50dp"
         android:padding="10dp"

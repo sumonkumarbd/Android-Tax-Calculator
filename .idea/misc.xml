@@ -15,12 +15,14 @@
         <entry key="..\:/Android_projects/Practice Challenges/TaxCalculator/app/src/main/res/drawable/ic_top.xml" value="0.19947916666666668" />
         <entry key="..\:/Android_projects/Practice Challenges/TaxCalculator/app/src/main/res/drawable/ic_wave.xml" value="0.1953125" />
         <entry key="..\:/Android_projects/Practice Challenges/TaxCalculator/app/src/main/res/drawable/ic_wave_upper.xml" value="0.1953125" />
+        <entry key="..\:/Android_projects/Practice Challenges/TaxCalculator/app/src/main/res/drawable/left_curev_base_color.xml" value="0.19947916666666668" />
         <entry key="..\:/Android_projects/Practice Challenges/TaxCalculator/app/src/main/res/drawable/r.xml" value="0.19947916666666668" />
         <entry key="..\:/Android_projects/Practice Challenges/TaxCalculator/app/src/main/res/drawable/red_button.xml" value="0.1953125" />
         <entry key="..\:/Android_projects/Practice Challenges/TaxCalculator/app/src/main/res/drawable/right_courved_white.xml" value="0.19947916666666668" />
         <entry key="..\:/Android_projects/Practice Challenges/TaxCalculator/app/src/main/res/drawable/shadow.xml" value="0.19947916666666668" />
         <entry key="..\:/Android_projects/Practice Challenges/TaxCalculator/app/src/main/res/drawable/singecolor_button.xml" value="0.1953125" />
         <entry key="..\:/Android_projects/Practice Challenges/TaxCalculator/app/src/main/res/drawable/three_color_curved.xml" value="0.19947916666666668" />
+        <entry key="..\:/Android_projects/Practice Challenges/TaxCalculator/app/src/main/res/drawable/tnas_curved25.xml" value="0.19947916666666668" />
         <entry key="..\:/Android_projects/Practice Challenges/TaxCalculator/app/src/main/res/drawable/tnas_curved40.xml" value="0.19947916666666668" />
         <entry key="..\:/Android_projects/Practice Challenges/TaxCalculator/app/src/main/res/drawable/tns_squre.xml" value="0.19947916666666668" />
         <entry key="..\:/Android_projects/Practice Challenges/TaxCalculator/app/src/main/res/drawable/top_shade.xml" value="0.1953125" />
@@ -35,7 +37,7 @@
         <entry key="..\:/Android_projects/Practice Challenges/TaxCalculator/app/src/main/res/layout/coustom_dialogbox.xml" value="0.25" />
         <entry key="..\:/Android_projects/Practice Challenges/TaxCalculator/app/src/main/res/layout/main_activity.xml" value="0.33" />
         <entry key="..\:/Android_projects/Practice Challenges/TaxCalculator/app/src/main/res/layout/salaey_tax.xml" value="0.25" />
-        <entry key="..\:/Android_projects/Practice Challenges/TaxCalculator/app/src/main/res/layout/salary_tax.xml" value="0.5" />
+        <entry key="..\:/Android_projects/Practice Challenges/TaxCalculator/app/src/main/res/layout/salary_tax.xml" value="0.33" />
         <entry key="..\:/Android_projects/Practice Challenges/TaxCalculator/app/src/main/res/layout/slab_calculator.xml" value="0.33" />
         <entry key="..\:/Android_projects/Practice Challenges/TaxCalculator/app/src/main/res/layout/slab_tax_calculator.xml" value="0.18333333333333332" />
         <entry key="..\:/Android_projects/Practice Challenges/TaxCalculator/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.1" />
