@@ -72,7 +72,7 @@ public class SlabCalculator extends Main {
         text_morq = findViewById(R.id.text_morq);
         header_titles = findViewById(R.id.header_titles);
         resulBar = findViewById(R.id.resulBar);
-//        dataTable_header = findViewById(R.id.dataTable_header);
+        dataTable_header = findViewById(R.id.dataTable_header);
         bottomArea = findViewById(R.id.bottomArea);
         input_area = findViewById(R.id.input_area);
         header_title1 = findViewById(R.id.header_title1);

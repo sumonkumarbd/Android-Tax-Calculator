@@ -69,7 +69,7 @@
     <!--    parent-->
     <!--        main card-->
     <LinearLayout
-        android:id="@+id/mainCard_salary"
+        android:id="@+id/dataTable_header"
         android:layout_width="370dp"
         android:layout_height="550dp"
         android:layout_gravity="center_horizontal"
