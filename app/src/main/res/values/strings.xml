@@ -31,6 +31,12 @@
     <string name="salarytax">স্যালারি ট্যাক্স</string>
     <string name="address_book">ঠিকানা সমূহ</string>
     <string name="about_us">এপপ্স সম্পর্কে</string>
+    <string name="zero_p">0%</string>
+    <string name="five_p">5%</string>
+    <string name="ten_p">10%</string>
+    <string name="fiftiin_p">15%</string>
+    <string name="twnty_p">20%</string>
+    <string name="twntyfive_p">25%</string>
 
 
     <dimen name="heading_size">14sp</dimen>

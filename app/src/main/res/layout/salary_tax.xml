@@ -79,6 +79,7 @@
         android:background="@drawable/tnas_curved25"
         android:elevation="@dimen/heading_size"
         android:orientation="vertical"
+        style="@style/Widget.MaterialComponents.CardView"
         >
         <TextView
             android:layout_width="wrap_content"
@@ -91,6 +92,7 @@
             android:textSize="@dimen/head_bold"
             android:textColor="@color/base"
             android:elevation="@dimen/Default"
+            style="@style/Widget.MaterialComponents.CardView"
             />
         <!--            Row-->
         <androidx.constraintlayout.widget.ConstraintLayout

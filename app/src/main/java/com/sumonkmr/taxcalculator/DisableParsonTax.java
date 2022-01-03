@@ -50,7 +50,7 @@ public class DisableParsonTax extends FemaleTax {
         text_morq = findViewById(R.id.text_morq);
         header_titles = findViewById(R.id.header_titles);
         resulBar = findViewById(R.id.resulBar);
-        dataTable_header = findViewById(R.id.dataTable_header);
+//        dataTable_header = findViewById(R.id.dataTable_header);
         bottomArea = findViewById(R.id.bottomArea);
         input_area = findViewById(R.id.input_area);
         header_title1 = findViewById(R.id.header_title1);
@@ -96,7 +96,6 @@ public class DisableParsonTax extends FemaleTax {
                         ballance4 = 1250000;
                         ballance5 = 1750000;
                         a1.setText("প্রথম সাড়ে ৪ লক্ষ টাকা");
-                        a1.setTextSize(TypedValue.COMPLEX_UNIT_SP,8);
                         break;
                     case 1:
                         //        values
@@ -106,7 +105,6 @@ public class DisableParsonTax extends FemaleTax {
                         ballance4 = 1300000;
                         ballance5 = 1800000;
                         a1.setText("প্রথম ৫ লক্ষ টাকা");
-                        a1.setTextSize(TypedValue.COMPLEX_UNIT_SP,10);
                         Toast.makeText(DisableParsonTax.this,"আপনার নির্ধারিত ট্যাক্সমুক্ত ইনকামে আরো অতিরিক্ত ৫০ হাজার টাকা যোগ হলো।",Toast.LENGTH_LONG).show();
                         break;
                     case 2:
@@ -117,7 +115,6 @@ public class DisableParsonTax extends FemaleTax {
                         ballance4 = 1200000;
                         ballance5 = 1700000;
                         a1.setText("প্রথম ৫ লক্ষ টাকা");
-                        a1.setTextSize(TypedValue.COMPLEX_UNIT_SP,10);
                         Toast.makeText(DisableParsonTax.this,"আপনার নির্ধারিত ট্যাক্সমুক্ত ইনকামে আরো অতিরিক্ত ৫০ হাজার টাকা যোগ হলো। ",Toast.LENGTH_LONG).show();
                         break;
                     case 3:
@@ -128,7 +125,6 @@ public class DisableParsonTax extends FemaleTax {
                         ballance4 = 1200000;
                         ballance5 = 1700000;
                         a1.setText("প্রথম ৫ লক্ষ টাকা");
-                        a1.setTextSize(TypedValue.COMPLEX_UNIT_SP,10);
                         Toast.makeText(DisableParsonTax.this," আপনার নির্ধারিত ট্যাক্সমুক্ত ইনকামে আরো অতিরিক্ত ৫০ হাজার টাকা যোগ হলো।",Toast.LENGTH_LONG).show();
                         break;
 
@@ -146,7 +142,6 @@ public class DisableParsonTax extends FemaleTax {
                 ballance4 = 1250000;
                 ballance5 = 1750000;
                 a1.setText("প্রথম সাড়ে ৪ লক্ষ টাকা");
-                a1.setTextSize(TypedValue.COMPLEX_UNIT_SP,8);
 
             }
         });

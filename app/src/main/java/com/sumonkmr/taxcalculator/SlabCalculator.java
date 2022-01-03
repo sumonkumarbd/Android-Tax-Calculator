@@ -28,7 +28,8 @@ public class SlabCalculator extends Main {
     TextView a1 ,c1, c2, c3, c4, c5, c6, d1, d2, d3, d4, d5, d6;
     TextView totalAmount, totalTax, amountResult, taxResult, appName, text_morq;
     TextView season, header_title1, header_title2, header_title3, header_title4;
-    LinearLayout header_titles, dataTable_header ,resulBar, bottomArea, input_area;
+    LinearLayout dataTable_header ,resulBar, bottomArea, input_area;
+    androidx.constraintlayout.widget.ConstraintLayout header_titles;
     EditText inputVal;
     ImageButton calcButton, calcButton_disabled;
     ImageView inputError;
@@ -71,7 +72,7 @@ public class SlabCalculator extends Main {
         text_morq = findViewById(R.id.text_morq);
         header_titles = findViewById(R.id.header_titles);
         resulBar = findViewById(R.id.resulBar);
-        dataTable_header = findViewById(R.id.dataTable_header);
+//        dataTable_header = findViewById(R.id.dataTable_header);
         bottomArea = findViewById(R.id.bottomArea);
         input_area = findViewById(R.id.input_area);
         header_title1 = findViewById(R.id.header_title1);
@@ -114,7 +115,6 @@ public class SlabCalculator extends Main {
                         ballance4 = 1100000;
                         ballance5 = 1600000;
                         a1.setText("প্রথম ৩ লক্ষ টাকা টাকা");
-                        a1.setTextSize(TypedValue.COMPLEX_UNIT_SP,10);
                         break;
                     case 1:
                         //        values
@@ -124,7 +124,6 @@ public class SlabCalculator extends Main {
                         ballance4 = 1150000;
                         ballance5 = 1650000;
                         a1.setText("প্রথম সাড়ে ৩ লক্ষ টাকা");
-                        a1.setTextSize(TypedValue.COMPLEX_UNIT_SP,8);
                         Toast.makeText(SlabCalculator.this,"আপনার নির্ধারিত ট্যাক্সমুক্ত ইনকামে আরো অতিরিক্ত ৫০ হাজার টাকা যোগ হলো।",Toast.LENGTH_LONG).show();
                         break;
                     case 2:
@@ -135,7 +134,6 @@ public class SlabCalculator extends Main {
                         ballance4 = 1150000;
                         ballance5 = 1650000;
                         a1.setText("প্রথম সাড়ে ৩ লক্ষ টাকা");
-                        a1.setTextSize(TypedValue.COMPLEX_UNIT_SP,8);
                         Toast.makeText(SlabCalculator.this,"আপনার নির্ধারিত ট্যাক্সমুক্ত ইনকামে আরো অতিরিক্ত ৫০ হাজার টাকা যোগ হলো। ",Toast.LENGTH_LONG).show();
                         break;
                     case 3:
@@ -190,7 +188,7 @@ public class SlabCalculator extends Main {
         season.startAnimation(zoom_in);
         header_titles.startAnimation(right_to_left);
         resulBar.startAnimation(left_to_right);
-        dataTable_header.startAnimation(fade_in);
+//        dataTable_header.startAnimation(fade_in);
         input_area.startAnimation(right_to_left_slow);
         bottomArea.startAnimation(up_from_bottom_slow);
         header_title1.startAnimation(fade_in);
@@ -405,7 +403,7 @@ public class SlabCalculator extends Main {
 //                SixthMethod
 
 //                if incase given amount is more than 999999999 digit then it will work for better user expreance
-        if (newUserInput > 99999999) {
+        if (userInput.length() > 10) {
             amountResult.setTextSize(TypedValue.COMPLEX_UNIT_SP,12);
             taxResult.setTextSize(TypedValue.COMPLEX_UNIT_SP,12);
             c6.setTextSize(TypedValue.COMPLEX_UNIT_SP,8);

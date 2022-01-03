@@ -50,7 +50,7 @@ public class FemaleTax extends SlabCalculator {
         text_morq = findViewById(R.id.text_morq);
         header_titles = findViewById(R.id.header_titles);
         resulBar = findViewById(R.id.resulBar);
-        dataTable_header = findViewById(R.id.dataTable_header);
+//        dataTable_header = findViewById(R.id.dataTable_header);
         bottomArea = findViewById(R.id.bottomArea);
         input_area = findViewById(R.id.input_area);
         header_title1 = findViewById(R.id.header_title1);
@@ -98,7 +98,6 @@ public class FemaleTax extends SlabCalculator {
                         ballance4 = 1150000;
                         ballance5 = 1650000;
                         a1.setText("প্রথম সাড়ে ৩ লক্ষ টাকা");
-                        a1.setTextSize(TypedValue.COMPLEX_UNIT_SP,8);
                         break;
                     case 1:
                         //        values
@@ -108,7 +107,6 @@ public class FemaleTax extends SlabCalculator {
                         ballance4 = 1200000;
                         ballance5 = 1700000;
                         a1.setText("প্রথম ৪ লক্ষ টাকা");
-                        a1.setTextSize(TypedValue.COMPLEX_UNIT_SP,10);
                         Toast.makeText(FemaleTax.this,"আপনার নির্ধারিত ট্যাক্সমুক্ত ইনকামে আরো অতিরিক্ত ৫০ হাজার টাকা যোগ হলো।",Toast.LENGTH_LONG).show();
                         break;
                     case 2:
@@ -119,7 +117,6 @@ public class FemaleTax extends SlabCalculator {
                         ballance4 = 1200000;
                         ballance5 = 1700000;
                         a1.setText("প্রথম ৪ লক্ষ টাকা");
-                        a1.setTextSize(TypedValue.COMPLEX_UNIT_SP,10);
                         Toast.makeText(FemaleTax.this,"আপনার নির্ধারিত ট্যাক্সমুক্ত ইনকামে আরো অতিরিক্ত ৫০ হাজার টাকা যোগ হলো। ",Toast.LENGTH_LONG).show();
                         break;
                     case 3:
@@ -130,7 +127,6 @@ public class FemaleTax extends SlabCalculator {
                         ballance4 = 1200000;
                         ballance5 = 1700000;
                         a1.setText("প্রথম ৪ লক্ষ টাকা");
-                        a1.setTextSize(TypedValue.COMPLEX_UNIT_SP,10);
                         Toast.makeText(FemaleTax.this," আপনার নির্ধারিত ট্যাক্সমুক্ত ইনকামে আরো অতিরিক্ত ৫০ হাজার টাকা যোগ হলো।",Toast.LENGTH_LONG).show();
                         break;
 

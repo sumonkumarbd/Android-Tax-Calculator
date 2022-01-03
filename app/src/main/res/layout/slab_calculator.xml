@@ -26,7 +26,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_gravity="top"
-            android:textSize="@dimen/heading_size"
+            android:textSize="@dimen/much_bold"
             android:fontFamily="@font/normal"
             android:gravity="top"
             android:layout_marginTop="-20dp"
@@ -37,741 +37,862 @@
             android:text="@string/intro" />
     </LinearLayout><!--        morque_text-->
     <!--    UpperVictor-->
-
+    <!--Upper color bord-->
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="40dp"
-        android:layout_marginBottom="-5dp"
-        android:orientation="horizontal">
-        <!--        CalculateArea-->
+        android:layout_height="100dp"
+        android:layout_gravity="center"
+        android:background="@drawable/singecolor_button"
+        style="@style/Widget.MaterialComponents.CardView"
+        android:gravity="center"
+        >
         <!--        appName-->
         <TextView
             android:id="@+id/appName"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="20dp"
-            android:fontFamily="@font/bd_font"
-            android:shadowColor="@color/gray"
+            android:layout_gravity="center"
+            android:layout_marginTop="-20dp"
+            android:elevation="@dimen/Default"
+            android:fontFamily="@font/titir"
+            android:gravity="center"
             android:text="@string/app_name"
-            android:textColor="@color/base"
-            android:textSize="25sp"
-            android:gravity="left"
-            app:neumorph_shadowElevation="5dp" />
+            android:textColor="@color/white"
+            android:textSize="@dimen/head_bold" />
         <!--        appName-->
+
+
+
+    </LinearLayout><!--Upper color bord-->
+    <!--    UpperVictor-->
+
+    <!--    parent-->
+    <!--        main card-->
+    <LinearLayout
+        android:id="@+id/mainCard_salary"
+        android:layout_width="370dp"
+        android:layout_height="550dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="-50dp"
+        android:background="@drawable/tnas_curved25"
+        android:elevation="@dimen/much_bold"
+        android:orientation="vertical"
+        style="@style/Widget.MaterialComponents.CardView"
+        >
         <!--        sesion-->
         <TextView
             android:id="@+id/season"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:gravity="right"
-            android:layout_marginEnd="20dp"
-            android:layout_marginBottom="10dp"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
             android:fontFamily="@font/bd_font"
             android:text="@string/finance_year_21_22"
             android:textColor="@color/base"
-            android:layout_marginTop="15dp"
+            android:elevation="@dimen/Default"
+            android:layout_marginTop="5dp"
             android:textSize="@dimen/much_bold" />
         <!--        sesion-->
-    </LinearLayout>
 
-
-    <!--MainAreaParent-->
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="460dp"
-        android:orientation="vertical"
-        >
-        <!--    mainArea-->
-        <RelativeLayout
+        <!--            Row-->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/header_titles"
             android:layout_width="match_parent"
-            android:layout_height="350dp"
-            android:id="@+id/mainArea"
+            android:layout_height="30dp"
+            android:paddingHorizontal="@dimen/Default"
+            android:layout_gravity="center_horizontal"
             >
-            <!--        dataholderParent-->
+
             <LinearLayout
+                android:id="@+id/heading1_slab"
+                android:layout_width="160dp"
+                android:layout_height="40dp"
+                style="@style/Widget.MaterialComponents.CardView"
+                android:background="@drawable/left_curev_base_color"
+                android:elevation="@dimen/shadow"
+                android:paddingHorizontal="5dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:orientation="horizontal">
+
+                <!--dataHeading-->
+                <TextView
+                    android:id="@+id/header_title1"
+                    android:layout_width="110dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="3dp"
+                    android:elevation="10dp"
+                    android:fontFamily="@font/bdf"
+                    android:gravity="center"
+                    android:text="@string/slab"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/much_bold" />
+                <!--dataHeading-->
+
+                <!--dataHeading-->
+                <TextView
+                    android:id="@+id/header_title2"
+                    android:layout_width="30dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:elevation="10dp"
+                    android:fontFamily="@font/bdf"
+                    android:gravity="center|center_vertical"
+                    android:text="@string/tax_rate"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/much_bold" />
+                <!--dataHeading-->
+
+            </LinearLayout><!--                firstCol-->
+<!--          secCol-->
+            <LinearLayout
+                android:id="@+id/heading2_slab"
+                style="@style/Widget.MaterialComponents.CardView"
+                android:layout_width="210dp"
+                android:layout_height="40dp"
+                android:background="@drawable/right_courved_white"
+                android:elevation="@dimen/shadow"
+                android:orientation="horizontal"
+                android:padding="5dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/heading1_slab"
+                app:layout_constraintTop_toTopOf="parent">
+                <!--dataHeading-->
+                <TextView
+                    android:id="@+id/header_title3"
+                    android:layout_width="100dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="5dp"
+                    android:elevation="10dp"
+                    android:fontFamily="@font/bdf"
+                    android:gravity="center"
+                    android:text="@string/tax_amount"
+                    android:textColor="@color/base"
+                    android:textSize="@dimen/much_bold" />
+                <!--dataHeading-->
+
+                <!--dataHeading-->
+                <TextView
+                    android:id="@+id/header_title4"
+                    android:layout_width="80dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="start"
+                    android:layout_marginStart="10dp"
+                    android:elevation="10dp"
+                    android:fontFamily="@font/bdf"
+                    android:gravity="center|center_vertical"
+                    android:text="@string/tax"
+                    android:textColor="@color/base"
+                    android:textSize="@dimen/much_bold" />
+                <!--dataHeading-->
+            </LinearLayout><!--          secCol-->
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+        <!--Row-->
+
+        <!--            Row-->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:paddingHorizontal="@dimen/Default"
+            android:layout_gravity="center_horizontal"
+            >
+
+            <LinearLayout
+                android:id="@+id/col1_slab"
+                android:layout_width="160dp"
+                android:layout_height="40dp"
+                style="@style/Widget.MaterialComponents.CardView"
+                android:background="@drawable/left_curev_base_color"
+                android:elevation="@dimen/shadow"
+                android:paddingHorizontal="5dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:orientation="horizontal">
+
+                <!--dataHeading-->
+                <!--                    data-->
+                <TextView
+                    android:id="@+id/a1"
+                    android:layout_width="120dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="3dp"
+                    android:elevation="10dp"
+                    android:fontFamily="@font/bdf"
+                    android:gravity="center"
+                    android:text="@string/firstSlab"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/much_bold" />
+                <!--                    data-->
+
+                <!--                    data-->
+                <TextView
+                    android:id="@+id/b1"
+                    android:layout_width="20dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:elevation="10dp"
+                    android:fontFamily="@font/bdf"
+                    android:gravity="end|center_vertical"
+                    android:text="@string/zero_p"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/much_bold" />
+                <!--                    data-->
+
+            </LinearLayout><!--                firstCol-->
+            <!--          secCol-->
+            <LinearLayout
+                android:id="@+id/col2_slab"
+                style="@style/Widget.MaterialComponents.CardView"
+                android:layout_width="210dp"
+                android:layout_height="40dp"
+                android:background="@drawable/right_courved_white"
+                android:elevation="@dimen/shadow"
+                android:orientation="horizontal"
+                android:padding="5dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/col1_slab"
+                app:layout_constraintTop_toTopOf="parent">
+                <!--dataHeading-->
+                <TextView
+                    android:id="@+id/c1"
+                    android:layout_width="100dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="5dp"
+                    android:elevation="10dp"
+                    android:fontFamily="@font/bdf"
+                    android:gravity="start|center_vertical"
+                    android:textColor="@color/base"
+                    android:textSize="@dimen/much_bold" />
+                <!--dataHeading-->
+
+                <!--dataHeading-->
+                <TextView
+                    android:id="@+id/d1"
+                    android:layout_width="80dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="start"
+                    android:layout_marginStart="10dp"
+                    android:elevation="10dp"
+                    android:fontFamily="@font/bdf"
+                    android:gravity="end|center_vertical"
+                    android:textColor="@color/base"
+                    android:textSize="@dimen/much_bold" />
+                <!--dataHeading-->
+            </LinearLayout><!--          secCol-->
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+        <!--Row-->
+
+        <!--            Row-->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginTop="-5dp"
+            android:paddingHorizontal="@dimen/Default"
+            android:layout_gravity="center_horizontal"
+            >
+
+            <LinearLayout
+                android:id="@+id/col3_slab"
+                android:layout_width="160dp"
+                android:layout_height="40dp"
+                style="@style/Widget.MaterialComponents.CardView"
+                android:background="@drawable/left_curev_base_color"
+                android:elevation="@dimen/shadow"
+                android:paddingHorizontal="5dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:orientation="horizontal">
+
+                <!--dataHeading-->
+                <!--                    data-->
+                <TextView
+                    android:id="@+id/a2"
+                    android:layout_width="110dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="3dp"
+                    android:elevation="10dp"
+                    android:fontFamily="@font/bdf"
+                    android:gravity="center"
+                    android:text="@string/seceoundSlab"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/much_bold" />
+                <!--                    data-->
+
+                <!--                    data-->
+                <TextView
+                    android:id="@+id/b2"
+                    android:layout_width="30dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:elevation="10dp"
+                    android:fontFamily="@font/bdf"
+                    android:gravity="end|center_vertical"
+                    android:text="@string/five_p"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/much_bold" />
+                <!--                    data-->
+
+            </LinearLayout><!--                firstCol-->
+            <!--          secCol-->
+            <LinearLayout
+                android:id="@+id/col4_slab"
+                style="@style/Widget.MaterialComponents.CardView"
+                android:layout_width="210dp"
+                android:layout_height="40dp"
+                android:background="@drawable/right_courved_white"
+                android:elevation="@dimen/shadow"
+                android:orientation="horizontal"
+                android:padding="5dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/col3_slab"
+                app:layout_constraintTop_toTopOf="parent">
+                <!--dataHeading-->
+                <TextView
+                    android:id="@+id/c2"
+                    android:layout_width="90dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="5dp"
+                    android:elevation="10dp"
+                    android:fontFamily="@font/bdf"
+                    android:gravity="start|center_vertical"
+                    android:textColor="@color/base"
+                    android:textSize="@dimen/much_bold" />
+                <!--dataHeading-->
+
+                <!--dataHeading-->
+                <TextView
+                    android:id="@+id/d2"
+                    android:layout_width="100dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="start"
+                    android:elevation="10dp"
+                    android:fontFamily="@font/bdf"
+                    android:gravity="end|center_vertical"
+                    android:textColor="@color/base"
+                    android:textSize="@dimen/much_bold" />
+                <!--dataHeading-->
+            </LinearLayout><!--          secCol-->
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+        <!--Row-->
+
+        <!--            Row-->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginTop="-5dp"
+            android:paddingHorizontal="@dimen/Default"
+            android:layout_gravity="center_horizontal"
+            >
+
+            <LinearLayout
+                android:id="@+id/col5_slab"
+                android:layout_width="160dp"
+                android:layout_height="40dp"
+                style="@style/Widget.MaterialComponents.CardView"
+                android:background="@drawable/left_curev_base_color"
+                android:elevation="@dimen/shadow"
+                android:paddingHorizontal="5dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:orientation="horizontal">
+
+                <!--dataHeading-->
+                <!--                    data-->
+                <TextView
+                    android:id="@+id/a3"
+                    android:layout_width="110dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="3dp"
+                    android:elevation="10dp"
+                    android:fontFamily="@font/bdf"
+                    android:gravity="center"
+                    android:text="@string/thirdSlab"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/much_bold" />
+                <!--                    data-->
+
+                <!--                    data-->
+                <TextView
+                    android:id="@+id/b3"
+                    android:layout_width="30dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:elevation="10dp"
+                    android:fontFamily="@font/bdf"
+                    android:gravity="end|center_vertical"
+                    android:text="@string/ten_p"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/much_bold" />
+                <!--                    data-->
+
+            </LinearLayout><!--                firstCol-->
+            <!--          secCol-->
+            <LinearLayout
+                android:id="@+id/col6_slab"
+                style="@style/Widget.MaterialComponents.CardView"
+                android:layout_width="210dp"
+                android:layout_height="40dp"
+                android:background="@drawable/right_courved_white"
+                android:elevation="@dimen/shadow"
+                android:orientation="horizontal"
+                android:padding="5dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/col5_slab"
+                app:layout_constraintTop_toTopOf="parent">
+                <!--dataHeading-->
+                <TextView
+                    android:id="@+id/c3"
+                    android:layout_width="95dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="5dp"
+                    android:elevation="10dp"
+                    android:fontFamily="@font/bdf"
+                    android:gravity="start|center_vertical"
+                    android:textColor="@color/base"
+                    android:textSize="@dimen/much_bold" />
+                <!--dataHeading-->
+
+                <!--dataHeading-->
+                <TextView
+                    android:id="@+id/d3"
+                    android:layout_width="95dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="end"
+                    android:elevation="10dp"
+                    android:fontFamily="@font/bdf"
+                    android:gravity="end|center_vertical"
+                    android:textColor="@color/base"
+                    android:textSize="@dimen/much_bold" />
+                <!--dataHeading-->
+            </LinearLayout><!--          secCol-->
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+        <!--Row-->
+
+        <!--            Row-->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginTop="-5dp"
+            android:paddingHorizontal="@dimen/Default"
+            android:layout_gravity="center_horizontal"
+            >
+
+            <LinearLayout
+                android:id="@+id/col7_slab"
+                android:layout_width="160dp"
+                android:layout_height="40dp"
+                style="@style/Widget.MaterialComponents.CardView"
+                android:background="@drawable/left_curev_base_color"
+                android:elevation="@dimen/shadow"
+                android:paddingHorizontal="5dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:orientation="horizontal">
+
+                <!--dataHeading-->
+                <!--                    data-->
+                <TextView
+                    android:id="@+id/a4"
+                    android:layout_width="110dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="3dp"
+                    android:elevation="10dp"
+                    android:fontFamily="@font/bdf"
+                    android:gravity="center"
+                    android:text="@string/fourthSlab"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/much_bold" />
+                <!--                    data-->
+
+                <!--                    data-->
+                <TextView
+                    android:id="@+id/b4"
+                    android:layout_width="30dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:elevation="10dp"
+                    android:fontFamily="@font/bdf"
+                    android:gravity="end|center_vertical"
+                    android:text="@string/fiftiin_p"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/much_bold" />
+                <!--                    data-->
+
+            </LinearLayout><!--                firstCol-->
+            <!--          secCol-->
+            <LinearLayout
+                android:id="@+id/col8_slab"
+                style="@style/Widget.MaterialComponents.CardView"
+                android:layout_width="210dp"
+                android:layout_height="40dp"
+                android:background="@drawable/right_courved_white"
+                android:elevation="@dimen/shadow"
+                android:orientation="horizontal"
+                android:padding="5dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/col7_slab"
+                app:layout_constraintTop_toTopOf="parent">
+                <!--dataHeading-->
+                <TextView
+                    android:id="@+id/c4"
+                    android:layout_width="90dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="5dp"
+                    android:elevation="10dp"
+                    android:fontFamily="@font/bdf"
+                    android:gravity="start|center_vertical"
+                    android:textColor="@color/base"
+                    android:textSize="@dimen/much_bold" />
+                <!--dataHeading-->
+
+                <!--dataHeading-->
+                <TextView
+                    android:id="@+id/d4"
+                    android:layout_width="100dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="start"
+                    android:elevation="10dp"
+                    android:fontFamily="@font/bdf"
+                    android:gravity="end|center_vertical"
+                    android:textColor="@color/base"
+                    android:textSize="@dimen/much_bold" />
+                <!--dataHeading-->
+            </LinearLayout><!--          secCol-->
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+        <!--Row-->
+
+        <!--            Row-->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginTop="-5dp"
+            android:paddingHorizontal="@dimen/Default"
+            android:layout_gravity="center_horizontal"
+            >
+
+            <LinearLayout
+                android:id="@+id/col9_slab"
+                android:layout_width="160dp"
+                android:layout_height="40dp"
+                style="@style/Widget.MaterialComponents.CardView"
+                android:background="@drawable/left_curev_base_color"
+                android:elevation="@dimen/shadow"
+                android:paddingHorizontal="5dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:orientation="horizontal">
+
+                <!--dataHeading-->
+                <!--                    data-->
+                <TextView
+                    android:id="@+id/a5"
+                    android:layout_width="110dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="3dp"
+                    android:elevation="10dp"
+                    android:fontFamily="@font/bdf"
+                    android:gravity="center"
+                    android:text="@string/fifthSlab"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/much_bold" />
+                <!--                    data-->
+
+                <!--                    data-->
+                <TextView
+                    android:id="@+id/b5"
+                    android:layout_width="30dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:elevation="10dp"
+                    android:fontFamily="@font/bdf"
+                    android:gravity="end|center_vertical"
+                    android:text="@string/twnty_p"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/much_bold" />
+                <!--                    data-->
+
+            </LinearLayout><!--                firstCol-->
+            <!--          secCol-->
+            <LinearLayout
+                android:id="@+id/col10_slab"
+                style="@style/Widget.MaterialComponents.CardView"
+                android:layout_width="210dp"
+                android:layout_height="40dp"
+                android:background="@drawable/right_courved_white"
+                android:elevation="@dimen/shadow"
+                android:orientation="horizontal"
+                android:padding="5dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/col9_slab"
+                app:layout_constraintTop_toTopOf="parent">
+                <!--dataHeading-->
+                <TextView
+                    android:id="@+id/c5"
+                    android:layout_width="90dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="5dp"
+                    android:elevation="10dp"
+                    android:fontFamily="@font/bdf"
+                    android:gravity="start|center_vertical"
+                    android:textColor="@color/base"
+                    android:textSize="@dimen/much_bold" />
+                <!--dataHeading-->
+
+                <!--dataHeading-->
+                <TextView
+                    android:id="@+id/d5"
+                    android:layout_width="100dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="start"
+                    android:elevation="10dp"
+                    android:fontFamily="@font/bdf"
+                    android:gravity="end|center_vertical"
+                    android:textColor="@color/base"
+                    android:textSize="@dimen/much_bold"/>
+                <!--dataHeading-->
+            </LinearLayout><!--          secCol-->
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+        <!--Row-->
+
+        <!--            Row-->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginTop="-5dp"
+            android:paddingHorizontal="@dimen/Default"
+            android:layout_gravity="center_horizontal"
+            >
+
+            <LinearLayout
+                android:id="@+id/col11_slab"
+                android:layout_width="160dp"
+                android:layout_height="40dp"
+                style="@style/Widget.MaterialComponents.CardView"
+                android:background="@drawable/left_curev_base_color"
+                android:elevation="@dimen/shadow"
+                android:paddingHorizontal="5dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:orientation="horizontal">
+
+                <!--dataHeading-->
+                <!--                    data-->
+                <TextView
+                    android:id="@+id/a6"
+                    android:layout_width="110dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="3dp"
+                    android:elevation="10dp"
+                    android:fontFamily="@font/bdf"
+                    android:gravity="center"
+                    android:text="@string/sixthSlab"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/much_bold" />
+                <!--                    data-->
+
+                <!--                    data-->
+                <TextView
+                    android:id="@+id/b6"
+                    android:layout_width="30dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:elevation="10dp"
+                    android:layout_marginStart="2dp"
+                    android:fontFamily="@font/bdf"
+                    android:gravity="end|center_vertical"
+                    android:text="@string/twntyfive_p"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/much_bold" />
+                <!--                    data-->
+
+            </LinearLayout><!--                firstCol-->
+            <!--          secCol-->
+            <LinearLayout
+                android:id="@+id/col12_slab"
+                style="@style/Widget.MaterialComponents.CardView"
+                android:layout_width="210dp"
+                android:layout_height="40dp"
+                android:background="@drawable/right_courved_white"
+                android:elevation="@dimen/shadow"
+                android:orientation="horizontal"
+                android:padding="5dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/col11_slab"
+                app:layout_constraintTop_toTopOf="parent">
+                <!--dataHeading-->
+                <TextView
+                    android:id="@+id/c6"
+                    android:layout_width="95dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="5dp"
+                    android:elevation="10dp"
+                    android:fontFamily="@font/bdf"
+                    android:gravity="start|center_vertical"
+                    android:textColor="@color/base"
+                    android:textSize="@dimen/much_bold" />
+                <!--dataHeading-->
+
+                <!--dataHeading-->
+                <TextView
+                    android:id="@+id/d6"
+                    android:layout_width="95dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="start"
+                    android:elevation="10dp"
+                    android:fontFamily="@font/bdf"
+                    android:gravity="end|center_vertical"
+                    android:textColor="@color/base"
+                    android:textSize="@dimen/much_bold" />
+                <!--dataHeading-->
+            </LinearLayout><!--          secCol-->
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+        <!--Row-->
+
+
+
+            <!--            sumArea-->
+            <LinearLayout
+                android:id="@+id/resulBar"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="10sp"
+                android:background="@drawable/two_color"
                 android:orientation="vertical">
-
-
-                <!--        heading-->
+                <!--Result Heading-->
                 <LinearLayout
-                    android:id="@+id/header_titles"
                     android:layout_width="match_parent"
-                    android:layout_height="35dp"
-                    android:layout_marginStart="10dp"
-                    android:layout_marginEnd="10dp"
-                    android:layout_marginBottom="-5dp"
-                    android:background="@drawable/two_color"
-                    android:orientation="horizontal"
-                    android:weightSum="12">
-                    <!--dataHeading-->
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
                     <TextView
-                        android:id="@+id/header_title1"
+                        android:id="@+id/totalAmount"
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
                         android:layout_gravity="center"
-                        android:layout_marginStart="10dp"
                         android:layout_weight="4"
-                        android:elevation="10dp"
+                        android:elevation="@dimen/Default"
                         android:fontFamily="@font/titir"
                         android:gravity="center"
-                        android:text="@string/slab"
-                        android:textAlignment="center"
+                        android:text="@string/total_amount"
                         android:textColor="@color/white"
                         android:textSize="@dimen/heading_size" />
                     <!--dataHeading-->
-
 
                     <!--dataHeading-->
                     <TextView
-                        android:id="@+id/header_title2"
+                        android:id="@+id/totalTax"
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
                         android:layout_gravity="center"
-                        android:layout_weight="1.5"
-                        android:elevation="10dp"
-                        android:fontFamily="@font/titir"
-                        android:gravity="center_vertical|center"
-                        android:text="@string/tax_rate"
-                        android:textColor="@color/white"
-                        android:textSize="@dimen/heading_size" />
-                    <!--dataHeading-->
-
-
-                    <!--dataHeading-->
-                    <!--dataHeading-->
-
-                    <TextView
-                        android:id="@+id/header_title3"
-                        android:layout_width="0dp"
-                        android:layout_height="match_parent"
-                        android:layout_gravity="center"
-                        android:layout_marginStart="10dp"
-                        android:layout_weight="3"
-                        android:elevation="10dp"
+                        android:layout_weight="4"
+                        android:elevation="@dimen/Default"
                         android:fontFamily="@font/titir"
                         android:gravity="center"
-                        android:text="@string/tax_amount"
+                        android:text="@string/total_tax"
                         android:textColor="@color/white"
                         android:textSize="@dimen/heading_size" />
 
                     <!--dataHeading-->
-                    <TextView
-                        android:id="@+id/header_title4"
-                        android:layout_width="0dp"
-                        android:layout_height="match_parent"
-                        android:layout_gravity="center"
-                        android:layout_marginStart="20dp"
-                        android:layout_weight="3"
-                        android:elevation="10dp"
-                        android:fontFamily="@font/titir"
-                        android:gravity="center"
-                        android:text="@string/tax"
-                        android:textColor="@color/white"
-                        android:textSize="@dimen/heading_size" />
-                    <!--dataHeading-->
-
-                </LinearLayout>
-                <!--        heading-->
 
 
-                <!--            dataTable-->
+                </LinearLayout><!--Result Heading-->
+
                 <LinearLayout
-                    android:id="@+id/dataTable_header"
                     android:layout_width="match_parent"
-                    android:layout_height="255dp"
-                    android:orientation="vertical">
+                    android:layout_height="1dp"
+                    android:orientation="horizontal">
 
-                    <soup.neumorphism.NeumorphCardView
-                        style="@style/Widget.Neumorph.CardView"
-                        android:layout_width="match_parent"
-                        android:layout_height="55dp"
-                        app:neumorph_lightSource="rightTop"
-                        app:neumorph_shadowColorLight="@color/white"
-                        app:neumorph_shapeType="basin">
-
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:orientation="horizontal">
-
-                            <!--                    data-->
-                            <TextView
-                                android:id="@+id/a1"
-                                android:layout_width="0dp"
-                                android:layout_height="match_parent"
-                                android:layout_gravity="center"
-                                android:layout_marginStart="5dp"
-                                android:layout_weight="3.5"
-                                android:fontFamily="@font/bdf"
-                                android:gravity="center"
-                                android:text="@string/firstSlab"
-                                android:elevation="@dimen/Default"
-                                android:textColor="@color/base"
-                                android:textSize="@dimen/Default" />
-                            <!--                    data-->
-
-
-                            <!--                    data-->
-                            <TextView
-                                android:id="@+id/a2"
-                                android:layout_width="0dp"
-                                android:layout_height="match_parent"
-                                android:layout_gravity="center"
-                                android:layout_weight="1"
-                                android:fontFamily="@font/bdf"
-                                android:gravity="fill_vertical|center"
-                                android:text="0%"
-                                android:elevation="@dimen/Default"
-                                android:textColor="@color/base"
-                                android:textSize="@dimen/Default" />
-                            <!--                    data-->
-
-
-                            <!--                    data-->
-                            <TextView
-                                android:id="@+id/c1"
-                                android:layout_width="0dp"
-                                android:layout_height="match_parent"
-                                android:layout_weight="3"
-                                android:fontFamily="@font/bdf"
-                                android:gravity="fill_vertical|end"
-                                android:textColor="@color/base"
-                                android:textSize="@dimen/Default" />
-                            <!--                    data-->
-
-
-                            <!--                    data-->
-                            <TextView
-                                android:id="@+id/d1"
-                                android:layout_width="0dp"
-                                android:layout_height="match_parent"
-                                android:layout_gravity="center"
-                                android:layout_weight="3.5"
-                                android:fontFamily="@font/bdf"
-                                android:gravity="center"
-                                android:textColor="@color/base"
-                                android:textSize="@dimen/Default" />
-                            <!--                    data-->
-
-
-                        </LinearLayout>
-
-
-                    </soup.neumorphism.NeumorphCardView>
-                    <!--            dataTable-->
-
-                    <!--            dataTable-->
-                    <soup.neumorphism.NeumorphCardView
-                        style="@style/Widget.Neumorph.CardView"
-                        android:layout_width="match_parent"
-                        android:layout_height="55dp"
-                        android:layout_marginTop="-15dp"
-                        app:neumorph_lightSource="rightTop"
-                        app:neumorph_shadowColorLight="@color/white"
-                        app:neumorph_shapeType="basin">
-
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:orientation="horizontal">
-
-                            <!--                    data-->
-                            <TextView
-                                android:id="@+id/b1"
-                                android:layout_width="0dp"
-                                android:layout_height="match_parent"
-                                android:layout_marginStart="5dp"
-                                android:layout_weight="3.5"
-                                android:fontFamily="@font/bdf"
-                                android:gravity="center"
-                                android:text="@string/seceoundSlab"
-                                android:elevation="@dimen/Default"
-                                android:textColor="@color/base"
-                                android:textSize="@dimen/Default" />
-                            <!--                    data-->
-
-
-                            <!--                    data-->
-                            <TextView
-                                android:layout_width="0dp"
-                                android:layout_height="match_parent"
-                                android:layout_gravity="center"
-                                android:layout_weight="1"
-                                android:fontFamily="@font/bdf"
-                                android:gravity="fill_vertical|center"
-                                android:text="5%"
-                                android:elevation="@dimen/Default"
-                                android:textColor="@color/base"
-                                android:textSize="@dimen/Default" />
-                            <!--                    data-->
-
-
-                            <!--                    data-->
-                            <TextView
-                                android:id="@+id/c2"
-                                android:layout_width="0dp"
-                                android:layout_height="match_parent"
-
-                                android:layout_weight="3"
-                                android:fontFamily="@font/bdf"
-                                android:gravity="fill_vertical|end"
-                                android:textColor="@color/base"
-                                android:textSize="@dimen/Default" />
-                            <!--                    data-->
-
-
-                            <!--                    data-->
-                            <TextView
-                                android:id="@+id/d2"
-                                android:layout_width="0dp"
-                                android:layout_height="match_parent"
-                                android:layout_gravity="center"
-                                android:layout_marginEnd="5dp"
-                                android:layout_weight="3.5"
-                                android:fontFamily="@font/bdf"
-                                android:gravity="center"
-                                android:textColor="@color/base"
-                                android:textSize="@dimen/Default" />
-                            <!--                    data-->
-
-
-                        </LinearLayout>
-
-
-                    </soup.neumorphism.NeumorphCardView>
-                    <!--            dataTable-->
-
-                    <!--            dataTable-->
-                    <soup.neumorphism.NeumorphCardView
-                        style="@style/Widget.Neumorph.CardView"
-                        android:layout_width="match_parent"
-                        android:layout_height="55dp"
-                        android:layout_marginTop="-15dp"
-                        app:neumorph_shadowColorLight="@color/white"
-                        app:neumorph_lightSource="rightTop"
-                        app:neumorph_shapeType="basin">
-
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:orientation="horizontal">
-
-                            <!--                    data-->
-                            <TextView
-                                android:layout_width="0dp"
-                                android:layout_height="match_parent"
-                                android:layout_marginStart="5dp"
-                                android:layout_weight="3.5"
-                                android:fontFamily="@font/bdf"
-                                android:gravity="center"
-                                android:text="@string/thirdSlab"
-                                android:elevation="@dimen/Default"
-                                android:textColor="@color/base"
-                                android:textSize="@dimen/Default" />
-                            <!--                    data-->
-
-
-                            <!--                    data-->
-                            <TextView
-                                android:layout_width="0dp"
-                                android:layout_height="match_parent"
-                                android:layout_gravity="center"
-                                android:layout_weight="1"
-                                android:fontFamily="@font/bdf"
-                                android:gravity="fill_vertical|center"
-                                android:text="10%"
-                                android:elevation="@dimen/Default"
-                                android:textColor="@color/base"
-                                android:textSize="@dimen/Default" />
-                            <!--                    data-->
-
-
-                            <!--                    data-->
-                            <TextView
-                                android:id="@+id/c3"
-                                android:layout_width="0dp"
-                                android:layout_height="match_parent"
-                                android:layout_weight="3"
-                                android:fontFamily="@font/bdf"
-                                android:gravity="fill_vertical|end"
-                                android:textColor="@color/base"
-                                android:textSize="@dimen/Default" />
-                            <!--                    data-->
-
-
-                            <!--                    data-->
-                            <TextView
-                                android:id="@+id/d3"
-                                android:layout_width="0dp"
-                                android:layout_height="match_parent"
-                                android:layout_gravity="center"
-                                android:layout_marginEnd="5dp"
-                                android:layout_weight="3.5"
-                                android:fontFamily="@font/bdf"
-                                android:gravity="center"
-                                android:textColor="@color/base"
-                                android:textSize="@dimen/Default" />
-                            <!--                    data-->
-
-
-                        </LinearLayout>
-
-
-                    </soup.neumorphism.NeumorphCardView>
-                    <!--            dataTable-->
-
-                    <!--            dataTable-->
-                    <soup.neumorphism.NeumorphCardView
-                        style="@style/Widget.Neumorph.CardView"
-                        android:layout_width="match_parent"
-                        android:layout_height="55dp"
-                        android:layout_marginTop="-15dp"
-                        app:neumorph_lightSource="rightTop"
-                        app:neumorph_shadowColorLight="@color/white"
-                        app:neumorph_shapeType="basin">
-
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:orientation="horizontal">
-
-                            <!--                    data-->
-                            <TextView
-                                android:layout_width="0dp"
-                                android:layout_height="match_parent"
-                                android:layout_marginStart="5dp"
-                                android:layout_weight="3.5"
-                                android:fontFamily="@font/bdf"
-                                android:gravity="center"
-                                android:text="@string/fourthSlab"
-                                android:elevation="@dimen/Default"
-                                android:textColor="@color/base"
-                                android:textSize="@dimen/Default" />
-                            <!--                    data-->
-
-
-                            <!--                    data-->
-                            <TextView
-                                android:layout_width="0dp"
-                                android:layout_height="match_parent"
-                                android:layout_gravity="center"
-                                android:layout_weight="1"
-                                android:fontFamily="@font/bdf"
-                                android:gravity="fill_vertical|center"
-                                android:text="15%"
-                                android:elevation="@dimen/Default"
-                                android:textColor="@color/base"
-                                android:textSize="@dimen/Default" />
-                            <!--                    data-->
-
-
-                            <!--                    data-->
-                            <TextView
-                                android:id="@+id/c4"
-                                android:layout_width="0dp"
-                                android:layout_height="match_parent"
-                                android:layout_weight="3"
-                                android:fontFamily="@font/bdf"
-                                android:gravity="fill_vertical|end"
-                                android:textColor="@color/base"
-                                android:textSize="@dimen/Default" />
-                            <!--                    data-->
-
-
-                            <!--                    data-->
-                            <TextView
-                                android:id="@+id/d4"
-                                android:layout_width="0dp"
-                                android:layout_height="match_parent"
-                                android:layout_gravity="center"
-                                android:layout_marginEnd="5dp"
-                                android:layout_weight="3.5"
-                                android:fontFamily="@font/bdf"
-                                android:gravity="center"
-                                android:textColor="@color/base"
-                                android:textSize="@dimen/Default" />
-                            <!--                    data-->
-
-
-                        </LinearLayout>
-
-
-                    </soup.neumorphism.NeumorphCardView>
-                    <!--            dataTable-->
-
-                    <!--            dataTable-->
-                    <soup.neumorphism.NeumorphCardView
-                        style="@style/Widget.Neumorph.CardView"
-                        android:layout_width="match_parent"
-                        android:layout_height="55dp"
-                        android:layout_marginTop="-15dp"
-                        app:neumorph_shadowColorLight="@color/white"
-                        app:neumorph_lightSource="rightTop"
-                        app:neumorph_shapeType="basin">
-
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:orientation="horizontal">
-
-                            <!--                    data-->
-                            <TextView
-                                android:layout_width="0dp"
-                                android:layout_height="match_parent"
-                                android:layout_marginStart="5dp"
-                                android:layout_weight="3.5"
-                                android:fontFamily="@font/bdf"
-                                android:gravity="center"
-                                android:text="@string/fifthSlab"
-                                android:elevation="@dimen/Default"
-                                android:textColor="@color/base"
-                                android:textSize="@dimen/Default" />
-                            <!--                    data-->
-
-
-                            <!--                    data-->
-                            <TextView
-                                android:layout_width="0dp"
-                                android:layout_height="match_parent"
-                                android:layout_gravity="right"
-                                android:layout_weight="1"
-                                android:fontFamily="@font/bdf"
-                                android:gravity="fill_vertical|center"
-                                android:text="20%"
-                                android:elevation="@dimen/Default"
-                                android:textColor="@color/base"
-                                android:textSize="@dimen/Default" />
-                            <!--                    data-->
-
-
-                            <!--                    data-->
-                            <TextView
-                                android:id="@+id/c5"
-                                android:layout_width="0dp"
-                                android:layout_height="match_parent"
-                                android:layout_weight="3"
-                                android:fontFamily="@font/bdf"
-                                android:gravity="fill_vertical|end"
-                                android:textColor="@color/base"
-                                android:textSize="@dimen/Default" />
-                            <!--                    data-->
-
-
-                            <!--                    data-->
-                            <TextView
-                                android:id="@+id/d5"
-                                android:layout_width="0dp"
-                                android:layout_height="match_parent"
-                                android:layout_gravity="center"
-                                android:layout_marginEnd="5dp"
-                                android:layout_weight="3.5"
-                                android:fontFamily="@font/bdf"
-                                android:gravity="center"
-                                android:textColor="@color/base"
-                                android:textSize="@dimen/Default" />
-                            <!--                    data-->
-
-
-                        </LinearLayout>
-
-
-                    </soup.neumorphism.NeumorphCardView>
-                    <!--            dataTable-->
-
-                    <!--            dataTable-->
-                    <soup.neumorphism.NeumorphCardView
-                        style="@style/Widget.Neumorph.CardView"
-                        android:layout_width="match_parent"
-                        android:layout_height="55dp"
-                        android:layout_marginTop="-15dp"
-                        app:neumorph_lightSource="rightTop"
-                        app:neumorph_shadowColorLight="@color/white"
-                        app:neumorph_shapeType="basin">
-
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:orientation="horizontal">
-
-                            <!--                    data-->
-                            <TextView
-                                android:layout_width="0dp"
-                                android:layout_height="match_parent"
-                                android:layout_marginStart="5dp"
-                                android:layout_weight="3.5"
-                                android:fontFamily="@font/bdf"
-                                android:gravity="center"
-                                android:text="@string/sixthSlab"
-                                android:elevation="@dimen/Default"
-                                android:textColor="@color/base"
-                                android:textSize="@dimen/Default" />
-                            <!--                    data-->
-
-
-                            <!--                    data-->
-                            <TextView
-                                android:layout_width="0dp"
-                                android:layout_height="match_parent"
-                                android:layout_gravity="center"
-                                android:layout_weight="1"
-                                android:fontFamily="@font/bdf"
-                                android:gravity="fill_vertical|end"
-                                android:text="25%"
-                                android:elevation="@dimen/Default"
-                                android:textColor="@color/base"
-                                android:textSize="@dimen/Default" />
-                            <!--                    data-->
-
-
-                            <!--                    data-->
-                            <TextView
-                                android:id="@+id/c6"
-                                android:layout_width="0dp"
-                                android:layout_height="match_parent"
-                                android:layout_gravity="center"
-                                android:layout_weight="3.5"
-                                android:fontFamily="@font/bdf"
-                                android:gravity="fill_vertical|center"
-                                android:textColor="@color/base"
-                                android:textSize="@dimen/Default" />
-                            <!--                    data-->
-
-
-                            <!--                    data-->
-                            <TextView
-                                android:id="@+id/d6"
-                                android:layout_width="0dp"
-                                android:layout_height="match_parent"
-                                android:layout_gravity="center"
-                                android:layout_marginEnd="5dp"
-                                android:layout_weight="3.5"
-                                android:fontFamily="@font/bdf"
-                                android:gravity="center"
-                                android:textColor="@color/base"
-                                android:textSize="@dimen/Default" />
-                            <!--                    data-->
-
-
-                        </LinearLayout>
-
-
-                    </soup.neumorphism.NeumorphCardView>
-                </LinearLayout>
-
-
-                <!--            dataTable-->
-
-
-                <!--            sumArea-->
-                <LinearLayout
-                    android:id="@+id/resulBar"
-                    android:layout_width="match_parent"
-                    android:layout_height="60dp"
-                    android:layout_marginStart="10dp"
-                    android:layout_marginEnd="10sp"
-                    android:background="@drawable/two_color"
-                    android:orientation="vertical">
-                    <!--Result Heading-->
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal">
-
-                        <TextView
-                            android:id="@+id/totalAmount"
-                            android:layout_width="0dp"
-                            android:layout_height="match_parent"
-                            android:layout_gravity="center"
-                            android:layout_weight="4"
-                            android:fontFamily="@font/titir"
-                            android:gravity="center"
-                            android:elevation="@dimen/Default"
-                            android:text="@string/total_amount"
-                            android:textColor="@color/white"
-                            android:textSize="@dimen/heading_size" />
-                        <!--dataHeading-->
-
-                        <!--dataHeading-->
-                        <TextView
-                            android:id="@+id/totalTax"
-                            android:layout_width="0dp"
-                            android:layout_height="match_parent"
-                            android:layout_gravity="center"
-                            android:layout_weight="4"
-                            android:fontFamily="@font/titir"
-                            android:elevation="@dimen/Default"
-                            android:gravity="center"
-                            android:text="@string/total_tax"
-                            android:textColor="@color/white"
-                            android:textSize="@dimen/heading_size" />
-
-                        <!--dataHeading-->
-
-
-                    </LinearLayout><!--Result Heading-->
-
-                    <LinearLayout
+                    <View
                         android:layout_width="match_parent"
                         android:layout_height="1dp"
-                        android:orientation="horizontal">
-
-                        <View
-                            android:layout_width="match_parent"
-                            android:layout_height="1dp"
-                            android:layout_gravity="left"
-                            android:background="@color/white" />
+                        android:layout_gravity="left"
+                        android:background="@color/white" />
 
 
-                    </LinearLayout><!--view-->
+                </LinearLayout><!--view-->
 
 
-                    <!--Result Text-->
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal">
+                <!--Result Text-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
 
-                        <TextView
-                            android:id="@+id/amountResult"
-                            android:layout_width="0dp"
-                            android:layout_height="match_parent"
-                            android:layout_gravity="center"
-                            android:layout_weight="4"
-                            android:fontFamily="@font/bdf"
-                            android:gravity="center"
-                            android:text="-"
-                            android:textColor="@color/white"
-                            android:textSize="@dimen/much_bold" />
-                        <!--dataHeading-->
-
-
-                        <!--dataHeading-->
-                        <TextView
-                            android:id="@+id/taxResult"
-                            android:layout_width="0dp"
-                            android:layout_height="match_parent"
-                            android:layout_gravity="center"
-                            android:layout_weight="4"
-                            android:fontFamily="@font/bdf"
-                            android:gravity="center"
-                            android:text="-"
-                            android:textColor="@color/white"
-                            android:textSize="@dimen/much_bold" />
-                        <!--dataHeading-->
-
-                    </LinearLayout><!--Result Text-->
+                    <TextView
+                        android:id="@+id/amountResult"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:layout_weight="4"
+                        android:fontFamily="@font/bdf"
+                        android:gravity="center"
+                        android:text="-"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/heading_size" />
+                    <!--dataHeading-->
 
 
-                </LinearLayout>
-                <!--            sumArea-->
+                    <!--dataHeading-->
+                    <TextView
+                        android:id="@+id/taxResult"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:layout_weight="4"
+                        android:fontFamily="@font/bdf"
+                        android:gravity="center"
+                        android:text="-"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/heading_size" />
+                    <!--dataHeading-->
+
+                </LinearLayout><!--Result Text-->
 
 
             </LinearLayout>
-            <!--        dataholderParent-->
-
-        </RelativeLayout><!--    mainArea-->
+            <!--            sumArea-->
 
         <!--        InputArea-->
         <LinearLayout
@@ -831,7 +952,7 @@
                 android:layout_weight="1"
                 android:layout_gravity="center"
                 android:gravity="right"
-                android:layout_marginStart="-135dp"
+                android:layout_marginStart="-165dp"
                 android:layout_marginEnd="10dp"
                 >
 <!--            clcButton>Enabled-->
@@ -877,7 +998,7 @@
             </RelativeLayout>  <!--        CalcButton-->
 
         </LinearLayout>
-
+<!--Bottom Area-->
         <LinearLayout
             android:id="@+id/bottomArea"
             android:layout_width="300dp"
@@ -901,7 +1022,7 @@
                 android:gravity="start|center"
                 android:fontFamily="@font/bd_font"
                 android:textSize="@dimen/head_bold"
-                android:layout_marginStart="20dp"
+                android:layout_marginStart="15dp"
                 android:elevation="5dp"
                 android:layout_marginEnd="-20dp"
                 android:textColor="@color/base"
@@ -940,54 +1061,8 @@
 
             </soup.neumorphism.NeumorphCardView>
 
-        </LinearLayout>
+        </LinearLayout><!--Bottom Area-->
 
+    </LinearLayout><!--        main card-->
 
-
-
-
-    </LinearLayout><!--MainAreaParent-->
-
-<!--    Bottom Area-->
-<LinearLayout
-    android:id="@+id/bottomArea2"
-    android:layout_width="match_parent"
-    android:layout_height="150dp"
-    android:visibility="gone"
-    android:orientation="vertical"
-    >
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="right"
-        android:src="@drawable/np_logo_set"/>
-
-
-    <!--    LowerVictor-->
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="bottom"
-        android:gravity="bottom">
-
-        <ImageView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true"
-            android:scaleType="fitXY"
-            android:src="@drawable/footer_top_bg" />
-
-    </RelativeLayout>
-    <!--    LowerVictor-->
-
-
-</LinearLayout>
-    <!--    Bottom Area-->
-
-
-
-
-
-
-
-</LinearLayout>
+</LinearLayout><!--Root-->
