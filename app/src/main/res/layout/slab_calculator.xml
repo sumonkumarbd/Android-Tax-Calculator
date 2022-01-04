@@ -96,10 +96,12 @@
         <!--            Row-->
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/header_titles"
-            android:layout_width="285dp"
+            android:layout_width="280dp"
             android:layout_height="20dp"
             android:layout_marginTop="5dp"
             android:layout_gravity="center_horizontal"
+            style="@style/Widget.MaterialComponents.CardView"
+            android:elevation="@dimen/shadow"
             >
 
             <LinearLayout
@@ -163,7 +165,7 @@
                 <!--dataHeading-->
                 <TextView
                     android:id="@+id/header_title3"
-                    android:layout_width="85dp"
+                    android:layout_width="80dp"
                     android:layout_height="match_parent"
                     android:layout_gravity="center"
                     android:elevation="10dp"
@@ -200,6 +202,8 @@
             android:layout_marginTop="5dp"
             android:paddingHorizontal="7dp"
             android:layout_gravity="center_horizontal"
+            style="@style/Widget.MaterialComponents.CardView"
+            android:elevation="@dimen/shadow"
             >
 
             <LinearLayout
@@ -219,7 +223,7 @@
                 <!--dataHeading-->
                 <TextView
                     android:id="@+id/a1"
-                    android:layout_width="94dp"
+                    android:layout_width="92dp"
                     android:layout_height="match_parent"
                     android:layout_gravity="start"
                     android:elevation="10dp"
@@ -239,7 +243,7 @@
                     android:layout_gravity="center"
                     android:elevation="10dp"
                     android:fontFamily="@font/bdf"
-                    android:gravity="start|center_vertical"
+                    android:gravity="center|center_vertical"
                     android:text="@string/zero_p"
                     android:textColor="@color/white"
                     android:textSize="@dimen/Default" />
@@ -263,7 +267,7 @@
                 <!--dataHeading-->
                 <TextView
                     android:id="@+id/c1"
-                    android:layout_width="85dp"
+                    android:layout_width="80dp"
                     android:layout_height="match_parent"
                     android:layout_gravity="center"
                     android:elevation="10dp"
@@ -298,6 +302,8 @@
             android:layout_marginTop="5dp"
             android:paddingHorizontal="7dp"
             android:layout_gravity="center_horizontal"
+            style="@style/Widget.MaterialComponents.CardView"
+            android:elevation="@dimen/shadow"
             >
 
             <LinearLayout
@@ -317,7 +323,7 @@
                 <!--dataHeading-->
                 <TextView
                     android:id="@+id/a2"
-                    android:layout_width="94dp"
+                    android:layout_width="92dp"
                     android:layout_height="match_parent"
                     android:layout_gravity="start"
                     android:elevation="10dp"
@@ -361,7 +367,7 @@
                 <!--dataHeading-->
                 <TextView
                     android:id="@+id/c2"
-                    android:layout_width="85dp"
+                    android:layout_width="80dp"
                     android:layout_height="match_parent"
                     android:layout_gravity="center"
                     android:elevation="10dp"
@@ -396,6 +402,8 @@
             android:layout_marginTop="5dp"
             android:paddingHorizontal="7dp"
             android:layout_gravity="center_horizontal"
+            style="@style/Widget.MaterialComponents.CardView"
+            android:elevation="@dimen/shadow"
             >
 
             <LinearLayout
@@ -415,7 +423,7 @@
                 <!--dataHeading-->
                 <TextView
                     android:id="@+id/a3"
-                    android:layout_width="94dp"
+                    android:layout_width="92dp"
                     android:layout_height="match_parent"
                     android:layout_gravity="start"
                     android:elevation="10dp"
@@ -459,7 +467,7 @@
                 <!--dataHeading-->
                 <TextView
                     android:id="@+id/c3"
-                    android:layout_width="85dp"
+                    android:layout_width="80dp"
                     android:layout_height="match_parent"
                     android:layout_gravity="center"
                     android:elevation="10dp"
@@ -494,6 +502,8 @@
             android:layout_marginTop="5dp"
             android:paddingHorizontal="7dp"
             android:layout_gravity="center_horizontal"
+            style="@style/Widget.MaterialComponents.CardView"
+            android:elevation="@dimen/shadow"
             >
 
             <LinearLayout
@@ -513,7 +523,7 @@
                 <!--dataHeading-->
                 <TextView
                     android:id="@+id/a4"
-                    android:layout_width="94dp"
+                    android:layout_width="92dp"
                     android:layout_height="match_parent"
                     android:layout_gravity="start"
                     android:elevation="10dp"
@@ -557,7 +567,7 @@
                 <!--dataHeading-->
                 <TextView
                     android:id="@+id/c4"
-                    android:layout_width="85dp"
+                    android:layout_width="80dp"
                     android:layout_height="match_parent"
                     android:layout_gravity="center"
                     android:elevation="10dp"
@@ -592,6 +602,8 @@
             android:layout_marginTop="5dp"
             android:paddingHorizontal="7dp"
             android:layout_gravity="center_horizontal"
+            style="@style/Widget.MaterialComponents.CardView"
+            android:elevation="@dimen/shadow"
             >
 
             <LinearLayout
@@ -611,7 +623,7 @@
                 <!--dataHeading-->
                 <TextView
                     android:id="@+id/a5"
-                    android:layout_width="94dp"
+                    android:layout_width="92dp"
                     android:layout_height="match_parent"
                     android:layout_gravity="start"
                     android:elevation="10dp"
@@ -655,7 +667,7 @@
                 <!--dataHeading-->
                 <TextView
                     android:id="@+id/c5"
-                    android:layout_width="85dp"
+                    android:layout_width="80dp"
                     android:layout_height="match_parent"
                     android:layout_gravity="center"
                     android:elevation="10dp"
@@ -690,6 +702,8 @@
             android:layout_marginTop="5dp"
             android:paddingHorizontal="7dp"
             android:layout_gravity="center_horizontal"
+            style="@style/Widget.MaterialComponents.CardView"
+            android:elevation="@dimen/shadow"
             >
 
             <LinearLayout
@@ -708,7 +722,7 @@
 
                 <!--dataHeading-->
                 <TextView
-                    android:id="@+id/a6"                    android:layout_width="94dp"
+                    android:id="@+id/a6"                    android:layout_width="92dp"
                     android:layout_height="match_parent"
                     android:layout_gravity="start"
                     android:elevation="10dp"
@@ -752,7 +766,7 @@
                 <!--dataHeading-->
                 <TextView
                     android:id="@+id/c6"
-                    android:layout_width="85dp"
+                    android:layout_width="80dp"
                     android:layout_height="match_parent"
                     android:layout_gravity="center"
                     android:elevation="10dp"
@@ -786,6 +800,7 @@
                 android:id="@+id/resulBar"
                 android:layout_width="match_parent"
                 android:layout_height="60dp"
+                android:layout_marginTop="10dp"
                 android:layout_marginStart="5dp"
                 android:layout_marginEnd="10sp"
                 android:background="@drawable/two_color"
@@ -942,7 +957,7 @@
                 android:layout_weight="1"
                 android:layout_gravity="center"
                 android:gravity="right"
-                android:layout_marginStart="-165dp"
+                android:layout_marginStart="-125dp"
                 android:layout_marginEnd="10dp"
                 >
 <!--            clcButton>Enabled-->
@@ -950,7 +965,7 @@
                     android:id="@+id/calcButton"
                     style="@style/Widget.Neumorph.Button"
                     app:neumorph_shadowColorLight="@color/white"
-                    app:neumorph_lightSource="leftTop"
+                    app:neumorph_lightSource="rightTop"
                     android:layout_width="60dp"
                     android:layout_height="60dp"
                     android:layout_gravity="center"
