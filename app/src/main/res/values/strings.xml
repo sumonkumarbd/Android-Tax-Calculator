@@ -37,6 +37,18 @@
     <string name="fiftiin_p">15%</string>
     <string name="twnty_p">20%</string>
     <string name="twntyfive_p">25%</string>
+    <string name="basic_salary">মূল বেতন</string>
+    <string name="bonus">বিশেষ বেতন</string>
+    <string name="past_salary">বকেয়া বেতন</string>
+    <string name="house_rent">বাড়ি ভাড়া</string>
+    <string name="medical_allowance">চিকিৎসা ভাতা</string>
+    <string name="surgery_cost">সার্জারি খরচ</string>
+    <string name="travel_cost">যাতায়াত ভাতা</string>
+    <string name="festival_bonus">উৎসব বোনাস</string>
+    <string name="servant_allowance">পরিচারক ভাতা</string>
+    <string name="holiday_allowance">ছুটি ভাতা</string>
+    <string name="honorary_gift">সম্মানী পুরষ্কার</string>
+    <string name="overTime">ওভার টাইম</string>
 
 
     <dimen name="heading_size">14sp</dimen>
