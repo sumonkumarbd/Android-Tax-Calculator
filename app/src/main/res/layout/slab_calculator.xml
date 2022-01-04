@@ -698,7 +698,7 @@
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/sisth_row"
             android:layout_width="match_parent"
-            android:layout_height="30dp"
+            android:layout_height="38dp"
             android:layout_marginTop="5dp"
             android:paddingHorizontal="7dp"
             android:layout_gravity="center_horizontal"
@@ -800,7 +800,7 @@
                 android:id="@+id/resulBar"
                 android:layout_width="match_parent"
                 android:layout_height="60dp"
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="5dp"
                 android:layout_marginStart="5dp"
                 android:layout_marginEnd="10sp"
                 android:background="@drawable/two_color"
