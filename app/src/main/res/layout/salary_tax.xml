@@ -154,6 +154,24 @@
                         app:layout_constraintStart_toEndOf="@+id/col1"
                         app:layout_constraintTop_toTopOf="parent">
 
+                        <EditText
+                            android:layout_width="match_parent"
+                            android:layout_height="30dp"
+                            android:background="@color/tnsparent"
+                            android:id="@+id/basic_salary"
+                            android:hint="@string/monthly"
+                            android:textColor="@color/base"
+                            android:fontFamily="@font/banglafont"
+                            android:textColorHint="@color/gray"
+                            app:neumorph_shapeType="basin"
+                            android:textSize="@dimen/heading_size"
+                            android:text=""
+                            android:inputType="number"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:focusableInTouchMode="true"
+                            android:autofillHints="no" />
+
 
 
                     </LinearLayout><!--                    col2-->
@@ -210,9 +228,26 @@
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toEndOf="@+id/col3"
-                        app:layout_constraintTop_toTopOf="parent">
+                        app:layout_constraintTop_toTopOf="parent"
+                        >
 
-
+                        <EditText
+                            android:layout_width="match_parent"
+                            android:layout_height="30dp"
+                            android:background="@color/tnsparent"
+                            android:id="@+id/bonus"
+                            android:hint="@string/monthly"
+                            android:textColor="@color/base"
+                            android:fontFamily="@font/banglafont"
+                            android:textColorHint="@color/gray"
+                            app:neumorph_shapeType="basin"
+                            android:textSize="@dimen/heading_size"
+                            android:text=""
+                            android:inputType="number"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:focusableInTouchMode="true"
+                            android:autofillHints="no" />
 
                     </LinearLayout><!--col4-->
 
@@ -267,9 +302,25 @@
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toEndOf="@+id/col5"
-                        app:layout_constraintTop_toTopOf="parent">
-
-
+                        app:layout_constraintTop_toTopOf="parent"
+                        >
+                        <EditText
+                            android:layout_width="match_parent"
+                            android:layout_height="30dp"
+                            android:background="@color/tnsparent"
+                            android:id="@+id/past_salary"
+                            android:hint="@string/bokeya_beton_hint"
+                            android:textColor="@color/base"
+                            android:fontFamily="@font/banglafont"
+                            android:textColorHint="@color/gray"
+                            app:neumorph_shapeType="basin"
+                            android:textSize="@dimen/heading_size"
+                            android:text=""
+                            android:inputType="number"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:focusableInTouchMode="true"
+                            android:autofillHints="no" />
 
                     </LinearLayout><!--                firstCol-->
 
@@ -323,9 +374,25 @@
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toEndOf="@+id/col7"
-                        app:layout_constraintTop_toTopOf="parent">
-
-
+                        app:layout_constraintTop_toTopOf="parent"
+                        >
+                        <EditText
+                            android:layout_width="match_parent"
+                            android:layout_height="30dp"
+                            android:background="@color/tnsparent"
+                            android:id="@+id/house_rent"
+                            android:hint="@string/monthly"
+                            android:textColor="@color/base"
+                            android:fontFamily="@font/banglafont"
+                            android:textColorHint="@color/gray"
+                            app:neumorph_shapeType="basin"
+                            android:textSize="@dimen/heading_size"
+                            android:text=""
+                            android:inputType="number"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:focusableInTouchMode="true"
+                            android:autofillHints="no" />
 
                     </LinearLayout><!--                col8-->
 
@@ -379,7 +446,25 @@
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toEndOf="@+id/col9"
-                        app:layout_constraintTop_toTopOf="parent">
+                        app:layout_constraintTop_toTopOf="parent"
+                        >
+                        <EditText
+                            android:layout_width="match_parent"
+                            android:layout_height="30dp"
+                            android:background="@color/tnsparent"
+                            android:id="@+id/medical_allowance"
+                            android:hint="@string/monthly"
+                            android:textColor="@color/base"
+                            android:fontFamily="@font/banglafont"
+                            android:textColorHint="@color/gray"
+                            app:neumorph_shapeType="basin"
+                            android:textSize="@dimen/heading_size"
+                            android:text=""
+                            android:inputType="number"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:focusableInTouchMode="true"
+                            android:autofillHints="no" />
 
 
 
@@ -435,9 +520,25 @@
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toEndOf="@+id/col11"
-                        app:layout_constraintTop_toTopOf="parent">
-
-
+                        app:layout_constraintTop_toTopOf="parent"
+                        >
+                        <EditText
+                            android:layout_width="match_parent"
+                            android:layout_height="30dp"
+                            android:background="@color/tnsparent"
+                            android:id="@+id/surgery_cost"
+                            android:hint="@string/monthly"
+                            android:textColor="@color/base"
+                            android:fontFamily="@font/banglafont"
+                            android:textColorHint="@color/gray"
+                            app:neumorph_shapeType="basin"
+                            android:textSize="@dimen/heading_size"
+                            android:text=""
+                            android:inputType="number"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:focusableInTouchMode="true"
+                            android:autofillHints="no" />
 
                     </LinearLayout><!--                firstCol-->
 
@@ -491,9 +592,25 @@
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toEndOf="@+id/col13"
-                        app:layout_constraintTop_toTopOf="parent">
-
-
+                        app:layout_constraintTop_toTopOf="parent"
+                        >
+                        <EditText
+                            android:layout_width="match_parent"
+                            android:layout_height="30dp"
+                            android:background="@color/tnsparent"
+                            android:id="@+id/travel_cost"
+                            android:hint="@string/monthly"
+                            android:textColor="@color/base"
+                            android:fontFamily="@font/banglafont"
+                            android:textColorHint="@color/gray"
+                            app:neumorph_shapeType="basin"
+                            android:textSize="@dimen/heading_size"
+                            android:text=""
+                            android:inputType="number"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:focusableInTouchMode="true"
+                            android:autofillHints="no" />
 
                     </LinearLayout><!--                firstCol-->
 
@@ -522,16 +639,16 @@
                         app:layout_constraintTop_toTopOf="parent"
                         android:orientation="vertical"
                         >
+
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
+                            android:elevation="@dimen/Default"
+                            android:fontFamily="@font/bdf"
                             android:gravity="center|center_vertical"
                             android:text="@string/festival_bonus"
                             android:textColor="@color/white"
-                            android:fontFamily="@font/bdf"
-                            android:textSize="@dimen/heading_size"
-                            android:elevation="@dimen/Default"
-                            />
+                            android:textSize="@dimen/heading_size" />
 
                     </LinearLayout>
 
@@ -547,9 +664,25 @@
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toEndOf="@+id/col15"
-                        app:layout_constraintTop_toTopOf="parent">
-
-
+                        app:layout_constraintTop_toTopOf="parent"
+                        >
+                        <EditText
+                            android:layout_width="match_parent"
+                            android:layout_height="30dp"
+                            android:background="@color/tnsparent"
+                            android:id="@+id/festival_bonus"
+                            android:hint="@string/festival_bonus_hint"
+                            android:textColor="@color/base"
+                            android:fontFamily="@font/banglafont"
+                            android:textColorHint="@color/gray"
+                            app:neumorph_shapeType="basin"
+                            android:textSize="@dimen/heading_size"
+                            android:text=""
+                            android:inputType="number"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:focusableInTouchMode="true"
+                            android:autofillHints="no" />
 
                     </LinearLayout><!--                firstCol-->
 
@@ -603,9 +736,25 @@
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toEndOf="@+id/col17"
-                        app:layout_constraintTop_toTopOf="parent">
-
-
+                        app:layout_constraintTop_toTopOf="parent"
+                        >
+                        <EditText
+                            android:layout_width="match_parent"
+                            android:layout_height="30dp"
+                            android:background="@color/tnsparent"
+                            android:id="@+id/servant_allowance"
+                            android:hint="@string/monthly"
+                            android:textColor="@color/base"
+                            android:fontFamily="@font/banglafont"
+                            android:textColorHint="@color/gray"
+                            app:neumorph_shapeType="basin"
+                            android:textSize="@dimen/heading_size"
+                            android:text=""
+                            android:inputType="number"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:focusableInTouchMode="true"
+                            android:autofillHints="no" />
 
                     </LinearLayout><!--                firstCol-->
 
@@ -659,9 +808,25 @@
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toEndOf="@+id/col19"
-                        app:layout_constraintTop_toTopOf="parent">
-
-
+                        app:layout_constraintTop_toTopOf="parent"
+                        >
+                        <EditText
+                            android:layout_width="match_parent"
+                            android:layout_height="30dp"
+                            android:background="@color/tnsparent"
+                            android:id="@+id/holiday_allowance"
+                            android:hint="@string/yearly"
+                            android:textColor="@color/base"
+                            android:fontFamily="@font/banglafont"
+                            android:textColorHint="@color/gray"
+                            app:neumorph_shapeType="basin"
+                            android:textSize="@dimen/heading_size"
+                            android:text=""
+                            android:inputType="number"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:focusableInTouchMode="true"
+                            android:autofillHints="no" />
 
                     </LinearLayout><!--                firstCol-->
 
@@ -715,9 +880,25 @@
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toEndOf="@+id/col21"
-                        app:layout_constraintTop_toTopOf="parent">
-
-
+                        app:layout_constraintTop_toTopOf="parent"
+                        >
+                        <EditText
+                            android:layout_width="match_parent"
+                            android:layout_height="30dp"
+                            android:background="@color/tnsparent"
+                            android:id="@+id/honorary_gift"
+                            android:hint="@string/yearly"
+                            android:textColor="@color/base"
+                            android:fontFamily="@font/banglafont"
+                            android:textColorHint="@color/gray"
+                            app:neumorph_shapeType="basin"
+                            android:textSize="@dimen/heading_size"
+                            android:text=""
+                            android:inputType="number"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:focusableInTouchMode="true"
+                            android:autofillHints="no" />
 
                     </LinearLayout><!--                firstCol-->
 
@@ -771,9 +952,25 @@
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toEndOf="@+id/col23"
-                        app:layout_constraintTop_toTopOf="parent">
-
-
+                        app:layout_constraintTop_toTopOf="parent"
+                        >
+                        <EditText
+                            android:layout_width="match_parent"
+                            android:layout_height="30dp"
+                            android:background="@color/tnsparent"
+                            android:id="@+id/over_time"
+                            android:hint="@string/monthly"
+                            android:textColor="@color/base"
+                            android:fontFamily="@font/banglafont"
+                            android:textColorHint="@color/gray"
+                            app:neumorph_shapeType="basin"
+                            android:textSize="@dimen/heading_size"
+                            android:text=""
+                            android:inputType="number"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:focusableInTouchMode="true"
+                            android:autofillHints="no" />
 
                     </LinearLayout><!--                firstCol-->
 

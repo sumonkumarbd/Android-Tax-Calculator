@@ -938,7 +938,6 @@
                     android:hint="@string/hint_text"
                     android:textColor="@color/base"
                     android:fontFamily="@font/banglafont"
-                    android:defaultFocusHighlightEnabled="true"
                     android:textColorHint="@color/gray"
                     app:neumorph_shapeType="basin"
                     android:textSize="@dimen/head_bold"
@@ -947,7 +946,7 @@
                     android:layout_gravity="center"
                     android:gravity="center"
                     android:focusableInTouchMode="true"
-                    />
+                    android:autofillHints="no" />
             </soup.neumorphism.NeumorphCardView>
 
             <!--        CalcButton-->
