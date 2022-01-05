@@ -52,17 +52,17 @@
         >
 
         <TextView
-            android:id="@+id/appName_salary"
+            style="@style/Widget.MaterialComponents.CardView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginTop="-20dp"
+            android:id="@+id/title_salary"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/head_bolder"
             android:elevation="@dimen/Default"
             android:fontFamily="@font/titir"
-            android:gravity="center"
-            android:text="@string/app_name"
+            android:text="@string/salarytax"
             android:textColor="@color/white"
-            android:textSize="@dimen/head_bold" />
+            android:textSize="@dimen/head_bolder" />
 
 
     </LinearLayout><!--Upper color bord-->
@@ -73,7 +73,7 @@
     <LinearLayout
         android:id="@+id/mainCard_salary"
         android:layout_width="280dp"
-        android:layout_height="420dp"
+        android:layout_height="430dp"
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="-50dp"
         android:background="@drawable/tnas_curved25"
@@ -81,19 +81,210 @@
         android:orientation="vertical"
         style="@style/Widget.MaterialComponents.CardView"
         >
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/salarytax"
-            android:layout_marginBottom="10dp"
-            android:layout_gravity="center_horizontal"
-            android:layout_marginTop="@dimen/Default"
-            android:fontFamily="@font/titir"
-            android:textSize="@dimen/head_bold"
-            android:textColor="@color/base"
-            android:elevation="@dimen/Default"
-            style="@style/Widget.MaterialComponents.CardView"
-            />
+        <!--            sumArea-->
+        <LinearLayout
+            android:id="@+id/resulBar"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="10sp"
+            android:background="@drawable/two_color"
+            android:orientation="vertical">
+            <!--Result Heading-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/annul_taxFree_income"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_weight="4"
+                    android:elevation="@dimen/Default"
+                    android:fontFamily="@font/titir"
+                    android:gravity="center"
+                    android:text="@string/annul_taxfree_income"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/heading_size" />
+                <!--dataHeading-->
+
+                <!--dataHeading-->
+                <TextView
+                    android:id="@+id/ananul_taxable_income"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_weight="4"
+                    android:elevation="@dimen/Default"
+                    android:fontFamily="@font/titir"
+                    android:gravity="center"
+                    android:text="@string/ananul_taxable_income"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/heading_size" />
+
+                <!--dataHeading-->
+
+
+            </LinearLayout><!--Result Heading-->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:orientation="horizontal">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_gravity="left"
+                    android:background="@color/white" />
+
+
+            </LinearLayout><!--view-->
+
+
+            <!--Result Text-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/taxFreeResult"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_weight="4"
+                    android:fontFamily="@font/bdf"
+                    android:gravity="center"
+                    android:text="-"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/heading_size" />
+                <!--dataHeading-->
+
+
+                <!--dataHeading-->
+                <TextView
+                    android:id="@+id/taxableResult"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_weight="4"
+                    android:fontFamily="@font/bdf"
+                    android:gravity="center"
+                    android:text="-"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/heading_size" />
+                <!--dataHeading-->
+
+            </LinearLayout><!--Result Text-->
+
+
+        </LinearLayout><!--sumArea-->
+
+        <!--        InputArea-->
+        <LinearLayout
+            android:id="@+id/totalDisplay_bar"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_gravity="center"
+            android:layout_marginHorizontal="10dp"
+            android:gravity="center|center_horizontal|center_vertical"
+            android:orientation="horizontal"
+            android:weightSum="3"
+
+            >
+            <soup.neumorphism.NeumorphCardView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                style="@style/Widget.Neumorph.CardView"
+                app:neumorph_lightSource="rightTop"
+                app:neumorph_shadowColorLight="@color/white"
+                app:neumorph_shapeType="basin"
+                >
+                <ImageView
+                    android:id="@+id/inputError"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_baseline_error_outline_24"
+                    android:layout_marginStart="6dp"
+                    android:layout_marginTop="5dp"
+                    android:visibility="invisible"
+                    android:alpha=".8"
+                    />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:background="@color/tnsparent"
+                    android:id="@+id/total_annul_display"
+                    android:hint="@string/total_annul_hint"
+                    android:textColor="@color/base"
+                    android:fontFamily="@font/bdf"
+                    android:textColorHint="@color/gray"
+                    app:neumorph_shapeType="basin"
+                    android:textSize="@dimen/heading_size"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:focusableInTouchMode="true"
+                    android:autofillHints="no" />
+            </soup.neumorphism.NeumorphCardView>
+
+            <!--        CalcButton-->
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_gravity="center"
+                android:gravity="right"
+                android:layout_marginStart="-115dp"
+                android:layout_marginEnd="10dp"
+                >
+                <!--            clcButton>Enabled-->
+                <soup.neumorphism.NeumorphImageButton
+                    android:id="@+id/calcButton_salary"
+                    style="@style/Widget.Neumorph.Button"
+                    app:neumorph_shadowColorLight="@color/white"
+                    app:neumorph_lightSource="rightTop"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_gravity="center"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:gravity="center"
+                    android:scaleType="center"
+                    android:src="@drawable/ic_baseline_calculate_24"
+                    android:textColor="@color/base"
+                    android:textSize="@dimen/much_bold"
+                    app:neumorph_shapeType="basin" />
+                <!--                clcButton>Enabled-->
+
+                <!--                clcButton>Disaled-->
+                <soup.neumorphism.NeumorphImageButton
+                    android:id="@+id/calcButton_salary_disabled"
+                    style="@style/Widget.Neumorph.Button"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_gravity="center"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:gravity="center"
+                    android:scaleType="center"
+                    android:src="@drawable/ic_baseline_calculate_24_disable"
+                    android:textColor="@color/base"
+                    android:textSize="@dimen/much_bold"
+                    android:visibility="invisible"
+                    app:neumorph_lightSource="rightTop"
+                    app:neumorph_shadowColorLight="@color/white"
+                    app:neumorph_shapeType="basin" />
+                <!--                clcButton>Disaled-->
+
+
+            </RelativeLayout>  <!--        CalcButton-->
+
+        </LinearLayout> <!--        InputArea-->
 <!--        parent ScrollView-->
         <ScrollView
             android:layout_width="match_parent"
@@ -982,109 +1173,7 @@
         </ScrollView><!--parent ScrollView-->
 
 
-        <!--            sumArea-->
-        <LinearLayout
-            android:id="@+id/resulBar"
-            android:layout_width="match_parent"
-            android:layout_height="60dp"
-            android:layout_marginTop="5dp"
-            android:layout_marginStart="5dp"
-            android:layout_marginEnd="10sp"
-            android:background="@drawable/two_color"
-            android:orientation="vertical">
-            <!--Result Heading-->
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
 
-                <TextView
-                    android:id="@+id/annul_taxfree_income"
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_gravity="center"
-                    android:layout_weight="4"
-                    android:elevation="@dimen/Default"
-                    android:fontFamily="@font/titir"
-                    android:gravity="center"
-                    android:text="@string/annul_taxfree_income"
-                    android:textColor="@color/white"
-                    android:textSize="@dimen/heading_size" />
-                <!--dataHeading-->
-
-                <!--dataHeading-->
-                <TextView
-                    android:id="@+id/ananul_taxable_income"
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_gravity="center"
-                    android:layout_weight="4"
-                    android:elevation="@dimen/Default"
-                    android:fontFamily="@font/titir"
-                    android:gravity="center"
-                    android:text="@string/ananul_taxable_income"
-                    android:textColor="@color/white"
-                    android:textSize="@dimen/heading_size" />
-
-                <!--dataHeading-->
-
-
-            </LinearLayout><!--Result Heading-->
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:orientation="horizontal">
-
-                <View
-                    android:layout_width="match_parent"
-                    android:layout_height="1dp"
-                    android:layout_gravity="left"
-                    android:background="@color/white" />
-
-
-            </LinearLayout><!--view-->
-
-
-            <!--Result Text-->
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-
-                <TextView
-                    android:id="@+id/taxFreeResult"
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_gravity="center"
-                    android:layout_weight="4"
-                    android:fontFamily="@font/bdf"
-                    android:gravity="center"
-                    android:text="-"
-                    android:textColor="@color/white"
-                    android:textSize="@dimen/heading_size" />
-                <!--dataHeading-->
-
-
-                <!--dataHeading-->
-                <TextView
-                    android:id="@+id/taxableResult"
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_gravity="center"
-                    android:layout_weight="4"
-                    android:fontFamily="@font/bdf"
-                    android:gravity="center"
-                    android:text="-"
-                    android:textColor="@color/white"
-                    android:textSize="@dimen/heading_size" />
-                <!--dataHeading-->
-
-            </LinearLayout><!--Result Text-->
-
-
-        </LinearLayout>
-        <!--            sumArea-->
 
     </LinearLayout><!--main card-->
 

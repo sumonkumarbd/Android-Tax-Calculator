@@ -55,6 +55,7 @@
     <string name="bokeya_beton_hint">যদি থাকে</string>
     <string name="festival_bonus_hint">অর্থ বছরে যে কয়টি</string>
     <string name="yearly">বাৎসরিক</string>
+    <string name="total_annul_hint">সম্পূর্ণ বাৎসরিক ইনকাম</string>
 
 
     <dimen name="heading_size">14sp</dimen>

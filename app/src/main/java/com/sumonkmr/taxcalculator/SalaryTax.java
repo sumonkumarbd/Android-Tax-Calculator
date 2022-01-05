@@ -1,7 +1,9 @@
 package com.sumonkmr.taxcalculator;
 
+import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.os.Handler;
+import android.speech.tts.TextToSpeech;
 import android.text.TextUtils;
 import android.widget.EditText;
 import android.widget.LinearLayout;
@@ -10,10 +12,15 @@ import android.widget.TextView;
 public class SalaryTax extends FreedomFighterTax {
 
     LinearLayout mainCard_salary;
-    TextView appName_salary;
+    soup.neumorphism.NeumorphImageButton calcButton_salary, calcButton_salary_disabled;
+    TextView title_salary, taxFreeResult, taxableResult,total_annul_display ;
     EditText basic_salary,bonus,past_salary,house_rent,medical_allowance,surgery_cost,travel_cost,festival_bonus,servant_allowance,holiday_allowance,honorary_gift,over_time;
     String  basic_salary_s,bonus_s,past_salary_s,house_rent_s,medical_allowance_s,surgery_cost_s,travel_cost_s,festival_bonus_s,servant_allowance_s,holiday_allowance_s,honorary_gift_s,over_time_s;
-    double basic_salary_f,bonus_f,past_salary_f,house_rent_f,medical_allowance_f,surgery_cost_f,travel_cost_f,festival_bonus_f,servant_allowance_f,holiday_allowance_f,honorary_gift_f,over_time_f;
+    double basic_salary_d,bonus_d,past_salary_d,house_rent_d,medical_allowance_d,surgery_cost_d,travel_cost_d,festival_bonus_d,servant_allowance_d,holiday_allowance_d,honorary_gift_d,over_time_d;
+    double total_annual_display_d,taxFreeResult_d,taxableResult_d;
+    String  total_annual_display_s,taxFreeResult_s,taxableResult_s;
+    final String far = "%,.2f";
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,7 +32,7 @@ public class SalaryTax extends FreedomFighterTax {
 
 //        HOOKS
         mainCard_salary = findViewById(R.id.mainCard_salary);
-        appName_salary = findViewById(R.id.appName_salary);
+        title_salary = findViewById(R.id.title_salary);
         basic_salary = findViewById(R.id.basic_salary);
         bonus = findViewById(R.id.bonus);
         past_salary = findViewById(R.id.past_salary);
@@ -38,34 +45,13 @@ public class SalaryTax extends FreedomFighterTax {
         holiday_allowance = findViewById(R.id.holiday_allowance);
         honorary_gift = findViewById(R.id.honorary_gift);
         over_time = findViewById(R.id.over_time);
+        taxFreeResult = findViewById(R.id.taxFreeResult);
+        taxableResult = findViewById(R.id.taxableResult);
+        total_annul_display = findViewById(R.id.total_annul_display);
+        calcButton_salary = findViewById(R.id.calcButton_salary);
+        calcButton_salary_disabled = findViewById(R.id.calcButton_salary_disabled);
 
-        //        convert to string
-        basic_salary_s = String.valueOf(basic_salary);
-        bonus_s = String.valueOf(bonus);
-        past_salary_s = String.valueOf(past_salary);
-        house_rent_s = String.valueOf(house_rent);
-        medical_allowance_s = String.valueOf(medical_allowance);
-        surgery_cost_s = String.valueOf(surgery_cost);
-        travel_cost_s = String.valueOf(travel_cost);
-        festival_bonus_s = String.valueOf(festival_bonus);
-        servant_allowance_s = String.valueOf(servant_allowance);
-        holiday_allowance_s = String.valueOf(holiday_allowance);
-        honorary_gift_s = String.valueOf(honorary_gift);
-        over_time_s = String.valueOf(over_time);
 
-//        convert to float
-        basic_salary_f = Double.parseDouble(basic_salary_s);
-        bonus_f = Double.parseDouble(bonus_s);
-        past_salary_f = Double.parseDouble(past_salary_s);
-        house_rent_f = Double.parseDouble(house_rent_s);
-        medical_allowance_f = Double.parseDouble(medical_allowance_s);
-        surgery_cost_f = Double.parseDouble(surgery_cost_s);
-        travel_cost_f = Double.parseDouble(travel_cost_s);
-        festival_bonus_f = Double.parseDouble(festival_bonus_s);
-        servant_allowance_f = Double.parseDouble(servant_allowance_s);
-        holiday_allowance_f = Double.parseDouble(holiday_allowance_s);
-        honorary_gift_f = Double.parseDouble(honorary_gift_s);
-        over_time_f = Double.parseDouble(over_time_s);
 
 
         //        for TextMorque
@@ -77,8 +63,16 @@ public class SalaryTax extends FreedomFighterTax {
 
 //        Caling Animations
 
-        appName_salary.setAnimation(zoom_in);
+        title_salary.setAnimation(zoom_in);
         mainCard_salary.setAnimation(fade_in);
+
+
+//        OnClickListeners
+        calcButton_salary.setOnClickListener(view -> {
+            total_salary_income_annual();
+        });
+
+
 
 
 
@@ -93,11 +87,55 @@ public class SalaryTax extends FreedomFighterTax {
 
 //    Methods
 //    total_salary_income_annual
+    @SuppressLint("DefaultLocale")
     private void total_salary_income_annual(){
+
+        //        convert to string
+        basic_salary_s = basic_salary.getText().toString();
+        bonus_s = bonus.getText().toString();
+        past_salary_s = past_salary.getText().toString();
+        house_rent_s = house_rent.getText().toString();
+        medical_allowance_s = medical_allowance.getText().toString();
+        surgery_cost_s = surgery_cost.getText().toString();
+        travel_cost_s = travel_cost.getText().toString();
+        festival_bonus_s = festival_bonus.getText().toString();
+        servant_allowance_s = servant_allowance.getText().toString();
+        holiday_allowance_s = holiday_allowance.getText().toString();
+        honorary_gift_s = honorary_gift.getText().toString();
+        over_time_s = over_time.getText().toString();
+//        total_annual_display_s = String.format(far,total_annual_display_d);
+//        taxFreeResult_s = String.format(far,taxFreeResult_d);
+//        taxableResult_s = String.format(far,taxableResult_d);
+
+//        convert to float
+        basic_salary_d = Double.parseDouble(basic_salary_s);
+        bonus_d = Double.parseDouble(bonus_s);
+        past_salary_d = Double.parseDouble(past_salary_s);
+        house_rent_d = Double.parseDouble(house_rent_s);
+        medical_allowance_d = Double.parseDouble(medical_allowance_s);
+        surgery_cost_d = Double.parseDouble(surgery_cost_s);
+        travel_cost_d = Double.parseDouble(travel_cost_s);
+        festival_bonus_d = Double.parseDouble(festival_bonus_s);
+        servant_allowance_d = Double.parseDouble(servant_allowance_s);
+        holiday_allowance_d = Double.parseDouble(holiday_allowance_s);
+        honorary_gift_d = Double.parseDouble(honorary_gift_s);
+        over_time_d = Double.parseDouble(over_time_s);
+
+//        Operation
+        total_annual_display_d = basic_salary_d + bonus_d + past_salary_d + house_rent_d + medical_allowance_d + surgery_cost_d + travel_cost_d + servant_allowance_d + holiday_allowance_d + honorary_gift_d + over_time_d;
+        total_annual_display_s = String.format(far,total_annual_display_d);
+        String ad=total_annual_display_s.concat(" টাকা");
+
+        total_annul_display.setText(ad);
+        voiceBrief(ad);
 
 
     }//total_salary_income_annual
 
+    //    VoiceAsist
+    public void voiceBrief(String voice){
+        int taxResult = sp.speak(voice,TextToSpeech.QUEUE_ADD,null);
+    };//voiceAsist
 
 
 }// class SalaryTax
