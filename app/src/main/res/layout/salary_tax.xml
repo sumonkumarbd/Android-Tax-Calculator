@@ -73,7 +73,7 @@
     <LinearLayout
         android:id="@+id/mainCard_salary"
         android:layout_width="280dp"
-        android:layout_height="400dp"
+        android:layout_height="420dp"
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="-50dp"
         android:background="@drawable/tnas_curved25"
@@ -783,6 +783,111 @@
             </LinearLayout><!--support of Scroll View-->
             
         </ScrollView><!--parent ScrollView-->
+
+
+        <!--            sumArea-->
+        <LinearLayout
+            android:id="@+id/resulBar"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="10sp"
+            android:background="@drawable/two_color"
+            android:orientation="vertical">
+            <!--Result Heading-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/annul_taxfree_income"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_weight="4"
+                    android:elevation="@dimen/Default"
+                    android:fontFamily="@font/titir"
+                    android:gravity="center"
+                    android:text="@string/annul_taxfree_income"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/heading_size" />
+                <!--dataHeading-->
+
+                <!--dataHeading-->
+                <TextView
+                    android:id="@+id/ananul_taxable_income"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_weight="4"
+                    android:elevation="@dimen/Default"
+                    android:fontFamily="@font/titir"
+                    android:gravity="center"
+                    android:text="@string/ananul_taxable_income"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/heading_size" />
+
+                <!--dataHeading-->
+
+
+            </LinearLayout><!--Result Heading-->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:orientation="horizontal">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_gravity="left"
+                    android:background="@color/white" />
+
+
+            </LinearLayout><!--view-->
+
+
+            <!--Result Text-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/amountResult"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_weight="4"
+                    android:fontFamily="@font/bdf"
+                    android:gravity="center"
+                    android:text="-"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/heading_size" />
+                <!--dataHeading-->
+
+
+                <!--dataHeading-->
+                <TextView
+                    android:id="@+id/taxResult"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_weight="4"
+                    android:fontFamily="@font/bdf"
+                    android:gravity="center"
+                    android:text="-"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/heading_size" />
+                <!--dataHeading-->
+
+            </LinearLayout><!--Result Text-->
+
+
+        </LinearLayout>
+        <!--            sumArea-->
 
     </LinearLayout><!--main card-->
 

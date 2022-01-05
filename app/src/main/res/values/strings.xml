@@ -49,6 +49,8 @@
     <string name="holiday_allowance">ছুটি ভাতা</string>
     <string name="honorary_gift">সম্মানী পুরষ্কার</string>
     <string name="overTime">ওভার টাইম</string>
+    <string name="ananul_taxable_income">বাৎসরিক করযুক্ত আয়</string>
+    <string name="annul_taxfree_income">বাৎসরিক করমুক্ত আয়</string>
 
 
     <dimen name="heading_size">14sp</dimen>
