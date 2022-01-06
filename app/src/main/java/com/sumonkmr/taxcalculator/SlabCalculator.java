@@ -296,7 +296,7 @@ public class SlabCalculator extends Main {
         //            secondMathode
         if (newUserInput > ballance1 && newUserInput <= ballance2) {
             c2.setText(ftaxAmount + tk);
-            d2.setText(fstTax + " টাকা");
+            d2.setText(fstTax + tk);
             taxResult.setText(fstTax);
             //                TextToSpeech
             voiceAsst(fstTax);
