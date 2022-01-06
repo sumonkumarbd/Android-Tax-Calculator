@@ -62,7 +62,6 @@ public class FemaleTax extends SlabCalculator {
 
 
         super.a1.setText("প্রথম সাড়ে ৩ লক্ষ টাকা");
-        super.a1.setTextSize(TypedValue.COMPLEX_UNIT_SP,8);
 
 
 
@@ -144,7 +143,6 @@ public class FemaleTax extends SlabCalculator {
                 ballance4 = 1150000;
                 ballance5 = 1650000;
                 a1.setText("প্রথম সাড়ে ৩ লক্ষ টাকা");
-                a1.setTextSize(TypedValue.COMPLEX_UNIT_SP,8);
 
             }
         });
