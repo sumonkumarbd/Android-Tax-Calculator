@@ -245,7 +245,7 @@ public class SlabCalculator extends Main {
         double firstTaxamount =(newUserInput - ballance1);
         String ftaxAmount = String.format("%,.2f",firstTaxamount);
         double firstTax = firstTaxamount*5/100;
-        String fstTax = String.format("%,.2f",firstTax);
+        String fstTax = String.format("%,.2f",firstTax).concat(tk);
 
         double secoundTaxableamount = (newUserInput - ballance2);
         String secTaxAmount = String.format("%,.2f",secoundTaxableamount);
@@ -282,29 +282,29 @@ public class SlabCalculator extends Main {
             d2.setText("");
             taxResult.setText(zero_tk);
             //TextToSpeech
-            voiceAsst("0");
+            voiceAsst(zero_tk);
         } else if (newUserInput > ballance1) {
-            String newballance1 = String.format("%,.2f",ballance1);
-            c1.setText(newballance1 + tk);
+            String newballance1 = String.format("%,.2f",ballance1).concat(tk);
+            c1.setText(newballance1);
             d1.setText(zero_tk);
             //                TextToSpeech
-            voiceAsst(zero_tk);
+            voiceAsst(zero_tk+tk);
         }
 
         //            secondMathode
         if (newUserInput > ballance1 && newUserInput <= ballance2) {
             c2.setText(ftaxAmount + tk);
             d2.setText(fstTax + " টাকা");
-            taxResult.setText(fstTax+tk);
+            taxResult.setText(fstTax);
             //                TextToSpeech
             voiceAsst(fstTax);
         } else if (newUserInput > ballance2) {
             double secoundMaxAmount = ballance2 - ballance1;
             double secoundMaxTax = (secoundMaxAmount * 5 / 100);
-            String sMaxsecAmount = String.format("%,.2f",secoundMaxAmount);
-            String sMaxsecTax = String.format("%,.2f",secoundMaxTax);
-            c2.setText(sMaxsecAmount + tk);
-            d2.setText(sMaxsecTax + tk);
+            String sMaxsecAmount = String.format("%,.2f",secoundMaxAmount).concat(tk);
+            String sMaxsecTax = String.format("%,.2f",secoundMaxTax).concat(tk);
+            c2.setText(sMaxsecAmount);
+            d2.setText(sMaxsecTax);
             //                TextToSpeech
             voiceAsst(sMaxsecTax);
         }
@@ -317,17 +317,17 @@ public class SlabCalculator extends Main {
             c3.setText(secTaxAmount + tk);
             d3.setText(secTax + tk);
             double sumSecTax =secondTax + 5000;
-            String newSumSecTax = String.format("%,.2f",sumSecTax);
-            taxResult.setText(newSumSecTax+tk);
+            String newSumSecTax = String.format("%,.2f",sumSecTax).concat(tk);
+            taxResult.setText(newSumSecTax);
             //                TextToSpeech
             voiceAsst(newSumSecTax);
         } else if (newUserInput > ballance3) {
             double ThirdMaxAmount = ballance3 - ballance2;
             double thirdMaxTax = (ThirdMaxAmount * 10 / 100);
             String sThirdMaxAmount = String.format("%,.2f",ThirdMaxAmount);
-            String sthirdMaxTax = String.format("%,.2f",thirdMaxTax);
+            String sthirdMaxTax = String.format("%,.2f",thirdMaxTax).concat(tk);
             c3.setText(sThirdMaxAmount + tk);
-            d3.setText(sthirdMaxTax + tk);
+            d3.setText(sthirdMaxTax);
             //                TextToSpeech
             voiceAsst(sthirdMaxTax);
         } else if (newUserInput <= ballance2) {
@@ -342,17 +342,17 @@ public class SlabCalculator extends Main {
             c4.setText(thirdTaxAmount + tk);
             d4.setText(sThirdTax + tk);
             double sumThirdTax = thirdTax + 35000;
-            String newSumThirdTax = String.format("%,.2f",sumThirdTax);
-            taxResult.setText(newSumThirdTax+tk);
+            String newSumThirdTax = String.format("%,.2f",sumThirdTax).concat(tk);
+            taxResult.setText(newSumThirdTax);
             //                TextToSpeech
             voiceAsst(newSumThirdTax);
         } else if (newUserInput > ballance4) {
             double fourthMaxAmount = ballance4 - ballance3;
             double fourthMaxTax = (fourthMaxAmount * 15 / 100);
             String sfourthMaxAmount = String.format("%,.2f",fourthMaxAmount);
-            String sfourthMaxTax = String.format("%,.2f",fourthMaxTax);
+            String sfourthMaxTax = String.format("%,.2f",fourthMaxTax).concat(tk);
             c4.setText(sfourthMaxAmount + tk);
-            d4.setText(sfourthMaxTax + tk);
+            d4.setText(sfourthMaxTax);
             //                TextToSpeech
             voiceAsst(sfourthMaxTax);
         } else if (newUserInput <= ballance3) {
@@ -367,17 +367,17 @@ public class SlabCalculator extends Main {
             c5.setText(fourthTaxAmount + tk);
             d5.setText(newfourthTax + tk);
             double sumfourthTax = fourthTax + 95000;
-            String newFourthTax = String.format("%,.2f",sumfourthTax);
-            taxResult.setText(newFourthTax+tk);
+            String newFourthTax = String.format("%,.2f",sumfourthTax).concat(tk);
+            taxResult.setText(newFourthTax);
             //                TextToSpeech
             voiceAsst(newFourthTax);
         } else if (newUserInput > ballance5) {
             double fifthMaxAmount = ballance5 - ballance4;
             double fifthMaxTax = (fifthMaxAmount * 20) / 100;
-            String sfifthMaxAmount = String.format("%,.2f",fifthMaxAmount);
-            String sfifthMaxTax = String.format("%,.2f",fifthMaxTax);
-            c5.setText(sfifthMaxAmount + tk);
-            d5.setText(sfifthMaxTax + tk);
+            String sfifthMaxAmount = String.format("%,.2f",fifthMaxAmount).concat(tk);
+            String sfifthMaxTax = String.format("%,.2f",fifthMaxTax).concat(tk);
+            c5.setText(sfifthMaxAmount);
+            d5.setText(sfifthMaxTax);
             //                TextToSpeech
             voiceAsst(sfifthMaxTax);
         } else if (newUserInput <= ballance4) {
@@ -392,8 +392,8 @@ public class SlabCalculator extends Main {
             c6.setText(fifthTaxAmount + tk);
             d6.setText(newfifthTax + tk);
             double sumFifthTax = fifthTax + 195000;
-            String newSumFifthTax = String.format("%,.2f",sumFifthTax);
-            taxResult.setText(newSumFifthTax+tk);
+            String newSumFifthTax = String.format("%,.2f",sumFifthTax).concat(tk);
+            taxResult.setText(newSumFifthTax);
             //                TextToSpeech
             voiceAsst(newSumFifthTax);
         } else if (newUserInput <= ballance5) {
@@ -427,7 +427,6 @@ public class SlabCalculator extends Main {
     public void voiceAsst(String voice){
         int speech = sp.speak("আপনার ট্যাক্স হচ্ছে",TextToSpeech.QUEUE_FLUSH,null);
         int taxResult = sp.speak(voice,TextToSpeech.QUEUE_ADD,null);
-        int taka = sp.speak("টাকা",TextToSpeech.QUEUE_ADD,null);
     };//voiceAsist
 
     public void textToVoice(){

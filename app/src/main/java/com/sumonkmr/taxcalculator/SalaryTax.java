@@ -130,6 +130,8 @@ public class SalaryTax extends FreedomFighterTax {
         voiceBrief(ad);
 
 
+
+
     }//total_salary_income_annual
 
     //    VoiceAsist
