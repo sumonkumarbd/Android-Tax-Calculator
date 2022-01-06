@@ -443,10 +443,6 @@ public class SlabCalculator extends Main {
                 });
     };//textToVoice
 
-
-
-
-
     //        for Empty requration
     public TextWatcher textWatcher = new TextWatcher() {
         @Override

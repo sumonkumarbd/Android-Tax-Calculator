@@ -4,7 +4,9 @@ import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.os.Handler;
 import android.speech.tts.TextToSpeech;
+import android.text.Editable;
 import android.text.TextUtils;
+import android.text.TextWatcher;
 import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -72,6 +74,8 @@ public class SalaryTax extends FreedomFighterTax {
             total_salary_income_annual();
         });
 
+//        TextWatcher
+        basic_salary.addTextChangedListener(textWatcher_ST);
 
 
 
@@ -139,5 +143,27 @@ public class SalaryTax extends FreedomFighterTax {
         int taxResult = sp.speak(voice,TextToSpeech.QUEUE_ADD,null);
     };//voiceAsist
 
+
+//    TextWactcher
+    TextWatcher textWatcher_ST = new TextWatcher() {
+    @Override
+    public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+
+    }
+
+    @Override
+    public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+        basic_salary_s = basic_salary.getText().toString();
+//        total_annual_display_s = String.format(far,total_annual_display_d);
+        total_annul_display.setText(basic_salary_s);
+
+
+    }
+
+    @Override
+    public void afterTextChanged(Editable editable) {
+
+    }//    TextWactcher
+};
 
 }// class SalaryTax
