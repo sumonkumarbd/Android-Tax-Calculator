@@ -54,6 +54,26 @@ public class SalaryTax extends FreedomFighterTax {
         total_annul_display =(TextView) findViewById(R.id.total_annul_display);
         calcButton_salary = findViewById(R.id.calcButton_salary);
         calcButton_salary_disabled = findViewById(R.id.calcButton_salary_disabled);
+
+
+
+        //        Convert to string all variables
+        basic_salary_s = (String) basic_salary.getText().toString();
+        bonus_s =(String) bonus.getText().toString();
+        past_salary_s =(String) past_salary.getText().toString();
+        house_rent_s =(String) house_rent.getText().toString();
+        medical_allowance_s =(String) medical_allowance.getText().toString();
+        surgery_cost_s =(String) surgery_cost.getText().toString();
+        travel_cost_s =(String) travel_cost.getText().toString();
+        festival_bonus_s =(String) festival_bonus.getText().toString();
+        servant_allowance_s =(String) servant_allowance.getText().toString();
+        holiday_allowance_s =(String) holiday_allowance.getText().toString();
+        honorary_gift_s = (String)honorary_gift.getText().toString();
+        over_time_s = (String)over_time.getText().toString();
+//        total_annual_display_s = String.format(far,total_annual_display_d);
+//        taxFreeResult_s = String.format(far,taxFreeResult_d);
+//        taxableResult_s = String.format(far,taxableResult_d);
+//        basic_salary_s.length()<=0 || bonus_s.length()<=0 || past_salary_s.length()<=0 || house_rent_s.length()<=0 || medical_allowance_s.length()<=0 || surgery_cost_s.length()<=0 || travel_cost_s.length()<=0 || festival_bonus_s.length()<=0 || servant_allowance_s.length()<=0 || holiday_allowance_s.length()<=0 || honorary_gift_s.length() <=0 || over_time_s.length()<=0
         
         
 
@@ -124,23 +144,7 @@ public class SalaryTax extends FreedomFighterTax {
     @Override
     public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
 
-        //        Convert to string all variables
-        basic_salary_s = (String) basic_salary.getText().toString();
-        bonus_s =(String) bonus.getText().toString();
-        past_salary_s =(String) past_salary.getText().toString();
-        house_rent_s =(String) house_rent.getText().toString();
-        medical_allowance_s =(String) medical_allowance.getText().toString();
-        surgery_cost_s =(String) surgery_cost.getText().toString();
-        travel_cost_s =(String) travel_cost.getText().toString();
-        festival_bonus_s =(String) festival_bonus.getText().toString();
-        servant_allowance_s =(String) servant_allowance.getText().toString();
-        holiday_allowance_s =(String) holiday_allowance.getText().toString();
-        honorary_gift_s = (String)honorary_gift.getText().toString();
-        over_time_s = (String)over_time.getText().toString();
-//        total_annual_display_s = String.format(far,total_annual_display_d);
-//        taxFreeResult_s = String.format(far,taxFreeResult_d);
-//        taxableResult_s = String.format(far,taxableResult_d);
-//        basic_salary_s.length()<=0 || bonus_s.length()<=0 || past_salary_s.length()<=0 || house_rent_s.length()<=0 || medical_allowance_s.length()<=0 || surgery_cost_s.length()<=0 || travel_cost_s.length()<=0 || festival_bonus_s.length()<=0 || servant_allowance_s.length()<=0 || holiday_allowance_s.length()<=0 || honorary_gift_s.length() <=0 || over_time_s.length()<=0
+
 
         //        for empty reqartions
         if (basic_salary_s.length()<=0 || bonus_s.length()<=0 || past_salary_s.length()<=0 || house_rent_s.length()<=0 || medical_allowance_s.length()<=0 || surgery_cost_s.length()<=0 || travel_cost_s.length()<=0 || festival_bonus_s.length()<=0 || servant_allowance_s.length()<=0 || holiday_allowance_s.length()<=0 || honorary_gift_s.length() <=0 || over_time_s.length()<=0)
@@ -148,6 +152,21 @@ public class SalaryTax extends FreedomFighterTax {
             Toast.makeText(SalaryTax.this, "Please fill all fields!!", Toast.LENGTH_SHORT).show();
         }else {
 
+
+        }//        for empty reparations
+
+    }
+
+    @Override
+    public void afterTextChanged(Editable editable) {
+
+    }//    TextWactcher
+};
+
+
+//    operation Method
+
+    private void totalSalaryAmount(){
         //        convert to float
         basic_salary_d =(Double) Double.parseDouble(basic_salary_s);
         bonus_d = (Double)Double.parseDouble(bonus_s);
@@ -170,20 +189,6 @@ public class SalaryTax extends FreedomFighterTax {
         String ad=total_annual_display_s.concat(" টাকা");
         total_annul_display.setText(ad);
 //        voiceBrief(ad);
-        }//        for empty reparations
-
-    }
-
-    @Override
-    public void afterTextChanged(Editable editable) {
-
-    }//    TextWactcher
-};
-
-
-//    operation Method
-
-    private void totalSalaryAmount(){
 
     }
 
