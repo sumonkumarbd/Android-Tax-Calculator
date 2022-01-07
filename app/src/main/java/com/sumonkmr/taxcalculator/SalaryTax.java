@@ -151,8 +151,7 @@ public class SalaryTax extends FreedomFighterTax {
         {
             Toast.makeText(SalaryTax.this, "Please fill all fields!!", Toast.LENGTH_SHORT).show();
         }else {
-
-
+            totalSalaryAmount();
         }//        for empty reparations
 
     }
