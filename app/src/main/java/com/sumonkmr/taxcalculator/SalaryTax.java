@@ -140,10 +140,10 @@ public class SalaryTax extends FreedomFighterTax {
 //        total_annual_display_s = String.format(far,total_annual_display_d);
 //        taxFreeResult_s = String.format(far,taxFreeResult_d);
 //        taxableResult_s = String.format(far,taxableResult_d);
-//        basic_salary_s.length()<0 || bonus_s.length()<0 || past_salary_s.length()<0 || house_rent_s.length()<0 || medical_allowance_s.length()<0 || surgery_cost_s.length()<0 || travel_cost_s.length()<0 || festival_bonus_s.length()<0 || servant_allowance_s.length()<0 || holiday_allowance_s.length()<0 || honorary_gift_s.length() <0 || over_time_s.length()<0
+//        basic_salary_s.length()<=0 || bonus_s.length()<=0 || past_salary_s.length()<=0 || house_rent_s.length()<=0 || medical_allowance_s.length()<=0 || surgery_cost_s.length()<=0 || travel_cost_s.length()<=0 || festival_bonus_s.length()<=0 || servant_allowance_s.length()<=0 || holiday_allowance_s.length()<=0 || honorary_gift_s.length() <=0 || over_time_s.length()<=0
 
         //        for empty reqartions
-        if (basic_salary_s.length()<=0)
+        if (basic_salary_s.length()<=0 || bonus_s.length()<=0 || past_salary_s.length()<=0 || house_rent_s.length()<=0 || medical_allowance_s.length()<=0 || surgery_cost_s.length()<=0 || travel_cost_s.length()<=0 || festival_bonus_s.length()<=0 || servant_allowance_s.length()<=0 || holiday_allowance_s.length()<=0 || honorary_gift_s.length() <=0 || over_time_s.length()<=0)
         {
             Toast.makeText(SalaryTax.this, "Please fill all fields!!", Toast.LENGTH_SHORT).show();
         }else {
@@ -179,5 +179,12 @@ public class SalaryTax extends FreedomFighterTax {
 
     }//    TextWactcher
 };
+
+
+//    operation Method
+
+    private void totalSalaryAmount(){
+
+    }
 
 }// class SalaryTax
