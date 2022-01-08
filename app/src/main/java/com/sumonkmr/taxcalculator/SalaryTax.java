@@ -21,7 +21,7 @@ public class SalaryTax extends FreedomFighterTax {
     EditText basic_salary,bonus,past_salary,house_rent,medical_allowance,surgery_cost,travel_cost,festival_bonus,servant_allowance,holiday_allowance,honorary_gift,over_time;
     String  basic_salary_s,bonus_s,past_salary_s,house_rent_s,medical_allowance_s,surgery_cost_s,travel_cost_s,festival_bonus_s,servant_allowance_s,holiday_allowance_s,honorary_gift_s,over_time_s;
     Double basic_salary_d,bonus_d,past_salary_d,house_rent_d,medical_allowance_d,surgery_cost_d,travel_cost_d,festival_bonus_d,servant_allowance_d,holiday_allowance_d,honorary_gift_d,over_time_d;
-    double total_annual_display_d,taxFreeResult_d,taxableResult_d;
+    double total_annual_display_d,taxFreeResult_d,taxableResult_d,fTowSum,fFourSum,fSixSum,fEightSum,fTenSum;
     String  total_annual_display_s,taxFreeResult_s,taxableResult_s;
     final String far = "%,.2f";
 
@@ -147,12 +147,13 @@ public class SalaryTax extends FreedomFighterTax {
 
 
         //        for empty reqartions
-        if (basic_salary_s.length()<=0 || bonus_s.length()<=0 || past_salary_s.length()<=0 || house_rent_s.length()<=0 || medical_allowance_s.length()<=0 || surgery_cost_s.length()<=0 || travel_cost_s.length()<=0 || festival_bonus_s.length()<=0 || servant_allowance_s.length()<=0 || holiday_allowance_s.length()<=0 || honorary_gift_s.length() <=0 || over_time_s.length()<=0)
-        {
-            Toast.makeText(SalaryTax.this, "Please fill all fields!!", Toast.LENGTH_SHORT).show();
-        }else {
+//        if (basic_salary_s.length()<=0 || bonus_s.length()<=0 || past_salary_s.length()<=0 || house_rent_s.length()<=0 || medical_allowance_s.length()<=0 || surgery_cost_s.length()<=0 || travel_cost_s.length()<=0 || festival_bonus_s.length()<=0 || servant_allowance_s.length()<=0 || holiday_allowance_s.length()<=0 || honorary_gift_s.length() <=0 || over_time_s.length()<=0)
+//        {
             totalSalaryAmount();
-        }//        for empty reparations
+//
+//        }else {
+//            Toast.makeText(SalaryTax.this, "Please fill all fields!!", Toast.LENGTH_SHORT).show();
+//        }//        for empty reparations
 
     }
 
@@ -169,7 +170,7 @@ public class SalaryTax extends FreedomFighterTax {
         //        convert to float
         basic_salary_d =(Double) Double.parseDouble(basic_salary_s);
         bonus_d = (Double)Double.parseDouble(bonus_s);
-        past_salary_d =(Double) Double.parseDouble(past_salary_s);
+//        past_salary_d =(Double) Double.parseDouble(past_salary_s);
         house_rent_d =(Double) Double.parseDouble(house_rent_s);
         medical_allowance_d = (Double)Double.parseDouble(medical_allowance_s);
         surgery_cost_d =(Double) Double.parseDouble(surgery_cost_s);
@@ -183,12 +184,35 @@ public class SalaryTax extends FreedomFighterTax {
 
 
 //        Operation
-        total_annual_display_d =(Double) basic_salary_d + past_salary_d + house_rent_d + medical_allowance_d + surgery_cost_d + travel_cost_d + servant_allowance_d + holiday_allowance_d + honorary_gift_d + over_time_d;
-        total_annual_display_s = String.format(far,total_annual_display_d);
-        String ad=total_annual_display_s.concat(" টাকা");
-        total_annul_display.setText(ad);
-//        voiceBrief(ad);
+//        total_annual_display_d =(Double) basic_salary_d + past_salary_d + house_rent_d + medical_allowance_d + surgery_cost_d + travel_cost_d +
+//        servant_allowance_d + holiday_allowance_d + honorary_gift_d + over_time_d;
+//        total_annual_display_s = String.format(far,total_annual_display_d);
+//        String ad=total_annual_display_s.concat(" টাকা");
+//        total_annul_display.setText(ad);
+////        voiceBrief(ad);
 
-    }
+        if(!(basic_salary_s.length() < 0) && !(bonus_s.length() < 0)) {
+            fTowSum = basic_salary_d+bonus_d;
+            total_annual_display_s = String.format(far,fTowSum).concat(tk);
+            total_annul_display.setText(total_annual_display_s);
+        }else if(!(house_rent_s.length() < 0) && !(medical_allowance_s.length() < 0)){
+            fFourSum = fTowSum + house_rent_d + medical_allowance_d;
+            total_annual_display_s = String.format(far,fFourSum).concat(tk);
+            total_annul_display.setText(total_annual_display_s);
+        }else if (!(surgery_cost_s.length() < 0) && !(travel_cost_s.length() < 0)){
+            fSixSum = fFourSum + surgery_cost_d + travel_cost_d;
+            total_annual_display_s = String.format(far,fSixSum).concat(tk);
+            total_annul_display.setText(total_annual_display_s);
+        }else if (!(servant_allowance_s.length() < 0) && !(holiday_allowance_s.length() < 0)){
+            fEightSum = fSixSum + servant_allowance_d + holiday_allowance_d;
+            total_annual_display_s = String.format(far,fEightSum).concat(tk);
+            total_annul_display.setText(total_annual_display_s);
+        }else if (!(honorary_gift_s.length() < 0) && !(over_time_s.length() < 0)){
+            fTenSum = fEightSum + honorary_gift_d + over_time_d;
+            total_annual_display_s = String.format(far,fTenSum).concat(tk);
+            total_annul_display.setText(total_annual_display_s);
+        }
+
+    }//salaryAmount Method
 
 }// class SalaryTax

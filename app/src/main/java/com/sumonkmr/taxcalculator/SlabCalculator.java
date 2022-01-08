@@ -39,6 +39,8 @@ public class SlabCalculator extends Main {
     Spinner spinner;
     String[] items;
     String far = "%,.2f";
+    String tk = " টাকা";
+    String zero_tk = "0 টাকা ";
 
 
     @Override
@@ -241,8 +243,6 @@ public class SlabCalculator extends Main {
         double newUserInput = Double.parseDouble(userInput);
         @SuppressLint("DefaultLocale") String userValue = String.format(far,newUserInput);
 
-        String tk = " টাকা";
-        String zero_tk = "0 টাকা ";
 
         double firstTaxamount =(newUserInput - ballance1);
         String ftaxAmount = String.format(far,firstTaxamount);
