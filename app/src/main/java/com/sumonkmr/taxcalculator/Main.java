@@ -7,9 +7,11 @@ import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
 import android.text.TextUtils;
+import android.view.View;
 import android.view.ViewGroup;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
+import android.webkit.WebView;
 import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -24,7 +26,7 @@ public class Main extends AppCompatActivity {
 
     Animation fade_in, zoom_in, left_to_right, right_to_left, right_to_left_slow, middle_to_top, bottom_from_up;
     Animation up_down_cont, up_from_bottom, up_from_bottom_slow, slide_in_left, slide_out_right, slide_out_left, slide_in_right,right_slidere_infinit;
-    LinearLayout slabCalcButton, first_row, insButton, e_tin, sec_row, salary_tax, thirdRow, address_book, about_us;
+    LinearLayout slabCalcButton, first_row, insButton, e_tin, sec_row, salary_tax, thirdRow, address_book, about_us,InsButton;
     androidx.constraintlayout.widget.ConstraintLayout  mainCard;
     Dialog dialog;
     TextView appName, text_morque;
@@ -66,6 +68,7 @@ public class Main extends AppCompatActivity {
         address_book = findViewById(R.id.address_book);
         about_us = findViewById(R.id.about_us);
         appName = findViewById(R.id.appName);
+        insButton = findViewById(R.id.insButton);
 
 //        calling animations
         appName.setAnimation(zoom_in);
@@ -105,6 +108,17 @@ public class Main extends AppCompatActivity {
         salary_tax.setOnClickListener(view -> {
             Intent salary_tax = new Intent(Main.this,SalaryTax.class);
             startActivity(salary_tax);
+        });
+
+        insButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                WebView  mWebview= new WebView(Main.this);
+                mWebview.loadUrl("https://nbr.gov.bd/uploads/publications/Nirdeshika_2021-2022.pdf");
+                mWebview.getSettings().setJavaScriptEnabled(true);
+                setContentView(mWebview);
+
+            }
         });
 
 
