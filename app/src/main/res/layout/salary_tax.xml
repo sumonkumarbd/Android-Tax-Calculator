@@ -1150,7 +1150,7 @@
                             android:layout_height="30dp"
                             android:background="@color/tnsparent"
                             android:id="@+id/over_time"
-                            android:hint="@string/monthly"
+                            android:hint="@string/yearly"
                             android:textColor="@color/base"
                             android:fontFamily="@font/banglafont"
                             android:textColorHint="@color/gray"
