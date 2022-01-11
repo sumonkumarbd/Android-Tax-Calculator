@@ -110,13 +110,14 @@ public class Main extends AppCompatActivity {
             startActivity(salary_tax);
         });
 
-        insButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(Main.this,Pdf_viewer.class);
-                startActivity(intent);
+        insButton.setOnClickListener(view -> {
+            Intent intent = new Intent(Main.this,Pdf_viewer.class);
+            startActivity(intent);
+        });
 
-            }
+        e_tin.setOnClickListener(view -> {
+            Intent intent = new Intent(Main.this,E_TIN.class);
+            startActivity(intent);
         });
 
 
