@@ -223,20 +223,21 @@ public class SalaryTax extends FreedomFighterTax {
         over_time_d = (Double)Double.parseDouble(over_time_s);
         over_time_d_y = over_time_d ;
 
-        total_annual_display_d = basic_salary_d_y + bonus_d_y + past_salary_d_y + house_rent_d_y + surgery_cost_d_y + festival_bonus_d_y + servant_allowance_d_y + holiday_allowance_d_y + honorary_gift_d_y + over_time_d_y;
+        total_annual_display_d = basic_salary_d_y + bonus_d_y + past_salary_d_y + surgery_cost_d_y  + house_rent_d_y + festival_bonus_d_y + servant_allowance_d_y + holiday_allowance_d_y + honorary_gift_d_y + over_time_d_y;
         total_annual_display_s = String.format(far,total_annual_display_d).concat(tk);
         total_annul_display.setText(total_annual_display_s);
 
-        taxableResult_d = basic_salary_d_y + bonus_d_y + past_salary_d_y + surgery_cost_d_y + festival_bonus_d_y + servant_allowance_d_y + holiday_allowance_d_y + honorary_gift_d_y + over_time_d_y;
+        taxableResult_d = basic_salary_d_y + bonus_d_y + past_salary_d_y + festival_bonus_d_y + servant_allowance_d_y + holiday_allowance_d_y + honorary_gift_d_y + over_time_d_y;
         taxableResult_s = String.format(far,taxableResult_d).concat(tk);
         taxableResult.setText(taxableResult_s);
 
 
-        taxFreeResult_d = total_annual_display_d - taxableResult_d;
+        taxFreeResult_d = surgery_cost_d_y;
         taxFreeResult_s = String.format(far,taxFreeResult_d).concat(tk);
         taxFreeResult.setText(taxFreeResult_s);
 
         double houseRent_clc = basic_salary_d * 50 / 100;
+        double house_into_12 = house_rent_d * 12;
         if (house_rent_d > houseRent_clc){
             house_rent_d_y = (house_rent_d - houseRent_clc)* 12;
             taxableResult_d = taxableResult_d + house_rent_d_y;
@@ -250,7 +251,11 @@ public class SalaryTax extends FreedomFighterTax {
             taxableResult_d = taxableResult_d + house_rent_d_y;
             taxableResult_s = String.format(far,taxableResult_d).concat(tk);
             taxableResult.setText(taxableResult_s);
-            taxFreeResult_d = total_annual_display_d - taxableResult_d;
+            taxFreeResult_d = taxFreeResult_d + house_into_12;
+            taxFreeResult_s = String.format(far,taxFreeResult_d).concat(tk);
+            taxFreeResult.setText(taxFreeResult_s);
+        }else {
+            taxFreeResult_d = surgery_cost_d_y + house_into_12;
             taxFreeResult_s = String.format(far,taxFreeResult_d).concat(tk);
             taxFreeResult.setText(taxFreeResult_s);
         }
