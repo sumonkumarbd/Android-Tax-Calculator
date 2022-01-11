@@ -113,10 +113,8 @@ public class Main extends AppCompatActivity {
         insButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                WebView  mWebview= new WebView(Main.this);
-                mWebview.loadUrl("https://nbr.gov.bd/uploads/publications/Nirdeshika_2021-2022.pdf");
-                mWebview.getSettings().setJavaScriptEnabled(true);
-                setContentView(mWebview);
+                Intent intent = new Intent(Main.this,Pdf_viewer.class);
+                startActivity(intent);
 
             }
         });
