@@ -75,7 +75,7 @@
         android:layout_width="280dp"
         android:layout_height="430dp"
         android:layout_gravity="center_horizontal"
-        android:layout_marginTop="-50dp"
+        android:layout_marginTop="-60dp"
         android:background="@drawable/tnas_curved25"
         android:elevation="@dimen/heading_size"
         android:orientation="vertical"
@@ -205,16 +205,6 @@
                 app:neumorph_shadowColorLight="@color/white"
                 app:neumorph_shapeType="basin"
                 >
-                <ImageView
-                    android:id="@+id/inputError"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:src="@drawable/ic_baseline_error_outline_24"
-                    android:layout_marginStart="6dp"
-                    android:layout_marginTop="5dp"
-                    android:visibility="invisible"
-                    android:alpha=".8"
-                    />
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="30dp"
@@ -591,77 +581,7 @@
                 <!--Row4-->
 
                 <!--            Row5-->
-                <androidx.constraintlayout.widget.ConstraintLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="60dp"
-                    android:layout_marginTop="-10dp"
-                    android:paddingHorizontal="@dimen/Default"
-                    android:layout_gravity="center_horizontal"
-                    >
 
-                    <LinearLayout
-                        android:id="@+id/col9"
-                        android:layout_width="110dp"
-                        android:layout_height="40dp"
-                        style="@style/Widget.MaterialComponents.CardView"
-                        android:background="@drawable/left_curev_base_color"
-                        android:elevation="@dimen/shadow"
-                        android:paddingHorizontal="5dp"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent"
-                        android:orientation="vertical"
-                        >
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:gravity="center|center_vertical"
-                            android:text="@string/medical_allowance"
-                            android:textColor="@color/white"
-                            android:fontFamily="@font/bdf"
-                            android:textSize="@dimen/heading_size"
-                            android:elevation="@dimen/Default"
-                            />
-
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:id="@+id/col10"
-                        style="@style/Widget.MaterialComponents.CardView"
-                        android:layout_width="150dp"
-                        android:layout_height="40dp"
-                        android:background="@drawable/right_courved_white"
-                        android:elevation="@dimen/shadow"
-                        android:orientation="vertical"
-                        android:padding="5dp"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintStart_toEndOf="@+id/col9"
-                        app:layout_constraintTop_toTopOf="parent"
-                        >
-                        <EditText
-                            android:layout_width="match_parent"
-                            android:layout_height="30dp"
-                            android:background="@color/tnsparent"
-                            android:id="@+id/medical_allowance"
-                            android:hint="@string/monthly"
-                            android:textColor="@color/base"
-                            android:fontFamily="@font/banglafont"
-                            android:textColorHint="@color/gray"
-                            app:neumorph_shapeType="basin"
-                            android:textSize="@dimen/heading_size"
-                            android:text=""
-                            android:inputType="number"
-                            android:layout_gravity="center"
-                            android:gravity="center"
-                            android:focusableInTouchMode="true"
-                            android:autofillHints="no" />
-
-
-
-                    </LinearLayout><!--                firstCol-->
-
-                </androidx.constraintlayout.widget.ConstraintLayout>
                 <!--Row5-->
 
                 <!--            Row6-->
@@ -737,75 +657,6 @@
                 <!--Row6-->
 
                 <!--            Row7-->
-                <androidx.constraintlayout.widget.ConstraintLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="60dp"
-                    android:layout_marginTop="-10dp"
-                    android:paddingHorizontal="@dimen/Default"
-                    android:layout_gravity="center_horizontal"
-                    >
-
-                    <LinearLayout
-                        android:id="@+id/col13"
-                        android:layout_width="110dp"
-                        android:layout_height="40dp"
-                        style="@style/Widget.MaterialComponents.CardView"
-                        android:background="@drawable/left_curev_base_color"
-                        android:elevation="@dimen/shadow"
-                        android:paddingHorizontal="5dp"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent"
-                        android:orientation="vertical"
-                        >
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:gravity="center|center_vertical"
-                            android:text="@string/travel_cost"
-                            android:textColor="@color/white"
-                            android:fontFamily="@font/bdf"
-                            android:textSize="@dimen/heading_size"
-                            android:elevation="@dimen/Default"
-                            />
-
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:id="@+id/col14"
-                        style="@style/Widget.MaterialComponents.CardView"
-                        android:layout_width="150dp"
-                        android:layout_height="40dp"
-                        android:background="@drawable/right_courved_white"
-                        android:elevation="@dimen/shadow"
-                        android:orientation="vertical"
-                        android:padding="5dp"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintStart_toEndOf="@+id/col13"
-                        app:layout_constraintTop_toTopOf="parent"
-                        >
-                        <EditText
-                            android:layout_width="match_parent"
-                            android:layout_height="30dp"
-                            android:background="@color/tnsparent"
-                            android:id="@+id/travel_cost"
-                            android:hint="@string/monthly"
-                            android:textColor="@color/base"
-                            android:fontFamily="@font/banglafont"
-                            android:textColorHint="@color/gray"
-                            app:neumorph_shapeType="basin"
-                            android:textSize="@dimen/heading_size"
-                            android:text=""
-                            android:inputType="number"
-                            android:layout_gravity="center"
-                            android:gravity="center"
-                            android:focusableInTouchMode="true"
-                            android:autofillHints="no" />
-
-                    </LinearLayout><!--                firstCol-->
-
-                </androidx.constraintlayout.widget.ConstraintLayout>
                 <!--Row7-->
 
                 <!--            Row8-->

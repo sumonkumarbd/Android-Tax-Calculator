@@ -21,10 +21,9 @@ public class SalaryTax extends FreedomFighterTax {
     TextView title_salary, taxFreeResult, taxableResult,total_annul_display ;
     EditText basic_salary,bonus,past_salary,house_rent,medical_allowance,surgery_cost,travel_cost,festival_bonus,servant_allowance,holiday_allowance,honorary_gift,over_time;
     String  basic_salary_s,bonus_s,past_salary_s,house_rent_s,medical_allowance_s,surgery_cost_s,travel_cost_s,festival_bonus_s,servant_allowance_s,holiday_allowance_s,honorary_gift_s,over_time_s;
-    String  basic_salary_as,bonus_as,past_salary_as,house_rent_as,medical_allowance_as,surgery_cost_as,travel_cost_as,festival_bonus_as,servant_allowance_as,holiday_allowance_as,honorary_gift_as,over_time_as;
     Double basic_salary_d,bonus_d,past_salary_d,house_rent_d,medical_allowance_d,surgery_cost_d,travel_cost_d,festival_bonus_d,servant_allowance_d,holiday_allowance_d,honorary_gift_d,over_time_d;
     Double basic_salary_d_y,bonus_d_y,past_salary_d_y,house_rent_d_y,medical_allowance_d_y,surgery_cost_d_y,travel_cost_d_y,festival_bonus_d_y,servant_allowance_d_y,holiday_allowance_d_y,honorary_gift_d_y,over_time_d_y;
-    double total_annual_display_d,taxFreeResult_d,taxableResult_d,fTowSum,fFourSum,fSixSum,fEightSum,fTenSum;
+    double total_annual_display_d,taxFreeResult_d,taxableResult_d;
     String  total_annual_display_s,taxFreeResult_s,taxableResult_s;
     final String far = "%,.2f";
     int zero = 0;
@@ -46,9 +45,7 @@ public class SalaryTax extends FreedomFighterTax {
         bonus = (EditText)findViewById(R.id.bonus);
         past_salary =(EditText) findViewById(R.id.past_salary);
         house_rent =(EditText) findViewById(R.id.house_rent);
-        medical_allowance =(EditText) findViewById(R.id.medical_allowance);
         surgery_cost =(EditText) findViewById(R.id.surgery_cost);
-        travel_cost =(EditText) findViewById(R.id.travel_cost);
         festival_bonus =(EditText)findViewById(R.id.festival_bonus);
         servant_allowance =(EditText) findViewById(R.id.servant_allowance);
         holiday_allowance =(EditText) findViewById(R.id.holiday_allowance);
@@ -79,10 +76,7 @@ public class SalaryTax extends FreedomFighterTax {
 
 
 
-        //        for TextMorque
-        Runnable taxt = () ->text_morq.setEllipsize(TextUtils.TruncateAt.MARQUEE);
-        text_morq.setSelected(true);
-        handler.postDelayed(taxt,2000);
+
 
 
 
@@ -109,12 +103,8 @@ public class SalaryTax extends FreedomFighterTax {
                 past_salary.setText(s_zero);
             }else if (house_rent.getText().toString().length() == zero){
                 house_rent.setText(s_zero);
-            }else if (medical_allowance.getText().toString().length() == zero){
-                medical_allowance.setText(s_zero);
             }else if (surgery_cost.getText().toString().length() == zero){
                 surgery_cost.setText(s_zero);
-            }else if (travel_cost.getText().toString().length() == zero){
-                travel_cost.setText(s_zero);
             }else if (festival_bonus.getText().toString().length() == zero){
                 festival_bonus.setText(s_zero);
             }else if (servant_allowance.getText().toString().length() == zero){
@@ -130,7 +120,22 @@ public class SalaryTax extends FreedomFighterTax {
             }
         });
 
+        total_annul_display.setOnClickListener(view -> {
+            voiceBrief(total_annual_display_s);
+        });
 
+        taxableResult.setOnClickListener(view -> {
+            voiceBrief(taxableResult_s);
+        });
+
+        taxFreeResult.setOnClickListener(view -> {
+            voiceBrief(taxFreeResult_s);
+        });
+
+        //        for TextMorque
+        Runnable taxt = () ->text_morq.setEllipsize(TextUtils.TruncateAt.MARQUEE);
+        text_morq.setSelected(true);
+        handler.postDelayed(taxt,2000);
 
     }//onCreate
 
@@ -184,23 +189,12 @@ public class SalaryTax extends FreedomFighterTax {
 
 
 //
-        medical_allowance_s =(String) medical_allowance.getText().toString();
-        medical_allowance_d = (Double)Double.parseDouble(medical_allowance_s);
-        if (medical_allowance_d > basic_salary_d*.10 || medical_allowance_d * 12 > 220000) {
-            medical_allowance_d_y = medical_allowance_d * 12;
-        }
 
 
         surgery_cost_s =(String) surgery_cost.getText().toString();
         surgery_cost_d =(Double) Double.parseDouble(surgery_cost_s);
         surgery_cost_d_y = surgery_cost_d;
 
-
-        travel_cost_s =(String) travel_cost.getText().toString();
-        travel_cost_d =(Double) Double.parseDouble(travel_cost_s);
-        if (travel_cost_d * 12 > 30000){
-          travel_cost_d_y = travel_cost_d * 12 ;
-        }
 
 
         festival_bonus_s =(String) festival_bonus.getText().toString();
