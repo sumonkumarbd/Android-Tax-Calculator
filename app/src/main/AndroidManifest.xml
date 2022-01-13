@@ -16,7 +16,7 @@
             android:name=".TaxZone"
             android:exported="false" />
         <activity
-            android:name=".Govt_Website"
+            android:name=".AboutUs"
             android:exported="false" />
         <activity
             android:name=".E_TIN"

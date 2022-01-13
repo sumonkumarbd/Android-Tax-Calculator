@@ -329,7 +329,7 @@
                     android:elevation="10dp"
                     android:fontFamily="@font/bdf"
                     android:gravity="start|center_vertical"
-                    android:text="@string/seceoundSlab"
+                    android:text="@string/secSlab"
                     android:textAlignment="textStart"
                     android:textColor="@color/white"
                     android:textSize="@dimen/Default" />

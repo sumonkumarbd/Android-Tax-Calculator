@@ -124,7 +124,7 @@ public class Main extends AppCompatActivity {
         });
 
         govt_site.setOnClickListener(view -> {
-            Intent intent = new Intent(Main.this, Govt_Website.class);
+            Intent intent = new Intent(Main.this, AboutUs.class);
             startActivity(intent);
         });
 

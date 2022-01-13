@@ -12,8 +12,8 @@ public class E_TIN extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.e_tin);
 
-        WebView webViewer = findViewById(R.id.webViewer);
-        String url = "https://secure.incometax.gov.bd/TINHome";
+        WebView webViewer = findViewById(R.id.e_tin_webVIew);
+        String url = "https://nbr.sblesheba.com/";
         webViewer.loadUrl(url);
     }
 }
