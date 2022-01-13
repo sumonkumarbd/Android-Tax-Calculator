@@ -114,7 +114,7 @@ public class Main extends AppCompatActivity {
         });
 
         e_tin.setOnClickListener(view -> {
-            Intent intent = new Intent(Main.this,E_TIN.class);
+            Intent intent = new Intent(Main.this, Payments.class);
             startActivity(intent);
         });
 

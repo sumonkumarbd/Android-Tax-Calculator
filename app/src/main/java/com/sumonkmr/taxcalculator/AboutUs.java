@@ -1,9 +1,8 @@
 package com.sumonkmr.taxcalculator;
 
 import android.os.Bundle;
-import android.webkit.WebView;
 
-public class AboutUs extends E_TIN {
+public class AboutUs extends Payments {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

@@ -19,7 +19,7 @@
             android:name=".AboutUs"
             android:exported="false" />
         <activity
-            android:name=".E_TIN"
+            android:name=".Payments"
             android:exported="false" />
         <activity
             android:name=".Pdf_viewer"
