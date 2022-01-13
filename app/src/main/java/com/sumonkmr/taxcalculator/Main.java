@@ -26,7 +26,7 @@ public class Main extends AppCompatActivity {
     Animation up_down_cont, up_from_bottom, up_from_bottom_slow, slide_in_left, slide_out_right, slide_out_left, slide_in_right,right_slidere_infinit;
     LinearLayout slabCalcButton, first_row, insButton, e_tin, sec_row, salary_tax, thirdRow, address_book, govt_site;
     androidx.constraintlayout.widget.ConstraintLayout  mainCard;
-    Dialog dialog;
+    Dialog dialog , dialog_about;
     TextView appName, text_morque;
 
 

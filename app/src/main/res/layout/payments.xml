@@ -67,7 +67,7 @@
         <!--    UpperVictor-->
 
         <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/mainCard_e_tin"
+            android:id="@+id/mainCard_payments"
             android:layout_width="305dp"
             android:layout_height="420dp"
             style="@style/Widget.MaterialComponents.CardView"
@@ -79,7 +79,7 @@
             android:elevation="@dimen/heading_size"
             >
             <WebView
-                android:id="@+id/e_tin_webVIew"
+                android:id="@+id/payments_webVIew"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"/>
 
