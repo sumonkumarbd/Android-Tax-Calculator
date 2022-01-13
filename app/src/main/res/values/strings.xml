@@ -31,7 +31,7 @@
     <string name="e_return">রিটার্ন জমা দিন</string>
     <string name="nbr_site">সর: ওয়েবসাইট</string>
     <string name="salarytax">স্যালারি ট্যাক্স</string>
-    <string name="address_book">ঠিকানা সমূহ</string>
+    <string name="tax_zone">ট্যাক্স জোন</string>
     <string name="about_us">এপপ্স সম্পর্কে</string>
     <string name="zero_p">0%</string>
     <string name="five_p">5%</string>
@@ -58,6 +58,9 @@
     <string name="festival_bonus_hint">অর্থ বছরে যে কয়টি</string>
     <string name="yearly">বাৎসরিক</string>
     <string name="total_annul_hint">সর্বমোট বাৎসরিক আয়</string>
+    <string name="taxZone1">ট্যাক্স জোন - ১ , ঢাকা।</string>
+    <string name="website">website</string>
+    <string name="taxZone2">ট্যাক্স জোন - ২ , ঢাকা।</string>
 
 
     <dimen name="heading_size">14sp</dimen>

@@ -118,6 +118,11 @@ public class Main extends AppCompatActivity {
             startActivity(intent);
         });
 
+        address_book.setOnClickListener(view -> {
+            Intent intent = new Intent(Main.this,TaxZone.class);
+            startActivity(intent);
+        });
+
         govt_site.setOnClickListener(view -> {
             Intent intent = new Intent(Main.this, Govt_Website.class);
             startActivity(intent);

@@ -1,0 +1,291 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/background_dark"
+    tools:context=".SalaryTax">
+
+    <!--    UpperVictor-->
+    <!--        morque_text-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:orientation="vertical"
+        >
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/base"
+            android:alpha=".9"
+            />
+        <TextView
+            android:id="@+id/text_morq"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="top"
+            android:textSize="@dimen/heading_size"
+            android:fontFamily="@font/normal"
+            android:focusableInTouchMode="true"
+            android:ellipsize="marquee"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:scrollHorizontally="true"
+            android:gravity="top"
+            android:layout_marginTop="-20dp"
+            android:textColor="@color/white"
+            android:alpha="1"
+            android:textEditPasteWindowLayout="@string/intro"
+            android:singleLine="true"
+            android:text="@string/intro" />
+    </LinearLayout><!--        morque_text-->
+
+    <!--Upper color bord-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_gravity="center"
+        android:background="@drawable/singecolor_button"
+        style="@style/Widget.MaterialComponents.CardView"
+        android:gravity="center"
+        >
+
+        <TextView
+            style="@style/Widget.MaterialComponents.CardView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/title_salary"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/head_bolder"
+            android:elevation="@dimen/Default"
+            android:fontFamily="@font/titir"
+            android:text="@string/tax_zone"
+            android:textColor="@color/white"
+            android:textSize="@dimen/head_bolder" />
+
+
+    </LinearLayout><!--Upper color bord-->
+    <!--    UpperVictor-->
+
+    <!--    parent-->
+    <!--        main card-->
+    <LinearLayout
+        android:id="@+id/mainCard_salary"
+        android:layout_width="280dp"
+        android:layout_height="430dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="-60dp"
+        android:background="@drawable/tnas_curved25"
+        android:elevation="@dimen/heading_size"
+        android:orientation="vertical"
+        style="@style/Widget.MaterialComponents.CardView"
+        >
+
+        <!--        parent ScrollView-->
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="260dp"
+            android:layout_marginTop="10dp"
+            >
+            <!--            support of Scroll View-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                >
+                <!--            Row1-->
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:paddingHorizontal="@dimen/Default"
+                    android:layout_gravity="center_horizontal"
+                    >
+                    <!--                    col1-->
+                    <LinearLayout
+                        android:id="@+id/col1"
+                        android:layout_width="150dp"
+                        android:layout_height="40dp"
+                        style="@style/Widget.MaterialComponents.CardView"
+                        android:background="@drawable/left_curev_base_color"
+                        android:elevation="@dimen/shadow"
+                        android:paddingHorizontal="5dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        android:orientation="vertical"
+                        >
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center|center_vertical"
+                            android:text="@string/taxZone1"
+                            android:textColor="@color/white"
+                            android:fontFamily="@font/bdf"
+                            android:textSize="@dimen/heading_size"
+                            android:elevation="@dimen/Default"
+                            />
+
+                    </LinearLayout><!--                    col1-->
+
+                    <!--                    col2-->
+                    <LinearLayout
+                        android:id="@+id/col2"
+                        style="@style/Widget.MaterialComponents.CardView"
+                        android:layout_width="110dp"
+                        android:layout_height="40dp"
+                        android:background="@drawable/right_courved_white"
+                        android:elevation="@dimen/shadow"
+                        android:orientation="vertical"
+                        android:padding="5dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/col1"
+                        app:layout_constraintTop_toTopOf="parent">
+                       <LinearLayout
+                           android:layout_width="match_parent"
+                           android:layout_height="match_parent"
+                           android:orientation="horizontal"
+                           android:layout_gravity="center"
+                           android:gravity="center"
+                           android:padding="5dp"
+                           android:weightSum="3"
+                           >
+                           <ImageView
+                               android:id="@+id/website1"
+                               android:layout_width="0dp"
+                               android:layout_height="wrap_content"
+                               android:layout_weight="1"
+                               android:src="@drawable/website"
+                               android:contentDescription="@string/website" />
+
+                           <ImageView
+                               android:id="@+id/facebook1"
+                               android:layout_width="0dp"
+                               android:layout_height="wrap_content"
+                               android:layout_weight="1"
+                               android:src="@drawable/facebook"
+                               android:contentDescription="@string/website" />
+
+                           <ImageView
+                               android:id="@+id/telephone1"
+                               android:layout_width="0dp"
+                               android:layout_height="wrap_content"
+                               android:layout_weight="1"
+                               android:src="@drawable/telephone"
+                               android:contentDescription="@string/website" />
+
+                       </LinearLayout>
+
+
+
+
+                    </LinearLayout><!--                    col2-->
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+                <!--Row1-->
+
+                <!--            Row1-->
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:paddingHorizontal="@dimen/Default"
+                    android:layout_gravity="center_horizontal"
+                    >
+                    <!--                    col1-->
+                    <LinearLayout
+                        android:id="@+id/col3"
+                        android:layout_width="150dp"
+                        android:layout_height="40dp"
+                        style="@style/Widget.MaterialComponents.CardView"
+                        android:background="@drawable/left_curev_base_color"
+                        android:elevation="@dimen/shadow"
+                        android:paddingHorizontal="5dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        android:orientation="vertical"
+                        >
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center|center_vertical"
+                            android:text="@string/taxZone2"
+                            android:textColor="@color/white"
+                            android:fontFamily="@font/bdf"
+                            android:textSize="@dimen/heading_size"
+                            android:elevation="@dimen/Default"
+                            />
+
+                    </LinearLayout><!--                    col1-->
+
+                    <!--                    col2-->
+                    <LinearLayout
+                        android:id="@+id/col4"
+                        style="@style/Widget.MaterialComponents.CardView"
+                        android:layout_width="110dp"
+                        android:layout_height="40dp"
+                        android:background="@drawable/right_courved_white"
+                        android:elevation="@dimen/shadow"
+                        android:orientation="vertical"
+                        android:padding="5dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/col3"
+                        app:layout_constraintTop_toTopOf="parent">
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:padding="5dp"
+                            android:weightSum="3"
+                            >
+                            <ImageView
+                                android:id="@+id/website2"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:src="@drawable/website"
+                                android:contentDescription="@string/website" />
+
+                            <ImageView
+                                android:id="@+id/facebook2"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:src="@drawable/facebook"
+                                android:contentDescription="@string/website" />
+
+                            <ImageView
+                                android:id="@+id/telephone2"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:src="@drawable/telephone"
+                                android:contentDescription="@string/website" />
+
+                        </LinearLayout>
+
+
+
+
+                    </LinearLayout><!--                    col2-->
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+                <!--Row1-->
+
+
+
+            </LinearLayout><!--support of Scroll View-->
+
+        </ScrollView><!--parent ScrollView-->
+
+
+
+
+    </LinearLayout><!--main card-->
+
+
+</LinearLayout>
