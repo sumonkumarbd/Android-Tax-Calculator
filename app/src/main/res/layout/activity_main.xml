@@ -78,7 +78,7 @@
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="-50dp"
         android:padding="10dp"
-        android:background="@drawable/tnas_curved25"
+        android:background="@drawable/tns_crv25"
         android:elevation="@dimen/heading_size">
 
         <!--            firstRow-->

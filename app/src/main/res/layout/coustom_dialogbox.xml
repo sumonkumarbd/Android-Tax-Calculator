@@ -14,7 +14,7 @@
         android:layout_width="300dp"
         android:layout_height="500dp"
         android:layout_marginBottom="52dp"
-        android:background="@drawable/tnas_curved25"
+        android:background="@drawable/tns_crv25"
         android:elevation="@dimen/head_bolder"
         android:orientation="vertical"
         android:padding="20dp"

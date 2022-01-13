@@ -60,7 +60,23 @@
     <string name="total_annul_hint">সর্বমোট বাৎসরিক আয়</string>
     <string name="taxZone1">ট্যাক্স জোন - ১ , ঢাকা।</string>
     <string name="website">website</string>
-    <string name="taxZone2">ট্যাক্স জোন - ২ , ঢাকা।</string>
+    <string name="taxZone2">ট্যাক্স জোন - ২,ঢাকা।</string>
+    <string name="taxZone3">ট্যাক্স জোন - ৩,ঢাকা।</string>
+    <string name="taxZone4">ট্যাক্স জোন - ৪,ঢাকা।</string>
+    <string name="taxZone5">ট্যাক্স জোন - ৫,ঢাকা।</string>
+    <string name="taxZone6">ট্যাক্স জোন - ৬,ঢাকা।</string>
+    <string name="taxZone7">ট্যাক্স জোন - ৭,ঢাকা।</string>
+    <string name="taxZone8">ট্যাক্স জোন - ৮,ঢাকা।</string>
+    <string name="taxZone9">ট্যাক্স জোন - ৯,ঢাকা।</string>
+    <string name="taxZone10">ট্যাক্স জোন - ১০,ঢাকা।</string>
+    <string name="taxZone11">ট্যাক্স জোন - ১১,ঢাকা।</string>
+    <string name="taxZone12">ট্যাক্স জোন - ১২,ঢাকা।</string>
+    <string name="taxZone13">ট্যাক্স জোন - ১৩,ঢাকা।</string>
+    <string name="taxZone14">ট্যাক্স জোন - ১৪,ঢাকা।</string>
+    <string name="taxZone15">ট্যাক্স জোন - ১৫,ঢাকা।</string>
+    <string name="taxZone16">ট্যাক্সজোন,ময়মনসিংহ।</string>
+    <string name="taxZone17">ট্যাক্স জোন, সিলেট।</string>
+    <string name="taxZone18">ট্যাক্স গাইড বাংলাদেশ।</string>
 
 
     <dimen name="heading_size">14sp</dimen>
