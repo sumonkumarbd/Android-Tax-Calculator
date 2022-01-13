@@ -1,5 +1,5 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
-    <string name="app_name">ট্যাক্স ক্যালকুলেটর</string>
+    <string name="app_name">ট্যাক্সিকিউশন বাংলা</string>
     <string name="hint_text">এখানে আপনার মোট আয় লিখুন</string>
     <string name="slab">ট্যাক্সের স্ল্যাব</string>
     <string name="tax_rate">রেট</string>
