@@ -38,7 +38,7 @@
             android:alpha="1"
             android:textEditPasteWindowLayout="@string/intro"
             android:singleLine="true"
-            android:text="@string/intro" />
+            android:text="@string/salary_intro" />
     </LinearLayout><!--        morque_text-->
 
     <!--Upper color bord-->
