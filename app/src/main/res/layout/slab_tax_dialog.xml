@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/selection_card"
+    android:layout_width="310dp"
+    android:layout_height="410dp"
+    android:background="@drawable/tns_crv25"
+    android:elevation="@dimen/head_bolder"
+    android:orientation="vertical"
+    android:visibility="visible"
+    android:layout_gravity="center"
+    >
+
+        <!--Upper color bord-->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/upper"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginHorizontal="15dp"
+            android:background="@drawable/singecolor_button"
+            style="@style/Widget.MaterialComponents.CardView"
+            android:gravity="center"
+            >
+
+            <TextView
+                android:id="@+id/govt_site_title"
+                style="@style/Widget.MaterialComponents.CardView"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_horizontal"
+                android:elevation="@dimen/Default"
+                android:fontFamily="@font/titir"
+                android:gravity="center"
+                android:text="@string/app_name"
+                android:textColor="@color/white"
+                android:textSize="@dimen/head_bolder"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/btn_cancel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/cancel"
+                android:src="@drawable/cancel"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.609"
+                app:layout_constraintStart_toEndOf="@+id/govt_site_title"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.111" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout><!--Upper color bord-->
+        <!--    UpperVictor-->
+
+        <soup.neumorphism.NeumorphImageButton
+            android:id="@+id/imageView"
+            style="@style/Widget.Neumorph.ImageButton"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:contentDescription="@string/app_name"
+            android:layout_gravity="center"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:src="@drawable/logo"
+            android:scaleType="fitCenter"
+            app:neumorph_shapeType="basin"
+            />
+
+        <TextView
+            android:id="@+id/dialog_heading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:fontFamily="@font/titir"
+            android:text="@string/type_of_tax"
+            android:textColor="@color/base"
+            android:elevation="@dimen/Default"
+            android:textSize="16sp"
+            android:layout_gravity="center"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+        <TextView
+            android:id="@+id/dialog_notice"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="16dp"
+            android:fontFamily="@font/bd_font"
+            android:textColor="@color/gray"
+            android:text="@string/notice_massage"
+            android:textAlignment="center"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/dialog_heading" />
+
+        <View
+            android:id="@+id/divider"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/lines"
+            app:layout_constraintBottom_toTopOf="@id/male"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="-10dp"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/dialog_notice" />
+
+        <!--            Row1-->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="280dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="10dp"
+            android:paddingHorizontal="@dimen/Default"
+            android:layout_gravity="center_horizontal"
+            >
+            <!--                    col1-->
+            <LinearLayout
+                android:id="@+id/male"
+                android:layout_width="110dp"
+                android:layout_height="40dp"
+                style="@style/Widget.MaterialComponents.CardView"
+                android:background="@drawable/left_crv_base_color"
+                android:elevation="@dimen/shadow"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:orientation="vertical"
+                >
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center|center_vertical"
+                    android:text="@string/male"
+                    android:textColor="@color/white"
+                    android:fontFamily="@font/bdf"
+                    android:textSize="@dimen/heading_size"
+                    android:elevation="@dimen/Default"
+                    />
+
+            </LinearLayout><!--                    col1-->
+
+            <!--                    col2-->
+            <LinearLayout
+                android:id="@+id/female"
+                style="@style/Widget.MaterialComponents.CardView"
+                android:layout_width="150dp"
+                android:layout_height="40dp"
+                android:background="@drawable/right_courved_white"
+                android:elevation="@dimen/shadow"
+                android:orientation="vertical"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/male"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center|center_vertical"
+                    android:text="@string/female"
+                    android:textColor="@color/base"
+                    android:fontFamily="@font/bdf"
+                    android:textSize="@dimen/heading_size"
+                    android:elevation="@dimen/Default"
+                    />
+
+
+
+            </LinearLayout><!--                    col2-->
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+        <!--Row1-->
+
+        <!--            Row2-->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="280dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="-10dp"
+            android:paddingHorizontal="@dimen/Default"
+            android:layout_gravity="center_horizontal"
+            >
+            <!--                    col1-->
+            <LinearLayout
+                android:id="@+id/disable_parson"
+                android:layout_width="110dp"
+                android:layout_height="40dp"
+                style="@style/Widget.MaterialComponents.CardView"
+                android:background="@drawable/left_crv_base_color"
+                android:elevation="@dimen/shadow"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:orientation="vertical"
+                >
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center|center_vertical"
+                    android:text="@string/disable_person"
+                    android:textColor="@color/white"
+                    android:fontFamily="@font/bdf"
+                    android:textSize="@dimen/heading_size"
+                    android:elevation="@dimen/Default"
+                    />
+
+            </LinearLayout><!--                    col1-->
+
+            <!--                    col2-->
+            <LinearLayout
+                android:id="@+id/freedom_fighter"
+                style="@style/Widget.MaterialComponents.CardView"
+                android:layout_width="150dp"
+                android:layout_height="40dp"
+                android:background="@drawable/right_courved_white"
+                android:elevation="@dimen/shadow"
+                android:orientation="vertical"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/disable_parson"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center|center_vertical"
+                    android:text="@string/freedom_fighter"
+                    android:textColor="@color/base"
+                    android:fontFamily="@font/bdf"
+                    android:textSize="@dimen/heading_size"
+                    android:elevation="@dimen/Default"
+                    />
+
+
+
+            </LinearLayout><!--                    col2-->
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+        <!--Row2-->
+
+    </LinearLayout>
+    <!--    parent-->

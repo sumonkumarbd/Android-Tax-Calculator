@@ -11,6 +11,7 @@ import android.view.ViewGroup;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -92,10 +93,8 @@ public class Main extends AppCompatActivity {
 //        dialog_BOx
         //Create the Dialog her
         dialog = new Dialog(this);
-        dialog.setContentView(R.layout.coustom_dialogbox);
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-            dialog.getWindow().setBackgroundDrawable(getDrawable(R.drawable.dialog_background));
-        }
+        dialog.setContentView(R.layout.slab_tax_dialog);
+
         dialog.getWindow().setLayout(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT);
         dialog.setCancelable(false); //Optional
         dialog.getWindow().getAttributes().windowAnimations =R.anim.slide_out_right; //Setting the animations to dialog
@@ -132,11 +131,11 @@ public class Main extends AppCompatActivity {
 
 
 
-        Button male = dialog.findViewById(R.id.male);
-        Button female = dialog.findViewById(R.id.female);
-        Button disable_parson = dialog.findViewById(R.id.disable_parson);
-        Button freedom_fighter = dialog.findViewById(R.id.freedom_fighter);
-        NeumorphImageButton Cancel = dialog.findViewById(R.id.btn_cancel);
+        LinearLayout male = dialog.findViewById(R.id.male);
+        LinearLayout female = dialog.findViewById(R.id.female);
+        LinearLayout disable_parson = dialog.findViewById(R.id.disable_parson);
+        LinearLayout freedom_fighter = dialog.findViewById(R.id.freedom_fighter);
+        ImageView Cancel = dialog.findViewById(R.id.btn_cancel);
 
 
         male.setOnClickListener(v -> {
