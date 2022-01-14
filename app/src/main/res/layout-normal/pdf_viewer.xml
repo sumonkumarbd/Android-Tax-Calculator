@@ -54,12 +54,13 @@
 
         <TextView
             style="@style/Widget.MaterialComponents.CardView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
             android:id="@+id/ins"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
             android:layout_gravity="center_horizontal"
-            android:layout_marginTop="@dimen/head_bolder"
             android:elevation="@dimen/Default"
+            android:layout_marginTop="@dimen/head_bolder"
+            android:gravity="center"
             android:fontFamily="@font/titir"
             android:text="@string/instraction_dash"
             android:textColor="@color/white"
@@ -71,11 +72,11 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/mainCard_pdf"
-        android:layout_width="305dp"
-        android:layout_height="420dp"
+        android:layout_width="360dp"
+        android:layout_height="550dp"
         style="@style/Widget.MaterialComponents.CardView"
         android:layout_gravity="center_horizontal"
-        android:layout_marginTop="-60dp"
+        android:layout_marginTop="-40dp"
         android:background="@drawable/tns_crv25"
         android:paddingVertical="20dp"
         android:paddingHorizontal="1dp"

@@ -151,10 +151,6 @@ public class SalaryTax extends FreedomFighterTax {
 
 //    Methods
 
-    //    VoiceAsist
-    public void voiceBrief(String voice){
-        int taxResult = sp.speak(voice,TextToSpeech.QUEUE_ADD,null);
-    };//voiceAsist
 
 
 //    TextWactcher

@@ -37,6 +37,8 @@ public class SlabCalculator extends Main {
     ImageButton calcButton, calcButton_disabled;
     ImageView inputError;
     double ballance1, ballance2, ballance3, ballance4, ballance5, sumTax;
+    String beforeText, afterText;
+    double middleText;
     TextToSpeech sp;
     Spinner spinner;
     String[] items;
@@ -234,6 +236,7 @@ public class SlabCalculator extends Main {
         });// ClacButton_disabled Listener
 
 
+
     }//    View.OnCreateSaveInstance
 
 
@@ -426,6 +429,7 @@ public class SlabCalculator extends Main {
 
 
 
+
         inputVal.setText("");
 
     };//calculator finished
@@ -435,6 +439,11 @@ public class SlabCalculator extends Main {
         int speech = sp.speak("আপনার ট্যাক্স হচ্ছে",TextToSpeech.QUEUE_FLUSH,null);
         int taxResult = sp.speak(voice,TextToSpeech.QUEUE_ADD,null);
     };//voiceAsist
+
+    //    voiceBrief
+    public void voiceBrief(String voice){
+        int taxResult = sp.speak(voice,TextToSpeech.QUEUE_ADD,null);
+    };//voiceBrief
 
     public void textToVoice(){
         sp = new TextToSpeech(getApplicationContext(),

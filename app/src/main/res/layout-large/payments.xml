@@ -69,8 +69,8 @@
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/mainCard_payments"
-            android:layout_width="305dp"
-            android:layout_height="420dp"
+            android:layout_width="380dp"
+            android:layout_height="550dp"
             style="@style/Widget.MaterialComponents.CardView"
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="-60dp"

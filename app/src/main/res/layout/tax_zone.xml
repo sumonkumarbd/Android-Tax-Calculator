@@ -28,6 +28,7 @@
             android:layout_gravity="top"
             android:textSize="@dimen/heading_size"
             android:fontFamily="@font/normal"
+            android:justificationMode="inter_word"
             android:focusableInTouchMode="true"
             android:ellipsize="marquee"
             android:marqueeRepeatLimit="marquee_forever"

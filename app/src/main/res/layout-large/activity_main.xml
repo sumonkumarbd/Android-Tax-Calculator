@@ -46,7 +46,7 @@
     <!--Upper color bord-->
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="100dp"
+        android:layout_height="130dp"
         android:layout_gravity="center"
         android:background="@drawable/singecolor_button"
         android:gravity="center"
@@ -73,8 +73,8 @@
     <!--        main card-->
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/mainCard"
-        android:layout_width="280dp"
-        android:layout_height="390dp"
+        android:layout_width="380dp"
+        android:layout_height="550dp"
         style="@style/Widget.MaterialComponents.CardView"
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="-50dp"
@@ -86,7 +86,7 @@
         <LinearLayout
             android:id="@+id/first_row"
             android:layout_width="match_parent"
-            android:layout_height="110dp"
+            android:layout_height="150dp"
             android:layout_marginHorizontal="15dp"
             android:layout_marginVertical="10dp"
             android:columnCount="2"
@@ -102,8 +102,8 @@
             <LinearLayout
                 android:id="@+id/insButton"
                 style="@style/Widget.MaterialComponents.CardView"
-                android:layout_width="100dp"
-                android:layout_height="100dp"
+                android:layout_width="130dp"
+                android:layout_height="130dp"
                 android:layout_marginTop="5dp"
                 android:layout_marginEnd="10dp"
                 android:padding="5dp"
@@ -113,7 +113,7 @@
 
                 <ImageView
                     android:layout_width="match_parent"
-                    android:layout_height="60dp"
+                    android:layout_height="100dp"
                     android:layout_marginHorizontal="10dp"
                     android:contentDescription="@string/instraction_dash"
                     android:src="@drawable/instructions" />
@@ -134,7 +134,7 @@
 
             <View
                 android:layout_width="1dp"
-                android:layout_height="100dp"
+                android:layout_height="130dp"
                 android:layout_marginTop="5dp"
                 android:alpha=".5"
                 android:background="@color/base"
@@ -144,8 +144,8 @@
             <LinearLayout
                 android:id="@+id/e_tin"
                 style="@style/Widget.MaterialComponents.CardView"
-                android:layout_width="100dp"
-                android:layout_height="100dp"
+                android:layout_width="130dp"
+                android:layout_height="130dp"
                 android:layout_marginTop="5dp"
                 android:layout_marginStart="10dp"
                 android:padding="5dp"
@@ -155,7 +155,7 @@
 
                 <ImageView
                     android:layout_width="match_parent"
-                    android:layout_height="60dp"
+                    android:layout_height="100dp"
                     android:layout_marginHorizontal="10dp"
                     android:contentDescription="@string/prements"
                     android:src="@drawable/etin" />
@@ -178,7 +178,7 @@
         </LinearLayout><!--            firstRow-->
 
         <View
-            android:layout_width="100dp"
+            android:layout_width="140dp"
             android:layout_height="1dp"
             android:background="@color/base"
             android:alpha=".5"
@@ -189,7 +189,7 @@
             />
 
         <View
-            android:layout_width="100dp"
+            android:layout_width="140dp"
             android:layout_height="1dp"
             android:background="@color/base"
             android:alpha=".5"
@@ -204,7 +204,7 @@
         <LinearLayout
             android:id="@+id/sec_row"
             android:layout_width="match_parent"
-            android:layout_height="110dp"
+            android:layout_height="150dp"
             android:layout_marginHorizontal="15dp"
             android:layout_marginVertical="10dp"
             android:columnCount="2"
@@ -220,8 +220,8 @@
             <LinearLayout
                 android:id="@+id/salary_tax"
                 style="@style/Widget.MaterialComponents.CardView"
-                android:layout_width="100dp"
-                android:layout_height="100dp"
+                android:layout_width="130dp"
+                android:layout_height="130dp"
                 android:layout_marginTop="5dp"
                 android:layout_marginEnd="10dp"
                 android:padding="5dp"
@@ -231,7 +231,7 @@
 
                 <ImageView
                     android:layout_width="match_parent"
-                    android:layout_height="60dp"
+                    android:layout_height="100dp"
                     android:layout_marginHorizontal="10dp"
                     android:contentDescription="@string/salarytax"
                     android:src="@drawable/monthly_calculate" />
@@ -253,7 +253,7 @@
 
             <View
                 android:layout_width="1dp"
-                android:layout_height="100dp"
+                android:layout_height="130dp"
                 android:layout_marginTop="5dp"
                 android:alpha=".5"
                 android:background="@color/base"
@@ -263,8 +263,8 @@
             <LinearLayout
                 android:id="@+id/slabCalcButton"
                 style="@style/Widget.MaterialComponents.CardView"
-                android:layout_width="100dp"
-                android:layout_height="100dp"
+                android:layout_width="130dp"
+                android:layout_height="130dp"
                 android:layout_marginTop="5dp"
                 android:layout_marginStart="10dp"
                 android:padding="5dp"
@@ -274,7 +274,7 @@
 
                 <ImageView
                     android:layout_width="match_parent"
-                    android:layout_height="60dp"
+                    android:layout_height="100dp"
                     android:layout_marginHorizontal="10dp"
                     android:contentDescription="@string/slab_dash"
                     android:src="@drawable/tax" />
@@ -297,7 +297,7 @@
         </LinearLayout><!--            secRow-->
 
         <View
-            android:layout_width="100dp"
+            android:layout_width="140dp"
             android:layout_height="1dp"
             android:background="@color/base"
             android:alpha=".5"
@@ -308,7 +308,7 @@
             />
 
         <View
-            android:layout_width="100dp"
+            android:layout_width="140dp"
             android:layout_height="1dp"
             android:background="@color/base"
             android:alpha=".5"
@@ -322,7 +322,7 @@
         <LinearLayout
             android:id="@+id/thirdRow"
             android:layout_width="match_parent"
-            android:layout_height="110dp"
+            android:layout_height="150dp"
             android:layout_marginHorizontal="15dp"
             android:layout_marginVertical="10dp"
             android:columnCount="2"
@@ -337,8 +337,8 @@
             <LinearLayout
             android:id="@+id/address_book"
             style="@style/Widget.MaterialComponents.CardView"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
+            android:layout_width="130dp"
+            android:layout_height="130dp"
             android:layout_marginEnd="10dp"
             android:padding="5dp"
             android:background="@drawable/tns_squre"
@@ -347,7 +347,7 @@
 
             <ImageView
                 android:layout_width="match_parent"
-                android:layout_height="60dp"
+                android:layout_height="100dp"
                 android:layout_marginHorizontal="10dp"
                 android:contentDescription="@string/tax_zone"
                 android:src="@drawable/address_book" />
@@ -368,7 +368,7 @@
 
             <View
                 android:layout_width="1dp"
-                android:layout_height="100dp"
+                android:layout_height="130dp"
                 android:alpha=".5"
                 android:background="@color/base"
                 />
@@ -377,8 +377,8 @@
             <LinearLayout
                 android:id="@+id/govt_site"
                 style="@style/Widget.MaterialComponents.CardView"
-                android:layout_width="100dp"
-                android:layout_height="100dp"
+                android:layout_width="130dp"
+                android:layout_height="130dp"
                 android:layout_marginStart="10dp"
                 android:padding="5dp"
                 android:background="@drawable/tns_squre"
@@ -387,7 +387,7 @@
 
                 <ImageView
                     android:layout_width="match_parent"
-                    android:layout_height="60dp"
+                    android:layout_height="100dp"
                     android:layout_marginHorizontal="10dp"
                     android:contentDescription="@string/e_return"
                     android:src="@drawable/information" />

@@ -4,9 +4,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Pdf_viewer"
-    android:orientation="vertical">
-
+    android:orientation="vertical"
+    android:background="@color/background_dark"
+    tools:context=".SalaryTax">
 
     <!--    UpperVictor-->
     <!--        morque_text-->
@@ -28,8 +28,8 @@
             android:layout_gravity="top"
             android:textSize="@dimen/heading_size"
             android:fontFamily="@font/normal"
-            android:focusableInTouchMode="true"
             android:justificationMode="inter_word"
+            android:focusableInTouchMode="true"
             android:ellipsize="marquee"
             android:marqueeRepeatLimit="marquee_forever"
             android:scrollHorizontally="true"
@@ -54,14 +54,15 @@
 
         <TextView
             style="@style/Widget.MaterialComponents.CardView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/ins"
+            android:id="@+id/title_salary"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
             android:layout_gravity="center_horizontal"
-            android:layout_marginTop="@dimen/head_bolder"
             android:elevation="@dimen/Default"
+            android:layout_marginTop="@dimen/head_bolder"
+            android:gravity="center"
             android:fontFamily="@font/titir"
-            android:text="@string/instraction_dash"
+            android:text="@string/tax_zone"
             android:textColor="@color/white"
             android:textSize="@dimen/head_bolder" />
 
@@ -70,19 +71,19 @@
     <!--    UpperVictor-->
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/mainCard_pdf"
-        android:layout_width="305dp"
-        android:layout_height="420dp"
+        android:id="@+id/mainCard_taxzone"
+        android:layout_width="360dp"
+        android:layout_height="550dp"
         style="@style/Widget.MaterialComponents.CardView"
         android:layout_gravity="center_horizontal"
-        android:layout_marginTop="-60dp"
+        android:layout_marginTop="-40dp"
         android:background="@drawable/tns_crv25"
         android:paddingVertical="20dp"
         android:paddingHorizontal="1dp"
         android:elevation="@dimen/heading_size"
         >
-        <com.github.barteksc.pdfviewer.PDFView
-            android:id="@+id/pdf_viewer"
+        <WebView
+            android:id="@+id/taxZone_webView"
             android:layout_width="match_parent"
             android:layout_height="match_parent"/>
 

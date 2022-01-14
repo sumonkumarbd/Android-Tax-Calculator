@@ -7,6 +7,7 @@ import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
 import android.text.TextUtils;
+import android.util.Log;
 import android.view.ViewGroup;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
@@ -16,13 +17,19 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
+import com.google.android.gms.ads.LoadAdError;
 import com.google.android.gms.ads.MobileAds;
 import com.google.android.gms.ads.initialization.InitializationStatus;
 import com.google.android.gms.ads.initialization.OnInitializationCompleteListener;
+import com.google.android.gms.ads.interstitial.InterstitialAd;
+import com.google.android.gms.ads.interstitial.InterstitialAdLoadCallback;
+
+import java.util.Random;
 
 import soup.neumorphism.NeumorphImageButton;
 
@@ -37,6 +44,8 @@ public class Main extends AppCompatActivity {
     TextView appName, text_morque;
     AdView adView;
     AdRequest adRequest;
+    InterstitialAd mInterstitialAd;
+    int myCount;
 
 
     @SuppressLint({"UseCompatLoadingForDrawables", "ObsoleteSdkInt"})
@@ -51,6 +60,23 @@ public class Main extends AppCompatActivity {
         adView = findViewById(R.id.adView);
         adRequest = new AdRequest.Builder().build();
         adView.loadAd(adRequest);
+
+
+        InterstitialAd.load(this,"ca-app-pub-3940256099942544/1033173712", adRequest,
+                new InterstitialAdLoadCallback() {
+                    @Override
+                    public void onAdLoaded(@NonNull InterstitialAd interstitialAd) {
+                        // The mInterstitialAd reference will be null until
+                        // an ad is loaded.
+                        mInterstitialAd = interstitialAd;
+                    }
+
+                    @Override
+                    public void onAdFailedToLoad(@NonNull LoadAdError loadAdError) {
+                        // Handle the error
+                        mInterstitialAd = null;
+                    }
+                });
 
 
 
@@ -96,6 +122,7 @@ public class Main extends AppCompatActivity {
 
 //        objs
         Handler handler = new Handler();
+        Random random  = new Random();
 
 
 //        Actions
@@ -121,26 +148,71 @@ public class Main extends AppCompatActivity {
         salary_tax.setOnClickListener(view -> {
             Intent salary_tax = new Intent(Main.this,SalaryTax.class);
             startActivity(salary_tax);
+            myCount = random.nextInt(100-5)+5;
+            if (myCount%2==0) {
+                //Show Fullscreen ad
+                if (mInterstitialAd != null) {
+                    mInterstitialAd.show(Main.this);
+                } else {
+                    Log.d("TAG", "The interstitial ad wasn't ready yet.");
+                }
+            }
         });
 
         insButton.setOnClickListener(view -> {
             Intent intent = new Intent(Main.this,Pdf_viewer.class);
             startActivity(intent);
+            myCount = random.nextInt(100-5)+5;
+            if (myCount%2==0) {
+                //Show Fullscreen ad
+                if (mInterstitialAd != null) {
+                    mInterstitialAd.show(Main.this);
+                } else {
+                    Log.d("TAG", "The interstitial ad wasn't ready yet.");
+                }
+            }
         });
 
         e_tin.setOnClickListener(view -> {
             Intent intent = new Intent(Main.this, Payments.class);
             startActivity(intent);
+            myCount = random.nextInt(100-5)+5;
+            if (myCount%2==0) {
+                //Show Fullscreen ad
+                if (mInterstitialAd != null) {
+                    mInterstitialAd.show(Main.this);
+                } else {
+                    Log.d("TAG", "The interstitial ad wasn't ready yet.");
+                }
+            }
         });
 
         address_book.setOnClickListener(view -> {
             Intent intent = new Intent(Main.this,TaxZone.class);
             startActivity(intent);
+            myCount = random.nextInt(100-5)+5;
+            if (myCount%2==0) {
+                //Show Fullscreen ad
+                if (mInterstitialAd != null) {
+                    mInterstitialAd.show(Main.this);
+                } else {
+                    Log.d("TAG", "The interstitial ad wasn't ready yet.");
+                }
+            }
         });
 
         govt_site.setOnClickListener(view -> {
             Intent intent = new Intent(Main.this, AboutUs.class);
             startActivity(intent);
+            myCount = random.nextInt(100-5)+5;
+            if (myCount%2==0) {
+                //Show Fullscreen ad
+                if (mInterstitialAd != null) {
+                    mInterstitialAd.show(Main.this);
+                } else {
+                    Log.d("TAG", "The interstitial ad wasn't ready yet.");
+                }
+            }
         });
 
 
@@ -159,6 +231,15 @@ public class Main extends AppCompatActivity {
             Intent intent = new Intent(Main.this,SlabCalculator.class);
             startActivity(intent);
             dialog.dismiss();
+            myCount = random.nextInt(100-5)+5;
+            if (myCount%2==0) {
+                //Show Fullscreen ad
+                if (mInterstitialAd != null) {
+                    mInterstitialAd.show(Main.this);
+                } else {
+                    Log.d("TAG", "The interstitial ad wasn't ready yet.");
+                }
+            }
         });
 
 
@@ -168,12 +249,30 @@ public class Main extends AppCompatActivity {
             Intent intent = new Intent(Main.this,FemaleTax.class);
             startActivity(intent);
             dialog.dismiss();
+            myCount = random.nextInt(100-5)+5;
+            if (myCount%2==0) {
+                //Show Fullscreen ad
+                if (mInterstitialAd != null) {
+                    mInterstitialAd.show(Main.this);
+                } else {
+                    Log.d("TAG", "The interstitial ad wasn't ready yet.");
+                }
+            }
         });
 
         female.setOnClickListener(v -> {
 
             Intent intent = new Intent(Main.this,FemaleTax.class);
             startActivity(intent);
+            myCount = random.nextInt(100-5)+5;
+            if (myCount%2==0) {
+                //Show Fullscreen ad
+                if (mInterstitialAd != null) {
+                    mInterstitialAd.show(Main.this);
+                } else {
+                    Log.d("TAG", "The interstitial ad wasn't ready yet.");
+                }
+            }
             dialog.dismiss();
         });
 
@@ -181,6 +280,15 @@ public class Main extends AppCompatActivity {
 
             Intent intent = new Intent(Main.this,DisableParsonTax.class);
             startActivity(intent);
+            myCount = random.nextInt(100-5)+5;
+            if (myCount%2==0) {
+                //Show Fullscreen ad
+                if (mInterstitialAd != null) {
+                    mInterstitialAd.show(Main.this);
+                } else {
+                    Log.d("TAG", "The interstitial ad wasn't ready yet.");
+                }
+            }
             dialog.dismiss();
         });
 
@@ -188,6 +296,15 @@ public class Main extends AppCompatActivity {
 
             Intent intent = new Intent(Main.this,FreedomFighterTax.class);
             startActivity(intent);
+            myCount = random.nextInt(100-5)+5;
+            if (myCount%2==0) {
+                //Show Fullscreen ad
+                if (mInterstitialAd != null) {
+                    mInterstitialAd.show(Main.this);
+                } else {
+                    Log.d("TAG", "The interstitial ad wasn't ready yet.");
+                }
+            }
             dialog.dismiss();
         });
 

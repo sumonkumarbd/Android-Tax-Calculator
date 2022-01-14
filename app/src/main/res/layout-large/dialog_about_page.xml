@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="280dp"
+    android:layout_height="250dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_gravity="center"
+    android:background="@drawable/tns_crv25">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@drawable/dialog_background"
+        >
+
+    <!--Upper color bord-->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/upper"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/singecolor_button"
+        style="@style/Widget.MaterialComponents.CardView"
+        android:gravity="center"
+        >
+
+        <TextView
+            android:id="@+id/govt_site_title"
+            style="@style/Widget.MaterialComponents.CardView"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_horizontal"
+            android:elevation="@dimen/Default"
+            android:fontFamily="@font/titir"
+            android:gravity="center"
+            android:text="@string/app_name"
+            android:textColor="@color/white"
+            android:textSize="@dimen/head_bolder"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/dialog_cancel_about"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/cancel"
+            android:src="@drawable/cancel"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.609"
+            app:layout_constraintStart_toEndOf="@+id/govt_site_title"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.111" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout><!--Upper color bord-->
+    <!--    UpperVictor-->
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center|center_horizontal"
+        android:text="@string/about_dialog_text"
+        android:textSize="@dimen/head_bolder"
+        android:fontFamily="@font/normal"
+        android:layout_marginTop="40dp"
+        />
+
+        <Button
+            android:id="@+id/about_dialog_button"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:text="@string/hint_dialog_button_txt"
+            android:textSize="@dimen/head_bolder"
+            android:background="@color/sec_base"
+            android:elevation="@dimen/head_bolder"
+            />
+
+    </LinearLayout>
+</LinearLayout>
