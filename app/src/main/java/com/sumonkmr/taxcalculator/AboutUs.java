@@ -14,7 +14,9 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
-public class AboutUs extends Main {
+import com.google.android.gms.ads.MobileAds;
+
+public class AboutUs extends TaxZone {
 
     LinearLayout mainCard_govt;
     ImageView image_holder;
@@ -26,6 +28,12 @@ public class AboutUs extends Main {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.about_us);
+
+        MobileAds.initialize(this, initializationStatus -> {
+        });
+        adView = findViewById(R.id.adView);
+        adView.loadAd(adRequest);
+
 
         mainCard_govt = findViewById(R.id.mainCard_govt);
         image_holder = findViewById(R.id.image_holder);

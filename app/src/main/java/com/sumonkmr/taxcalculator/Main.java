@@ -18,6 +18,12 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
+import com.google.android.gms.ads.MobileAds;
+import com.google.android.gms.ads.initialization.InitializationStatus;
+import com.google.android.gms.ads.initialization.OnInitializationCompleteListener;
+
 import soup.neumorphism.NeumorphImageButton;
 
 public class Main extends AppCompatActivity {
@@ -29,6 +35,8 @@ public class Main extends AppCompatActivity {
     androidx.constraintlayout.widget.ConstraintLayout  mainCard;
     Dialog dialog , dialog_about;
     TextView appName, text_morque;
+    AdView adView;
+    AdRequest adRequest;
 
 
     @SuppressLint({"UseCompatLoadingForDrawables", "ObsoleteSdkInt"})
@@ -36,6 +44,14 @@ public class Main extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        MobileAds.initialize(this, initializationStatus -> {
+        });
+
+        adView = findViewById(R.id.adView);
+        adRequest = new AdRequest.Builder().build();
+        adView.loadAd(adRequest);
+
 
 
         //        Animations

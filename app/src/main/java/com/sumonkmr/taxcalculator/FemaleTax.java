@@ -11,6 +11,8 @@ import android.widget.ArrayAdapter;
 import android.widget.Spinner;
 import android.widget.Toast;
 
+import com.google.android.gms.ads.MobileAds;
+
 
 public class FemaleTax extends SlabCalculator {
 
@@ -20,6 +22,10 @@ public class FemaleTax extends SlabCalculator {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.slab_calculator);
 
+        MobileAds.initialize(this, initializationStatus -> {
+        });
+        adView = findViewById(R.id.adView);
+        adView.loadAd(adRequest);
 
 
 

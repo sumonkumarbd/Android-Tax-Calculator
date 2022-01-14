@@ -20,6 +20,8 @@ import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.android.gms.ads.MobileAds;
+
 import java.util.Locale;
 
 
@@ -48,7 +50,10 @@ public class SlabCalculator extends Main {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.slab_calculator);
 
-
+        MobileAds.initialize(this, initializationStatus -> {
+        });
+        adView = findViewById(R.id.adView);
+        adView.loadAd(adRequest);
 
 
 //       Hooks

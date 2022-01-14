@@ -5,7 +5,9 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.webkit.WebView;
 
-public class TaxZone extends Main {
+import com.google.android.gms.ads.MobileAds;
+
+public class TaxZone extends Payments {
     androidx.constraintlayout.widget.ConstraintLayout mainCard_taxzone;
 
     @Override
@@ -13,8 +15,13 @@ public class TaxZone extends Main {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.tax_zone);
 
-        mainCard_taxzone = findViewById(R.id.mainCard_taxzone);
+        MobileAds.initialize(this, initializationStatus -> {
+        });
+        adView = findViewById(R.id.adView);
+        adView.loadAd(adRequest);
 
+
+        mainCard_taxzone = findViewById(R.id.mainCard_taxzone);
         mainCard_taxzone.setAnimation(up_from_bottom);
 
 

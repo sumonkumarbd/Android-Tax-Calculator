@@ -73,7 +73,7 @@
     <LinearLayout
         android:id="@+id/mainCard_salary"
         android:layout_width="280dp"
-        android:layout_height="430dp"
+        android:layout_height="400dp"
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="-60dp"
         android:background="@drawable/tns_crv25"
@@ -1027,6 +1027,26 @@
 
 
     </LinearLayout><!--main card-->
+
+    <!--bannerAds-->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="bottom"
+        >
+
+        <com.google.android.gms.ads.AdView
+            android:id="@+id/adView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:adSize="BANNER"
+            app:adUnitId="ca-app-pub-3940256099942544/6300978111"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+        </com.google.android.gms.ads.AdView>
+    </androidx.constraintlayout.widget.ConstraintLayout><!--bannerAds-->
 
 
 </LinearLayout>

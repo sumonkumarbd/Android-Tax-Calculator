@@ -14,6 +14,10 @@ import android.widget.Switch;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.android.gms.ads.MobileAds;
+import com.google.android.gms.ads.initialization.InitializationStatus;
+import com.google.android.gms.ads.initialization.OnInitializationCompleteListener;
+
 public class SalaryTax extends FreedomFighterTax {
 
     LinearLayout mainCard_salary;
@@ -34,6 +38,12 @@ public class SalaryTax extends FreedomFighterTax {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.salary_tax);
+
+        MobileAds.initialize(this, initializationStatus -> {
+        });
+        adView = findViewById(R.id.adView);
+        adView.loadAd(adRequest);
+
 
         //        Object of Handler
         Handler handler = new Handler();

@@ -11,6 +11,8 @@ import android.widget.ArrayAdapter;
 import android.widget.Spinner;
 import android.widget.Toast;
 
+import com.google.android.gms.ads.MobileAds;
+
 
 public class FreedomFighterTax extends DisableParsonTax {
 
@@ -21,6 +23,10 @@ public class FreedomFighterTax extends DisableParsonTax {
         setContentView(R.layout.slab_calculator);
 
 
+        MobileAds.initialize(this, initializationStatus -> {
+        });
+        adView = findViewById(R.id.adView);
+        adView.loadAd(adRequest);
 
 
 

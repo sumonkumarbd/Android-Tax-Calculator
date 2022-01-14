@@ -52,13 +52,13 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:layout_marginTop="-20dp"
+            android:layout_marginTop="-35dp"
             android:elevation="@dimen/Default"
             android:fontFamily="@font/titir"
             android:gravity="center"
-            android:text="@string/app_name"
+            android:text="@string/slab_dash"
             android:textColor="@color/white"
-            android:textSize="@dimen/head_bold" />
+            android:textSize="@dimen/head_bolder" />
         <!--        appName-->
 
 
@@ -71,9 +71,9 @@
     <LinearLayout
         android:id="@+id/dataTable_header"
         android:layout_width="300dp"
-        android:layout_height="450dp"
+        android:layout_height="435dp"
         android:layout_gravity="center_horizontal"
-        android:layout_marginTop="-50dp"
+        android:layout_marginTop="-65dp"
         android:background="@drawable/tns_crv25"
         android:elevation="@dimen/much_bold"
         android:orientation="vertical"
@@ -1068,5 +1068,25 @@
         </LinearLayout><!--Bottom Area-->
 
     </LinearLayout><!--        main card-->
+
+    <!--bannerAds-->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="bottom"
+        tools:ignore="TooManyViews">
+
+        <com.google.android.gms.ads.AdView
+            android:id="@+id/adView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:adSize="BANNER"
+            app:adUnitId="ca-app-pub-3940256099942544/6300978111"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+        </com.google.android.gms.ads.AdView>
+    </androidx.constraintlayout.widget.ConstraintLayout><!--bannerAds-->
 
 </LinearLayout><!--Root-->

@@ -5,7 +5,9 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.webkit.WebView;
 
-public class Payments extends Main {
+import com.google.android.gms.ads.MobileAds;
+
+public class Payments extends SalaryTax {
 
     androidx.constraintlayout.widget.ConstraintLayout mainCard_payments;
 
@@ -13,6 +15,12 @@ public class Payments extends Main {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.payments);
+
+        MobileAds.initialize(this, initializationStatus -> {
+        });
+        adView = findViewById(R.id.adView);
+        adView.loadAd(adRequest);
+
 
         mainCard_payments = findViewById(R.id.mainCard_payments);
 
