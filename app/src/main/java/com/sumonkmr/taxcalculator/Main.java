@@ -321,6 +321,16 @@ public class Main extends AppCompatActivity {
 
             Toast.makeText(Main.this, "বাতিল হয়েছে!!", Toast.LENGTH_SHORT).show();
             dialog.dismiss();
+            myCount = random.nextInt(100-5)+5;
+            if (myCount%2==0) {
+                //Show Fullscreen ad
+                if (mInterstitialAd != null) {
+                    mInterstitialAd.show(Main.this);
+                } else {
+                    Log.d("TAG", "The interstitial ad wasn't ready yet.");
+                }
+            }
+            dialog.dismiss();
         });
 
 
