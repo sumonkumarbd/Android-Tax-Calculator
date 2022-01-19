@@ -39,7 +39,7 @@
             android:alpha="1"
             android:textEditPasteWindowLayout="@string/intro"
             android:singleLine="true"
-            android:text="@string/main_intro" />
+            android:text="@string/intro" />
     </LinearLayout><!--        morque_text-->
     <!--    UpperVictor-->
 
