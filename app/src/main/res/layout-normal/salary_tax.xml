@@ -54,13 +54,12 @@
 
         <TextView
             style="@style/Widget.MaterialComponents.CardView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:id="@+id/title_salary"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
             android:layout_gravity="center_horizontal"
-            android:elevation="@dimen/Default"
             android:layout_marginTop="@dimen/head_bolder"
-            android:gravity="center"
+            android:elevation="@dimen/Default"
             android:fontFamily="@font/titir"
             android:text="@string/salarytax"
             android:textColor="@color/white"
@@ -74,10 +73,10 @@
     <!--        main card-->
     <LinearLayout
         android:id="@+id/mainCard_salary"
-        android:layout_width="360dp"
-        android:layout_height="550dp"
+        android:layout_width="280dp"
+        android:layout_height="400dp"
         android:layout_gravity="center_horizontal"
-        android:layout_marginTop="-40dp"
+        android:layout_marginTop="-60dp"
         android:background="@drawable/tns_crv25"
         android:elevation="@dimen/heading_size"
         android:orientation="vertical"
@@ -231,7 +230,7 @@
                 android:layout_weight="1"
                 android:layout_gravity="center"
                 android:gravity="right"
-                android:layout_marginStart="-180dp"
+                android:layout_marginStart="-115dp"
                 android:layout_marginEnd="10dp"
                 >
                 <!--            clcButton>Enabled-->
@@ -277,13 +276,12 @@
             </RelativeLayout>  <!--        CalcButton-->
 
         </LinearLayout> <!--        InputArea-->
-<!--        parent ScrollView-->
+        <!--        parent ScrollView-->
         <ScrollView
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginBottom="20dp"
+            android:layout_height="260dp"
             >
-<!--            support of Scroll View-->
+            <!--            support of Scroll View-->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -296,10 +294,10 @@
                     android:paddingHorizontal="@dimen/Default"
                     android:layout_gravity="center_horizontal"
                     >
-<!--                    col1-->
+                    <!--                    col1-->
                     <LinearLayout
                         android:id="@+id/col1"
-                        android:layout_width="160dp"
+                        android:layout_width="110dp"
                         android:layout_height="40dp"
                         style="@style/Widget.MaterialComponents.CardView"
                         android:background="@drawable/left_crv_base_color"
@@ -323,11 +321,11 @@
 
                     </LinearLayout><!--                    col1-->
 
-<!--                    col2-->
+                    <!--                    col2-->
                     <LinearLayout
                         android:id="@+id/col2"
                         style="@style/Widget.MaterialComponents.CardView"
-                        android:layout_width="200dp"
+                        android:layout_width="150dp"
                         android:layout_height="40dp"
                         android:background="@drawable/right_courved_white"
                         android:elevation="@dimen/shadow"
@@ -371,10 +369,10 @@
                     android:paddingHorizontal="@dimen/Default"
                     android:layout_gravity="center_horizontal"
                     >
-<!--                    col3-->
+                    <!--                    col3-->
                     <LinearLayout
                         android:id="@+id/col3"
-                        android:layout_width="160dp"
+                        android:layout_width="110dp"
                         android:layout_height="40dp"
                         style="@style/Widget.MaterialComponents.CardView"
                         android:background="@drawable/left_crv_base_color"
@@ -403,7 +401,7 @@
                     <LinearLayout
                         android:id="@+id/col4"
                         style="@style/Widget.MaterialComponents.CardView"
-                        android:layout_width="200dp"
+                        android:layout_width="150dp"
                         android:layout_height="40dp"
                         android:background="@drawable/right_courved_white"
                         android:elevation="@dimen/shadow"
@@ -446,10 +444,10 @@
                     android:paddingHorizontal="@dimen/Default"
                     android:layout_gravity="center_horizontal"
                     >
-<!--                    col5-->
+                    <!--                    col5-->
                     <LinearLayout
                         android:id="@+id/col5"
-                        android:layout_width="160dp"
+                        android:layout_width="110dp"
                         android:layout_height="40dp"
                         style="@style/Widget.MaterialComponents.CardView"
                         android:background="@drawable/left_crv_base_color"
@@ -477,7 +475,7 @@
                     <LinearLayout
                         android:id="@+id/col6"
                         style="@style/Widget.MaterialComponents.CardView"
-                        android:layout_width="200dp"
+                        android:layout_width="150dp"
                         android:layout_height="40dp"
                         android:background="@drawable/right_courved_white"
                         android:elevation="@dimen/shadow"
@@ -519,10 +517,10 @@
                     android:paddingHorizontal="@dimen/Default"
                     android:layout_gravity="center_horizontal"
                     >
-<!--                    col7-->
+                    <!--                    col7-->
                     <LinearLayout
                         android:id="@+id/col7"
-                        android:layout_width="160dp"
+                        android:layout_width="110dp"
                         android:layout_height="40dp"
                         style="@style/Widget.MaterialComponents.CardView"
                         android:background="@drawable/left_crv_base_color"
@@ -545,11 +543,11 @@
                             />
 
                     </LinearLayout><!--                    col7-->
-<!--                    col8-->
+                    <!--                    col8-->
                     <LinearLayout
                         android:id="@+id/col8"
                         style="@style/Widget.MaterialComponents.CardView"
-                        android:layout_width="200dp"
+                        android:layout_width="150dp"
                         android:layout_height="40dp"
                         android:background="@drawable/right_courved_white"
                         android:elevation="@dimen/shadow"
@@ -598,7 +596,7 @@
 
                     <LinearLayout
                         android:id="@+id/col11"
-                        android:layout_width="160dp"
+                        android:layout_width="110dp"
                         android:layout_height="40dp"
                         style="@style/Widget.MaterialComponents.CardView"
                         android:background="@drawable/left_crv_base_color"
@@ -625,7 +623,7 @@
                     <LinearLayout
                         android:id="@+id/col12"
                         style="@style/Widget.MaterialComponents.CardView"
-                        android:layout_width="200dp"
+                        android:layout_width="150dp"
                         android:layout_height="40dp"
                         android:background="@drawable/right_courved_white"
                         android:elevation="@dimen/shadow"
@@ -673,7 +671,7 @@
 
                     <LinearLayout
                         android:id="@+id/col15"
-                        android:layout_width="160dp"
+                        android:layout_width="110dp"
                         android:layout_height="40dp"
                         style="@style/Widget.MaterialComponents.CardView"
                         android:background="@drawable/left_crv_base_color"
@@ -700,7 +698,7 @@
                     <LinearLayout
                         android:id="@+id/col16"
                         style="@style/Widget.MaterialComponents.CardView"
-                        android:layout_width="200dp"
+                        android:layout_width="150dp"
                         android:layout_height="40dp"
                         android:background="@drawable/right_courved_white"
                         android:elevation="@dimen/shadow"
@@ -745,7 +743,7 @@
 
                     <LinearLayout
                         android:id="@+id/col17"
-                        android:layout_width="160dp"
+                        android:layout_width="110dp"
                         android:layout_height="40dp"
                         style="@style/Widget.MaterialComponents.CardView"
                         android:background="@drawable/left_crv_base_color"
@@ -772,7 +770,7 @@
                     <LinearLayout
                         android:id="@+id/col18"
                         style="@style/Widget.MaterialComponents.CardView"
-                        android:layout_width="200dp"
+                        android:layout_width="150dp"
                         android:layout_height="40dp"
                         android:background="@drawable/right_courved_white"
                         android:elevation="@dimen/shadow"
@@ -817,7 +815,7 @@
 
                     <LinearLayout
                         android:id="@+id/col19"
-                        android:layout_width="160dp"
+                        android:layout_width="110dp"
                         android:layout_height="40dp"
                         style="@style/Widget.MaterialComponents.CardView"
                         android:background="@drawable/left_crv_base_color"
@@ -844,7 +842,7 @@
                     <LinearLayout
                         android:id="@+id/col20"
                         style="@style/Widget.MaterialComponents.CardView"
-                        android:layout_width="200dp"
+                        android:layout_width="150dp"
                         android:layout_height="40dp"
                         android:background="@drawable/right_courved_white"
                         android:elevation="@dimen/shadow"
@@ -889,7 +887,7 @@
 
                     <LinearLayout
                         android:id="@+id/col21"
-                        android:layout_width="160dp"
+                        android:layout_width="110dp"
                         android:layout_height="40dp"
                         style="@style/Widget.MaterialComponents.CardView"
                         android:background="@drawable/left_crv_base_color"
@@ -916,7 +914,7 @@
                     <LinearLayout
                         android:id="@+id/col22"
                         style="@style/Widget.MaterialComponents.CardView"
-                        android:layout_width="200dp"
+                        android:layout_width="150dp"
                         android:layout_height="40dp"
                         android:background="@drawable/right_courved_white"
                         android:elevation="@dimen/shadow"
@@ -961,7 +959,7 @@
 
                     <LinearLayout
                         android:id="@+id/col23"
-                        android:layout_width="160dp"
+                        android:layout_width="110dp"
                         android:layout_height="40dp"
                         style="@style/Widget.MaterialComponents.CardView"
                         android:background="@drawable/left_crv_base_color"
@@ -988,7 +986,7 @@
                     <LinearLayout
                         android:id="@+id/col24"
                         style="@style/Widget.MaterialComponents.CardView"
-                        android:layout_width="200dp"
+                        android:layout_width="150dp"
                         android:layout_height="40dp"
                         android:background="@drawable/right_courved_white"
                         android:elevation="@dimen/shadow"
@@ -1021,9 +1019,9 @@
 
                 </androidx.constraintlayout.widget.ConstraintLayout>
                 <!--Row12-->
-                
+
             </LinearLayout><!--support of Scroll View-->
-            
+
         </ScrollView><!--parent ScrollView-->
 
 

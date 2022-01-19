@@ -30,26 +30,18 @@
         <entry key="..\:/Android_projects/Practice Challenges/TaxCalculator/app/src/main/res/drawable/two_color_curved.xml" value="0.1953125" />
         <entry key="..\:/Android_projects/Practice Challenges/TaxCalculator/app/src/main/res/font/bdf.xml" value="0.209375" />
         <entry key="..\:/Android_projects/Practice Challenges/TaxCalculator/app/src/main/res/font/normal.xml" value="0.21354166666666666" />
-        <entry key="..\:/Android_projects/Practice Challenges/TaxCalculator/app/src/main/res/layout-large/about_us.xml" value="0.67" />
-        <entry key="..\:/Android_projects/Practice Challenges/TaxCalculator/app/src/main/res/layout-large/activity_main.xml" value="0.75" />
-        <entry key="..\:/Android_projects/Practice Challenges/TaxCalculator/app/src/main/res/layout-large/dialog_about_page.xml" value="0.44" />
-        <entry key="..\:/Android_projects/Practice Challenges/TaxCalculator/app/src/main/res/layout-large/payments.xml" value="0.44" />
-        <entry key="..\:/Android_projects/Practice Challenges/TaxCalculator/app/src/main/res/layout-large/pdf_viewer.xml" value="0.44" />
-        <entry key="..\:/Android_projects/Practice Challenges/TaxCalculator/app/src/main/res/layout-large/salary_tax.xml" value="0.75" />
-        <entry key="..\:/Android_projects/Practice Challenges/TaxCalculator/app/src/main/res/layout-large/slab_calculator.xml" value="0.9" />
-        <entry key="..\:/Android_projects/Practice Challenges/TaxCalculator/app/src/main/res/layout-large/tax_zone.xml" value="0.44" />
-        <entry key="..\:/Android_projects/Practice Challenges/TaxCalculator/app/src/main/res/layout-normal/about_us.xml" value="0.25" />
-        <entry key="..\:/Android_projects/Practice Challenges/TaxCalculator/app/src/main/res/layout-normal/activity_main.xml" value="0.25" />
-        <entry key="..\:/Android_projects/Practice Challenges/TaxCalculator/app/src/main/res/layout-normal/dialog_about_page.xml" value="0.11911231884057971" />
-        <entry key="..\:/Android_projects/Practice Challenges/TaxCalculator/app/src/main/res/layout-normal/payments.xml" value="0.10869565217391304" />
-        <entry key="..\:/Android_projects/Practice Challenges/TaxCalculator/app/src/main/res/layout-normal/pdf_viewer.xml" value="0.11911231884057971" />
+        <entry key="..\:/Android_projects/Practice Challenges/TaxCalculator/app/src/main/res/layout-large/salary_tax.xml" value="0.439484126984127" />
+        <entry key="..\:/Android_projects/Practice Challenges/TaxCalculator/app/src/main/res/layout-normal/about_us.xml" value="0.10552536231884058" />
+        <entry key="..\:/Android_projects/Practice Challenges/TaxCalculator/app/src/main/res/layout-normal/activity_main.xml" value="0.18333333333333332" />
+        <entry key="..\:/Android_projects/Practice Challenges/TaxCalculator/app/src/main/res/layout-normal/payments.xml" value="0.10552536231884058" />
+        <entry key="..\:/Android_projects/Practice Challenges/TaxCalculator/app/src/main/res/layout-normal/pdf_viewer.xml" value="0.10552536231884058" />
         <entry key="..\:/Android_projects/Practice Challenges/TaxCalculator/app/src/main/res/layout-normal/salary_tax.xml" value="0.18333333333333332" />
-        <entry key="..\:/Android_projects/Practice Challenges/TaxCalculator/app/src/main/res/layout-normal/slab_calculator.xml" value="0.18333333333333332" />
-        <entry key="..\:/Android_projects/Practice Challenges/TaxCalculator/app/src/main/res/layout-normal/tax_zone.xml" value="0.18333333333333332" />
+        <entry key="..\:/Android_projects/Practice Challenges/TaxCalculator/app/src/main/res/layout-normal/slab_calculator.xml" value="0.25" />
+        <entry key="..\:/Android_projects/Practice Challenges/TaxCalculator/app/src/main/res/layout-normal/tax_zone.xml" value="0.10552536231884058" />
         <entry key="..\:/Android_projects/Practice Challenges/TaxCalculator/app/src/main/res/layout-v26/activity_main.xml" value="0.33" />
         <entry key="..\:/Android_projects/Practice Challenges/TaxCalculator/app/src/main/res/layout-v26/slab_calculator.xml" value="0.125" />
-        <entry key="..\:/Android_projects/Practice Challenges/TaxCalculator/app/src/main/res/layout/about_us.xml" value="0.18" />
-        <entry key="..\:/Android_projects/Practice Challenges/TaxCalculator/app/src/main/res/layout/activity_main.xml" value="0.18" />
+        <entry key="..\:/Android_projects/Practice Challenges/TaxCalculator/app/src/main/res/layout/about_us.xml" value="0.33" />
+        <entry key="..\:/Android_projects/Practice Challenges/TaxCalculator/app/src/main/res/layout/activity_main.xml" value="0.33" />
         <entry key="..\:/Android_projects/Practice Challenges/TaxCalculator/app/src/main/res/layout/activity_slab_tax_calculator.xml" value="0.125" />
         <entry key="..\:/Android_projects/Practice Challenges/TaxCalculator/app/src/main/res/layout/coustom_dialogbox.xml" value="0.33" />
         <entry key="..\:/Android_projects/Practice Challenges/TaxCalculator/app/src/main/res/layout/dialog_about_page.xml" value="0.22" />
@@ -62,7 +54,7 @@
         <entry key="..\:/Android_projects/Practice Challenges/TaxCalculator/app/src/main/res/layout/salaey_tax.xml" value="0.25" />
         <entry key="..\:/Android_projects/Practice Challenges/TaxCalculator/app/src/main/res/layout/salary_tax.xml" value="0.31568228105906315" />
         <entry key="..\:/Android_projects/Practice Challenges/TaxCalculator/app/src/main/res/layout/slab.xml" value="0.33" />
-        <entry key="..\:/Android_projects/Practice Challenges/TaxCalculator/app/src/main/res/layout/slab_calculator.xml" value="0.18" />
+        <entry key="..\:/Android_projects/Practice Challenges/TaxCalculator/app/src/main/res/layout/slab_calculator.xml" value="0.33" />
         <entry key="..\:/Android_projects/Practice Challenges/TaxCalculator/app/src/main/res/layout/slab_tax_calculator.xml" value="0.18333333333333332" />
         <entry key="..\:/Android_projects/Practice Challenges/TaxCalculator/app/src/main/res/layout/slab_tax_dialog.xml" value="0.22" />
         <entry key="..\:/Android_projects/Practice Challenges/TaxCalculator/app/src/main/res/layout/tax_zone.xml" value="0.25" />

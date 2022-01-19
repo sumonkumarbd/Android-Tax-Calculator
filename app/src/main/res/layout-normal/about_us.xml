@@ -54,13 +54,12 @@
 
         <TextView
             style="@style/Widget.MaterialComponents.CardView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:id="@+id/govt_site_title"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
             android:layout_gravity="center_horizontal"
-            android:elevation="@dimen/Default"
             android:layout_marginTop="@dimen/head_bolder"
-            android:gravity="center"
+            android:elevation="@dimen/Default"
             android:fontFamily="@font/titir"
             android:text="@string/about_us"
             android:textColor="@color/white"
@@ -72,105 +71,103 @@
 
     <LinearLayout
         android:id="@+id/mainCard_govt"
-        android:layout_width="360dp"
-        android:layout_height="550dp"
+        android:layout_width="280dp"
+        android:layout_height="410dp"
         style="@style/Widget.MaterialComponents.CardView"
         android:layout_gravity="center_horizontal"
-        android:layout_marginTop="-40dp"
+        android:layout_marginTop="-60dp"
         android:background="@drawable/tns_crv25"
         android:paddingHorizontal="1dp"
         android:elevation="@dimen/heading_size">
 
 
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_margin="10dp"
-        android:padding="@dimen/head_bolder"
-        >
-
-
-
-        <View
-            android:id="@+id/topVIew"
-            android:layout_width="320dp"
-            android:layout_height="1dp"
-            android:background="@color/lines"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintBottom_toTopOf="@id/image_holder"
-            app:layout_constraintEnd_toEndOf="parent"
-            />
-
-        <View
-            android:id="@+id/left_view"
-            android:layout_width="1dp"
-            android:layout_height="300dp"
-            android:layout_marginStart="20dp"
-            android:background="@color/lines"
-            app:layout_constraintBottom_toTopOf="@id/about_t"
-            app:layout_constraintEnd_toStartOf="@id/image_holder"
-            app:layout_constraintHorizontal_bias="0.473"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="1.0" />
-
-
-        <View
-            android:id="@+id/right_view"
-            android:layout_width="1dp"
-            android:layout_height="320dp"
-            android:layout_marginEnd="20dp"
-            android:background="@color/lines"
-            app:layout_constraintBottom_toTopOf="@id/about_t"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.421"
-            app:layout_constraintStart_toEndOf="@id/image_holder"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="1.0" />
-
-        <ImageView
-            android:id="@+id/image_holder"
-            android:layout_width="220dp"
-            android:layout_height="220dp"
-            android:elevation="@dimen/head_bolder"
-            android:orientation="vertical"
-            android:layout_marginTop="30dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            android:contentDescription="@string/about_us"
-            android:src="@drawable/potfolio" />
-
-        <View
-            android:id="@+id/view_about"
-            android:layout_width="320dp"
-            android:layout_height="1dp"
-            android:background="@color/lines"
-            app:layout_constraintTop_toBottomOf="@+id/image_holder"
-            app:layout_constraintBottom_toTopOf="@+id/about_t"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent" />
-
-        <TextView
-            android:id="@+id/about_t"
+        <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="5dp"
-            android:layout_marginHorizontal="10dp"
-            android:text="@string/about_talk"
-            android:textAlignment="textStart"
-            android:fontFamily="@font/bd_font"
-            android:textSize="@dimen/heading_size"
-            android:justificationMode="inter_word"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/view_about" />
+            android:layout_height="match_parent"
+            android:layout_margin="10dp"
+            >
 
 
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
+            <View
+                android:id="@+id/topVIew"
+                android:layout_width="220dp"
+                android:layout_height="1dp"
+                android:background="@color/lines"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toTopOf="@id/image_holder"
+                app:layout_constraintEnd_toEndOf="parent"
+                />
+
+            <View
+                android:id="@+id/left_view"
+                android:layout_width="1dp"
+                android:layout_height="190dp"
+                android:background="@color/lines"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/image_holder"
+                android:layout_marginStart="30dp"
+                app:layout_constraintBottom_toTopOf="@id/about_t"
+                app:layout_constraintTop_toTopOf="parent"
+                />
+
+            <View
+                android:id="@+id/right_view"
+                android:layout_width="1dp"
+                android:layout_height="190dp"
+                android:background="@color/lines"
+                app:layout_constraintStart_toEndOf="@id/image_holder"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toTopOf="@id/about_t"
+                android:layout_marginEnd="30dp"
+                />
+
+
+
+            <ImageView
+                android:id="@+id/image_holder"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:elevation="@dimen/head_bolder"
+                android:orientation="vertical"
+                android:layout_marginTop="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:contentDescription="@string/about_us"
+                android:src="@drawable/potfolio" />
+
+            <View
+                android:id="@+id/view_about"
+                android:layout_width="220dp"
+                android:layout_height="1dp"
+                android:background="@color/lines"
+                app:layout_constraintTop_toBottomOf="@+id/image_holder"
+                app:layout_constraintBottom_toTopOf="@+id/about_t"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <TextView
+                android:id="@+id/about_t"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginHorizontal="10dp"
+                android:text="@string/about_talk"
+                android:textAlignment="textStart"
+                android:fontFamily="@font/bd_font"
+                android:textSize="@dimen/heading_size"
+                android:justificationMode="inter_word"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/view_about" />
+
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
     </LinearLayout>
 
     <!--bannerAds-->
