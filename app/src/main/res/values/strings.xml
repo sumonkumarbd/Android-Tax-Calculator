@@ -65,6 +65,9 @@
     <string name="hint_dialog_button_txt">দেখুন!!</string>
 
 
+    <string name="ad_id_banner">ca-app-pub-3940256099942544/6300978111</string>
+
+
     <dimen name="heading_size">14sp</dimen>
     <dimen name="Default">10sp</dimen>
     <dimen name="shadow">3sp</dimen>

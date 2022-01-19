@@ -70,431 +70,461 @@
 
 
     <!--    parent-->
-    <!--        main card-->
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/mainCard"
-        style="@style/Widget.MaterialComponents.CardView"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginTop="-50dp"
-        android:background="@drawable/tns_crv25"
-        android:elevation="@dimen/heading_size"
-        android:layout_marginHorizontal="@dimen/head_bolder"
-        android:padding="5dp"
-        >
-
-        <!--            firstRow-->
-        <LinearLayout
-            android:id="@+id/first_row"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-           android:layout_marginHorizontal="15dp"
-            android:layout_marginTop="15dp"
-            android:columnCount="2"
-            android:gravity="center_horizontal"
-            android:orientation="horizontal"
-            android:weightSum="2"
-            android:rowCount="0"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent">
-
-            <!--                firstCol-->
-            <LinearLayout
-                android:id="@+id/insButton"
-                style="@style/Widget.MaterialComponents.CardView"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_margin="5dp"
-                android:layout_weight="1"
-                android:layout_marginEnd="10dp"
-                android:background="@drawable/tns_squre"
-                android:elevation="@dimen/shadow"
-                android:orientation="vertical"
-                android:weightSum="4"
-                android:padding="5dp">
-
-                <ImageView
-                    android:layout_width="match_parent"
-                    android:layout_height="0dp"
-                    android:layout_marginHorizontal="10dp"
-                    android:layout_weight="3"
-                    android:contentDescription="@string/instraction_dash"
-                    android:src="@drawable/instructions"
-                    tools:ignore="NestedWeights" />
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="0dp"
-                    android:layout_weight="1"
-                    android:layout_gravity="bottom"
-                    android:layout_marginTop="5dp"
-                    android:fontFamily="@font/normal"
-                    android:gravity="center"
-                    android:text="@string/instraction_dash"
-                    android:textColor="@color/base"
-                    android:textSize="@dimen/heading_size" />
-
-
-            </LinearLayout><!--                firstCol-->
-
-            <View
-                android:layout_width="1dp"
-                android:layout_height="110dp"
-                android:layout_marginVertical="5dp"
-                android:layout_marginHorizontal="10dp"
-                android:alpha=".5"
-                android:background="@color/base" />
-
-            <!--                secCol-->
-            <LinearLayout
-                android:id="@+id/e_tin"
-                style="@style/Widget.MaterialComponents.CardView"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:layout_marginStart="10dp"
-                android:weightSum="4"
-                android:background="@drawable/tns_squre"
-                android:elevation="@dimen/shadow"
-                android:orientation="vertical"
-                android:layout_margin="5dp"
-                android:padding="5dp">
-
-                <ImageView
-                    android:layout_width="match_parent"
-                    android:layout_height="0dp"
-                    android:layout_weight="3"
-                    android:layout_marginHorizontal="10dp"
-                    android:contentDescription="@string/prements"
-                    android:src="@drawable/etin"
-                    tools:ignore="NestedWeights" />
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="0dp"
-                    android:layout_weight="1"
-                    android:layout_gravity="bottom"
-                    android:layout_marginTop="5dp"
-                    android:fontFamily="@font/normal"
-                    android:gravity="center"
-                    android:text="@string/prements"
-                    android:textColor="@color/base"
-                    android:textSize="@dimen/heading_size" />
-
-
-            </LinearLayout><!--                secCol-->
-
-
-        </LinearLayout><!--            firstRow-->
-
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="15dp"
-            android:orientation="horizontal"
-            android:weightSum="3"
-            android:gravity="center"
-            android:layout_marginHorizontal="15dp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/first_row"
-            app:layout_constraintBottom_toTopOf="@id/sec_row"
-            >
-            <View
-                android:layout_width="0dp"
-                android:layout_height="1dp"
-                android:layout_weight="1.5"
-                android:alpha=".5"
-                android:layout_gravity="center"
-                android:layout_marginEnd="12dp"
-                android:background="@color/base"
-                />
-
-            <View
-                android:layout_width="0dp"
-                android:layout_height="1dp"
-                android:layout_weight="1.5"
-                android:layout_marginStart="12dp"
-                android:alpha=".5"
-                android:background="@color/base" />
-
-        </LinearLayout>
-
-
-
-
-        <!--            secRow-->
-        <LinearLayout
-            android:id="@+id/sec_row"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginHorizontal="15dp"
-            android:layout_marginTop="15dp"
-            android:columnCount="2"
-            android:gravity="center_horizontal"
-            android:orientation="horizontal"
-            android:weightSum="2"
-            android:rowCount="0"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toStartOf="parent"
-
-            app:layout_constraintTop_toBottomOf="@id/first_row">
-
-            <!--                firstCol-->
-            <LinearLayout
-                android:id="@+id/salary_tax"
-                style="@style/Widget.MaterialComponents.CardView"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_margin="5dp"
-                android:layout_weight="1"
-                android:layout_marginEnd="10dp"
-                android:background="@drawable/tns_squre"
-                android:elevation="@dimen/shadow"
-                android:orientation="vertical"
-                android:weightSum="4"
-                android:padding="5dp">
-
-                <ImageView
-                    android:layout_width="match_parent"
-                    android:layout_height="0dp"
-                    android:layout_marginHorizontal="10dp"
-                    android:layout_weight="3"
-                    android:contentDescription="@string/salarytax"
-                    android:src="@drawable/monthly_calculate"
-                    tools:ignore="NestedWeights" />
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="0dp"
-                    android:layout_weight="1"
-                    android:layout_gravity="bottom"
-                    android:layout_marginTop="5dp"
-                    android:fontFamily="@font/normal"
-                    android:gravity="center"
-                    android:text="@string/salarytax"
-                    android:textColor="@color/base"
-                    android:textSize="@dimen/heading_size" />
-
-
-            </LinearLayout><!--                firstCol-->
-
-            <View
-                android:layout_width="1dp"
-                android:layout_height="110dp"
-                android:layout_marginVertical="5dp"
-                android:layout_marginHorizontal="10dp"
-                android:alpha=".5"
-                android:background="@color/base" />
-
-            <!--                secCol-->
-            <LinearLayout
-                android:id="@+id/slabCalcButton"
-                style="@style/Widget.MaterialComponents.CardView"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:layout_marginStart="10dp"
-                android:weightSum="4"
-                android:background="@drawable/tns_squre"
-                android:elevation="@dimen/shadow"
-                android:orientation="vertical"
-                android:layout_margin="5dp"
-                android:padding="5dp">
-
-                <ImageView
-                    android:layout_width="match_parent"
-                    android:layout_height="0dp"
-                    android:layout_weight="3"
-                    android:layout_marginHorizontal="10dp"
-                    android:contentDescription="@string/prements"
-                    android:src="@drawable/tax"
-                    tools:ignore="NestedWeights" />
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="0dp"
-                    android:layout_weight="1"
-                    android:layout_gravity="bottom"
-                    android:layout_marginTop="5dp"
-                    android:fontFamily="@font/normal"
-                    android:gravity="center"
-                    android:text="@string/slab_dash"
-                    android:textColor="@color/base"
-                    android:textSize="@dimen/heading_size" />
-
-
-            </LinearLayout><!--                secCol-->
-
-
-        </LinearLayout><!--            secRow-->
-
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="15dp"
-            android:orientation="horizontal"
-            android:weightSum="3"
-            android:gravity="center"
-            android:layout_marginHorizontal="15dp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/sec_row"
-            app:layout_constraintBottom_toTopOf="@id/thirdRow"
-            >
-            <View
-                android:layout_width="0dp"
-                android:layout_height="1dp"
-                android:layout_weight="1.5"
-                android:alpha=".5"
-                android:layout_marginEnd="12dp"
-                android:background="@color/base"
-                />
-
-            <View
-                android:layout_width="0dp"
-                android:layout_height="1dp"
-                android:layout_weight="1.5"
-                android:layout_marginStart="12dp"
-                android:alpha=".5"
-                android:background="@color/base" />
-
-        </LinearLayout>
-
-
-
-        <!--            thirdRow-->
-        <LinearLayout
-            android:id="@+id/thirdRow"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginHorizontal="15dp"
-            android:layout_marginTop="15dp"
-            android:columnCount="2"
-            android:gravity="center_horizontal"
-            android:orientation="horizontal"
-            android:weightSum="2"
-            android:rowCount="0"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toStartOf="parent"
-
-            app:layout_constraintTop_toBottomOf="@id/sec_row">
-
-            <!--                firstCol-->
-            <LinearLayout
-                android:id="@+id/address_book"
-                style="@style/Widget.MaterialComponents.CardView"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_margin="5dp"
-                android:layout_weight="1"
-                android:layout_marginEnd="10dp"
-                android:background="@drawable/tns_squre"
-                android:elevation="@dimen/shadow"
-                android:orientation="vertical"
-                android:weightSum="4"
-                android:padding="5dp">
-
-                <ImageView
-                    android:layout_width="match_parent"
-                    android:layout_height="0dp"
-                    android:layout_marginHorizontal="10dp"
-                    android:layout_weight="3"
-                    android:contentDescription="@string/tax_zone"
-                    android:src="@drawable/address_book"
-                    tools:ignore="NestedWeights" />
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="0dp"
-                    android:layout_weight="1"
-                    android:layout_gravity="bottom"
-                    android:layout_marginTop="5dp"
-                    android:fontFamily="@font/normal"
-                    android:gravity="center"
-                    android:text="@string/tax_zone"
-                    android:textColor="@color/base"
-                    android:textSize="@dimen/heading_size" />
-
-
-            </LinearLayout><!--                firstCol-->
-
-            <View
-                android:layout_width="1dp"
-                android:layout_height="110dp"
-                android:layout_marginVertical="5dp"
-                android:layout_marginHorizontal="10dp"
-                android:alpha=".5"
-                android:background="@color/base" />
-
-            <!--                secCol-->
-            <LinearLayout
-                android:id="@+id/govt_site"
-                style="@style/Widget.MaterialComponents.CardView"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:layout_marginStart="10dp"
-                android:weightSum="4"
-                android:background="@drawable/tns_squre"
-                android:elevation="@dimen/shadow"
-                android:orientation="vertical"
-                android:layout_margin="5dp"
-                android:padding="5dp">
-
-                <ImageView
-                    android:layout_width="match_parent"
-                    android:layout_height="0dp"
-                    android:layout_weight="3"
-                    android:layout_marginHorizontal="10dp"
-                    android:contentDescription="@string/about_us"
-                    android:src="@drawable/information"
-                    tools:ignore="NestedWeights" />
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="0dp"
-                    android:layout_weight="1"
-                    android:layout_gravity="bottom"
-                    android:layout_marginTop="5dp"
-                    android:fontFamily="@font/normal"
-                    android:gravity="center"
-                    android:text="@string/about_us"
-                    android:textColor="@color/base"
-                    android:textSize="@dimen/heading_size" />
-
-
-            </LinearLayout><!--                secCol-->
-
-
-        </LinearLayout><!--            thirdRow-->
-
-
-    </androidx.constraintlayout.widget.ConstraintLayout><!--        main card-->
-    <!--bannerAds-->
-    <androidx.constraintlayout.widget.ConstraintLayout
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_gravity="bottom"
+        android:orientation="vertical"
+        android:layout_marginTop="-50dp"
+        android:weightSum="4"
         >
 
-        <com.google.android.gms.ads.AdView
-            android:id="@+id/adView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:adSize="BANNER"
-            app:adUnitId="ca-app-pub-3940256099942544/6300978111"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent">
+        <!--        main card-->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/mainCard"
+            style="@style/Widget.MaterialComponents.CardView"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="3.50"
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/tns_crv25"
+            android:elevation="@dimen/heading_size"
+            android:layout_marginHorizontal="@dimen/head_bolder"
+            android:padding="5dp"
+            >
 
-        </com.google.android.gms.ads.AdView>
-    </androidx.constraintlayout.widget.ConstraintLayout><!--bannerAds-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:weightSum="4"
+                android:orientation="vertical">
+
+                <!--            firstRow-->
+                <LinearLayout
+                    android:id="@+id/first_row"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1.2"
+                    android:layout_marginHorizontal="15dp"
+                    android:layout_marginTop="15dp"
+                    android:columnCount="2"
+                    android:gravity="center_horizontal"
+                    android:orientation="horizontal"
+                    android:weightSum="2"
+                    android:rowCount="0"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <!--                firstCol-->
+                    <LinearLayout
+                        android:id="@+id/insButton"
+                        style="@style/Widget.MaterialComponents.CardView"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_margin="5dp"
+                        android:layout_weight="1"
+                        android:layout_marginEnd="10dp"
+                        android:background="@drawable/tns_squre"
+                        android:elevation="@dimen/shadow"
+                        android:orientation="vertical"
+                        android:weightSum="4"
+                        android:padding="5dp">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_marginHorizontal="10dp"
+                            android:layout_weight="3"
+                            android:contentDescription="@string/instraction_dash"
+                            android:src="@drawable/instructions"
+                            tools:ignore="NestedWeights" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="1"
+                            android:layout_gravity="bottom"
+                            android:layout_marginTop="5dp"
+                            android:fontFamily="@font/normal"
+                            android:gravity="center"
+                            android:text="@string/instraction_dash"
+                            android:textColor="@color/base"
+                            android:textSize="@dimen/heading_size" />
+
+
+                    </LinearLayout><!--                firstCol-->
+
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginVertical="5dp"
+                        android:layout_marginHorizontal="10dp"
+                        android:alpha=".5"
+                        android:background="@color/base" />
+
+                    <!--                secCol-->
+                    <LinearLayout
+                        android:id="@+id/e_tin"
+                        style="@style/Widget.MaterialComponents.CardView"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:layout_marginStart="10dp"
+                        android:weightSum="4"
+                        android:background="@drawable/tns_squre"
+                        android:elevation="@dimen/shadow"
+                        android:orientation="vertical"
+                        android:layout_margin="5dp"
+                        android:padding="5dp">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="3"
+                            android:layout_marginHorizontal="10dp"
+                            android:contentDescription="@string/prements"
+                            android:src="@drawable/etin"
+                            tools:ignore="NestedWeights" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="1"
+                            android:layout_gravity="bottom"
+                            android:layout_marginTop="5dp"
+                            android:fontFamily="@font/normal"
+                            android:gravity="center"
+                            android:text="@string/prements"
+                            android:textColor="@color/base"
+                            android:textSize="@dimen/heading_size" />
+
+
+                    </LinearLayout><!--                secCol-->
+
+
+                </LinearLayout><!--            firstRow-->
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight=".2"
+                    android:orientation="horizontal"
+                    android:gravity="center"
+                    android:layout_marginBottom="-15dp"
+                    android:weightSum="3"
+                    android:layout_marginHorizontal="15dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/first_row"
+                    app:layout_constraintBottom_toTopOf="@id/sec_row"
+                    >
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="1dp"
+                        android:layout_weight="1.5"
+                        android:alpha=".5"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginEnd="12dp"
+                        android:background="@color/base"
+                        />
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="1dp"
+                        android:layout_weight="1.5"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginStart="12dp"
+                        android:alpha=".5"
+                        android:background="@color/base" />
+
+                </LinearLayout>
+
+
+
+
+                <!--            secRow-->
+                <LinearLayout
+                    android:id="@+id/sec_row"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1.2"
+                    android:layout_marginHorizontal="15dp"
+                    android:layout_marginTop="15dp"
+                    android:columnCount="2"
+                    android:gravity="center_horizontal"
+                    android:orientation="horizontal"
+                    android:weightSum="2"
+                    android:rowCount="0"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+
+                    app:layout_constraintTop_toBottomOf="@id/first_row">
+
+                    <!--                firstCol-->
+                    <LinearLayout
+                        android:id="@+id/salary_tax"
+                        style="@style/Widget.MaterialComponents.CardView"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_margin="5dp"
+                        android:layout_weight="1"
+                        android:layout_marginEnd="10dp"
+                        android:background="@drawable/tns_squre"
+                        android:elevation="@dimen/shadow"
+                        android:orientation="vertical"
+                        android:weightSum="4"
+                        android:padding="5dp">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_marginHorizontal="10dp"
+                            android:layout_weight="3"
+                            android:contentDescription="@string/salarytax"
+                            android:src="@drawable/monthly_calculate"
+                            tools:ignore="NestedWeights" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="1"
+                            android:layout_gravity="bottom"
+                            android:layout_marginTop="5dp"
+                            android:fontFamily="@font/normal"
+                            android:gravity="center"
+                            android:text="@string/salarytax"
+                            android:textColor="@color/base"
+                            android:textSize="@dimen/heading_size" />
+
+
+                    </LinearLayout><!--                firstCol-->
+
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginVertical="5dp"
+                        android:layout_marginHorizontal="10dp"
+                        android:alpha=".5"
+                        android:background="@color/base" />
+
+                    <!--                secCol-->
+                    <LinearLayout
+                        android:id="@+id/slabCalcButton"
+                        style="@style/Widget.MaterialComponents.CardView"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:layout_marginStart="10dp"
+                        android:weightSum="4"
+                        android:background="@drawable/tns_squre"
+                        android:elevation="@dimen/shadow"
+                        android:orientation="vertical"
+                        android:layout_margin="5dp"
+                        android:padding="5dp">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="3"
+                            android:layout_marginHorizontal="10dp"
+                            android:contentDescription="@string/prements"
+                            android:src="@drawable/tax"
+                            tools:ignore="NestedWeights" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="1"
+                            android:layout_gravity="bottom"
+                            android:layout_marginTop="5dp"
+                            android:fontFamily="@font/normal"
+                            android:gravity="center"
+                            android:text="@string/slab_dash"
+                            android:textColor="@color/base"
+                            android:textSize="@dimen/heading_size" />
+
+
+                    </LinearLayout><!--                secCol-->
+
+
+                </LinearLayout><!--            secRow-->
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight=".2"
+                    android:orientation="horizontal"
+                    android:weightSum="3"
+                    android:gravity="center"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="-15dp"
+                    android:layout_marginHorizontal="15dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/sec_row"
+                    app:layout_constraintBottom_toTopOf="@id/thirdRow"
+                    >
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="1dp"
+                        android:layout_weight="1.5"
+                        android:alpha=".5"
+                        android:layout_marginEnd="12dp"
+                        android:background="@color/base"
+                        />
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="1dp"
+                        android:layout_weight="1.5"
+                        android:layout_marginStart="12dp"
+                        android:alpha=".5"
+                        android:background="@color/base" />
+
+                </LinearLayout>
+
+
+
+                <!--            thirdRow-->
+                <LinearLayout
+                    android:id="@+id/thirdRow"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1.2"
+                    android:layout_marginHorizontal="15dp"
+                    android:layout_marginTop="15dp"
+                    android:columnCount="2"
+                    android:gravity="center_horizontal"
+                    android:orientation="horizontal"
+                    android:weightSum="2"
+                    android:rowCount="0"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+
+                    app:layout_constraintTop_toBottomOf="@id/sec_row">
+
+                    <!--                firstCol-->
+                    <LinearLayout
+                        android:id="@+id/address_book"
+                        style="@style/Widget.MaterialComponents.CardView"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_margin="5dp"
+                        android:layout_weight="1"
+                        android:layout_marginEnd="10dp"
+                        android:background="@drawable/tns_squre"
+                        android:elevation="@dimen/shadow"
+                        android:orientation="vertical"
+                        android:weightSum="4"
+                        android:padding="5dp">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_marginHorizontal="10dp"
+                            android:layout_weight="3"
+                            android:contentDescription="@string/tax_zone"
+                            android:src="@drawable/address_book"
+                            tools:ignore="NestedWeights" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="1"
+                            android:layout_gravity="bottom"
+                            android:layout_marginTop="5dp"
+                            android:fontFamily="@font/normal"
+                            android:gravity="center"
+                            android:text="@string/tax_zone"
+                            android:textColor="@color/base"
+                            android:textSize="@dimen/heading_size" />
+
+
+                    </LinearLayout><!--                firstCol-->
+
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginVertical="5dp"
+                        android:layout_marginHorizontal="10dp"
+                        android:alpha=".5"
+                        android:background="@color/base" />
+
+                    <!--                secCol-->
+                    <LinearLayout
+                        android:id="@+id/govt_site"
+                        style="@style/Widget.MaterialComponents.CardView"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:layout_marginStart="10dp"
+                        android:weightSum="4"
+                        android:background="@drawable/tns_squre"
+                        android:elevation="@dimen/shadow"
+                        android:orientation="vertical"
+                        android:layout_margin="5dp"
+                        android:padding="5dp">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="3"
+                            android:layout_marginHorizontal="10dp"
+                            android:contentDescription="@string/about_us"
+                            android:src="@drawable/information"
+                            tools:ignore="NestedWeights" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="1"
+                            android:layout_gravity="bottom"
+                            android:layout_marginTop="5dp"
+                            android:fontFamily="@font/normal"
+                            android:gravity="center"
+                            android:text="@string/about_us"
+                            android:textColor="@color/base"
+                            android:textSize="@dimen/heading_size" />
+
+
+                    </LinearLayout><!--                secCol-->
+
+
+                </LinearLayout><!--            thirdRow-->
+
+            </LinearLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout><!--        main card-->
+        <!--bannerAds-->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight=".5"
+            android:layout_gravity="bottom"
+            >
+
+            <com.google.android.gms.ads.AdView
+                android:id="@+id/adView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:adSize="BANNER"
+                app:adUnitId="@string/ad_id_banner"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent">
+
+            </com.google.android.gms.ads.AdView>
+        </androidx.constraintlayout.widget.ConstraintLayout><!--bannerAds-->
+
+    </LinearLayout><!--    parent-->
+
+
 
 </LinearLayout>
     <!--grandParent-->
